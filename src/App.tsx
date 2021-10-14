@@ -10,7 +10,7 @@ function App(): JSX.Element {
                      Edit <code>src/App.tsx</code> and save to reload.
                 </p>
                 <h1>CISC 275 Final Project</h1>
-                <p>Srinath Venkatesh, Elliot Tingey</p>
+                <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
             </header>
         </div>
     );
