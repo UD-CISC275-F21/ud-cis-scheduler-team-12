@@ -1,4 +1,4 @@
-export interface Pokemon {
+export interface Course {
     name: string
     id: number
     timeStart: number
