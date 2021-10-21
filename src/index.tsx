@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import BoardComp from "./BoardComp";
+import Courses from "./components/Courses";
 import reportWebVitals from "./reportWebVitals";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
@@ -10,7 +10,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 ReactDOM.render(
     <React.StrictMode>
         <App />
-        <BoardComp />
+        <Courses />
     </React.StrictMode>,
     document.getElementById("root")
 );

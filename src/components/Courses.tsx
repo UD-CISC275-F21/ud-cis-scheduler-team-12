@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, Col, Row, Container, CardGroup} from "react-bootstrap/";
-import "./BoardComp.css";
+import "../css/courses.css";
+import "../assets/courses.json";
+//import { Course } from "../interfaces/course";
 
 
 
@@ -12,7 +14,7 @@ function BoardComp(): JSX.Element {
                     <Card.Body>
                         <Card.Title>Course 1</Card.Title>
                         <Card.Text>
-                        Course Information 
+                        Course Information
                         </Card.Text>
                     </Card.Body>
 
