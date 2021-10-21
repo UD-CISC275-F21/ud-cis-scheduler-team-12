@@ -5,7 +5,6 @@ import { DummyCourse } from "./DummyCourse";
 
 export function Board() {
     const [courses, setCourses] = useState(Array(9).fill(null));
-    
 
     function renderCourse(i: number) {
         return (
