@@ -7,7 +7,7 @@ export function Board() {
     const [courses, setCourses] = useState(Array(9).fill(null));
     
 
-    function renderCourse(i) {
+    function renderCourse(i: number) {
         return (
             <DummyCourse
                 value={courses[i]}
