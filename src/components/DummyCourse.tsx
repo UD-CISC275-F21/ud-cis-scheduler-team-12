@@ -1,13 +1,14 @@
 
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import React from "react";
+// import ReactDOM from "react-dom";
 
 //Placeholder for a real Course object to be placed on Board
 
-export function DummyCourse({ value, onClick }) {
+export function DummyCourse(): JSX.Element {
     return (
-        <button className="course-card" onClick={onClick}>
-            {value}
-        </button>
+        <div>text</div>
+        // <button className="course-card" onClick={onClick}>
+        //     {value}
+        // </button>
     );
 }
