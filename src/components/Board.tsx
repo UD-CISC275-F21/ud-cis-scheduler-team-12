@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Col, Row, Container} from "react-bootstrap";
-import CourseComp from "./Courses";
+import React from "react";
+// import { Col, Row, Container} from "react-bootstrap";
+// import CourseComp from "./Courses";
 
 
 export function Board(): JSX.Element {
-    const [courses, setCourses] = useState(Array(9).fill(null));
+    // const [courses, setCourses] = useState(Array(9).fill(null));
 
     // function renderCourse(i: number): JSX.Element {
     //     return (
