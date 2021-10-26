@@ -1,4 +1,4 @@
-[
+const courseData =[
     {
         "name": "CISC",
         "id": 100,
@@ -42,4 +42,5 @@
         "schedule": "MWF"
     }
 
-]
+];
+export default courseData;
