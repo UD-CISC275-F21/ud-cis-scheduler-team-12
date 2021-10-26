@@ -1,8 +1,9 @@
 import React from "react";
-import { Card, Accordion } from "react-bootstrap/";
+import { Card, Dropdown, DropdownButton, Col, Row, Container } from "react-bootstrap/";
 import "../css/courses.css";
 import "../assets/courses";
 import { Course } from "../interfaces/course";
+
 
 
 function CourseComp({ course1 }: {
@@ -12,19 +13,24 @@ function CourseComp({ course1 }: {
     return (
         <div>
             <Card className="card">
-                <Accordion className="accordian" defaultActiveKey="0" flush>
-                    <Accordion.Item eventKey="0">
-                        <Accordion.Header></Accordion.Header>
-                        <Accordion.Body>
-                            remove course
-                        </Accordion.Body>
-                    </Accordion.Item>
-                </Accordion>
-                <Card.Body>
-                    <Card.Title>{course1.name}</Card.Title>
-                    <Card.Text>
-                    Course ID: {course1.id}
-                    </Card.Text>
+                <Container>
+                    <Row>
+                        <Col>
+                            <Card.Title>{course1.name}: {course1.id}</Card.Title>
+                        </Col>
+                        <Col className="column-dropdown">
+                            <Card.Header className="card-header">
+                                <DropdownButton id="dropdown-button" title="" className="dropdown-button">
+                                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                </DropdownButton>
+                            </Card.Header>
+                        </Col>
+                        
+                    </Row>
+                </Container>
+                <Card.Body className="card-body">
 
                     <Card.Text>
                     From: {course1.timeStart} To: {course1.timeEnd}
