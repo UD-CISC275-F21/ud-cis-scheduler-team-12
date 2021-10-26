@@ -14,7 +14,7 @@ code {
 }
 
 
-.cardGroup {
+.card {
   background-color: #282c34;
 
   display: flex;
@@ -28,4 +28,11 @@ code {
 
 .container {
   background-color: #282c34;
+}
+
+.accordian {
+  align-items:flex-end;
+  justify-content: right;
+  padding-left: 62%;
+
 }

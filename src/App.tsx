@@ -11,8 +11,6 @@ function App(): JSX.Element {
                 UD CIS Scheduler
                 <h1>CISC 275 Final Project</h1>
                 <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
-                {courseData[1].name}
-
                 <CourseComp course1={courseData[1]} ></CourseComp>
             </header>
 
