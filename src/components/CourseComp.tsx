@@ -12,6 +12,14 @@ function CourseComp({ course1 }: {
     return (
         <div>
             <Card className="card">
+                <Accordion className="accordian" defaultActiveKey="0" flush>
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header></Accordion.Header>
+                        <Accordion.Body>
+                            remove course
+                        </Accordion.Body>
+                    </Accordion.Item>
+                </Accordion>
                 <Card.Body>
                     <Card.Title>{course1.name}</Card.Title>
                     <Card.Text>
