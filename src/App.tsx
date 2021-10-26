@@ -1,8 +1,8 @@
 import React from "react";
 import "./css/App.css";
-import ClassList from "./assets/courses.json";
-
-import CourseComp from "./components/Courses";
+// import courseData from "./assets/courses.js";
+// import CourseComp from "./components/CourseComp";
+import { Board } from "./components/Board";
 
 
 function App(): JSX.Element {
@@ -12,8 +12,8 @@ function App(): JSX.Element {
                 UD CIS Scheduler
                 <h1>CISC 275 Final Project</h1>
                 <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
-                <CourseComp
-                    course1={ClassList[0]}></CourseComp>
+                {/* <CourseComp course1={courseData[1]} ></CourseComp> */}
+                <Board></Board>
             </header>
 
             
