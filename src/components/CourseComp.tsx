@@ -10,16 +10,24 @@ function CourseComp({ course1 }: {
     }):  JSX.Element {
     
     return (
-        <Card className="card">
-            <Card.Body>
-                <Card.Title>{ course1.name }</Card.Title>
-                <Card.Text>
-                Course ID: {course1.id}
-                From: {course1.timeStart} To: {course1.timeEnd}
-                Days: {course1.schedule}
-                </Card.Text>
-            </Card.Body>
-        </Card>
+        <div>
+            <Card className="card">
+                <Card.Body>
+                    <Card.Title>{course1.name}</Card.Title>
+                    <Card.Text>
+                    Course ID: {course1.id}
+                    </Card.Text>
+
+                    <Card.Text>
+                    From: {course1.timeStart} To: {course1.timeEnd}
+                    </Card.Text>
+
+                    <Card.Text>
+                    Days: {course1.schedule}
+                    </Card.Text>
+                </Card.Body>
+            </Card>
+        </div>
     );
 }
 
