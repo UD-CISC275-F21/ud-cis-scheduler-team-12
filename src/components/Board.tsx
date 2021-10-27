@@ -18,8 +18,8 @@ export function Board():  JSX.Element {
 
     return (
         <div>
+            <h2>Courses</h2>
             <Container>
-                <div className="label-board"><h4>Courses</h4></div>
                 <Row className="course-row-1">
                     <Col>
                         {/* {renderCourse(0)}
