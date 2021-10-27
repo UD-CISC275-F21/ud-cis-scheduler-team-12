@@ -16,7 +16,7 @@ function CourseComp({ course1 }: {
                 <Container>
                     <Row>
                         <Col>
-                            <Card.Title>{course1.name}: {course1.id}</Card.Title>
+                            <Card.Title>{course1.name}</Card.Title>
                         </Col>
                         <Col className="column-dropdown">
                             <Card.Header className="card-header">

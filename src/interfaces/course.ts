@@ -1,6 +1,6 @@
 export interface Course {
-    name: string
     id: number
+    name: string
     timeStart: number
     timeEnd: number
     schedule: string
