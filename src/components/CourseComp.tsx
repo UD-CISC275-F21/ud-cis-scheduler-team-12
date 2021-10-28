@@ -3,42 +3,52 @@ import { Card, Dropdown, DropdownButton, Col, Row, Container } from "react-boots
 import "../css/courses.css";
 import "../assets/courses";
 import { Course } from "../interfaces/course";
+import { MdDeleteForever } from "react-icons/md";
 
 
-
-function CourseComp({ course1 }: {
-    course1: Course 
-    }):  JSX.Element {
+function CourseComp({ course, setNumberOfCourses, numberOfCourses }: {
+    course: Course, setNumberOfCourses: (s: number) => void, numberOfCourses: number
+}):  JSX.Element {
     
+    function removeCourse() {
+        numberOfCourses === 0 ? setNumberOfCourses(0) : setNumberOfCourses(numberOfCourses-1);
+    }
+
+
     return (
         <div>
-            <Card className="card">
+            <Card className="card" style={{ width: "15rem" }}>
                 <Container>
                     <Row>
                         <Col>
-                            <Card.Title>{course1.name}</Card.Title>
+                            <Card.Title>{course.name}</Card.Title>
                         </Col>
-                        <Col className="column-dropdown">
-                            <Card.Header className="card-header">
-                                <DropdownButton id="dropdown-button" title="" className="dropdown-button">
-                                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                                </DropdownButton>
-                            </Card.Header>
-                        </Col>
-                        
+                        <Col>
+                            <button className="delete-button" onClick={removeCourse}>
+                                <MdDeleteForever></MdDeleteForever></button>
+                        </Col>                        
+
                     </Row>
                 </Container>
                 <Card.Body className="card-body">
 
                     <Card.Text>
-                    From: {course1.timeStart} To: {course1.timeEnd}
+                    From: {course.timeStart} To: {course.timeEnd}
                     </Card.Text>
 
                     <Card.Text>
-                    Days: {course1.schedule}
+                    Days: {course.schedule}
                     </Card.Text>
+                    <Col className="column-dropdown">
+                        <Card.Header className="card-header">
+                            <DropdownButton id="dropdown-button" title="" className="dropdown-button">
+                                <button onClick={removeCourse}>Remove Course</button>
+                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            </DropdownButton>
+                        </Card.Header>
+                    </Col>
                 </Card.Body>
             </Card>
         </div>
