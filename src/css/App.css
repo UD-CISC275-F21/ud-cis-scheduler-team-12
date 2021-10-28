@@ -17,6 +17,8 @@
 .cell-main {
   grid-area: main;
   background: green;
+  border-radius:25px;
+  border: 3px solid;
 }
 
 .cell-left {

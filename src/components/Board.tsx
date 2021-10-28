@@ -5,6 +5,9 @@ import CourseComp from "./CourseComp";
 import ClassList from "../assets/courses.js";
 import ClearSemesterButton from "./ClearSemesterButton";
 
+import "../css/board.css";
+
+
 
 export function Board({ setNumberOfCourses, numberOfCourses, courseID }: {
     setNumberOfCourses: (s: number) => void,  numberOfCourses: number, courseID: number
