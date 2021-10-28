@@ -3,15 +3,18 @@ import React from "react";
 import { Col, Row, Container } from "react-bootstrap";
 import CourseComp from "./CourseComp";
 import ClassList from "../assets/courses.js";
+import ClearSemesterButton from "./ClearSemesterButton";
 
 
-export function Board():  JSX.Element {
+export function Board({ setNumberOfCourses, numberOfCourses, courseID }: {
+    setNumberOfCourses: (s: number) => void,  numberOfCourses: number, courseID: number
+}):  JSX.Element {
     // const [courses, setCourses] = useState(Array(9).fill(null));
 
     // function renderCourse({ i }: { i: number }):  JSX.Element {
     //     return (
     //         <CourseComp
-    //             course1={ClassList[i]}
+    //             course1={ClassList[courseID]}
     //         ></CourseComp>
     //     );
     // }
@@ -22,42 +25,52 @@ export function Board():  JSX.Element {
             <Container>
                 <Row className="course-row-1">
                     <Col>
-                        {/* {renderCourse(0)}
-                        {renderCourse(1)}
-                        {renderCourse(2)} */}
-                        <CourseComp
-                            course1={ClassList[0]}
-                        ></CourseComp>
+                        { numberOfCourses > 0 && <CourseComp
+                            course={ClassList[courseID]}
+                            setNumberOfCourses={setNumberOfCourses}
+                            numberOfCourses={numberOfCourses}
+                        ></CourseComp> }
                     </Col>
                     <Col>
-                        <CourseComp
-                            course1={ClassList[1]}
-                        ></CourseComp>
+                        { numberOfCourses > 1 && <CourseComp
+                            course={ClassList[courseID]}
+                            setNumberOfCourses={setNumberOfCourses}
+                            numberOfCourses={numberOfCourses}
+                        ></CourseComp> }
                     </Col>
                     <Col>
-                        <CourseComp
-                            course1={ClassList[2]}
-                        ></CourseComp>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <CourseComp
-                            course1={ClassList[3]}
-                        ></CourseComp>
+                        { numberOfCourses > 2 && <CourseComp
+                            course={ClassList[courseID]}
+                            setNumberOfCourses={setNumberOfCourses}
+                            numberOfCourses={numberOfCourses}
+                        ></CourseComp> }
                     </Col>
                     <Col>
-                        <CourseComp
-                            course1={ClassList[4]}
-                        ></CourseComp>
+                        { numberOfCourses > 3 && <CourseComp
+                            course={ClassList[courseID]}
+                            setNumberOfCourses={setNumberOfCourses}
+                            numberOfCourses={numberOfCourses}
+                        ></CourseComp> }
                     </Col>
                     <Col>
-                        <CourseComp
-                            course1={ClassList[5]}
-                        ></CourseComp>
+                        { numberOfCourses > 4 && <CourseComp
+                            course={ClassList[courseID]}
+                            setNumberOfCourses={setNumberOfCourses}
+                            numberOfCourses={numberOfCourses}
+                        ></CourseComp> }
+                    </Col>
+                    <Col>
+                        { numberOfCourses > 5 && <CourseComp
+                            course={ClassList[courseID]}
+                            setNumberOfCourses={setNumberOfCourses}
+                            numberOfCourses={numberOfCourses}
+                        ></CourseComp> } 
                     </Col>
                 </Row>
             </Container>
+            { numberOfCourses > 0 && <ClearSemesterButton
+                setNumberOfCourses={setNumberOfCourses}
+            ></ClearSemesterButton> }
         </div>
     );
 }
