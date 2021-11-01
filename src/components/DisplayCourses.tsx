@@ -1,7 +1,5 @@
 import React from "react";
 import courseData from "../assets/courses";
-
-
 import { MdAdd } from "react-icons/md";
 
 export default function DisplayCourses(): JSX.Element {
