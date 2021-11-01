@@ -24,6 +24,7 @@ export function Board({ setNumberOfCourses, numberOfCourses, courseID }: {
 
     return (
         <div>
+            
             <h2>Courses</h2>
             <Container>
                 <Row className="course-row-1">
