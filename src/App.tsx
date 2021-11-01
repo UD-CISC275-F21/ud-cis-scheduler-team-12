@@ -4,6 +4,7 @@ import "./css/App.css";
 import { Board } from "./components/Board";
 import DisplayCourses from "./components/DisplayCourses";
 import SideMenu from "./components/SideMenu";
+import Calender from "./components/Calender";
 
 
 function App(): JSX.Element {
@@ -28,6 +29,9 @@ function App(): JSX.Element {
                     numberOfCourses={numberOfCourses}
                     courseID={courseID}
                 ></Board>
+
+                <Calender></Calender>
+            
             </section>
             <section className="cell-right">
                 <p>Course Search</p>
@@ -39,7 +43,6 @@ function App(): JSX.Element {
                 ></DisplayCourses>                
             </section>
             
-
         </div>
     );
 }
