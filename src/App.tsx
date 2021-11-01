@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css/App.css";
 
-import { Nav } from "react-bootstrap/";
 import { Board } from "./components/Board";
 import DisplayCourses from "./components/DisplayCourses";
-
+import SideMenu from "./components/SideMenu";
 
 
 function App(): JSX.Element {
+    const [courseID, setCourseID] = useState<number>(0);
+    const [numberOfCourses, setNumberOfCourses] = useState<number>(0);
+
+
     return (
         <div className="App">
             <header className="App-header">
@@ -17,21 +20,23 @@ function App(): JSX.Element {
             </header>
             <section className="cell-left">
                 <p>Menu</p>
-                <Nav justify variant="pills" className="flex-column" defaultActiveKey="/home">
-                    <Nav.Item>
-                        <Nav.Link eventKey="link-1">Nav1</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="link-2">Nav2</Nav.Link>
-                    </Nav.Item>
-                </Nav>
+                <SideMenu></SideMenu>
             </section>
             <section className="cell-main">
-                <Board></Board>
+                <Board
+                    setNumberOfCourses={setNumberOfCourses}
+                    numberOfCourses={numberOfCourses}
+                    courseID={courseID}
+                ></Board>
             </section>
             <section className="cell-right">
                 <p>Course Search</p>
-                <DisplayCourses></DisplayCourses>                
+                <DisplayCourses
+                    setCourseID={setCourseID}
+                    setNumberOfCourses={setNumberOfCourses}
+                    courseID={courseID}
+                    numberOfCourses={numberOfCourses}
+                ></DisplayCourses>                
             </section>
             
 

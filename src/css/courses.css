@@ -17,6 +17,26 @@ code {
 .card {
   color: black;
   background-color: #ffffff;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(.95);
+}
+.delete-button {
+  position: absolute;
+  right: -10px;
+  visibility: hidden;
+  transition: 0.3s;
+  background: transparent;
+  border: 0px;
+}
+.card:hover .delete-button {
+  right: 0px;
+  transform: scale(1.75);
+  visibility: visible;
+}
+.delete-button:hover {
+  color: crimson;
 }
 
 .card-body {
