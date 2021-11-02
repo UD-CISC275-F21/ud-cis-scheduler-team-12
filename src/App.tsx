@@ -10,7 +10,7 @@ import Calender from "./components/Calender";
 function App(): JSX.Element {
     const [courseID, setCourseID] = useState<number>(0);
     const [numberOfCourses, setNumberOfCourses] = useState<number>(0);
-
+    const [visibleSelect, setVisibleSelect] = useState<string | null>("1");
 
     return (
         <div className="App">
@@ -21,16 +21,18 @@ function App(): JSX.Element {
             </header>
             <section className="cell-left">
                 <p>Menu</p>
-                <SideMenu></SideMenu>
+                <SideMenu
+                    setVisibleSelect={setVisibleSelect}
+                ></SideMenu>
             </section>
             <section className="cell-main">
-                <Board
+                { visibleSelect === "1" && <Board
                     setNumberOfCourses={setNumberOfCourses}
                     numberOfCourses={numberOfCourses}
                     courseID={courseID}
-                ></Board>
+                ></Board> }
 
-                <Calender></Calender>
+                { visibleSelect === "2" && <Calender></Calender> }
             
             </section>
             <section className="cell-right">
