@@ -18,6 +18,7 @@ export function Calender():  JSX.Element {
     return (
         <div>
             <Container fluid>
+              
                 <h2>Calender</h2>
                 <Container className="cal-header">
                     <Row className="row justify-content-evenly no-gutters">
@@ -41,6 +42,7 @@ export function Calender():  JSX.Element {
                         </Col>
                     </Row>
                 </Container>
+
             </Container>    
         </div>
     );
