@@ -4,4 +4,5 @@ export interface Course {
     timeStart: number
     timeEnd: number
     schedule: string
+    description: string
 }

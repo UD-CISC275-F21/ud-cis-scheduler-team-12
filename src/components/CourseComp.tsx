@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Dropdown, DropdownButton, Col, Row, Container } from "react-bootstrap/";
+import { Card, Dropdown, DropdownButton, Col, Row, Container, Accordion } from "react-bootstrap/";
 import "../css/courses.css";
 import "../assets/courses";
 import { Course } from "../interfaces/course";
@@ -48,6 +48,16 @@ function CourseComp({ course, setNumberOfCourses, numberOfCourses }: {
                                 <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
                             </DropdownButton>
                         </Card.Header>
+                    </Col>
+                    <Col className="card-accordion">
+                        <Accordion>
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header>Details</Accordion.Header>
+                                <Accordion.Body>
+                                    Course description: {course.description}
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
                     </Col>
                 </Card.Body>
             </Card>
