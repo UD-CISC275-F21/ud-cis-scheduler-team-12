@@ -4,15 +4,19 @@ import "../css/courses.css";
 import "../assets/courses";
 import { Course } from "../interfaces/course";
 import { MdDeleteForever } from "react-icons/md";
+import courseData from "../assets/courses";
 
 
-function CourseComp({ course, setNumberOfCourses, numberOfCourses }: {
-    course: Course, setNumberOfCourses: (s: number) => void, numberOfCourses: number
+function CourseComp({ course, setNumberOfCourses, numberOfCourses, setClassList, classList }: {
+    course: Course, setNumberOfCourses: (s: number) => void, numberOfCourses: number,
+    setClassList: (l: Course[]) => void, classList: Course[]
 }):  JSX.Element {
     
-    function removeCourse() {
+    function removeCourse(id: number) {
         numberOfCourses === 0 ? setNumberOfCourses(0) : setNumberOfCourses(numberOfCourses-1);
+        setClassList(classList.filter(classList => classList !== courseData[id])); // Removing course based on course id
     }
+
 
 
     return (
@@ -24,7 +28,7 @@ function CourseComp({ course, setNumberOfCourses, numberOfCourses }: {
                             <Card.Title>{course.name}</Card.Title>
                         </Col>
                         <Col>
-                            <button className="delete-button" onClick={removeCourse}>
+                            <button className="delete-button" onClick={() => removeCourse(course.id)}>
                                 <MdDeleteForever></MdDeleteForever></button>
                         </Col>                        
 
@@ -42,7 +46,6 @@ function CourseComp({ course, setNumberOfCourses, numberOfCourses }: {
                     <Col className="column-dropdown">
                         <Card.Header className="card-header">
                             <DropdownButton id="dropdown-button" title="" className="dropdown-button">
-                                <button onClick={removeCourse}>Remove Course</button>
                                 <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                                 <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
                                 <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
