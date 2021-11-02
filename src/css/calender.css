@@ -1,10 +1,37 @@
-.calender-row {
-    margin: 30px 5px 50px 5px;
+
+.cal-container {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    padding-top:0px;
+    height: 100%;
+    
+    display:flex;
+    justify-content: center;
 }
 
-.bruh {
-    border-color: white;
-    border-style: solid;
-    background-color: white;
+.cal-day {
+    display:flex;
+    margin:auto;
+    justify-content: space-between;
+    text-align: center;
+    
+}
+
+
+.cal-background {
+    font-size: smaller;
     color: black;
+    background-color: white;
+    column-width: 100%;
+    min-width: 100%;
+    height:300px;
+}
+
+.cal-hours {
+    text-align: left;
+    margin: auto;
+    position: relative;
+    display:flex;
+    justify-content: center;
 }
