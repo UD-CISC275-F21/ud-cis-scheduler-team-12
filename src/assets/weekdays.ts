@@ -1,23 +1,23 @@
 export const Weekdays = [
     {   
         id:0,
-        "name":"  Monday " 
+        "name":"Monday|" 
     },
     {   
         id:1,
-        "name":"  Tuesday " 
+        "name":"Tuesday|" 
     },
     {   
         id:2,
-        "name":"  Wednesday " 
+        "name":"Wednesday|" 
     },
     {   
         id:3,
-        "name":"  Thursday "
+        "name":"Thursday|"
     },
     {   
         id:4,
-        "name":"  Friday  " 
+        "name":"Friday  " 
     }
 ];
 
