@@ -1,14 +1,19 @@
 import React from "react";
 import { Nav } from "react-bootstrap/";
 
-export default function SideMenu(): JSX.Element {
+export default function SideMenu( {setVisibleSelect} : {
+    setVisibleSelect: (s: string | null) => void
+}): JSX.Element {
+
+    const handleSelect = (eventKey: string | null) => setVisibleSelect(eventKey);
+
     return (
-        <Nav justify variant="pills" className="flex-column" defaultActiveKey="/home">
+        <Nav justify variant="pills" className="flex-column" defaultActiveKey="1" onSelect={handleSelect}>
             <Nav.Item>
-                <Nav.Link eventKey="link-1">Nav1</Nav.Link>
+                <Nav.Link eventKey="1">Semester View</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="link-2">Nav2</Nav.Link>
+                <Nav.Link eventKey="2">Calendar</Nav.Link>
             </Nav.Item>
         </Nav>
     );
