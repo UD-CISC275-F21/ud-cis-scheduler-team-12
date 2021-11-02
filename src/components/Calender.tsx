@@ -1,7 +1,7 @@
 import React from "react";
-import { Col, Row, Container} from "react-bootstrap";
+//import { Col, Row, Container} from "react-bootstrap";
 import "../css/calender.css";
-import { Weekday, Date } from "../interfaces/weekday";
+//import { Weekday, Date } from "../interfaces/weekday";
 import Weekdays from "../assets/weekdays";
 
 /**
