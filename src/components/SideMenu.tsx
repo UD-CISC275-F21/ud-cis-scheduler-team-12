@@ -13,8 +13,12 @@ export default function SideMenu( {setVisibleSelect} : {
                 <Nav.Link eventKey="1">Semester View</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="2">Calendar</Nav.Link>
+                <Nav.Link eventKey="2">Degree Plan View</Nav.Link>
             </Nav.Item>
+            <Nav.Item>
+                <Nav.Link eventKey="3">Calendar View</Nav.Link>
+            </Nav.Item>
+  
         </Nav>
     );
 }

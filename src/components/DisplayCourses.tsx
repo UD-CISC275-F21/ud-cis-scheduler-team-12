@@ -21,6 +21,7 @@ export default function DisplayCourses({ setCourseID , setNumberOfCourses, setCl
 
     return (
         <div>
+            <p>Course Search</p>
             {courseData.map(courseData => 
                 <p key={courseData.id}>{courseData.name}
                     <button onClick={() => addCourse(courseData.id)}>
