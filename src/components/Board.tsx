@@ -4,7 +4,6 @@ import { Col, Row, Container } from "react-bootstrap";
 import CourseComp from "./CourseComp";
 import ClassList from "../assets/courses.js";
 import ClearSemesterButton from "./ClearSemesterButton";
-
 import "../css/board.css";
 
 
@@ -13,7 +12,6 @@ export function Board({ setNumberOfCourses, numberOfCourses, courseID }: {
     setNumberOfCourses: (s: number) => void,  numberOfCourses: number, courseID: number
 }):  JSX.Element {
     // const [courses, setCourses] = useState(Array(9).fill(null));
-
     // function renderCourse({ i }: { i: number }):  JSX.Element {
     //     return (
     //         <CourseComp
