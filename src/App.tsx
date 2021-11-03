@@ -19,7 +19,7 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">
                 
-                UD Course Scheduler
+                UD CIS Scheduler
                 <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
             </header>
             <section className="cell-left">
