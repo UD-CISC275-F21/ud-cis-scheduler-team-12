@@ -7,7 +7,7 @@ import { Board } from "./components/Board";
 import DisplayCourses from "./components/DisplayCourses";
 import SideMenu from "./components/SideMenu";
 import Calender from "./components/Calender";
-
+import DegreePlan from "./components/DegreePlan";
 
 function App(): JSX.Element {
     const [courseID, setCourseID] = useState<number>(0);
@@ -18,8 +18,8 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
+                
                 UD CIS Scheduler
-                <h1>CISC 275 Final Project</h1>
                 <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
             </header>
             <section className="cell-left">
@@ -36,22 +36,28 @@ function App(): JSX.Element {
                     courseID={courseID}
                     setClassList={setClassList}
                 ></Board> }
+                
+                { visibleSelect === "2" && <DegreePlan
+                    classList={classList}
+                    setNumberOfCourses={setNumberOfCourses}
+                    numberOfCourses={numberOfCourses}
+                    courseID={courseID}
+                    setClassList={setClassList}></DegreePlan> }
 
-                { visibleSelect === "2" && <Calender></Calender> }
-            
+                { visibleSelect === "3" && <Calender></Calender> }
+
+                
             </section>
             <section className="cell-right">
-                <p>Course Search</p>
-                <DisplayCourses
+                { visibleSelect === "1" &&  <DisplayCourses
                     setClassList={setClassList}
                     setCourseID={setCourseID}
                     setNumberOfCourses={setNumberOfCourses}
                     classList={classList}
                     courseID={courseID}
                     numberOfCourses={numberOfCourses}
-                ></DisplayCourses>                
+                ></DisplayCourses> }                
             </section>
-            
         </div>
     );
 }
