@@ -39,10 +39,7 @@ function App(): JSX.Element {
                 
                 { visibleSelect === "2" && <DegreePlan
                     classList={classList}
-                    setNumberOfCourses={setNumberOfCourses}
-                    numberOfCourses={numberOfCourses}
-                    courseID={courseID}
-                    setClassList={setClassList}></DegreePlan> }
+                ></DegreePlan> }
 
                 { visibleSelect === "3" && <Calender></Calender> }
 

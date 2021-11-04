@@ -1,9 +1,11 @@
 import React from "react";
 import { Row, Col, Container} from "react-bootstrap";
 import "../css/calender.css";
-import CourseComp from "./CourseComp";
-import ClearSemesterButton from "./ClearSemesterButton";
+// import CourseComp from "./CourseComp";
+import SemesterComp from "./SemesterComp";
+// import ClearSemesterButton from "./ClearSemesterButton";
 import { Course } from "../interfaces/course";
+
 
 /**
  * 
@@ -13,12 +15,16 @@ import { Course } from "../interfaces/course";
 
  * at symbol returns 
  */
-export function DegreePlan({ setNumberOfCourses, numberOfCourses, classList, setClassList }: {
-    setNumberOfCourses: (s: number) => void,  numberOfCourses: number, courseID: number,
-    setClassList: (l: Course[]) => void, classList: Course[]
+// export function DegreePlan({ setNumberOfCourses, numberOfCourses, classList, setClassList }: {
+//     setNumberOfCourses: (s: number) => void,  numberOfCourses: number, courseID: number,
+//     setClassList: (l: Course[]) => void, classList: Course[]
+//     }):  JSX.Element {
+
+export function DegreePlan({ classList}: {
+    classList: Course[]
     }):  JSX.Element {
 
-    const semesterListToPrint = classList;
+    // const classListToPrint = classList;
     return (
         <div>
             
@@ -27,23 +33,24 @@ export function DegreePlan({ setNumberOfCourses, numberOfCourses, classList, set
             <div>
                 <Container>
                     <Row>
-                        {semesterListToPrint.map(semesterListToPrint =>
-                            <Col key={semesterListToPrint.id}>
-                                <CourseComp
-                                    course={semesterListToPrint}
-                                    setNumberOfCourses={setNumberOfCourses}
-                                    numberOfCourses={numberOfCourses}
-                                    setClassList={setClassList}
-                                    classList={classList}
-                                ></CourseComp>
+                        {/* {classListToPrint.map(classListToPrint =>
+                            <Col key={classListToPrint.id}>
+                                <SemesterComp
+                                    courseList={classListToPrint}
+                                ></SemesterComp>
                             </Col>
-                        )}
+                        )} */}
+                        <Col>
+                            <SemesterComp
+                                courseList={classList}
+                            ></SemesterComp>
+                        </Col>
                     </Row>
                 </Container>
-                { numberOfCourses > 0 && <ClearSemesterButton
+                {/* { numberOfCourses > 0 && <ClearSemesterButton
                     setNumberOfCourses={setNumberOfCourses}
                     setClassList={setClassList}
-                ></ClearSemesterButton> }
+                ></ClearSemesterButton> } */}
             </div>
 
         </div>
