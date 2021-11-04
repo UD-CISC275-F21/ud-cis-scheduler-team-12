@@ -1,5 +1,5 @@
-import React from "react";
-import { Col, Row, Container } from "react-bootstrap";
+import React, { useState } from "react";
+import { Col, Row, Container, ToggleButtonGroup, ToggleButton } from "react-bootstrap";
 import CourseComp from "./CourseComp";
 import ClearSemesterButton from "./ClearSemesterButton";
 import "../css/board.css";
@@ -7,29 +7,82 @@ import { Course } from "../interfaces/course";
 
 
 
-export function Board({ setNumberOfCourses, numberOfCourses, classList, setClassList }: {
-    setNumberOfCourses: (s: number) => void,  numberOfCourses: number, courseID: number,
-    setClassList: (l: Course[]) => void, classList: Course[]
+export function Board({ setNumberOfCourses, numberOfCourses, classList, setClassList, setSemesterSelect, semesterSelect }: {
+    setNumberOfCourses: (s: number) => void,  numberOfCourses: number,
+    setClassList: (l: Course[]) => void, classList: Course[],
+    setSemesterSelect: (s: string | null) => void, semesterSelect: string | null
 }):  JSX.Element {
 
-    // const [courses, setCourses] = useState(Array(9).fill(null));
-    // function renderCourse({ i }: { i: number }):  JSX.Element {
-    //     return (
-    //         <CourseComp
-    //             course1={ClassList[courseID]}
-    //         ></CourseComp>
-    //     );
-    // }
-
-
+    
     // const list variable to map out classList useState variable
     const classListToPrint = classList;
 
+    const [semesterHeader, setSemesterHeader] = useState<string>("Fall 1");
+
+    function handleSelect (val: string) {
+        setSemesterSelect(""+val);
+        console.log(val, ""+val, typeof val, val==="1");
+        switch(val+"") {
+        case "1":
+            console.log("WHAT");
+            setSemesterHeader("Fall 1");
+            return semesterHeader;
+        case "1.2":
+            console.log("KEY");
+            setSemesterHeader("Spring 1");
+            return semesterHeader;
+        case "1.3":
+            setSemesterHeader("Fall 2");
+            return semesterHeader;
+        case "1.4":
+            setSemesterHeader("Spring 2");
+            return semesterHeader;
+        case "1.5":
+            setSemesterHeader("Fall 3");
+            return semesterHeader;
+        case "1.6":
+            setSemesterHeader("Spring 3");
+            return semesterHeader;
+        case "1.7":
+            setSemesterHeader("Fall 4");
+            return semesterHeader;
+        case "1.8":
+            setSemesterHeader("Spring 4");
+            return semesterHeader;
+        }
+    }
 
     return (
         <div>
-            
-            <h2>Semester View</h2>
+            <div>
+                <h2>Semester View - {semesterHeader}</h2>
+                <ToggleButtonGroup type="radio" name="options" value={semesterSelect} onChange={handleSelect}>
+                    <ToggleButton id="tbg-radio-1" value={1}>
+                    Fall 1
+                    </ToggleButton>
+                    <ToggleButton id="tbg-radio-2" value={1.2}>
+                    Spring 1
+                    </ToggleButton>
+                    <ToggleButton id="tbg-radio-3" value={1.3}>
+                    Fall 2
+                    </ToggleButton>
+                    <ToggleButton id="tbg-radio-4" value={1.4}>
+                    Spring 2
+                    </ToggleButton>
+                    <ToggleButton id="tbg-radio-5" value={1.5}>
+                    Fall 3
+                    </ToggleButton>
+                    <ToggleButton id="tbg-radio-6" value={1.6}>
+                    Spring 3
+                    </ToggleButton>
+                    <ToggleButton id="tbg-radio-7" value={1.7}>
+                    Fall 4
+                    </ToggleButton>
+                    <ToggleButton id="tbg-radio-8" value={1.8}>
+                    Spring 4
+                    </ToggleButton>
+                </ToggleButtonGroup>
+            </div>
 
             <div>
                 <Container>

@@ -1,11 +1,11 @@
 import React from "react";
 import { Nav } from "react-bootstrap/";
 
-export default function SideMenu( {setVisibleSelect} : {
-    setVisibleSelect: (s: string | null) => void
+export default function SideMenu( {setVisibleView} : {
+    setVisibleView: (s: string | null) => void
 }): JSX.Element {
 
-    const handleSelect = (eventKey: string | null) => setVisibleSelect(eventKey);
+    const handleSelect = (eventKey: string | null) => setVisibleView(eventKey);
 
     return (
         <Nav justify variant="pills" className="flex-column" defaultActiveKey="1" onSelect={handleSelect}>

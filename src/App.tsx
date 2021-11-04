@@ -12,41 +12,48 @@ import DegreePlan from "./components/DegreePlan";
 function App(): JSX.Element {
     const [courseID, setCourseID] = useState<number>(0);
     const [numberOfCourses, setNumberOfCourses] = useState<number>(0);
-    const [visibleSelect, setVisibleSelect] = useState<string | null>("1");
+    const [visibleView, setVisibleView] = useState<string | null>("1");
+    const [semesterSelect, setSemesterSelect] = useState<string | null>("1");
     const [classList, setClassList] = useState<Course[]>([]); // Creating a list to store selected courses in dynamically
+    const [classList1, setClassList1] = useState<Course[]>([]); // Creating a list to store selected courses in dynamically
+    
+    const SEMESTER_MAP: Record<string, Course[]> = {
+        "1": classList,
+        "1.2": classList1,
+    };
 
     return (
         <div className="App">
             <header className="App-header">
-                
                 UD CIS Scheduler
                 <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
             </header>
             <section className="cell-left">
                 <p>Menu</p>
                 <SideMenu
-                    setVisibleSelect={setVisibleSelect}
+                    setVisibleView={setVisibleView}
                 ></SideMenu>
             </section>
             <section className="cell-main">
-                { visibleSelect === "1" && <Board
-                    classList={classList}
+                { visibleView === "1" && <Board
+                    classList={SEMESTER_MAP[semesterSelect as string]}
+                    setSemesterSelect={setSemesterSelect}
+                    semesterSelect={semesterSelect}
                     setNumberOfCourses={setNumberOfCourses}
                     numberOfCourses={numberOfCourses}
-                    courseID={courseID}
                     setClassList={setClassList}
                 ></Board> }
                 
-                { visibleSelect === "2" && <DegreePlan
+                { visibleView === "2" && <DegreePlan
                     classList={classList}
                 ></DegreePlan> }
 
-                { visibleSelect === "3" && <Calender></Calender> }
+                { visibleView === "3" && <Calender></Calender> }
 
                 
             </section>
             <section className="cell-right">
-                { visibleSelect === "1" &&  <DisplayCourses
+                { visibleView === "1" &&  <DisplayCourses
                     setClassList={setClassList}
                     setCourseID={setCourseID}
                     setNumberOfCourses={setNumberOfCourses}
