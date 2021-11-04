@@ -64,7 +64,7 @@ function CourseComp({ course, setNumberOfCourses, numberOfCourses, setClassList,
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Details</Accordion.Header>
                                 <Accordion.Body>
-                                    <button className="delete-button" onClick={() => editDescription()}>
+                                    <button className="edit-button" onClick={() => editDescription()}>
                                         <GrEdit></GrEdit></button>
                                     Course description: {course.description}
                                 </Accordion.Body>

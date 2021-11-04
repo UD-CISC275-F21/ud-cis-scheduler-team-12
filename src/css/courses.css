@@ -39,6 +39,23 @@ code {
   color: crimson;
 }
 
+.edit-button {
+  position: absolute;
+  right: -10px;
+  visibility: hidden;
+  transition: 0.3s;
+  background: transparent;
+  border: 0px;
+}
+.card:hover .edit-button {
+  right: 0px;
+  transform: scale(1.75);
+  visibility: visible;
+}
+.edit-button:hover {
+  color: rgb(64, 102, 7);
+}
+
 .card-body {
   background-color: #ffffff;
   display: flex;
