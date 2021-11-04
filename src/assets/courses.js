@@ -46,6 +46,14 @@ const courseData =[
         "timeEnd": 1800,
         "schedule": "MWF",
         "description": "This is English 100, section 10."
+    },
+    {
+        "id": 6,
+        "name": "CPEG 100",
+        "timeStart": 1700,
+        "timeEnd": 1800,
+        "schedule": "TR",
+        "description": "This is Compueter Engineering 100, section 10."
     }
 
 ];
