@@ -24,11 +24,9 @@ export function Board({ setNumberOfCourses, numberOfCourses, classList, setClass
         console.log(val, ""+val, typeof val, val==="1");
         switch(val+"") {
         case "1":
-            console.log("WHAT");
             setSemesterHeader("Fall 1");
             return semesterHeader;
         case "1.2":
-            console.log("KEY");
             setSemesterHeader("Spring 1");
             return semesterHeader;
         case "1.3":

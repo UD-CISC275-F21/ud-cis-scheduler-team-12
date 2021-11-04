@@ -10,13 +10,17 @@ import Calender from "./components/Calender";
 import DegreePlan from "./components/DegreePlan";
 
 function App(): JSX.Element {
-    const [courseID, setCourseID] = useState<number>(0);
     const [numberOfCourses, setNumberOfCourses] = useState<number>(0);
     const [visibleView, setVisibleView] = useState<string | null>("1");
     const [semesterSelect, setSemesterSelect] = useState<string | null>("1");
     const [classList, setClassList] = useState<Course[]>([]); // Creating a list to store selected courses in dynamically
     const [classList1, setClassList1] = useState<Course[]>([]); // Creating a list to store selected courses in dynamically
     
+    const COURSES_MAP: Record<string, Course[]> = {
+        "1": [],
+        "1.2": []
+    };
+
     const SEMESTER_MAP: Record<string, Course[]> = {
         "1": classList,
         "1.2": classList1,
@@ -55,10 +59,8 @@ function App(): JSX.Element {
             <section className="cell-right">
                 { visibleView === "1" &&  <DisplayCourses
                     setClassList={setClassList}
-                    setCourseID={setCourseID}
                     setNumberOfCourses={setNumberOfCourses}
                     classList={classList}
-                    courseID={courseID}
                     numberOfCourses={numberOfCourses}
                 ></DisplayCourses> }                
             </section>

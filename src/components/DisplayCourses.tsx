@@ -3,8 +3,7 @@ import courseData from "../assets/courses";
 import { MdAdd } from "react-icons/md";
 import { Course } from "../interfaces/course";
 
-export default function DisplayCourses({ setCourseID , setNumberOfCourses, setClassList, numberOfCourses, classList }: {
-    setCourseID: (s: number) => void, courseID: number,
+export default function DisplayCourses({ setNumberOfCourses, setClassList, numberOfCourses, classList }: {
     setNumberOfCourses: (n: number) => void, numberOfCourses: number,
     setClassList: (l: Course[]) => void, classList: Course[]
 }): JSX.Element {
@@ -15,7 +14,6 @@ export default function DisplayCourses({ setCourseID , setNumberOfCourses, setCl
             alert(`${courseData[id].name} is already added to this semester. Please select another course.`);
         } else {
             numberOfCourses === 6 ? (setNumberOfCourses(6), alert("Max number of courses selected for semester.")) : (setNumberOfCourses(numberOfCourses+1), setClassList([...classList, courseData[id]]));
-            setCourseID(id);
         }
     }
 
