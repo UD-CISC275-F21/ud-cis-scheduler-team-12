@@ -3,7 +3,9 @@ import { Card,Col, Row, Container, Accordion } from "react-bootstrap/";
 import "../css/courses.css";
 import "../assets/courses";
 import { Course } from "../interfaces/course";
+import { GrEdit } from "react-icons/gr";
 import { MdDeleteForever } from "react-icons/md";
+
 import courseData from "../assets/courses";
 
 
@@ -17,10 +19,20 @@ function CourseComp({ course, setNumberOfCourses, numberOfCourses, setClassList,
         setClassList(classList.filter(classList => classList !== courseData[id])); // Removing course based on course id
     }
 
+    function editDescription() {
+        <form>
+            <label>
+                Name:
+                <input type="text" name="name" />
+            </label>
+            <input type="submit" value="Submit" />
+        </form>;
+    }
 
 
     return (
         <div>
+            
             <Card className="card" style={{ width: "15rem" }}>
                 <Container>
                     <Row>
@@ -52,6 +64,8 @@ function CourseComp({ course, setNumberOfCourses, numberOfCourses, setClassList,
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Details</Accordion.Header>
                                 <Accordion.Body>
+                                    <button className="delete-button" onClick={() => editDescription()}>
+                                        <GrEdit></GrEdit></button>
                                     Course description: {course.description}
                                 </Accordion.Body>
                             </Accordion.Item>
