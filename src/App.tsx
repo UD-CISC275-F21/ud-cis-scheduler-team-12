@@ -10,49 +10,55 @@ import Calender from "./components/Calender";
 import DegreePlan from "./components/DegreePlan";
 
 function App(): JSX.Element {
-    const [courseID, setCourseID] = useState<number>(0);
-    const [numberOfCourses, setNumberOfCourses] = useState<number>(0);
-    const [visibleSelect, setVisibleSelect] = useState<string | null>("1");
-    const [classList, setClassList] = useState<Course[]>([]); // Creating a list to store selected courses in dynamically
+    const [visibleView, setVisibleView] = useState<string | null>("1"); // Changes the different board views
+    const [semesterSelect, setSemesterSelect] = useState<string | null>("1");
+    
+    const SEMESTER_MAP_INIT: Record<string, Course[]> = {
+        "1": [],
+        "1.2": [],
+        "1.3": [],
+        "1.4": [],
+        "1.5": [],
+        "1.6": [],
+        "1.7": [],
+        "1.8": [],
+    };
+    const [SEMESTER_MAP, SET_SEMESTER_MAP] = useState<Record<string, Course[]>>(SEMESTER_MAP_INIT);
 
     return (
         <div className="App">
             <header className="App-header">
-                
                 UD CIS Scheduler
                 <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
             </header>
             <section className="cell-left">
                 <p>Menu</p>
                 <SideMenu
-                    setVisibleSelect={setVisibleSelect}
+                    setVisibleView={setVisibleView}
                 ></SideMenu>
             </section>
             <section className="cell-main">
-                { visibleSelect === "1" && <Board
-                    classList={classList}
-                    setNumberOfCourses={setNumberOfCourses}
-                    numberOfCourses={numberOfCourses}
-                    courseID={courseID}
-                    setClassList={setClassList}
+                { visibleView === "1" && <Board
+                    setSemesterSelect={setSemesterSelect}
+                    semesterSelect={semesterSelect}
+                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                    SEMESTER_MAP={SEMESTER_MAP}
                 ></Board> }
                 
-                { visibleSelect === "2" && <DegreePlan
-                    classList={classList}
+                { visibleView === "2" && <DegreePlan
+                    SEMESTER_MAP={SEMESTER_MAP}
+                    semesterSelect={semesterSelect}
                 ></DegreePlan> }
 
-                { visibleSelect === "3" && <Calender></Calender> }
+                { visibleView === "3" && <Calender></Calender> }
 
                 
             </section>
             <section className="cell-right">
-                { visibleSelect === "1" &&  <DisplayCourses
-                    setClassList={setClassList}
-                    setCourseID={setCourseID}
-                    setNumberOfCourses={setNumberOfCourses}
-                    classList={classList}
-                    courseID={courseID}
-                    numberOfCourses={numberOfCourses}
+                { visibleView === "1" &&  <DisplayCourses
+                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                    SEMESTER_MAP={SEMESTER_MAP}
+                    semesterSelect={semesterSelect}
                 ></DisplayCourses> }                
             </section>
         </div>
