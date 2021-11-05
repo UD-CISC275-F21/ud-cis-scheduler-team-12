@@ -7,8 +7,7 @@ import { Course } from "../interfaces/course";
 
 
 
-export function Board({ classList, setClassList, setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP }: {
-    setClassList: (l: Course[]) => void, classList: Course[],
+export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP }: {
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>
 }):  JSX.Element {
@@ -88,8 +87,6 @@ export function Board({ classList, setClassList, setSemesterSelect, semesterSele
                             <Col key={classListToPrint.id}>
                                 <CourseComp
                                     course={classListToPrint}
-                                    setClassList={setClassList}
-                                    classList={classList}
                                     SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                                     SEMESTER_MAP={SEMESTER_MAP}
                                     semesterSelect={semesterSelect}

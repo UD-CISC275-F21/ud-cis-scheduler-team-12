@@ -3,6 +3,8 @@ import { Card, Table } from "react-bootstrap/";
 import "../css/courses.css";
 import "../assets/courses";
 import { Course } from "../interfaces/course";
+import { MdDeleteForever } from "react-icons/md";
+
 
 
 // function SemesterComp({ course }: {
@@ -23,6 +25,9 @@ function SemesterComp({ courseList }: {
                                 return(
                                     <tr key={id}>
                                         <td>{course.name}</td>
+                                        <button className="delete-button">
+                                            <MdDeleteForever></MdDeleteForever>
+                                        </button>
                                     </tr>
                                 );
                             })}

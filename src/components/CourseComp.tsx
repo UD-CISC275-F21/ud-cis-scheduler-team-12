@@ -9,16 +9,17 @@ import { MdDeleteForever } from "react-icons/md";
 import courseData from "../assets/courses";
 
 
-function CourseComp({ course, setClassList, classList, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
+function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     course: Course,
-    setClassList: (l: Course[]) => void, classList: Course[],
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null
 }):  JSX.Element {
     
     function removeCourse(id: number) {
-        setClassList(classList.filter(classList => classList !== courseData[id])); // Removing course based on course id
-        //SET_SEMESTER_MAP(SEMESTER_MAP[""+semesterSelect].filter(SEMESTER_MAP[""+semesterSelect] => SEMESTER_MAP[""+semesterSelect] !== courseData));
+        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        
+        NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
+        SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
     }
 
     function editDescription() {

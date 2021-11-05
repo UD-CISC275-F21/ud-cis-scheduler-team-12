@@ -12,7 +12,6 @@ import DegreePlan from "./components/DegreePlan";
 function App(): JSX.Element {
     const [visibleView, setVisibleView] = useState<string | null>("1"); // Changes the different board views
     const [semesterSelect, setSemesterSelect] = useState<string | null>("1");
-    const [classList, setClassList] = useState<Course[]>([]); // Creating a list to store selected courses in dynamically
     
     const SEMESTER_MAP_INIT: Record<string, Course[]> = {
         "1": [],
@@ -40,16 +39,15 @@ function App(): JSX.Element {
             </section>
             <section className="cell-main">
                 { visibleView === "1" && <Board
-                    classList={SEMESTER_MAP[semesterSelect as string]}
                     setSemesterSelect={setSemesterSelect}
                     semesterSelect={semesterSelect}
-                    setClassList={setClassList}
                     SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                     SEMESTER_MAP={SEMESTER_MAP}
                 ></Board> }
                 
                 { visibleView === "2" && <DegreePlan
-                    classList={classList}
+                    SEMESTER_MAP={SEMESTER_MAP}
+                    semesterSelect={semesterSelect}
                 ></DegreePlan> }
 
                 { visibleView === "3" && <Calender></Calender> }

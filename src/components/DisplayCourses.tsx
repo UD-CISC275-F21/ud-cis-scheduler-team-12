@@ -8,15 +8,14 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
     semesterSelect: string | null
 }): JSX.Element {
 
-    const SEMESTER_MAP_BUFFER = SEMESTER_MAP;
-    
     function addCourse(id: number) {
+        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
         // If there are less than 6 courses, add the selected course onto the end of the classList
         if (SEMESTER_MAP[""+semesterSelect].includes(courseData[id])) {
             alert(`${courseData[id].name} is already added to this semester. Please select another course.`);
         } else {
-            SEMESTER_MAP[""+semesterSelect].length === 7 ? alert("Max number of courses selected for semester.")
-                : SET_SEMESTER_MAP({...SEMESTER_MAP, [""+semesterSelect]: courseData});
+            SEMESTER_MAP[""+semesterSelect].length === 6 ? alert("Max number of courses selected for semester.")
+                : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), SET_SEMESTER_MAP(NEW_SEMESTER_MAP));
         }
     }
 

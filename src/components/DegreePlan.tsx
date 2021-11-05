@@ -20,11 +20,12 @@ import { Course } from "../interfaces/course";
 //     setClassList: (l: Course[]) => void, classList: Course[]
 //     }):  JSX.Element {
 
-export function DegreePlan({ classList}: {
-    classList: Course[]
-    }):  JSX.Element {
+export function DegreePlan({ SEMESTER_MAP, semesterSelect }: {
+    SEMESTER_MAP: Record<string, Course[]>, semesterSelect: string | null
+}):  JSX.Element {
 
-    // const classListToPrint = classList;
+    const SEMESTER_MAP_TO_PRINT = {...SEMESTER_MAP};
+
     return (
         <div>
             
@@ -33,24 +34,15 @@ export function DegreePlan({ classList}: {
             <div>
                 <Container>
                     <Row>
-                        {/* {classListToPrint.map(classListToPrint =>
-                            <Col key={classListToPrint.id}>
+                        {SEMESTER_MAP_TO_PRINT[""+semesterSelect].map(SEMESTER_MAP_TO_PRINT =>
+                            <Col key={SEMESTER_MAP_TO_PRINT.id}>
                                 <SemesterComp
-                                    courseList={classListToPrint}
+                                    courseList={SEMESTER_MAP[""+semesterSelect]}
                                 ></SemesterComp>
                             </Col>
-                        )} */}
-                        <Col>
-                            <SemesterComp
-                                courseList={classList}
-                            ></SemesterComp>
-                        </Col>
+                        )}
                     </Row>
                 </Container>
-                {/* { numberOfCourses > 0 && <ClearSemesterButton
-                    setNumberOfCourses={setNumberOfCourses}
-                    setClassList={setClassList}
-                ></ClearSemesterButton> } */}
             </div>
 
         </div>
