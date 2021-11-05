@@ -7,21 +7,20 @@ import { Course } from "../interfaces/course";
 
 
 
-export function Board({ setNumberOfCourses, numberOfCourses, classList, setClassList, setSemesterSelect, semesterSelect }: {
-    setNumberOfCourses: (s: number) => void,  numberOfCourses: number,
+export function Board({ classList, setClassList, setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP }: {
     setClassList: (l: Course[]) => void, classList: Course[],
-    setSemesterSelect: (s: string | null) => void, semesterSelect: string | null
+    setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
+    SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>
 }):  JSX.Element {
 
     
     // const list variable to map out classList useState variable
-    const classListToPrint = classList;
+    const classListToPrint = SEMESTER_MAP[""+semesterSelect];
 
     const [semesterHeader, setSemesterHeader] = useState<string>("Fall 1");
 
     function handleSelect (val: string) {
         setSemesterSelect(""+val);
-        console.log(val, ""+val, typeof val, val==="1");
         switch(val+"") {
         case "1":
             setSemesterHeader("Fall 1");
@@ -89,18 +88,20 @@ export function Board({ setNumberOfCourses, numberOfCourses, classList, setClass
                             <Col key={classListToPrint.id}>
                                 <CourseComp
                                     course={classListToPrint}
-                                    setNumberOfCourses={setNumberOfCourses}
-                                    numberOfCourses={numberOfCourses}
                                     setClassList={setClassList}
                                     classList={classList}
+                                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                                    SEMESTER_MAP={SEMESTER_MAP}
+                                    semesterSelect={semesterSelect}
                                 ></CourseComp>
                             </Col>
                         )}
                     </Row>
                 </Container>
-                { numberOfCourses > 0 && <ClearSemesterButton
-                    setNumberOfCourses={setNumberOfCourses}
-                    setClassList={setClassList}
+                { SEMESTER_MAP[""+semesterSelect].length > 0 && <ClearSemesterButton
+                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                    SEMESTER_MAP={SEMESTER_MAP}
+                    semesterSelect={semesterSelect}
                 ></ClearSemesterButton> }
             </div>
 

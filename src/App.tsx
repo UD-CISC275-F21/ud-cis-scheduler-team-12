@@ -10,21 +10,21 @@ import Calender from "./components/Calender";
 import DegreePlan from "./components/DegreePlan";
 
 function App(): JSX.Element {
-    const [numberOfCourses, setNumberOfCourses] = useState<number>(0);
-    const [visibleView, setVisibleView] = useState<string | null>("1");
+    const [visibleView, setVisibleView] = useState<string | null>("1"); // Changes the different board views
     const [semesterSelect, setSemesterSelect] = useState<string | null>("1");
     const [classList, setClassList] = useState<Course[]>([]); // Creating a list to store selected courses in dynamically
-    const [classList1, setClassList1] = useState<Course[]>([]); // Creating a list to store selected courses in dynamically
     
-    const COURSES_MAP: Record<string, Course[]> = {
+    const SEMESTER_MAP_INIT: Record<string, Course[]> = {
         "1": [],
-        "1.2": []
+        "1.2": [],
+        "1.3": [],
+        "1.4": [],
+        "1.5": [],
+        "1.6": [],
+        "1.7": [],
+        "1.8": [],
     };
-
-    const SEMESTER_MAP: Record<string, Course[]> = {
-        "1": classList,
-        "1.2": classList1,
-    };
+    const [SEMESTER_MAP, SET_SEMESTER_MAP] = useState<Record<string, Course[]>>(SEMESTER_MAP_INIT);
 
     return (
         <div className="App">
@@ -43,9 +43,9 @@ function App(): JSX.Element {
                     classList={SEMESTER_MAP[semesterSelect as string]}
                     setSemesterSelect={setSemesterSelect}
                     semesterSelect={semesterSelect}
-                    setNumberOfCourses={setNumberOfCourses}
-                    numberOfCourses={numberOfCourses}
                     setClassList={setClassList}
+                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                    SEMESTER_MAP={SEMESTER_MAP}
                 ></Board> }
                 
                 { visibleView === "2" && <DegreePlan
@@ -58,10 +58,9 @@ function App(): JSX.Element {
             </section>
             <section className="cell-right">
                 { visibleView === "1" &&  <DisplayCourses
-                    setClassList={setClassList}
-                    setNumberOfCourses={setNumberOfCourses}
-                    classList={classList}
-                    numberOfCourses={numberOfCourses}
+                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                    SEMESTER_MAP={SEMESTER_MAP}
+                    semesterSelect={semesterSelect}
                 ></DisplayCourses> }                
             </section>
         </div>
