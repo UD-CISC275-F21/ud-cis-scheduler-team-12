@@ -7,10 +7,7 @@ import { MdDeleteForever } from "react-icons/md";
 import { ImCross, ImRadioChecked, ImRadioUnchecked } from "react-icons/im";
 import courseData from "../assets/courses";
 
-
-// function SemesterComp({ course }: {
-//     course: Course
-// }):  JSX.Element {
+import buttonList from "../assets/buttonList";
 
 function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterSelect, semesterSelect, setSemesterHeader }: {
     courseList: Course[],
@@ -18,6 +15,8 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterHeader: (s: string) => void
 }):  JSX.Element {
+
+    const semesterIndex = ""+semesterSelect;
 
     // const SELECT_MAP_INIT: Record<string, boolean> = {
     //     "1": false,
@@ -60,32 +59,7 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
     }
 
     function handleSelect (val: string) {
-        switch(val+"") {
-        case "1":
-            setSemesterHeader("Fall 1");
-            break;
-        case "2":
-            setSemesterHeader("Spring 1");
-            break;
-        case "3":
-            setSemesterHeader("Fall 2");
-            break;
-        case "4":
-            setSemesterHeader("Spring 2");
-            break;
-        case "5":
-            setSemesterHeader("Fall 3");
-            break;
-        case "6":
-            setSemesterHeader("Spring 3");
-            break;
-        case "7":
-            setSemesterHeader("Fall 4");
-            break;
-        case "8":
-            setSemesterHeader("Spring 4");
-            break;
-        }
+        setSemesterHeader(buttonList[+val-1].name);
     }
 
     function removeCourse(id: number) {
@@ -116,7 +90,7 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
                     
                     <Table>
                         <thead>
-                            <th className="semester-title">{semesterSelect}</th>
+                            <th className="semester-title">{buttonList[+semesterIndex-1].name}</th>
                             <tr>
                                 <th>Course</th>
                                 <th scope="col">Credit(s)</th>

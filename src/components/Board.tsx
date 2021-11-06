@@ -5,7 +5,7 @@ import ClearSemesterButton from "./ClearSemesterButton";
 import "../css/board.css";
 import { Course } from "../interfaces/course";
 
-
+import buttonList from "../assets/buttonList";
 
 export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader }: {
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
@@ -16,65 +16,30 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
     // const list variable to map out classList useState variable
     const classListToPrint = SEMESTER_MAP[""+semesterSelect];
 
-    function handleSelect (val: string) {
+    const buttonToggle = ""+semesterSelect;
+
+    function handleSelect (val: number) {
         setSemesterSelect(""+val);
-        switch(val+"") {
-        case "1":
-            setSemesterHeader("Fall 1");
-            return semesterHeader;
-        case "2":
-            setSemesterHeader("Spring 1");
-            return semesterHeader;
-        case "3":
-            setSemesterHeader("Fall 2");
-            return semesterHeader;
-        case "4":
-            setSemesterHeader("Spring 2");
-            return semesterHeader;
-        case "5":
-            setSemesterHeader("Fall 3");
-            return semesterHeader;
-        case "6":
-            setSemesterHeader("Spring 3");
-            return semesterHeader;
-        case "7":
-            setSemesterHeader("Fall 4");
-            return semesterHeader;
-        case "8":
-            setSemesterHeader("Spring 4");
-            return semesterHeader;
-        }
+        setSemesterHeader(buttonList[val-1].name);
     }
 
     return (
         <div>
             <div>
                 <h2>Semester View - {semesterHeader}</h2>
-                <ToggleButtonGroup type="radio" name="options" value={semesterSelect} onChange={handleSelect}>
-                    <ToggleButton id="tbg-radio-1" value={1}>
-                    Fall 1
-                    </ToggleButton>
-                    <ToggleButton id="tbg-radio-2" value={2}>
-                    Spring 1
-                    </ToggleButton>
-                    <ToggleButton id="tbg-radio-3" value={3}>
-                    Fall 2
-                    </ToggleButton>
-                    <ToggleButton id="tbg-radio-4" value={4}>
-                    Spring 2
-                    </ToggleButton>
-                    <ToggleButton id="tbg-radio-5" value={5}>
-                    Fall 3
-                    </ToggleButton>
-                    <ToggleButton id="tbg-radio-6" value={6}>
-                    Spring 3
-                    </ToggleButton>
-                    <ToggleButton id="tbg-radio-7" value={7}>
-                    Fall 4
-                    </ToggleButton>
-                    <ToggleButton id="tbg-radio-8" value={8}>
-                    Spring 4
-                    </ToggleButton>
+                <ToggleButtonGroup className="semester-button" name="options" value={+buttonToggle} onChange={handleSelect}>
+                    {buttonList.map((radio, idx) =>
+                        <ToggleButton
+                            key={idx}
+                            id={`radio-${idx}`}
+                            type="radio"
+                            variant={"outline-success"}
+                            name="radio"
+                            value={radio.value}
+                        >
+                            {radio.name}
+                        </ToggleButton>
+                    )}
                 </ToggleButtonGroup>
             </div>
 
