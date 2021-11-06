@@ -15,13 +15,13 @@ function App(): JSX.Element {
     
     const SEMESTER_MAP_INIT: Record<string, Course[]> = {
         "1": [],
-        "1.2": [],
-        "1.3": [],
-        "1.4": [],
-        "1.5": [],
-        "1.6": [],
-        "1.7": [],
-        "1.8": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+        "6": [],
+        "7": [],
+        "8": [],
     };
     const [SEMESTER_MAP, SET_SEMESTER_MAP] = useState<Record<string, Course[]>>(SEMESTER_MAP_INIT);
 

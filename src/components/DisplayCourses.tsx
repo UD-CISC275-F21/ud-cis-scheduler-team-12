@@ -10,12 +10,28 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
 
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        const foundCourse = findCourse(id);
+        
         // If there are less than 6 courses, add the selected course onto the end of the classList
-        if (SEMESTER_MAP[""+semesterSelect].includes(courseData[id])) {
+        if (foundCourse) {
             alert(`${courseData[id].name} is already added to this semester. Please select another course.`);
         } else {
+            // for (const [key, value] of Object.entries(SEMESTER_MAP)) {
+            //     console.log(key,value);
+            //     if (SEMESTER_MAP[key].includes(courseData[id])) {
+            //         alert(`Warning: ${courseData[id].name} is already added to semester ${key}.`);
+            //     }
+            // }
             SEMESTER_MAP[""+semesterSelect].length === 6 ? alert("Max number of courses selected for semester.")
                 : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), SET_SEMESTER_MAP(NEW_SEMESTER_MAP));
+        }
+    }
+
+    function findCourse(id: number) {
+        if(SEMESTER_MAP[""+semesterSelect].includes(courseData[id])) {
+            return true;
+        } else {
+            return false;
         }
     }
 

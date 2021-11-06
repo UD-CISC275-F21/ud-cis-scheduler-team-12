@@ -24,25 +24,25 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
         case "1":
             setSemesterHeader("Fall 1");
             return semesterHeader;
-        case "1.2":
+        case "2":
             setSemesterHeader("Spring 1");
             return semesterHeader;
-        case "1.3":
+        case "3":
             setSemesterHeader("Fall 2");
             return semesterHeader;
-        case "1.4":
+        case "4":
             setSemesterHeader("Spring 2");
             return semesterHeader;
-        case "1.5":
+        case "5":
             setSemesterHeader("Fall 3");
             return semesterHeader;
-        case "1.6":
+        case "6":
             setSemesterHeader("Spring 3");
             return semesterHeader;
-        case "1.7":
+        case "7":
             setSemesterHeader("Fall 4");
             return semesterHeader;
-        case "1.8":
+        case "8":
             setSemesterHeader("Spring 4");
             return semesterHeader;
         }
@@ -56,25 +56,25 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
                     <ToggleButton id="tbg-radio-1" value={1}>
                     Fall 1
                     </ToggleButton>
-                    <ToggleButton id="tbg-radio-2" value={1.2}>
+                    <ToggleButton id="tbg-radio-2" value={2}>
                     Spring 1
                     </ToggleButton>
-                    <ToggleButton id="tbg-radio-3" value={1.3}>
+                    <ToggleButton id="tbg-radio-3" value={3}>
                     Fall 2
                     </ToggleButton>
-                    <ToggleButton id="tbg-radio-4" value={1.4}>
+                    <ToggleButton id="tbg-radio-4" value={4}>
                     Spring 2
                     </ToggleButton>
-                    <ToggleButton id="tbg-radio-5" value={1.5}>
+                    <ToggleButton id="tbg-radio-5" value={5}>
                     Fall 3
                     </ToggleButton>
-                    <ToggleButton id="tbg-radio-6" value={1.6}>
+                    <ToggleButton id="tbg-radio-6" value={6}>
                     Spring 3
                     </ToggleButton>
-                    <ToggleButton id="tbg-radio-7" value={1.7}>
+                    <ToggleButton id="tbg-radio-7" value={7}>
                     Fall 4
                     </ToggleButton>
-                    <ToggleButton id="tbg-radio-8" value={1.8}>
+                    <ToggleButton id="tbg-radio-8" value={8}>
                     Spring 4
                     </ToggleButton>
                 </ToggleButtonGroup>
