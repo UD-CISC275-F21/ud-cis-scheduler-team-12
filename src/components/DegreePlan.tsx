@@ -15,16 +15,21 @@ import { Course } from "../interfaces/course";
 
  * at symbol returns 
  */
-// export function DegreePlan({ setNumberOfCourses, numberOfCourses, classList, setClassList }: {
-//     setNumberOfCourses: (s: number) => void,  numberOfCourses: number, courseID: number,
-//     setClassList: (l: Course[]) => void, classList: Course[]
-//     }):  JSX.Element {
 
-export function DegreePlan({ SEMESTER_MAP, semesterSelect }: {
-    SEMESTER_MAP: Record<string, Course[]>, semesterSelect: string | null
+
+export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP }: {
+    SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>
 }):  JSX.Element {
 
     const SEMESTER_MAP_TO_PRINT = {...SEMESTER_MAP};
+
+    function removeAllSemesters() {   
+        const NEW_SEMESTER_MAP = {...SEMESTER_MAP}; 
+        for (const [key] of Object.entries(NEW_SEMESTER_MAP)) {
+            NEW_SEMESTER_MAP[key]=[];
+            SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
+        }
+    }
 
     return (
         <div>
@@ -33,18 +38,27 @@ export function DegreePlan({ SEMESTER_MAP, semesterSelect }: {
 
             <div>
                 <Container>
-                    <Row>
-                        {SEMESTER_MAP_TO_PRINT[""+semesterSelect].map(SEMESTER_MAP_TO_PRINT =>
-                            <Col key={SEMESTER_MAP_TO_PRINT.id}>
+                    
+                    <Row xs={2} md={2}>
+                        
+                        {Object.entries(SEMESTER_MAP_TO_PRINT).map(([key, value]) =>
+                            <Col key={key}>
                                 <SemesterComp
-                                    courseList={SEMESTER_MAP[""+semesterSelect]}
+                                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                                    SEMESTER_MAP={SEMESTER_MAP}
+                                    courseList={value}
+                                    semesterSelect={key}
                                 ></SemesterComp>
                             </Col>
                         )}
+                        
                     </Row>
+                    
                 </Container>
             </div>
-
+            <div>
+                <button onClick={removeAllSemesters}>Clear All Semesters</button>
+            </div>
         </div>
     );
 }

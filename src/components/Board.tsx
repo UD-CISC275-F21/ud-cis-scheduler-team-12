@@ -82,7 +82,7 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
 
             <div>
                 <Container>
-                    <Row>
+                    <Row xs={1} md={3}>
                         {classListToPrint.map(classListToPrint =>
                             <Col key={classListToPrint.id}>
                                 <CourseComp

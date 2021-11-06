@@ -5,4 +5,5 @@ export interface Course {
     timeEnd: number
     schedule: string
     description: string
+    credits: number
 }
