@@ -33,7 +33,7 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
                             key={idx}
                             id={`radio-${idx}`}
                             type="radio"
-                            variant={"outline-success"}
+                            variant={ SEMESTER_MAP[""+radio.value].length > 0 ? "outline-success" : "outline-danger"}
                             name="radio"
                             value={radio.value}
                         >
