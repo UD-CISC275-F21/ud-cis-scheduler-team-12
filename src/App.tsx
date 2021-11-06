@@ -48,6 +48,7 @@ function App(): JSX.Element {
                 { visibleView === "2" && <DegreePlan
                     SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                     SEMESTER_MAP={SEMESTER_MAP}
+                    setSemesterSelect={setSemesterSelect}
                 ></DegreePlan> }
 
                 { visibleView === "3" && <Calender></Calender> }
@@ -55,11 +56,16 @@ function App(): JSX.Element {
                 
             </section>
             <section className="cell-right">
-                { visibleView === "1" &&  <DisplayCourses
+                { (visibleView === "1" &&  <DisplayCourses
                     SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                     SEMESTER_MAP={SEMESTER_MAP}
                     semesterSelect={semesterSelect}
-                ></DisplayCourses> }                
+                ></DisplayCourses>) ||
+                (visibleView === "2" &&  <DisplayCourses
+                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                    SEMESTER_MAP={SEMESTER_MAP}
+                    semesterSelect={semesterSelect}
+                ></DisplayCourses>) }                 
             </section>
         </div>
     );

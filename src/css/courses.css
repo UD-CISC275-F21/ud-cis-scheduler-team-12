@@ -56,7 +56,34 @@ code {
 .delete-course:hover {
   color: crimson;
 }
-
+.select-button-on {
+  position: absolute;
+  color: rgb(46, 196, 46);
+  visibility: visible;
+  transition: 0.3s;
+  background: transparent;
+  border: 0px;
+  size: 2px;
+  left: 2px;
+  transform: scale(1.5);
+}
+.select-button-off {
+  position: absolute;
+  left: -10px;
+  visibility: hidden;
+  transition: 0.3s;
+  background: transparent;
+  border: 0px;
+  size: 2px;
+}
+.card:hover .select-button-off {
+  left: 2px;
+  transform: scale(1.5);
+  visibility: visible;
+}
+.select-button-off:hover {
+  color: rgb(46, 196, 46);
+}
 
 .edit-button {
   position: absolute;

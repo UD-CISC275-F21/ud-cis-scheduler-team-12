@@ -17,13 +17,14 @@ import { Course } from "../interfaces/course";
  */
 
 
-export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP }: {
-    SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>
+export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect }: {
+    SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
+    setSemesterSelect: (s: string | null) => void
 }):  JSX.Element {
 
     const SEMESTER_MAP_TO_PRINT = {...SEMESTER_MAP};
 
-    function removeAllSemesters() {   
+    function removeAllSemesters() {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP}; 
         for (const [key] of Object.entries(NEW_SEMESTER_MAP)) {
             NEW_SEMESTER_MAP[key]=[];
@@ -47,6 +48,7 @@ export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP }: {
                                     SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                                     SEMESTER_MAP={SEMESTER_MAP}
                                     courseList={value}
+                                    setSemesterSelect={setSemesterSelect}
                                     semesterSelect={key}
                                 ></SemesterComp>
                             </Col>

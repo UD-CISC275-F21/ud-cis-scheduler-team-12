@@ -3,6 +3,8 @@ import courseData from "../assets/courses";
 import { MdAdd } from "react-icons/md";
 import { Course } from "../interfaces/course";
 
+import "../css/DisplayCourses.css";
+
 export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null
@@ -35,8 +37,8 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
         <div>
             <p>Course Search</p>
             {courseData.map(courseData => 
-                <p key={courseData.id}>{courseData.name}
-                    <button onClick={() => addCourse(courseData.id)}>
+                <p className="course" key={courseData.id}>{courseData.name}
+                    <button className="add-button" onClick={() => addCourse(courseData.id)}>
                         <MdAdd />
                     </button>
                 </p>
