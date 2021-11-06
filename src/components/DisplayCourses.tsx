@@ -28,11 +28,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
     }
 
     function findCourse(id: number) {
-        if(SEMESTER_MAP[""+semesterSelect].includes(courseData[id])) {
-            return true;
-        } else {
-            return false;
-        }
+        return SEMESTER_MAP[""+semesterSelect].includes(courseData[id]);
     }
 
     return (
