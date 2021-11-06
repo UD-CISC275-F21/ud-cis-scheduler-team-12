@@ -36,7 +36,7 @@ function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: 
     return (
         <div>
             
-            <Card className="card" style={{ width: "15rem" }}>
+            <Card className="card" style={{ width: "19rem" }}>
                 <Container>
                     <Row>
                         <Col>

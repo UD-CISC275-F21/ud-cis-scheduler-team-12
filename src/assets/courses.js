@@ -5,7 +5,8 @@ const courseData =[
         "timeStart": 1200,
         "timeEnd": 1300,
         "schedule": "MWF",
-        "description": "This is Computer Science 100, section 10."
+        "description": "This is Computer Science 100, section 10.",
+        "credits": 3
     },
     {
         "id": 1,
@@ -13,7 +14,8 @@ const courseData =[
         "timeStart": 1400,
         "timeEnd": 1500,
         "schedule": "MWF",
-        "description": "This is Computer Science 200, section 10."
+        "description": "This is Computer Science 200, section 10.",
+        "credits": 3
     },
     {
         "id": 2,
@@ -21,7 +23,8 @@ const courseData =[
         "timeStart": 1200,
         "timeEnd": 1300,
         "schedule": "TR",
-        "description": "This is Computer Science 300, section 10."
+        "description": "This is Computer Science 300, section 10.",
+        "credits": 3
     },
     {
         "id": 3,
@@ -29,7 +32,8 @@ const courseData =[
         "timeStart": 1530,
         "timeEnd": 1630,
         "schedule": "MWF",
-        "description": "This is Mathematics 100, section 10."
+        "description": "This is Mathematics 100, section 10.",
+        "credits": 3
     },
     {
         "id": 4,
@@ -37,7 +41,8 @@ const courseData =[
         "timeStart": 1330,
         "timeEnd": 1430,
         "schedule": "TR",
-        "description": "This is Mathematics 200, section 10."
+        "description": "This is Mathematics 200, section 10.",
+        "credits": 3
     },
     {
         "id": 5,
@@ -45,7 +50,8 @@ const courseData =[
         "timeStart": 1700,
         "timeEnd": 1800,
         "schedule": "MWF",
-        "description": "This is English 100, section 10."
+        "description": "This is English 100, section 10.",
+        "credits": 3
     },
     {
         "id": 6,
@@ -53,7 +59,8 @@ const courseData =[
         "timeStart": 1700,
         "timeEnd": 1800,
         "schedule": "TR",
-        "description": "This is Compueter Engineering 100, section 10."
+        "description": "This is Compueter Engineering 100, section 10.",
+        "credits": 3
     }
 
 ];

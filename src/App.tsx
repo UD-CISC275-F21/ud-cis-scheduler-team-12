@@ -46,8 +46,8 @@ function App(): JSX.Element {
                 ></Board> }
                 
                 { visibleView === "2" && <DegreePlan
+                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                     SEMESTER_MAP={SEMESTER_MAP}
-                    semesterSelect={semesterSelect}
                 ></DegreePlan> }
 
                 { visibleView === "3" && <Calender></Calender> }

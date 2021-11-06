@@ -18,6 +18,7 @@ code {
   color: black;
   background-color: #ffffff;
   transition: 0.3s;
+  margin-top: 3%;
 }
 .card:hover {
   transform: scale(.95);
@@ -30,6 +31,15 @@ code {
   background: transparent;
   border: 0px;
 }
+.delete-course {
+  position: absolute;
+  right: -10px;
+  visibility: hidden;
+  transition: 0.3s;
+  background: transparent;
+  border: 0px;
+  size: 0.01px;
+}
 .card:hover .delete-button {
   right: 0px;
   transform: scale(1.75);
@@ -38,6 +48,15 @@ code {
 .delete-button:hover {
   color: crimson;
 }
+.card:hover .delete-course {
+  right: 0px;
+  transform: scale(1.3);
+  visibility: visible;
+}
+.delete-course:hover {
+  color: crimson;
+}
+
 
 .edit-button {
   position: absolute;
@@ -80,4 +99,9 @@ code {
 
 .column-dropdown {
   color: black;
+}
+
+.semester-title{
+  float: right;
+  text-decoration: underline;
 }
