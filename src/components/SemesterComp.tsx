@@ -18,17 +18,17 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>
 }):  JSX.Element {
 
-    const SELECT_MAP_INIT: Record<string, boolean> = {
-        "1": false,
-        "2": false,
-        "3": false,
-        "4": false,
-        "5": false,
-        "6": false,
-        "7": false,
-        "8": false,
-    };
-    const [SELECT_MAP, SET_SELECT_MAP] = useState<Record<string, boolean>>(SELECT_MAP_INIT);
+    // const SELECT_MAP_INIT: Record<string, boolean> = {
+    //     "1": false,
+    //     "2": false,
+    //     "3": false,
+    //     "4": false,
+    //     "5": false,
+    //     "6": false,
+    //     "7": false,
+    //     "8": false,
+    // };
+    // const [SELECT_MAP, SET_SELECT_MAP] = useState<Record<string, boolean>>(SELECT_MAP_INIT);
     const [isToggle, setIsToggle] = useState<boolean>(false);
 
     function selectToggle(key: string) {
@@ -44,14 +44,17 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
         //     setIsToggle(NEW_SELECT_MAP[item]); 
         // });
 
-        // Object.keys(NEW_SELECT_MAP).forEach(v => NEW_SELECT_MAP[v] = false);
         // NEW_SELECT_MAP[key] = true;
-        // Object.keys(NEW_SELECT_MAP).forEach(key => setIsToggle(NEW_SELECT_MAP[key]));
+        // SET_SELECT_MAP(NEW_SELECT_MAP);
         
-        
+        // Object.keys(NEW_SELECT_MAP).forEach(item => {
+        //     setIsToggle(NEW_SELECT_MAP[item].valueOf()); 
+        // });
+        // console.log(NEW_SELECT_MAP);
+
         setIsToggle(!isToggle);
         setSemesterSelect(key);
-        console.log(semesterSelect);
+        // console.log(semesterSelect);
     }
 
     function removeCourse(id: number) {
