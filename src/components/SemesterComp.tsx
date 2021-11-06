@@ -1,61 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card, Table } from "react-bootstrap/";
 import "../css/courses.css";
 import "../assets/courses";
 import { Course } from "../interfaces/course";
 import { MdDeleteForever } from "react-icons/md";
 import { ImCross, ImRadioChecked, ImRadioUnchecked } from "react-icons/im";
-import courseData from "../assets/courses";
 
+import courseData from "../assets/courses";
 import buttonList from "../assets/buttonList";
 
-function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterSelect, semesterSelect, setSemesterHeader }: {
+function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterSelect, semesterSelect, setSemesterHeader, SET_SELECT_MAP, SELECT_MAP }: {
     courseList: Course[],
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
-    setSemesterHeader: (s: string) => void
+    setSemesterHeader: (s: string) => void,
+    SET_SELECT_MAP: (s: Record<string, boolean>) => void, SELECT_MAP: Record<string, boolean>
 }):  JSX.Element {
 
     const semesterIndex = ""+semesterSelect;
 
-    // const SELECT_MAP_INIT: Record<string, boolean> = {
-    //     "1": false,
-    //     "2": false,
-    //     "3": false,
-    //     "4": false,
-    //     "5": false,
-    //     "6": false,
-    //     "7": false,
-    //     "8": false,
-    // };
-    // const [SELECT_MAP, SET_SELECT_MAP] = useState<Record<string, boolean>>(SELECT_MAP_INIT);
-    const [isToggle, setIsToggle] = useState<boolean>(false);
-
     function selectToggle(key: string) {
-        // const NEW_SELECT_MAP = {...SELECT_MAP};
+        const NEW_SELECT_MAP = {...SELECT_MAP};
         
-        // Object.keys(NEW_SELECT_MAP).forEach(item => {
-        //     item === key ? (NEW_SELECT_MAP[item] = true, SET_SELECT_MAP(NEW_SELECT_MAP), setIsToggle(NEW_SELECT_MAP[item])) 
-        //         : (NEW_SELECT_MAP[item] = false, SET_SELECT_MAP(NEW_SELECT_MAP));
-        // });
+        Object.keys(NEW_SELECT_MAP).forEach(item => {
+            item === key ? NEW_SELECT_MAP[+item] = true : NEW_SELECT_MAP[+item] = false;
+            SET_SELECT_MAP(NEW_SELECT_MAP);
+        });
 
-
-        // Object.keys(NEW_SELECT_MAP).forEach(item => {
-        //     setIsToggle(NEW_SELECT_MAP[item]); 
-        // });
-
-        // NEW_SELECT_MAP[key] = true;
-        // SET_SELECT_MAP(NEW_SELECT_MAP);
-        
-        // Object.keys(NEW_SELECT_MAP).forEach(item => {
-        //     setIsToggle(NEW_SELECT_MAP[item].valueOf()); 
-        // });
-        // console.log(NEW_SELECT_MAP);
-
-        setIsToggle(!isToggle);
         setSemesterSelect(key);
         handleSelect(key);
-        // console.log(semesterSelect);
     }
 
     function handleSelect (val: string) {
@@ -80,10 +53,10 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
                 <button className="delete-button" onClick={removeAllCourses}>
                     <MdDeleteForever></MdDeleteForever>
                 </button>
-                { !isToggle && <button className="select-button-off" onClick={() => selectToggle(""+semesterSelect)}>
+                { !SELECT_MAP[+semesterIndex] && <button className="select-button-off" onClick={() => selectToggle(""+semesterSelect)}>
                     <ImRadioUnchecked></ImRadioUnchecked> 
                 </button>}
-                { isToggle && <button className="select-button-on" onClick={() => selectToggle(""+semesterSelect)}>
+                { SELECT_MAP[+semesterIndex] && <button className="select-button-on" onClick={() => selectToggle(""+semesterSelect)}>
                     <ImRadioChecked></ImRadioChecked>
                 </button>}
                 <Card.Body className="card-body">

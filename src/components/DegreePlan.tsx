@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, Container} from "react-bootstrap";
 import "../css/calender.css";
 // import CourseComp from "./CourseComp";
@@ -22,6 +22,18 @@ export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, 
     setSemesterSelect: (s: string | null) => void,
     setSemesterHeader: (s: string) => void
 }):  JSX.Element {
+
+    const SELECT_MAP_INIT = {
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": false,
+        "6": false,
+        "7": false,
+        "8": false
+    };
+    const [SELECT_MAP, SET_SELECT_MAP] = useState<Record<string, boolean>>(SELECT_MAP_INIT);
 
     const SEMESTER_MAP_TO_PRINT = {...SEMESTER_MAP};
 
@@ -52,6 +64,8 @@ export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, 
                                     setSemesterSelect={setSemesterSelect}
                                     semesterSelect={key}
                                     setSemesterHeader={setSemesterHeader}
+                                    SET_SELECT_MAP={SET_SELECT_MAP}
+                                    SELECT_MAP={SELECT_MAP}
                                 ></SemesterComp>
                             </Col>
                         )}
