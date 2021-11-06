@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Col, Row, Container, ToggleButtonGroup, ToggleButton } from "react-bootstrap";
 import CourseComp from "./CourseComp";
 import ClearSemesterButton from "./ClearSemesterButton";
@@ -7,16 +7,14 @@ import { Course } from "../interfaces/course";
 
 
 
-export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP }: {
+export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader }: {
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
-    SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>
+    SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
+    setSemesterHeader: (s: string) => void, semesterHeader: string
 }):  JSX.Element {
 
-    
     // const list variable to map out classList useState variable
     const classListToPrint = SEMESTER_MAP[""+semesterSelect];
-
-    const [semesterHeader, setSemesterHeader] = useState<string>("Fall 1");
 
     function handleSelect (val: string) {
         setSemesterSelect(""+val);
