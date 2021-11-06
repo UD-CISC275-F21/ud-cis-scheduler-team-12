@@ -12,10 +12,11 @@ import courseData from "../assets/courses";
 //     course: Course
 // }):  JSX.Element {
 
-function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterSelect, semesterSelect }: {
+function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterSelect, semesterSelect, setSemesterHeader }: {
     courseList: Course[],
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
-    SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>
+    SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
+    setSemesterHeader: (s: string) => void
 }):  JSX.Element {
 
     // const SELECT_MAP_INIT: Record<string, boolean> = {
@@ -54,7 +55,37 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
 
         setIsToggle(!isToggle);
         setSemesterSelect(key);
+        handleSelect(key);
         // console.log(semesterSelect);
+    }
+
+    function handleSelect (val: string) {
+        switch(val+"") {
+        case "1":
+            setSemesterHeader("Fall 1");
+            break;
+        case "2":
+            setSemesterHeader("Spring 1");
+            break;
+        case "3":
+            setSemesterHeader("Fall 2");
+            break;
+        case "4":
+            setSemesterHeader("Spring 2");
+            break;
+        case "5":
+            setSemesterHeader("Fall 3");
+            break;
+        case "6":
+            setSemesterHeader("Spring 3");
+            break;
+        case "7":
+            setSemesterHeader("Fall 4");
+            break;
+        case "8":
+            setSemesterHeader("Spring 4");
+            break;
+        }
     }
 
     function removeCourse(id: number) {
@@ -62,6 +93,7 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
         
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
+        setSemesterSelect(semesterSelect);
     }
 
     function removeAllCourses() {

@@ -12,6 +12,8 @@ import DegreePlan from "./components/DegreePlan";
 function App(): JSX.Element {
     const [visibleView, setVisibleView] = useState<string | null>("1"); // Changes the different board views
     const [semesterSelect, setSemesterSelect] = useState<string | null>("1");
+    const [semesterHeader, setSemesterHeader] = useState<string>("Fall 1");
+
     
     const SEMESTER_MAP_INIT: Record<string, Course[]> = {
         "1": [],
@@ -39,6 +41,8 @@ function App(): JSX.Element {
             </section>
             <section className="cell-main">
                 { visibleView === "1" && <Board
+                    semesterHeader={semesterHeader}
+                    setSemesterHeader={setSemesterHeader}
                     setSemesterSelect={setSemesterSelect}
                     semesterSelect={semesterSelect}
                     SET_SEMESTER_MAP={SET_SEMESTER_MAP}
@@ -49,6 +53,7 @@ function App(): JSX.Element {
                     SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                     SEMESTER_MAP={SEMESTER_MAP}
                     setSemesterSelect={setSemesterSelect}
+                    setSemesterHeader={setSemesterHeader}
                 ></DegreePlan> }
 
                 { visibleView === "3" && <Calender></Calender> }
