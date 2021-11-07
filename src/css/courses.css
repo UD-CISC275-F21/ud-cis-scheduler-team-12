@@ -22,6 +22,10 @@ code {
 }
 .card:hover {
   transform: scale(.95);
+  cursor: -webkit-grab; cursor: grab;
+}
+.card:active {
+  cursor: -webkit-grabbing; cursor: grabbing;
 }
 .delete-button {
   position: absolute;

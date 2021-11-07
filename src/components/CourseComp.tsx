@@ -7,6 +7,7 @@ import { GrEdit } from "react-icons/gr";
 import { MdDeleteForever } from "react-icons/md";
 
 import courseData from "../assets/courses";
+import { motion } from "framer-motion";
 
 
 function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
@@ -35,49 +36,63 @@ function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: 
 
     return (
         <div>
-            
-            <Card className="card" style={{ width: "19rem" }}>
-                <Container>
-                    <Row>
-                        <Col>
-                            <Card.Title>{course.name}</Card.Title>
+            <motion.div
+                drag
+                dragConstraints={{
+                    top: 0,
+                    bottom: 0,
+                    right: 0,
+                    left: 0
+                }}
+                onDragEnd={() => removeCourse(course.id)}
+                dragElastic={1}
+                initial={{ opacity: 0, x: 180 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                    ease: "easeInOut",
+                    duration: 0.5,
+                }}>
+                <Card className="card" style={{ width: "19rem" }}>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <Card.Title>{course.name}</Card.Title>
+                            </Col>
+                            <Col>
+                                <button className="delete-button" onClick={() => removeCourse(course.id)}>
+                                    <MdDeleteForever></MdDeleteForever></button>
+                            </Col>                        
+                        </Row>
+                    </Container>
+                    <Card.Body className="card-body">
+                        <Card.Text>
+                            Credits: {course.credits}
+                        </Card.Text>
+                        <Card.Text>
+                            From: {course.timeStart} To: {course.timeEnd}
+                        </Card.Text>
+
+                        <Card.Text>
+                            Days: {course.schedule}
+                        </Card.Text>
+                        <Col className="column-dropdown">
                         </Col>
-                        <Col>
-                            <button className="delete-button" onClick={() => removeCourse(course.id)}>
-                                <MdDeleteForever></MdDeleteForever></button>
-                        </Col>                        
 
-                    </Row>
-                </Container>
-                <Card.Body className="card-body">
-                    <Card.Text>
-                        Credits: {course.credits}
-                    </Card.Text>
-                    <Card.Text>
-                        From: {course.timeStart} To: {course.timeEnd}
-                    </Card.Text>
-
-                    <Card.Text>
-                        Days: {course.schedule}
-                    </Card.Text>
-
-                    <Col className="column-dropdown">
-                    </Col>
-
-                    <Col className="card-accordion">
-                        <Accordion>
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>Details</Accordion.Header>
-                                <Accordion.Body>
-                                    <button className="edit-button" onClick={() => editDescription()}>
-                                        <GrEdit></GrEdit></button>
-                                    Course description: {course.description}
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                    </Col>
-                </Card.Body>
-            </Card>
+                        <Col className="card-accordion">
+                            <Accordion>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>Details</Accordion.Header>
+                                    <Accordion.Body>
+                                        <button className="edit-button" onClick={() => editDescription()}>
+                                            <GrEdit></GrEdit></button>
+                                        Course description: {course.description}
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </Col>
+                    </Card.Body>
+                </Card>
+            </motion.div>
         </div>
     );
 }

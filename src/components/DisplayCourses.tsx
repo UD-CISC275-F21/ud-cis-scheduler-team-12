@@ -5,6 +5,7 @@ import { Course } from "../interfaces/course";
 
 import "../css/DisplayCourses.css";
 import SearchBar from "./SearchBar";
+import { motion } from "framer-motion";
 
 export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
@@ -49,11 +50,29 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                     return post;
                 }
             }).map(courseData => 
-                <p className="course" key={courseData.id}>{courseData.name}
-                    <button className="add-button" onClick={() => addCourse(courseData.id)}>
-                        <MdAdd />
-                    </button>
-                </p>
+                <motion.div
+                    drag
+                    dragConstraints={{
+                        top: 0,
+                        bottom: 0,
+                        right: 0,
+                        left: 0
+                    }}
+                    onDragEnd={() => addCourse(courseData.id)}
+                    dragElastic={1}
+                    key={courseData.id}
+                    initial={{ opacity: 0, x: 180 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                        ease: "easeInOut",
+                        duration: 1,
+                    }}>
+                    <p className="course" >{courseData.name}
+                        <button className="add-button" onClick={() => addCourse(courseData.id)}>
+                            <MdAdd />
+                        </button>
+                    </p>
+                </motion.div>
             )}
         </div>
     );
