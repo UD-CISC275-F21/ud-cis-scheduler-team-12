@@ -6,7 +6,8 @@ const courseData =[
         "timeEnd": 1300,
         "schedule": "MWF",
         "description": "This is Computer Science 100, section 10.",
-        "credits": 3
+        "credits": 3,
+        "preReq": []
     },
     {
         "id": 1,
@@ -15,7 +16,8 @@ const courseData =[
         "timeEnd": 1500,
         "schedule": "MWF",
         "description": "This is Computer Science 200, section 10.",
-        "credits": 3
+        "credits": 3,
+        "preReq": ["CISC 100"]
     },
     {
         "id": 2,
@@ -24,7 +26,8 @@ const courseData =[
         "timeEnd": 1300,
         "schedule": "TR",
         "description": "This is Computer Science 300, section 10.",
-        "credits": 3
+        "credits": 3,
+        "preReq": ["CISC 200, MATH 100"]
     },
     {
         "id": 3,
@@ -33,7 +36,8 @@ const courseData =[
         "timeEnd": 1630,
         "schedule": "MWF",
         "description": "This is Mathematics 100, section 10.",
-        "credits": 3
+        "credits": 3,
+        "preReq": []
     },
     {
         "id": 4,
@@ -42,7 +46,8 @@ const courseData =[
         "timeEnd": 1430,
         "schedule": "TR",
         "description": "This is Mathematics 200, section 10.",
-        "credits": 3
+        "credits": 3,
+        "preReq": ["MATH 100"]
     },
     {
         "id": 5,
@@ -51,7 +56,8 @@ const courseData =[
         "timeEnd": 1800,
         "schedule": "MWF",
         "description": "This is English 100, section 10.",
-        "credits": 3
+        "credits": 3,
+        "preReq": []
     },
     {
         "id": 6,
@@ -60,7 +66,8 @@ const courseData =[
         "timeEnd": 1800,
         "schedule": "TR",
         "description": "This is Compueter Engineering 100, section 10.",
-        "credits": 3
+        "credits": 3,
+        "preReq": []
     }
 
 ];

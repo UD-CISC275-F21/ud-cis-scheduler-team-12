@@ -74,7 +74,7 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
                                 return(
                                     <tr key={id}>
                                         <th>{course.name}</th>
-                                        <td>{course.id}</td>
+                                        <td>{course.credits}</td>
                                         <button className="delete-course" onClick={() => removeCourse(course.id)}>
                                             <ImCross></ImCross>
                                         </button>
