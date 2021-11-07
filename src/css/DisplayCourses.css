@@ -19,6 +19,10 @@
 
 .course:hover {
     transform: scale(.95);
+    cursor: -webkit-grab; cursor: grab;
+}
+.course:active{
+    cursor: -webkit-grabbing; cursor: grabbing;
 }
 .add-button:hover {
     color: crimson;
