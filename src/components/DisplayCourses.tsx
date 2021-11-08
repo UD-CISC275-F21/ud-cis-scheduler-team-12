@@ -6,6 +6,8 @@ import { Course } from "../interfaces/course";
 import "../css/DisplayCourses.css";
 import SearchBar from "./SearchBar";
 import { motion } from "framer-motion";
+import { Dropdown, DropdownButton } from "react-bootstrap";
+
 
 export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
@@ -39,7 +41,12 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
 
     return (
         <div>
-            <p>Course Search</p>
+            <div className="menu-button">
+                <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+                    <Dropdown.Item as="button">Search Course</Dropdown.Item>
+                    <Dropdown.Item as="button">Degree Requirements</Dropdown.Item>
+                </DropdownButton>
+            </div>
             <SearchBar
                 setQuery={setQuery}
             ></SearchBar>
