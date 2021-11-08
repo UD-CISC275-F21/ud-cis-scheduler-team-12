@@ -8,15 +8,15 @@ export default function SideMenu( {setVisibleView} : {
     const handleSelect = (eventKey: string | null) => setVisibleView(eventKey);
 
     return (
-        <Nav justify variant="pills" className="flex-column" defaultActiveKey="1" onSelect={handleSelect}>
+        <Nav justify variant="pills" className="flex-column" defaultActiveKey="2" onSelect={handleSelect}>
             <Nav.Item>
-                <Nav.Link eventKey="1">Semester View</Nav.Link>
+                <Nav.Link eventKey="2">Semester View</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="2">Degree Plan View</Nav.Link>
+                <Nav.Link eventKey="3">Degree Plan View</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="3">Calendar View</Nav.Link>
+                <Nav.Link eventKey="4">Calendar View</Nav.Link>
             </Nav.Item>
   
         </Nav>
