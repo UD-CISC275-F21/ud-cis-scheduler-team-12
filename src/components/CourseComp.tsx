@@ -34,8 +34,7 @@ function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: 
 
 
     return (
-        <div>
-            
+        <div>           
             <Card className="card" style={{ width: "19rem" }}>
                 <Container>
                     <Row>
@@ -50,18 +49,19 @@ function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: 
                     </Row>
                 </Container>
                 <Card.Body className="card-body">
-
                     <Card.Text>
-                    From: {course.timeStart} To: {course.timeEnd}
+                        Credits: {course.credits}
+                    </Card.Text>
+                    <Card.Text>
+                        From: {course.timeStart} To: {course.timeEnd}
                     </Card.Text>
 
                     <Card.Text>
-                    Days: {course.schedule}
+                        Days: {course.schedule}
                     </Card.Text>
-
                     <Col className="column-dropdown">
                     </Col>
-
+                  
                     <Col className="card-accordion">
                         <Accordion>
                             <Accordion.Item eventKey="0">

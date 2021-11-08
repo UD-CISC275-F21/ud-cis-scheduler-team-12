@@ -6,4 +6,5 @@ export interface Course {
     schedule: string
     description: string
     credits: number
+    preReq: string[]
 }
