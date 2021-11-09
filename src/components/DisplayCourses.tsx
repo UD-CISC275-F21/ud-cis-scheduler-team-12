@@ -34,38 +34,37 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                 SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
             }
         } else {
+            if (foundCourse) {
+                alert(`${courseData[id].name} is already added to this semester. Please select another course.`);
+            } else {
+                //  PREREQ MET IN PRIOR SEMESTER
+                for (const [key, value] of Object.entries(SEMESTER_MAP)) {
+                    console.log([key,value]);
+                    SEMESTER_MAP[key].forEach(item => {
+                        if(courseData[id].preReq.includes(item.name)) {
+                            preReqCheckCount++;
+                        }
+                    });
+                    if(+key+1 === +semesterValue) {
+                        break;
+                    }
+                }
+                if (preReqCount !== preReqCheckCount) {
+                    alert("Warning: Pre-Reqs not met.");
+                }
 
-           if (foundCourse) {
-              alert(`${courseData[id].name} is already added to this semester. Please select another course.`);
-          } else {
-              //  PREREQ MET IN PRIOR SEMESTER
-              for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-                  console.log(key,value);
-                  SEMESTER_MAP[key].forEach(item => {
-                      console.log(item.name);
-                      if(courseData[id].preReq.includes(item.name)) {
-                          preReqCheckCount++;
-                      }    
-                  });
-                  if(+key+1 === +semesterValue) {
-                      break;
-                  }
-              }
-              if (preReqCount !== preReqCheckCount) {
-                  alert("Warning: Pre-Reqs not met.");
-              }
+                //  DUPLICATE COURSES IN ANY SEMESTER
+                // for (const [key, value] of Object.entries(SEMESTER_MAP)) {
+                //     console.log(key,value);
+                //     if (SEMESTER_MAP[key].includes(courseData[id])) {
+                //         alert(`Warning: ${courseData[id].name} is already added to semester ${key}.`);
+                //     }
+                // }
 
-              //  DUPLICATE COURSES IN ANY SEMESTER
-              // for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-              //     console.log(key,value);
-              //     if (SEMESTER_MAP[key].includes(courseData[id])) {
-              //         alert(`Warning: ${courseData[id].name} is already added to semester ${key}.`);
-              //     }
-              // }
+                SEMESTER_MAP[""+semesterSelect].length === 6 ? alert("Max number of courses selected for semester.")
+                    : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), SET_SEMESTER_MAP(NEW_SEMESTER_MAP));
 
-              SEMESTER_MAP[""+semesterSelect].length === 6 ? alert("Max number of courses selected for semester.")
-                  : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), SET_SEMESTER_MAP(NEW_SEMESTER_MAP));
-
+            }
         }
     }
 
