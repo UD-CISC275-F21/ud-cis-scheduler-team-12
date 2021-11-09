@@ -126,6 +126,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                                     </Accordion.Body>
                                 </Accordion.Item>
                             </Accordion>
+                            <p></p>
                         </Col>
                     </p>
                 </motion.div>
