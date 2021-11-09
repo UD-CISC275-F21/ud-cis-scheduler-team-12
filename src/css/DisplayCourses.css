@@ -19,8 +19,25 @@
 
 .course:hover {
     transform: scale(.95);
+    cursor: -webkit-grab; cursor: grab;
+}
+.course:active{
+    cursor: -webkit-grabbing; cursor: grabbing;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .add-button:hover {
     color: crimson;
   }
 
+}
+.menu-button {
+    display: inline-flex;
+}
+.menu-button button {
+    transition: 0.3s;
+    background: transparent;
+    border: 0px;
+    color: rgb(0, 102, 255);
+    padding-top: 5%;
+    padding-bottom: 5%;
+}

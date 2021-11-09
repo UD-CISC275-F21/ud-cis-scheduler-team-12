@@ -6,6 +6,9 @@ import { Course } from "../interfaces/course";
 import "../css/DisplayCourses.css";
 import SearchBar from "./SearchBar";
 import { Accordion, Col } from "react-bootstrap";
+import { motion } from "framer-motion";
+import { Dropdown, DropdownButton } from "react-bootstrap";
+
 
 export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
@@ -79,7 +82,12 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
 
     return (
         <div>
-            <p>Course Search</p>
+            <div className="menu-button">
+                <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+                    <Dropdown.Item as="button">Search Course</Dropdown.Item>
+                    <Dropdown.Item as="button">Degree Requirements</Dropdown.Item>
+                </DropdownButton>
+            </div>
             <SearchBar
                 setQuery={setQuery}
             ></SearchBar>
@@ -90,21 +98,39 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                     return post;
                 }
             }).map(courseData => 
-                <p className="course" key={courseData.id}>{courseData.name}
-                    <button className="add-button" onClick={() => addCourse(courseData.id)}>
-                        <MdAdd />
-                    </button>
-                    <Col className="prereq-accordion">
-                        <Accordion>
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>Prerequisites</Accordion.Header>
-                                <Accordion.Body>
-                                    Prerequisites: {courseData.preReq}
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                    </Col>
-                </p>
+                <motion.div
+                    drag
+                    dragConstraints={{
+                        top: 0,
+                        bottom: 0,
+                        right: 0,
+                        left: 0
+                    }}
+                    onDragEnd={() => addCourse(courseData.id)}
+                    dragElastic={1}
+                    key={courseData.id}
+                    initial={{ opacity: 0, x: 180 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                        ease: "easeInOut",
+                        duration: 1,
+                    }}>
+                    <p className="course" key={courseData.id}>{courseData.name}
+                        <button className="add-button" onClick={() => addCourse(courseData.id)}>
+                            <MdAdd />
+                        </button>
+                        <Col className="prereq-accordion">
+                            <Accordion>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>Prerequisites</Accordion.Header>
+                                    <Accordion.Body>
+                                        Prerequisites: {courseData.preReq}
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </Col>
+                    </p>
+                </motion.div>
             )}
         </div>
     );
