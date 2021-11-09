@@ -29,7 +29,7 @@ const courseData =[
         "schedule": "TR",
         "description": "This is Computer Science 300, section 10.",
         "credits": 3,
-        "preReq": ["CISC 200, MATH 100"],
+        "preReq": ["CISC 200", "MATH 100"],
         "preReqID": [1, 3]
     },
     {
