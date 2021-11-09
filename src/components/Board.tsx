@@ -9,10 +9,12 @@ import courseData from "../assets/courses";
 import buttonList from "../assets/buttonList";
 import { AnimatePresence, motion } from "framer-motion";
 
-export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader }: {
+export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader, SET_SAVE_BIN, SAVE_BIN, binVisible }: {
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
-    setSemesterHeader: (s: string) => void, semesterHeader: string
+    setSemesterHeader: (s: string) => void, semesterHeader: string,
+    SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
+    binVisible: boolean
 }):  JSX.Element {
 
     // const list variable to map out classList useState variable
@@ -23,6 +25,13 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
     function removeCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
         
+        if (binVisible){
+            if (SAVE_BIN.includes(courseData[id])) {
+                alert(`${courseData[id].name} is already added to your bin. It will now be removed from the semester.`);
+            } else {
+                SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
+            }
+        }
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
     }
