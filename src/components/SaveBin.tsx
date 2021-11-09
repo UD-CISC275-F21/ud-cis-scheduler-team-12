@@ -8,13 +8,39 @@ import courseData from "../assets/courses";
 import BinCourseCard from "./BinCourseCard";
 import ClearBinButton from "./ClearBinButton";
 
-export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN }: {
+export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     setBinVisible: (b: boolean) => void, binVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
+    SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
+    semesterSelect: string | null
 }): JSX.Element {
 
     // const list variable to map out SAVE_BIN useState variable
     const binListToPrint = SAVE_BIN;
+
+    function addCourse(id: number) {
+        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        
+        // If there are less than 6 courses, add the selected course onto the end of the classList
+        if (SEMESTER_MAP[""+semesterSelect].includes(courseData[id])) {
+            alert(`${courseData[id].name} is already added to this semester. Please select another course.`);
+        } else {
+            // for (const [key, value] of Object.entries(SEMESTER_MAP)) {
+            //     console.log(key,value);
+            //     if (SEMESTER_MAP[key].includes(courseData[id])) {
+            //         alert(`Warning: ${courseData[id].name} is already added to semester ${key}.`);
+            //     }
+            // }
+
+            // After adding course to the semester, remove it from the save-later bin
+            SEMESTER_MAP[""+semesterSelect].length === 6 ? alert("Max number of courses selected for semester.")
+                : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), SET_SEMESTER_MAP(NEW_SEMESTER_MAP),
+                removeCourse(id));
+        }
+
+        
+
+    }
 
     function removeCourse(id: number) {
         SET_SAVE_BIN(SAVE_BIN.filter(item => item !== courseData[id]));
@@ -43,7 +69,7 @@ export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_
                                             right: 0,
                                             left: 0
                                         }}
-                                        onDragEnd={() => removeCourse(binListToPrint.id)}
+                                        onDragEnd={() => addCourse(binListToPrint.id)}
                                         dragElastic={1}
                                         initial={{ opacity: 0, x: 180 }}
                                         animate={{ opacity: 1, x: 0 }}

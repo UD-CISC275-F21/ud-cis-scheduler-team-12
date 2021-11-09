@@ -53,6 +53,9 @@ function MainPage({ visibleView, setVisibleView }: {
                     semesterSelect={semesterSelect}
                     SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                     SEMESTER_MAP={SEMESTER_MAP}
+                    SET_SAVE_BIN={SET_SAVE_BIN}
+                    SAVE_BIN={SAVE_BIN}
+                    binVisible={binVisible}
                 ></Board> }
                 
                 { visibleView === "3" && <DegreePlan
@@ -83,6 +86,9 @@ function MainPage({ visibleView, setVisibleView }: {
                 binVisible={binVisible}
                 SET_SAVE_BIN={SET_SAVE_BIN}
                 SAVE_BIN={SAVE_BIN}
+                SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                SEMESTER_MAP={SEMESTER_MAP}
+                semesterSelect={semesterSelect}
             ></SaveBin>
         </div>
     );

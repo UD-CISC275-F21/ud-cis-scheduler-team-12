@@ -24,7 +24,11 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
         
         // If bin is open, add courses to bin
         if (binVisible){
-            SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
+            if (SAVE_BIN.includes(courseData[id])) {
+                alert(`${courseData[id].name} is already added to your bin. Please select another course.`);
+            } else {
+                SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
+            }
         } else {
             // If there are less than 6 courses, add the selected course onto the end of the classList
             if (foundCourse) {
