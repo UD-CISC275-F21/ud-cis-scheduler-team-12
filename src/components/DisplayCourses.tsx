@@ -22,9 +22,9 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
         const foundCourse = findCourse(id);
-        const semesterValue = ""+semesterSelect;
-        const preReqCount = Object.keys(courseData[id].preReq).length;
-        let preReqCheckCount = 0;
+        // const semesterValue = ""+semesterSelect;
+        // const preReqCount = Object.keys(courseData[id].preReq).length;
+        // let preReqCheckCount = 0;
         
         // If bin is open, add courses to bin
         if (binVisible){
@@ -38,23 +38,36 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                 alert(`${courseData[id].name} is already added to this semester. Please select another course.`);
             } else {
                 //  PREREQ MET IN PRIOR SEMESTER
-                for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-                    console.log([key,value]);
-                    SEMESTER_MAP[key].forEach(item => {
-                        if(Object.keys(courseData[id].preReq).includes(item.name)) {
-                            preReqCheckCount++;
-                        }
-                    });
-                    if(+key+1 === +semesterValue) {
-                        break;
+                if (Object.keys(courseData[id].preReq).length > 0){
+                    console.log(courseData[id].preReq);
+                    if (Object.values(courseData[id].preReq).every(course => course === true)){
+                        courseData[id].preReqCheck = "black";
+                    } else {
+                        alert("Warning: Pre-Reqs not met.");
+                        courseData[id].preReqCheck = "red";
                     }
+                    updateColor(courseData[id]);
                 }
-                if (preReqCount !== preReqCheckCount) {
-                    alert("Warning: Pre-Reqs not met.");
-                    courseData[id].preReqCheck = "red";
-                } else {
-                    courseData[id].preReqCheck = "black";
-                }
+
+                //     for (const [key, value] of Object.entries(SEMESTER_MAP)) {
+                //         console.log([key,value]);
+                //         SEMESTER_MAP[key].forEach(item => {
+                //             if(Object.keys(courseData[id].preReq).includes(item.name)) {
+                //                 preReqCheckCount++;
+                //             }
+                //         });
+                //         if(+key+1 === +semesterValue) {
+                //             break;
+                //         }
+                //     }
+                // }
+                // if (preReqCount !== preReqCheckCount) {
+                //     alert("Warning: Pre-Reqs not met.");
+                //     courseData[id].preReqCheck = "red";
+                // } else {
+                //     courseData[id].preReqCheck = "black";
+                // }
+
                 //  DUPLICATE COURSES IN ANY SEMESTER
                 // for (const [key, value] of Object.entries(SEMESTER_MAP)) {
                 //     console.log(key,value);
@@ -63,13 +76,36 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                 //     }
                 // }
 
-                SEMESTER_MAP[""+semesterSelect].length === 6 ? alert("Max number of courses selected for semester.")
-                    : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), SET_SEMESTER_MAP(NEW_SEMESTER_MAP));
+                if (SEMESTER_MAP["" + semesterSelect].length === 6) {
+                    alert("Max number of courses selected for semester.");
+                } else {
+                    for (const [key, value] of Object.entries(courseData)) {
+                        //console.log([key,value]);
+                        Object.keys(value.preReq).forEach(courseName => {
+                            //console.log(courseName);
+                            if(courseName === courseData[id].name) {
+                                console.log(courseName);
+                                value.preReq[courseName] = true;
+                            }
+                        });
+                    }
+                    NEW_SEMESTER_MAP["" + semesterSelect].push(courseData[id]);
+                    SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
+                }
 
+                // SEMESTER_MAP[""+semesterSelect].length === 6 ? alert("Max number of courses selected for semester.")
+                //     : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), 
+                //     SET_SEMESTER_MAP(NEW_SEMESTER_MAP));
+
+            
             }
-        }
+        }   
     }
-
+    
+    function updateColor(course: Course) {
+        return course.preReqCheck;
+    }
+    
     function findCourse(id: number) {
         return SEMESTER_MAP[""+semesterSelect].includes(courseData[id]);
     }
@@ -125,7 +161,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header>Prerequisites</Accordion.Header>
                                         <Accordion.Body>
-                                            {Object.keys(courseData.preReq).map((course, flag) => 
+                                            {Object.keys(courseData.preReq).map(course => 
                                                 <div key={course}>{course}</div>
                                             )}
                                         </Accordion.Body>
