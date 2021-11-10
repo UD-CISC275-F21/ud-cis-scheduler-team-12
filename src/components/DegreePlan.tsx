@@ -24,7 +24,6 @@ export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, 
 }):  JSX.Element {
 
     const [SELECT_MAP, SET_SELECT_MAP] = useState<Record<string, boolean>>(SELECT_MAP_INIT);
-
     const SEMESTER_MAP_TO_PRINT = {...SEMESTER_MAP};
 
     function removeAllSemesters() {

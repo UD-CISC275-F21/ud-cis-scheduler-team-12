@@ -92,19 +92,19 @@ code {
 
 .edit-button {
   position: absolute;
-  right: -10px;
+  right: 10px;
   visibility: hidden;
   transition: 0.3s;
   background: transparent;
   border: 0px;
 }
 .card:hover .edit-button {
-  right: 0px;
-  transform: scale(1.75);
+  right: 40px;
+  transform: scale(1.50);
   visibility: visible;
 }
 .edit-button:hover {
-  color: rgb(64, 102, 7);
+  color: green;
 }
 
 .card-body {
@@ -116,6 +116,7 @@ code {
   text-align: center;
   color: black;
 }
+
 
 
 .card-header {

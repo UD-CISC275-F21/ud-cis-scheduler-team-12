@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import courseData from "../assets/courses";
 import { MdAdd } from "react-icons/md";
 import { Course } from "../interfaces/course";
-
 import "../css/DisplayCourses.css";
 import SearchBar from "./SearchBar";
 import { motion } from "framer-motion";
