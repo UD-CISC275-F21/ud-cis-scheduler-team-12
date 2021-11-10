@@ -117,17 +117,19 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                         <button className="add-button" onClick={() => addCourse(courseData.id)}>
                             <MdAdd />
                         </button>
-                        <Col className="prereq-accordion">
+                        { courseData.preReq.length > 0 && <Col className="prereq-accordion">
                             <Accordion>
                                 <Accordion.Item eventKey="0">
                                     <Accordion.Header>Prerequisites</Accordion.Header>
                                     <Accordion.Body>
-                                        Prerequisites: {courseData.preReq}
+                                        {courseData.preReq.map(course => 
+                                            <div key={course}>{course}</div>
+                                        )}
                                     </Accordion.Body>
                                 </Accordion.Item>
                             </Accordion>
                             <p></p>
-                        </Col>
+                        </Col> }
                     </p>
                 </motion.div>
             )}
