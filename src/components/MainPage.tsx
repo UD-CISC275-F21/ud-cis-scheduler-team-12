@@ -8,6 +8,7 @@ import DisplayCourses from "../components/DisplayCourses";
 import SideMenu from "../components/SideMenu";
 import Calender from "../components/Calender";
 import DegreePlan from "../components/DegreePlan";
+import SaveBin from "./SaveBin";
 
 function MainPage({ visibleView, setVisibleView }: {
     setVisibleView: (s: string | null) => void, visibleView: string | null
@@ -15,6 +16,13 @@ function MainPage({ visibleView, setVisibleView }: {
     const [semesterSelect, setSemesterSelect] = useState<string | null>("1");
     const [semesterHeader, setSemesterHeader] = useState<string>("Fall 1");
 
+    //Pre-req Check Variables
+    
+    // Bin Variables
+    const [binVisible, setBinVisible] = useState<boolean>(false);
+    const SAVE_BIN_INIT: Course[] = [];
+    const [SAVE_BIN, SET_SAVE_BIN] = useState<Course[]>(SAVE_BIN_INIT);
+   
     const SEMESTER_MAP_INIT: Record<string, Course[]> = {
         "1": [],
         "2": [],
@@ -47,6 +55,9 @@ function MainPage({ visibleView, setVisibleView }: {
                     semesterSelect={semesterSelect}
                     SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                     SEMESTER_MAP={SEMESTER_MAP}
+                    SET_SAVE_BIN={SET_SAVE_BIN}
+                    SAVE_BIN={SAVE_BIN}
+                    binVisible={binVisible}
                 ></Board> }
                 
                 { visibleView === "3" && <DegreePlan
@@ -65,8 +76,22 @@ function MainPage({ visibleView, setVisibleView }: {
                     SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                     SEMESTER_MAP={SEMESTER_MAP}
                     semesterSelect={semesterSelect}
+                    setBinVisible={setBinVisible}
+                    binVisible={binVisible}
+                    SET_SAVE_BIN={SET_SAVE_BIN}
+                    SAVE_BIN={SAVE_BIN}
                 ></DisplayCourses> }            
             </section>
+
+            <SaveBin
+                setBinVisible={setBinVisible}
+                binVisible={binVisible}
+                SET_SAVE_BIN={SET_SAVE_BIN}
+                SAVE_BIN={SAVE_BIN}
+                SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                SEMESTER_MAP={SEMESTER_MAP}
+                semesterSelect={semesterSelect}
+            ></SaveBin>
         </div>
     );
 }

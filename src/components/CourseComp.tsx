@@ -52,7 +52,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
 
     return (
         <div>           
-            <Card className="card" style={{ width: "19rem" }}>
+            <Card className="card" style={{ width: "19rem", color: course.preReqCheck }}>
                 <Container>
  
                     <Row>
@@ -84,8 +84,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                     </Card.Text>
                     <Col className="column-dropdown">
                     </Col>
-                  
-                    <Col>
+                    <Col className="card-accordion">
                         <Accordion>
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Details</Accordion.Header>
