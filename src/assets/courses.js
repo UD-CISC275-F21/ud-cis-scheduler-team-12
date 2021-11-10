@@ -8,7 +8,7 @@ const courseData =[
         "description": "This is Computer Science 100, section 10.",
         "credits": 3,
         "preReq": [],
-        "preReqID": []
+        "preReqCheck": "black"
     },
     {
         "id": 1,
@@ -19,7 +19,7 @@ const courseData =[
         "description": "This is Computer Science 200, section 10.",
         "credits": 3,
         "preReq": ["CISC 100"],
-        "preReqID": [0]
+        "preReqCheck": "black"
     },
     {
         "id": 2,
@@ -30,7 +30,7 @@ const courseData =[
         "description": "This is Computer Science 300, section 10.",
         "credits": 3,
         "preReq": ["CISC 200", "MATH 100"],
-        "preReqID": [1, 3]
+        "preReqCheck": "black"
     },
     {
         "id": 3,
@@ -41,7 +41,7 @@ const courseData =[
         "description": "This is Mathematics 100, section 10.",
         "credits": 3,
         "preReq": [],
-        "preReqID": []
+        "preReqCheck": "black"
     },
     {
         "id": 4,
@@ -52,7 +52,7 @@ const courseData =[
         "description": "This is Mathematics 200, section 10.",
         "credits": 3,
         "preReq": ["MATH 100"],
-        "preReqID": [3]
+        "preReqCheck": "black"
     },
     {
         "id": 5,
@@ -63,7 +63,7 @@ const courseData =[
         "description": "This is English 100, section 10.",
         "credits": 3,
         "preReq": [],
-        "preReqID": []
+        "preReqCheck": "black"
     },
     {
         "id": 6,
@@ -74,7 +74,7 @@ const courseData =[
         "description": "This is Compueter Engineering 100, section 10.",
         "credits": 3,
         "preReq": [],
-        "preReqID": []
+        "preReqCheck": "black"
     }
 
 ];

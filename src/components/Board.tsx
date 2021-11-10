@@ -41,6 +41,16 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
         setSemesterHeader(buttonList[val-1].name);
     }
 
+    function checkPreReqWarning(key: string) {
+        let flag = false;
+        SEMESTER_MAP[key].forEach(course => {
+            if(course.preReqCheck === "red"){
+                flag = true;
+            }
+        });
+        return flag;
+    }
+
     return (
         <div>
             <div>
@@ -51,7 +61,7 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
                             key={idx}
                             id={`radio-${idx}`}
                             type="radio"
-                            variant={ SEMESTER_MAP[""+radio.value].length > 0 ? "outline-success" : "outline-danger"}
+                            variant={ checkPreReqWarning(""+radio.value) ? "outline-warning" : SEMESTER_MAP[""+radio.value].length > 0 ? "outline-success" :  "outline-danger" }
                             name="radio"
                             value={radio.value}
                         >

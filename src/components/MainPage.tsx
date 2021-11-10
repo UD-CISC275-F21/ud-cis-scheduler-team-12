@@ -15,6 +15,8 @@ function MainPage({ visibleView, setVisibleView }: {
 }): JSX.Element {
     const [semesterSelect, setSemesterSelect] = useState<string | null>("1");
     const [semesterHeader, setSemesterHeader] = useState<string>("Fall 1");
+
+    //Pre-req Check Variables
     
     // Bin Variables
     const [binVisible, setBinVisible] = useState<boolean>(false);

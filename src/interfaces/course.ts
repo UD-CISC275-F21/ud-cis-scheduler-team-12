@@ -7,5 +7,5 @@ export interface Course {
     description: string
     credits: number
     preReq: string[]
-    preReqID: number[]
+    preReqCheck: string
 }
