@@ -51,8 +51,10 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                 }
                 if (preReqCount !== preReqCheckCount) {
                     alert("Warning: Pre-Reqs not met.");
+                    courseData[id].preReqCheck = "red";
+                } else {
+                    courseData[id].preReqCheck = "black";
                 }
-
                 //  DUPLICATE COURSES IN ANY SEMESTER
                 // for (const [key, value] of Object.entries(SEMESTER_MAP)) {
                 //     console.log(key,value);
@@ -89,50 +91,52 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
             <SearchBar
                 setQuery={setQuery}
             ></SearchBar>
-            {courseData.filter(post => {
-                if (query === "") {
-                    return post;
-                } else if (post.name.toLowerCase().includes(query.toLowerCase())) {
-                    return post;
-                }
-            }).map(courseData => 
-                <motion.div
-                    drag
-                    dragConstraints={{
-                        top: 0,
-                        bottom: 0,
-                        right: 0,
-                        left: 0
-                    }}
-                    onDragEnd={() => addCourse(courseData.id)}
-                    dragElastic={1}
-                    key={courseData.id}
-                    initial={{ opacity: 0, x: 180 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{
-                        ease: "easeInOut",
-                        duration: 1,
-                    }}>
-                    <p className="course" key={courseData.id}>{courseData.name}
-                        <button className="add-button" onClick={() => addCourse(courseData.id)}>
-                            <MdAdd />
-                        </button>
-                        { courseData.preReq.length > 0 && <Col className="prereq-accordion">
-                            <Accordion>
-                                <Accordion.Item eventKey="0">
-                                    <Accordion.Header>Prerequisites</Accordion.Header>
-                                    <Accordion.Body>
-                                        {courseData.preReq.map(course => 
-                                            <div key={course}>{course}</div>
-                                        )}
-                                    </Accordion.Body>
-                                </Accordion.Item>
-                            </Accordion>
-                            <p></p>
-                        </Col> }
-                    </p>
-                </motion.div>
-            )}
+            <ul className="list-group">
+                {courseData.filter(post => {
+                    if (query === "") {
+                        return post;
+                    } else if (post.name.toLowerCase().includes(query.toLowerCase())) {
+                        return post;
+                    }
+                }).map(courseData => 
+                    <motion.div
+                        drag
+                        dragConstraints={{
+                            top: 0,
+                            bottom: 0,
+                            right: 0,
+                            left: 0
+                        }}
+                        onDragEnd={() => addCourse(courseData.id)}
+                        dragElastic={1}
+                        key={courseData.id}
+                        initial={{ opacity: 0, x: 180 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                            ease: "easeInOut",
+                            duration: 1,
+                        }}>
+                        <li className="course" key={courseData.id}>{courseData.name}
+                            <button className="add-button" onClick={() => addCourse(courseData.id)}>
+                                <MdAdd />
+                            </button>
+                            { courseData.preReq.length > 0 && <Col className="prereq-accordion">
+                                <Accordion flush>
+                                    <Accordion.Item eventKey="0">
+                                        <Accordion.Header>Prerequisites</Accordion.Header>
+                                        <Accordion.Body>
+                                            {courseData.preReq.map(course => 
+                                                <div key={course}>{course}</div>
+                                            )}
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+                                </Accordion>
+                                <p></p>
+                            </Col> }
+                        </li>
+                    </motion.div>
+                )}
+            </ul>
         </div>
     );
 }

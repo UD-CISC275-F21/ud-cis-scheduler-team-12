@@ -7,7 +7,8 @@ const courseData =[
         "schedule": "MWF",
         "description": "This is Computer Science 100, section 10.",
         "credits": 3,
-        "preReq": []
+        "preReq": [],
+        "preReqCheck": "black"
     },
     {
         "id": 1,
@@ -17,7 +18,8 @@ const courseData =[
         "schedule": "MWF",
         "description": "This is Computer Science 200, section 10.",
         "credits": 4,
-        "preReq": ["CISC 100"]
+        "preReq": ["CISC 100"],
+        "preReqCheck": "black"
     },
     {
         "id": 2,
@@ -27,7 +29,8 @@ const courseData =[
         "schedule": "TR",
         "description": "This is Computer Science 300, section 10.",
         "credits": 3,
-        "preReq": ["CISC 200", "MATH 100"]
+        "preReq": ["CISC 200", "MATH 100"],
+        "preReqCheck": "black"
     },
     {
         "id": 3,
@@ -37,7 +40,8 @@ const courseData =[
         "schedule": "MWF",
         "description": "This is Mathematics 100, section 10.",
         "credits": 3,
-        "preReq": []
+        "preReq": [],
+        "preReqCheck": "black"
     },
     {
         "id": 4,
@@ -47,7 +51,8 @@ const courseData =[
         "schedule": "TR",
         "description": "This is Mathematics 200, section 10.",
         "credits": 3,
-        "preReq": ["MATH 100"]
+        "preReq": ["MATH 100"],
+        "preReqCheck": "black"
     },
     {
         "id": 5,
@@ -57,7 +62,8 @@ const courseData =[
         "schedule": "MWF",
         "description": "This is English 110, section 10.",
         "credits": 3,
-        "preReq": []
+        "preReq": [],
+        "preReqCheck": "black"
     },
     {
         "id": 6,
@@ -67,7 +73,8 @@ const courseData =[
         "schedule": "TR",
         "description": "This is Computer Engineering 100, section 10.",
         "credits": 3,
-        "preReq": []
+        "preReq": [],
+        "preReqCheck": "black"
     },
     {
         "id": 7,
@@ -77,7 +84,8 @@ const courseData =[
         "schedule": "TR",
         "description": "This is Computer Engineering 200, section 10.",
         "credits": 4,
-        "preReq": ["CPEG 100", "MATH 100"]
+        "preReq": ["CPEG 100", "MATH 100"],
+        "preReqCheck": "black"
     },
     {
         "id": 8,
@@ -87,7 +95,8 @@ const courseData =[
         "schedule": "MWF",
         "description": "This is Computer Engineering 300, section 10.",
         "credits": 4,
-        "preReq": ["CPEG 200", "MATH 100"]
+        "preReq": ["CPEG 200", "MATH 100"],
+        "preReqCheck": "black"
     },
     {
         "id": 9,
@@ -97,7 +106,8 @@ const courseData =[
         "schedule": "TR",
         "description": "This is Computer Engineering 400, section 10.",
         "credits": 3,
-        "preReq": ["CPEG 300", "MATH 200"]
+        "preReq": ["CPEG 300", "MATH 200"],
+        "preReqCheck": "black"
     },
     {
         "id": 10,
@@ -107,7 +117,8 @@ const courseData =[
         "schedule": "TR",
         "description": "This is Mathematics 300, section 10.",
         "credits": 3,
-        "preReq": ["MATH 200"]
+        "preReq": ["MATH 200"],
+        "preReqCheck": "black"
     },
     {
         "id": 11,
@@ -117,7 +128,8 @@ const courseData =[
         "schedule": "MWF",
         "description": "This is Mathematics 400, section 10.",
         "credits": 3,
-        "preReq": ["MATH 300"]
+        "preReq": ["MATH 300"],
+        "preReqCheck": "black"
     },
     {
         "id": 12,
@@ -127,7 +139,8 @@ const courseData =[
         "schedule": "TR",
         "description": "This is Computer Engineering 355, section 10.",
         "credits": 4,
-        "preReq": ["CPEG 300", "CISC 200"]
+        "preReq": ["CPEG 300", "CISC 200"],
+        "preReqCheck": "black"
     },
     {
         "id": 13,
@@ -137,7 +150,8 @@ const courseData =[
         "schedule": "MWF",
         "description": "This is Computer Science 400, section 10.",
         "credits": 3,
-        "preReq": ["CISC 300"]
+        "preReq": ["CISC 300"],
+        "preReqCheck": "black"
     },
     {
         "id": 14,
@@ -147,7 +161,8 @@ const courseData =[
         "schedule": "TR",
         "description": "This is English 200, section 10.",
         "credits": 3,
-        "preReq": ["ENGL 100"]
+        "preReq": ["ENGL 100"],
+        "preReqCheck": "black"
     },
     {
         "id": 15,
@@ -157,7 +172,8 @@ const courseData =[
         "schedule": "MWF",
         "description": "This is English 300, section 10.",
         "credits": 3,
-        "preReq": ["ENGL 200"]
+        "preReq": ["ENGL 200"],
+        "preReqCheck": "black"
     },
     {
         "id": 16,
@@ -167,7 +183,8 @@ const courseData =[
         "schedule": "MWF",
         "description": "This is English 400, section 10.",
         "credits": 3,
-        "preReq": ["ENGL 300"]
+        "preReq": ["ENGL 300"],
+        "preReqCheck": "black"
     },
     {
         "id": 17,
@@ -177,7 +194,8 @@ const courseData =[
         "schedule": "TR",
         "description": "This is History 100, section 10.",
         "credits": 3,
-        "preReq": []
+        "preReq": [],
+        "preReqCheck": "black"
     },
     {
         "id": 18,
@@ -187,7 +205,8 @@ const courseData =[
         "schedule": "TR",
         "description": "This is Physics 100, section 10.",
         "credits": 4,
-        "preReq": []
+        "preReq": [],
+        "preReqCheck": "black"
     },
     {
         "id": 19,
@@ -197,7 +216,8 @@ const courseData =[
         "schedule": "MWF",
         "description": "This is Physics 200, section 10.",
         "credits": 4,
-        "preReq": ["PHYS 100", "MATH 200"]
+        "preReq": ["PHYS 100", "MATH 200"],
+        "preReqCheck": "black"
     }
 
 ];
