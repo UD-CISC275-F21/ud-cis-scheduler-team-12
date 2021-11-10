@@ -23,7 +23,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
         const foundCourse = findCourse(id);
         const semesterValue = ""+semesterSelect;
-        const preReqCount = courseData[id].preReq.length;
+        const preReqCount = Object.keys(courseData[id].preReq).length;
         let preReqCheckCount = 0;
         
         // If bin is open, add courses to bin
@@ -41,7 +41,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                 for (const [key, value] of Object.entries(SEMESTER_MAP)) {
                     console.log([key,value]);
                     SEMESTER_MAP[key].forEach(item => {
-                        if(courseData[id].preReq.includes(item.name)) {
+                        if(Object.keys(courseData[id].preReq).includes(item.name)) {
                             preReqCheckCount++;
                         }
                     });
@@ -120,12 +120,12 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                             <button className="add-button" onClick={() => addCourse(courseData.id)}>
                                 <MdAdd />
                             </button>
-                            { courseData.preReq.length > 0 && <Col className="prereq-accordion">
+                            { Object.keys(courseData.preReq).length > 0 && <Col className="prereq-accordion">
                                 <Accordion flush>
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header>Prerequisites</Accordion.Header>
                                         <Accordion.Body>
-                                            {courseData.preReq.map(course => 
+                                            {Object.keys(courseData.preReq).map((course, flag) => 
                                                 <div key={course}>{course}</div>
                                             )}
                                         </Accordion.Body>
