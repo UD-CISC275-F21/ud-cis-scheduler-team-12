@@ -125,7 +125,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header>Prerequisites</Accordion.Header>
                                         <Accordion.Body>
-                                            Prerequisites: {courseData.preReq.map(course => 
+                                            {courseData.preReq.map(course => 
                                                 <div key={course}>{course}</div>
                                             )}
                                         </Accordion.Body>
