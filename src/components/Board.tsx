@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row, Container, ToggleButtonGroup, ToggleButton } from "react-bootstrap";
+
 import CourseComp from "./CourseComp";
 import ClearSemesterButton from "./ClearSemesterButton";
 import "../css/board.css";

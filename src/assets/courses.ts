@@ -56,11 +56,11 @@ const courseData = [
     },
     {
         "id": 5,
-        "name": "ENGL 110",
+        "name": "ENGL 100",
         "timeStart": 1700,
         "timeEnd": 1800,
         "schedule": "MWF",
-        "description": "This is English 110, section 10.",
+        "description": "This is English 100, section 10.",
         "credits": 3,
         "preReq": <Record<string, boolean>>{},
         "preReqCheck": "black"
