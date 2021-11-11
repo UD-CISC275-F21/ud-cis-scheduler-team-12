@@ -33,6 +33,29 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
                 SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
             }
         }
+        for (const [key, value] of Object.entries(courseData)) {
+            console.log([key,value]);
+            Object.keys(value.preReq).forEach(courseName => {
+                // console.log(courseName);
+                if(courseName === courseData[id].name) {
+                    console.log(courseName);
+                    value.preReq[courseName] = false;
+                }
+            });
+        }
+        for (const [key, value] of Object.entries(SEMESTER_MAP)) {
+            console.log([key,value]);
+            SEMESTER_MAP[key].forEach(item => {
+                if(Object.keys(item.preReq).length > 0) {
+                    if (Object.values(item.preReq).every(course => course === true)){
+                        item.preReqCheck = "black";
+                    } else {
+                        item.preReqCheck = "red";
+                    }
+                    updateColor(item);
+                }
+            });
+        }
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
     }
@@ -50,6 +73,10 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
             }
         });
         return flag;
+    }
+
+    function updateColor(course: Course) {
+        return course.preReqCheck;
     }
 
     return (

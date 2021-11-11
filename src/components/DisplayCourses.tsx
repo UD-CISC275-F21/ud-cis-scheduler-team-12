@@ -21,9 +21,6 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
         const foundCourse = findCourse(id);
-        const semesterValue = ""+semesterSelect;
-        const preReqCount = courseData[id].preReq.length;
-        let preReqCheckCount = 0;
         
         // If bin is open, add courses to bin
         if (binVisible){
@@ -37,38 +34,61 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                 alert(`${courseData[id].name} is already added to this semester. Please select another course.`);
             } else {
                 //  PREREQ MET IN PRIOR SEMESTER
+                if (Object.keys(courseData[id].preReq).length > 0){
+                    console.log(courseData[id].preReq);
+                    if (Object.values(courseData[id].preReq).every(course => course === true)){
+                        courseData[id].preReqCheck = "black";
+                    } else {
+                        alert("Warning: Pre-Reqs not met.");
+                        courseData[id].preReqCheck = "red";
+                    }
+                    updateColor(courseData[id]);
+                }
+
+                if (SEMESTER_MAP["" + semesterSelect].length === 6) {
+                    alert("Max number of courses selected for semester.");
+                } else {
+                    for (const [key, value] of Object.entries(courseData)) {
+                        console.log([key,value]);
+                        Object.keys(value.preReq).forEach(courseName => {
+                            //console.log(courseName);
+                            if(courseName === courseData[id].name) {
+                                console.log(courseName);
+                                value.preReq[courseName] = true;
+                            }
+                        });
+                    }
+                    NEW_SEMESTER_MAP["" + semesterSelect].push(courseData[id]);
+                    SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
+                }
+
                 for (const [key, value] of Object.entries(SEMESTER_MAP)) {
                     console.log([key,value]);
                     SEMESTER_MAP[key].forEach(item => {
-                        if(courseData[id].preReq.includes(item.name)) {
-                            preReqCheckCount++;
+                        if(Object.keys(item.preReq).length > 0) {
+                            if (Object.values(item.preReq).every(course => course === true)){
+                                item.preReqCheck = "black";
+                            } else {
+                                item.preReqCheck = "red";
+                            }
+                            updateColor(item);
                         }
                     });
-                    if(+key+1 === +semesterValue) {
-                        break;
-                    }
                 }
-                if (preReqCount !== preReqCheckCount) {
-                    alert("Warning: Pre-Reqs not met.");
-                    courseData[id].preReqCheck = "red";
-                } else {
-                    courseData[id].preReqCheck = "black";
-                }
-                //  DUPLICATE COURSES IN ANY SEMESTER
-                // for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-                //     console.log(key,value);
-                //     if (SEMESTER_MAP[key].includes(courseData[id])) {
-                //         alert(`Warning: ${courseData[id].name} is already added to semester ${key}.`);
-                //     }
-                // }
 
-                SEMESTER_MAP[""+semesterSelect].length === 6 ? alert("Max number of courses selected for semester.")
-                    : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), SET_SEMESTER_MAP(NEW_SEMESTER_MAP));
+                // SEMESTER_MAP[""+semesterSelect].length === 6 ? alert("Max number of courses selected for semester.")
+                //     : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), 
+                //     SET_SEMESTER_MAP(NEW_SEMESTER_MAP));
 
+            
             }
-        }
+        }   
     }
-
+    
+    function updateColor(course: Course) {
+        return course.preReqCheck;
+    }
+    
     function findCourse(id: number) {
         return SEMESTER_MAP[""+semesterSelect].includes(courseData[id]);
     }
@@ -83,7 +103,6 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
             <div className="menu-button">
                 <DropdownButton id="dropdown-basic-button" title="Dropdown button">
                     <Dropdown.Item as="button">Search Course</Dropdown.Item>
-                    <Dropdown.Item as="button">Degree Requirements</Dropdown.Item>
                     <Dropdown.Item as="button" onClick={() => showBin()}>Save Courses for Later</Dropdown.Item>
                 </DropdownButton>
             </div>
@@ -119,12 +138,12 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                             <button className="add-button" onClick={() => addCourse(courseData.id)}>
                                 <MdAdd />
                             </button>
-                            { courseData.preReq.length > 0 && <Col className="prereq-accordion">
+                            { Object.keys(courseData.preReq).length > 0 && <Col className="prereq-accordion">
                                 <Accordion flush>
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header>Prerequisites</Accordion.Header>
                                         <Accordion.Body>
-                                            {courseData.preReq.map(course => 
+                                            {Object.keys(courseData.preReq).map(course => 
                                                 <div key={course}>{course}</div>
                                             )}
                                         </Accordion.Body>

@@ -6,6 +6,6 @@ export interface Course {
     schedule: string
     description: string
     credits: number
-    preReq: string[]
+    preReq: Record<string, boolean>
     preReqCheck: string
 }

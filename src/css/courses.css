@@ -140,6 +140,9 @@ code {
   float: right;
   text-decoration: underline;
 }
+.popover {
+  padding: 1%;
+}
 .edit-desc-button {
   position: absolute;
   background: transparent;
