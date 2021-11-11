@@ -9,6 +9,7 @@ export default function ClearSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, se
 
     function removeAllCourses() {    
         for (const [key, value] of Object.entries(SEMESTER_MAP[""+semesterSelect])) {
+            console.log(key);
             removePreReq(value);
         }
         SET_SEMESTER_MAP({...SEMESTER_MAP, [""+semesterSelect]: []}); // Set classList to an empty array to clear all selected courses
@@ -16,7 +17,7 @@ export default function ClearSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, se
 
     function removePreReq(course: Course) {
         for (const [key, value] of Object.entries(courseData)) {
-            //console.log([key,value]);
+            console.log([key,value]);
             Object.keys(value.preReq).forEach(courseName => {
                 //console.log(courseName);
                 if(courseName === course.name) {
@@ -26,6 +27,7 @@ export default function ClearSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, se
             });
         }
         for (const [key, value] of Object.entries(SEMESTER_MAP)) {
+            console.log([key,value]);
             SEMESTER_MAP[key].forEach(item => {
                 if(Object.keys(item.preReq).length > 0) {
                     if (Object.values(item.preReq).every(course => course === true)){

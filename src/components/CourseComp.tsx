@@ -1,5 +1,5 @@
 import React from "react";
-import { Card,Col, Row, Container, Accordion, OverlayTrigger, Tooltip, Popover } from "react-bootstrap/";
+import { Card,Col, Row, Container, Accordion, OverlayTrigger, Popover } from "react-bootstrap/";
 import "../css/courses.css";
 import "../assets/courses";
 import { Course } from "../interfaces/course";
@@ -19,7 +19,7 @@ function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: 
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
         
         for (const [key, value] of Object.entries(courseData)) {
-            //console.log([key,value]);
+            console.log([key,value]);
             Object.keys(value.preReq).forEach(courseName => {
                 //console.log(courseName);
                 if(courseName === courseData[id].name) {
@@ -29,6 +29,7 @@ function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: 
             });
         }
         for (const [key, value] of Object.entries(SEMESTER_MAP)) {
+            console.log([key,value]);
             SEMESTER_MAP[key].forEach(item => {
                 if(Object.keys(item.preReq).length > 0) {
                     if (Object.values(item.preReq).every(course => course === true)){
