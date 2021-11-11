@@ -93,8 +93,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                                 ></TitleInput> }
                                 {titleVisable === 1 && <button onClick={() => submitTitle()}>Submit</button>
                                 }
-                            </Col>
-                            <Col>
+                            
                                 <button className="delete-button" onClick={() => removeCourse(course.id)}>
                                     <MdDeleteForever></MdDeleteForever></button>
                                 <button className="edit-button" onClick={() => editTitle()}><GrEdit></GrEdit></button>
