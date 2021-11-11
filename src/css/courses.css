@@ -31,6 +31,7 @@ code {
 .delete-button {
   position: absolute;
   right: -10px;
+  top: 0px;
   visibility: hidden;
   transition: 0.3s;
   background: transparent;
@@ -93,6 +94,7 @@ code {
 .edit-button {
   position: absolute;
   right: 10px;
+  top: 0px;
   visibility: hidden;
   transition: 0.3s;
   background: transparent;
@@ -137,4 +139,11 @@ code {
 .semester-title{
   float: right;
   text-decoration: underline;
+}
+.edit-desc-button {
+  position: absolute;
+  background: transparent;
+  border: 0px;
+  padding: 0px 5px 5px 5px;
+  transition: 0.3s;
 }

@@ -49,7 +49,7 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
 
     return (
         <div>
-            <Card className="card" style={{ width: "30rem" }}>
+            <Card className="card" style={{ width: "100%" }}>
                 <button className="delete-button" onClick={removeAllCourses}>
                     <MdDeleteForever></MdDeleteForever>
                 </button>
