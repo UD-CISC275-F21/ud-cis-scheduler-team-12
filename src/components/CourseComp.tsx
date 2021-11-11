@@ -108,6 +108,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                         <Card.Text>
                             From: {course.timeStart} To: {course.timeEnd}
                         </Card.Text>
+                        
 
                         <Card.Text>
                             Days: {course.schedule}
