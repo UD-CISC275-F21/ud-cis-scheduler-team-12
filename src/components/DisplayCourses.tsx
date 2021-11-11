@@ -104,7 +104,6 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
             <div className="menu-button">
                 <DropdownButton id="dropdown-basic-button" title="Dropdown button">
                     <Dropdown.Item as="button">Search Course</Dropdown.Item>
-                    <Dropdown.Item as="button">Degree Requirements</Dropdown.Item>
                     <Dropdown.Item as="button" onClick={() => showBin()}>Save Courses for Later</Dropdown.Item>
                 </DropdownButton>
             </div>
