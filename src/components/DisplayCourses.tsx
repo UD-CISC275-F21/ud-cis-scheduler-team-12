@@ -22,9 +22,6 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
         const foundCourse = findCourse(id);
-        // const semesterValue = ""+semesterSelect;
-        // const preReqCount = Object.keys(courseData[id].preReq).length;
-        // let preReqCheckCount = 0;
         
         // If bin is open, add courses to bin
         if (binVisible){
@@ -49,33 +46,6 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                     updateColor(courseData[id]);
                 }
 
-                //     for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-                //         console.log([key,value]);
-                //         SEMESTER_MAP[key].forEach(item => {
-                //             if(Object.keys(courseData[id].preReq).includes(item.name)) {
-                //                 preReqCheckCount++;
-                //             }
-                //         });
-                //         if(+key+1 === +semesterValue) {
-                //             break;
-                //         }
-                //     }
-                // }
-                // if (preReqCount !== preReqCheckCount) {
-                //     alert("Warning: Pre-Reqs not met.");
-                //     courseData[id].preReqCheck = "red";
-                // } else {
-                //     courseData[id].preReqCheck = "black";
-                // }
-
-                //  DUPLICATE COURSES IN ANY SEMESTER
-                // for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-                //     console.log(key,value);
-                //     if (SEMESTER_MAP[key].includes(courseData[id])) {
-                //         alert(`Warning: ${courseData[id].name} is already added to semester ${key}.`);
-                //     }
-                // }
-
                 if (SEMESTER_MAP["" + semesterSelect].length === 6) {
                     alert("Max number of courses selected for semester.");
                 } else {
@@ -91,6 +61,19 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                     }
                     NEW_SEMESTER_MAP["" + semesterSelect].push(courseData[id]);
                     SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
+                }
+
+                for (const [key, value] of Object.entries(SEMESTER_MAP)) {
+                    SEMESTER_MAP[key].forEach(item => {
+                        if(Object.keys(item.preReq).length > 0) {
+                            if (Object.values(item.preReq).every(course => course === true)){
+                                item.preReqCheck = "black";
+                            } else {
+                                item.preReqCheck = "red";
+                            }
+                            updateColor(item);
+                        }
+                    });
                 }
 
                 // SEMESTER_MAP[""+semesterSelect].length === 6 ? alert("Max number of courses selected for semester.")
