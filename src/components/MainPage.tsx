@@ -10,6 +10,8 @@ import Calender from "../components/Calender";
 import DegreePlan from "../components/DegreePlan";
 import SaveBin from "./SaveBin";
 
+import SEMESTER_MAP_INIT from "../assets/semesterMap";
+
 function MainPage({ visibleView, setVisibleView }: {
     setVisibleView: (s: string | null) => void, visibleView: string | null
 }): JSX.Element {
@@ -23,16 +25,7 @@ function MainPage({ visibleView, setVisibleView }: {
     const SAVE_BIN_INIT: Course[] = [];
     const [SAVE_BIN, SET_SAVE_BIN] = useState<Course[]>(SAVE_BIN_INIT);
    
-    const SEMESTER_MAP_INIT: Record<string, Course[]> = {
-        "1": [],
-        "2": [],
-        "3": [],
-        "4": [],
-        "5": [],
-        "6": [],
-        "7": [],
-        "8": [],
-    };
+    // useState to update the course array inside of a semester
     const [SEMESTER_MAP, SET_SEMESTER_MAP] = useState<Record<string, Course[]>>(SEMESTER_MAP_INIT);
 
     return (
