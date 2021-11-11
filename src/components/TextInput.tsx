@@ -7,7 +7,7 @@ export default function TextInput({ setInput }: {
 }): JSX.Element {
     return (
         <div>
-            <input className="form__field" type="description" placeholder="Enter Description" onChange={event => setInput(event.target.value)}/>
+            <input className="text_input" type="description" placeholder="Enter Description" onChange={event => setInput(event.target.value)}/>
         </div>
     );
 }

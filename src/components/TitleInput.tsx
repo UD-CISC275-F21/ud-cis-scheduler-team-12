@@ -7,7 +7,7 @@ export default function TitleInput({ setInput }: {
 }): JSX.Element {
     return (
         <div>
-            <input className="form__field" type="title" placeholder="Enter Title" onChange={event => setInput(event.target.value)}/>
+            <input className="text_input" type="title" placeholder="Enter Title" onChange={event => setInput(event.target.value)}/>
         </div>
     );
 }

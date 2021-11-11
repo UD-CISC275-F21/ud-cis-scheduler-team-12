@@ -52,7 +52,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
 
     return (
         <div>           
-            <Card className="card" style={{ width: "19rem", color: course.preReqCheck }}>
+            <Card className="card" style={{ width: "100%", color: course.preReqCheck }}>
                 <Container>
  
                     <Row>
@@ -63,8 +63,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                             ></TitleInput> }
                             {titleVisable === 1 && <button onClick={() => submitTitle()}>Submit</button>
                             }
-                        </Col>
-                        <Col>
+                        
                             <button className="delete-button" onClick={() => removeCourse(course.id)}>
                                 <MdDeleteForever></MdDeleteForever></button>
                             <button className="edit-button" onClick={() => editTitle()}><GrEdit></GrEdit></button>
@@ -94,8 +93,8 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                                         setInput={setInput}
                                     ></TextInput>}
                                     
-                                    <button className="" onClick={() => editDescription()}>Edit</button>
-                                    <button className="" onClick={() => submitDescription()}>Enter</button>    
+                                    { visable === 0 && <button className="edit-desc-button" onClick={() => editDescription()}><GrEdit></GrEdit></button> }
+                                    { visable === 1 && <button className="" onClick={() => submitDescription()}>Enter</button> }   
                                     
                                 </Accordion.Body>
                             </Accordion.Item>
