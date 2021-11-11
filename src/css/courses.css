@@ -137,3 +137,6 @@ code {
   float: right;
   text-decoration: underline;
 }
+.popover {
+  padding: 1%;
+}
