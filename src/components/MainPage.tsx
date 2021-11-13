@@ -19,25 +19,30 @@ function MainPage({ visibleView, setVisibleView }: {
     const state = {
         steps: [
             {
-                target: ".intro-step",
+                target: ".App-header",
                 disableBeacon: true,
                 title: "Welcome!",
                 content: "Welcome to your personal Course Scheduler! To take the tour of the features, hit 'next'. Or you can skip the tour by hitting 'skip'.",
             },
             {
+                target: ".cell-main",
+                title: "Main Board",
+                content: "This where all your planning will happen. This board will change views depending on which view option you select in the left menu.",
+            },
+            {
                 target: ".semester-step",
                 title: "Semester View",
-                content: "This is my awesome feature!",
+                content: "This is the semester view. You can toggle between semesters and it will change colors based on the status of the semester.\nGreen - courses added have no conflicts.\nRed - no courses are added.\nYellow - there are conflicts with certain courses.",
             },
             {
                 target: ".menu-step",
                 title: "Menu",
-                content: "This is my awesome feature!",
+                content: "Here you can either see your selected courses in the semester view or degree view.",
             },
             {
                 target: ".right-menu-step",
                 title: "Search Bar/Bin",
-                content: "This another awesome feature!",
+                content: <><iframe src="https://gifer.com/embed/5SM"></iframe><p><a href="https://gifer.com">via GIFER</a></p></>,
             },
         ]
     };
@@ -143,16 +148,17 @@ function MainPage({ visibleView, setVisibleView }: {
                 </div>
             </section>
             
-
-            <SaveBin
-                setBinVisible={setBinVisible}
-                binVisible={binVisible}
-                SET_SAVE_BIN={SET_SAVE_BIN}
-                SAVE_BIN={SAVE_BIN}
-                SET_SEMESTER_MAP={SET_SEMESTER_MAP}
-                SEMESTER_MAP={SEMESTER_MAP}
-                semesterSelect={semesterSelect}
-            ></SaveBin>
+            <div className="save-bin">
+                <SaveBin
+                    setBinVisible={setBinVisible}
+                    binVisible={binVisible}
+                    SET_SAVE_BIN={SET_SAVE_BIN}
+                    SAVE_BIN={SAVE_BIN}
+                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                    SEMESTER_MAP={SEMESTER_MAP}
+                    semesterSelect={semesterSelect}
+                ></SaveBin>
+            </div>
         </div>
     );
 }

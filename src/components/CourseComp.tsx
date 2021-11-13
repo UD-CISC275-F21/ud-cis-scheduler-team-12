@@ -79,10 +79,15 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
 
     return (
         <div>           
-            <OverlayTrigger trigger="hover" show={ Object.values(course.preReq).every(course => course === true) ? false : true } placement={ SEMESTER_MAP[""+semesterSelect].indexOf(course) > 2 ? "bottom" : "top" } overlay={
-                <Popover className="popover" id="tooltip-preReq">Missing: {Object.keys(course.preReq).filter(courseName => 
-                    course.preReq[courseName] === false).map(course => 
-                    <div key={course}>{course}</div>)} </Popover>}>
+            <OverlayTrigger 
+                trigger="hover" 
+                show={ Object.values(course.preReq).every(course => course === true) ? false : true } 
+                placement={ SEMESTER_MAP[""+semesterSelect].indexOf(course) > 2 ? "bottom" : "top" } 
+                overlay={
+                    <Popover className="popover" id="tooltip-preReq">Missing: {Object.keys(course.preReq).filter(courseName => 
+                        course.preReq[courseName] === false).map(course => 
+                        <div key={course}>{course}</div>)} </Popover>}
+            >
                 <Card className="card" style={{ width: "100%", color: updateColor(course) }}>
                     <Container>
                         <Row>
