@@ -9,6 +9,8 @@ import SideMenu from "../components/SideMenu";
 import Calender from "../components/Calender";
 import DegreePlan from "../components/DegreePlan";
 import SaveBin from "./SaveBin";
+import SaveButton from "./SaveButton";
+import AccessSavedSemestersButton from "./AccessSavedSemestersButton";
 
 function MainPage({ visibleView, setVisibleView }: {
     setVisibleView: (s: string | null) => void, visibleView: string | null
@@ -40,6 +42,10 @@ function MainPage({ visibleView, setVisibleView }: {
             <header className="App-header">
                 UD CIS Scheduler
                 <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
+                <SaveButton
+                    SEMESTER_MAP={SEMESTER_MAP}
+                ></SaveButton>
+                { localStorage.length > 0 && <AccessSavedSemestersButton></AccessSavedSemestersButton> }
             </header>
             <section className="cell-left">
                 <p>Menu</p>
