@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import courseData from "../assets/courses";
 import { MdAdd } from "react-icons/md";
-import { Course } from "../interfaces/course";
 import "../css/DisplayCourses.css";
 import SearchBar from "./SearchBar";
 import { Accordion, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Dropdown, DropdownButton } from "react-bootstrap";
+import { Course } from "../interfaces/course";
 
-
-export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN }: {
+export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, setNewCourseVisible, newCourseVisible, SET_SAVE_BIN, SAVE_BIN }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,
     setBinVisible: (b: boolean) => void, binVisible: boolean,
+    setNewCourseVisible: (b: boolean) => void, newCourseVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
 }): JSX.Element {
 
     const [query, setQuery] = useState<string>("");
+    
+    newCourseVisible;
 
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
@@ -97,6 +99,10 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
     function showBin() {
         setBinVisible(!binVisible);
     }
+    
+    function showCreateNewCourse() {
+        setNewCourseVisible(!newCourseVisible);
+    }
 
     return (
         <div>
@@ -104,6 +110,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                 <DropdownButton id="dropdown-basic-button" title="Dropdown button">
                     <Dropdown.Item as="button">Search Course</Dropdown.Item>
                     <Dropdown.Item as="button" onClick={() => showBin()}>Save Courses for Later</Dropdown.Item>
+                    <Dropdown.Item as="button" onClick={() => showCreateNewCourse()}>Create A New Course</Dropdown.Item>
                 </DropdownButton>
             </div>
             <SearchBar
