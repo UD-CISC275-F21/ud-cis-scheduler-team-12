@@ -2,10 +2,10 @@ import React from "react";
 import { Card, Table } from "react-bootstrap/";
 import "../css/courses.css";
 import "../assets/courses";
-import { Course } from "../interfaces/course";
+
 import { MdDeleteForever } from "react-icons/md";
 import { ImCross, ImRadioChecked, ImRadioUnchecked } from "react-icons/im";
-
+import Course from "../interfaces/course";
 import courseData from "../assets/courses";
 import buttonList from "../assets/buttonList";
 
