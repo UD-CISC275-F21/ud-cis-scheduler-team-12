@@ -52,6 +52,8 @@ function MainPage({ visibleView, setVisibleView }: {
                     buttonList={buttonList}
                 ></AddSemesterButton>
                 <RemoveSemesterButton
+                    setSemesterSelect={setSemesterSelect}
+                    setSemesterHeader={setSemesterHeader}
                     SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                     SEMESTER_MAP={SEMESTER_MAP}
                     setSemesterCount={setSemesterCount}
@@ -77,7 +79,6 @@ function MainPage({ visibleView, setVisibleView }: {
                     SET_SAVE_BIN={SET_SAVE_BIN}
                     SAVE_BIN={SAVE_BIN}
                     binVisible={binVisible}
-                    setButtonList={setButtonList}
                     buttonList={buttonList}
                 ></Board> }
                 
@@ -86,7 +87,6 @@ function MainPage({ visibleView, setVisibleView }: {
                     SEMESTER_MAP={SEMESTER_MAP}
                     setSemesterSelect={setSemesterSelect}
                     setSemesterHeader={setSemesterHeader}
-                    setButtonList={setButtonList}
                     buttonList={buttonList}
                 ></DegreePlan> }
 

@@ -9,13 +9,13 @@ import { ImCross, ImRadioChecked, ImRadioUnchecked } from "react-icons/im";
 import courseData from "../assets/courses";
 import { ButtonList } from "../interfaces/buttonList";
 
-function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterSelect, semesterSelect, setSemesterHeader, SET_SELECT_MAP, SELECT_MAP, setButtonList, buttonList }: {
+function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterSelect, semesterSelect, setSemesterHeader, SET_SELECT_MAP, SELECT_MAP, buttonList }: {
     courseList: Course[],
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterHeader: (s: string) => void,
     SET_SELECT_MAP: (s: Record<string, boolean>) => void, SELECT_MAP: Record<string, boolean>,
-    setButtonList: (b: ButtonList[]) => void, buttonList: ButtonList[]
+    buttonList: ButtonList[]
 }):  JSX.Element {
 
     const semesterIndex = ""+semesterSelect;

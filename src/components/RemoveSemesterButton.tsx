@@ -3,10 +3,12 @@ import courseData from "../assets/courses";
 import { ButtonList } from "../interfaces/buttonList";
 import { Course } from "../interfaces/course";
 
-export default function RemoveSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount, setButtonList, buttonList }: {
+export default function RemoveSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount, setButtonList, buttonList, setSemesterSelect, setSemesterHeader }: {
     SET_SEMESTER_MAP: (s: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterCount: (c: number) => void, semesterCount: number,
-    setButtonList: (b: ButtonList[]) => void, buttonList: ButtonList[]
+    setButtonList: (b: ButtonList[]) => void, buttonList: ButtonList[],
+    setSemesterSelect: (s: string | null) => void,
+    setSemesterHeader: (h: string) => void
 }): JSX.Element {
     
     function removeSemester() {
@@ -17,6 +19,14 @@ export default function RemoveSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, s
             alert("Can't remove more semesters");
         } else {
 
+            // Default to render first semester since it will never be deleted.
+            setSemesterSelect("1");
+            setSemesterHeader(buttonList[0].name);
+
+            // Clear last semester's courses before deletion
+            removeAllCourses();
+
+            // Remove last semester
             buttonList.pop();
             setButtonList(buttonList);
 
