@@ -1,4 +1,4 @@
 export interface ButtonList {
-    name: string
-    value: number
+    name: string;
+    value: number;
 }
