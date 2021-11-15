@@ -9,6 +9,10 @@ import SideMenu from "../components/SideMenu";
 import Calender from "../components/Calender";
 import DegreePlan from "../components/DegreePlan";
 import SaveBin from "./SaveBin";
+import AddSemesterButton from "./AddSemesterButton";
+import RemoveSemesterButton from "./RemoveSemesterButton";
+import { ButtonList } from "../interfaces/buttonList";
+import buttonListInit from "../assets/buttonList";
 
 function MainPage({ visibleView, setVisibleView }: {
     setVisibleView: (s: string | null) => void, visibleView: string | null
@@ -22,16 +26,15 @@ function MainPage({ visibleView, setVisibleView }: {
     const [binVisible, setBinVisible] = useState<boolean>(false);
     const SAVE_BIN_INIT: Course[] = [];
     const [SAVE_BIN, SET_SAVE_BIN] = useState<Course[]>(SAVE_BIN_INIT);
+
+    const [semesterCount, setSemesterCount] = useState<number>(5);
+    const [buttonList, setButtonList] = useState<ButtonList[]>(buttonListInit);
    
     const SEMESTER_MAP_INIT: Record<string, Course[]> = {
         "1": [],
         "2": [],
         "3": [],
         "4": [],
-        "5": [],
-        "6": [],
-        "7": [],
-        "8": [],
     };
     const [SEMESTER_MAP, SET_SEMESTER_MAP] = useState<Record<string, Course[]>>(SEMESTER_MAP_INIT);
 
@@ -40,6 +43,22 @@ function MainPage({ visibleView, setVisibleView }: {
             <header className="App-header">
                 UD CIS Scheduler
                 <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
+                <AddSemesterButton
+                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                    SEMESTER_MAP={SEMESTER_MAP}
+                    setSemesterCount={setSemesterCount}
+                    semesterCount={semesterCount}
+                    setButtonList={setButtonList}
+                    buttonList={buttonList}
+                ></AddSemesterButton>
+                <RemoveSemesterButton
+                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                    SEMESTER_MAP={SEMESTER_MAP}
+                    setSemesterCount={setSemesterCount}
+                    semesterCount={semesterCount}
+                    setButtonList={setButtonList}
+                    buttonList={buttonList}
+                ></RemoveSemesterButton>
             </header>
             <section className="cell-left">
                 <p>Menu</p>
@@ -58,6 +77,8 @@ function MainPage({ visibleView, setVisibleView }: {
                     SET_SAVE_BIN={SET_SAVE_BIN}
                     SAVE_BIN={SAVE_BIN}
                     binVisible={binVisible}
+                    setButtonList={setButtonList}
+                    buttonList={buttonList}
                 ></Board> }
                 
                 { visibleView === "3" && <DegreePlan
@@ -65,6 +86,8 @@ function MainPage({ visibleView, setVisibleView }: {
                     SEMESTER_MAP={SEMESTER_MAP}
                     setSemesterSelect={setSemesterSelect}
                     setSemesterHeader={setSemesterHeader}
+                    setButtonList={setButtonList}
+                    buttonList={buttonList}
                 ></DegreePlan> }
 
                 { visibleView === "4" && <Calender></Calender> }
