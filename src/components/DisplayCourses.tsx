@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 import { Accordion, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Dropdown, DropdownButton } from "react-bootstrap";
-import Course from "../interfaces/course";
+import { Course } from "../interfaces/course";
 
 export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, setNewCourseVisible, newCourseVisible, SET_SAVE_BIN, SAVE_BIN }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,

@@ -7,7 +7,7 @@ import "../css/SaveBin.css";
 import courseData from "../assets/courses";
 import BinCourseCard from "./BinCourseCard";
 import ClearBinButton from "./ClearBinButton";
-import Course from "../interfaces/course";
+import { Course } from "../interfaces/course";
 
 export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     setBinVisible: (b: boolean) => void, binVisible: boolean,

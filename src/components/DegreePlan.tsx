@@ -5,7 +5,7 @@ import "../css/calender.css";
 import SemesterComp from "./SemesterComp";
 // import ClearSemesterButton from "./ClearSemesterButton";
 import SELECT_MAP_INIT from "../assets/radioToggle";
-import Course from "../interfaces/course";
+import { Course } from "../interfaces/course";
 /**
  * 
  * export function Calender({ setNumberOfCourses, numberOfCourses, courseID }: {

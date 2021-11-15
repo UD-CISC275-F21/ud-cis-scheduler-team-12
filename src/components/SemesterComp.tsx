@@ -9,6 +9,7 @@ import courseData from "../assets/courses";
 import buttonList from "../assets/buttonList";
 import { Course } from "../interfaces/course";
 
+
 function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterSelect, semesterSelect, setSemesterHeader, SET_SELECT_MAP, SELECT_MAP }: {
     courseList: Course[],
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,

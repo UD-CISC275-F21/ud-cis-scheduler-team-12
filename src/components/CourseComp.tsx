@@ -7,7 +7,7 @@ import { MdDeleteForever } from "react-icons/md";
 import courseData from "../assets/courses";
 import TextInput from "./TextInput";
 import TitleInput from "./TitleInput";
-import Course from "../interfaces/course";
+import { Course } from "../interfaces/course";
 
 export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     course: Course,

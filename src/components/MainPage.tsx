@@ -7,7 +7,7 @@ import DisplayCourses from "../components/DisplayCourses";
 import SideMenu from "../components/SideMenu";
 import Calender from "../components/Calender";
 import DegreePlan from "../components/DegreePlan";
-import Course from "../interfaces/course";
+import { Course } from "../interfaces/course";
 import SaveBin from "./SaveBin";
 import CreateNewCourse from "./CreateNewCourse";
 

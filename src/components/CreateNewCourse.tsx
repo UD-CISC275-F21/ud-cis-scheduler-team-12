@@ -7,7 +7,7 @@ import "../css/SaveBin.css";
 import courseData from "../assets/courses";
 import CreateNewCourseCard from "./BinCourseCard";
 import ClearBinButton from "./ClearBinButton";
-import Course from "../interfaces/course";
+import { Course } from "../interfaces/course";
 
 export default function CreateNewCourse({ setNewCourseVisible, newCourseVisible, SET_SAVE_BIN, SAVE_BIN, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: 
     {

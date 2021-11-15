@@ -1,6 +1,6 @@
 import React from "react";
 import courseData from "../assets/courses";
-import Course from "../interfaces/course";
+import { Course } from "../interfaces/course";
 
 export default function ClearSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, 

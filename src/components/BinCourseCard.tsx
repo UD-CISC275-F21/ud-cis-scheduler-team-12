@@ -5,7 +5,7 @@ import "../assets/courses";
 import { GrEdit } from "react-icons/gr";
 import { MdDeleteForever } from "react-icons/md";
 import courseData from "../assets/courses";
-import Course from "../interfaces/course";
+import { Course } from "../interfaces/course";
 
 
 export default function CourseCard({ course, SET_SAVE_BIN, SAVE_BIN }: {

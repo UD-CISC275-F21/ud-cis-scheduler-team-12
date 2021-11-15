@@ -7,7 +7,7 @@ import "../css/board.css";
 import courseData from "../assets/courses";
 import buttonList from "../assets/buttonList";
 import { AnimatePresence, motion } from "framer-motion";
-import Course from "../interfaces/course";
+import { Course } from "../interfaces/course";
 
 export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader, SET_SAVE_BIN, SAVE_BIN, binVisible }: {
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
