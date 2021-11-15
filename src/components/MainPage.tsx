@@ -45,7 +45,11 @@ function MainPage({ visibleView, setVisibleView }: {
                 <SaveButton
                     SEMESTER_MAP={SEMESTER_MAP}
                 ></SaveButton>
-                { localStorage.length > 0 && <AccessSavedSemestersButton></AccessSavedSemestersButton> }
+                { localStorage.length > 0 && <AccessSavedSemestersButton
+                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                    SEMESTER_MAP={SEMESTER_MAP}
+                    semesterSelect={semesterSelect}
+                ></AccessSavedSemestersButton> }
             </header>
             <section className="cell-left">
                 <p>Menu</p>

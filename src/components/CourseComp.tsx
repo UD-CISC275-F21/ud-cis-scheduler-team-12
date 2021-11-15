@@ -51,7 +51,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
             Object.keys(value.preReq).forEach(courseName => {
                 //console.log(courseName);
                 if(courseName === courseData[id].name) {
-                    console.log(courseName);
+                    console.log(`found ${courseName}`);
                     value.preReq[courseName] = false;
                 }
             });
@@ -70,6 +70,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
             });
         }
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
+        alert(courseData[id].id);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
     }
 
