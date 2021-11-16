@@ -43,14 +43,17 @@ function MainPage({ visibleView, setVisibleView }: {
             <header className="App-header">
                 UD CIS Scheduler
                 <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
-                <AddSemesterButton
-                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
-                    SEMESTER_MAP={SEMESTER_MAP}
-                    setSemesterCount={setSemesterCount}
-                    semesterCount={semesterCount}
-                    setButtonList={setButtonList}
-                    buttonList={buttonList}
-                ></AddSemesterButton>
+                
+                
+            </header>
+            <section className="cell-left">
+                <p>Menu</p>
+                <SideMenu
+                    setVisibleView={setVisibleView}
+                ></SideMenu>
+            </section>
+            <section className="cell-main">
+
                 <RemoveSemesterButton
                     setSemesterSelect={setSemesterSelect}
                     setSemesterHeader={setSemesterHeader}
@@ -61,14 +64,17 @@ function MainPage({ visibleView, setVisibleView }: {
                     setButtonList={setButtonList}
                     buttonList={buttonList}
                 ></RemoveSemesterButton>
-            </header>
-            <section className="cell-left">
-                <p>Menu</p>
-                <SideMenu
-                    setVisibleView={setVisibleView}
-                ></SideMenu>
-            </section>
-            <section className="cell-main">
+                
+                <AddSemesterButton
+                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                    SEMESTER_MAP={SEMESTER_MAP}
+                    setSemesterCount={setSemesterCount}
+                    semesterCount={semesterCount}
+                    setButtonList={setButtonList}
+                    buttonList={buttonList}
+                ></AddSemesterButton>
+
+                
                 { visibleView === "2" && <Board
                     semesterHeader={semesterHeader}
                     setSemesterHeader={setSemesterHeader}
