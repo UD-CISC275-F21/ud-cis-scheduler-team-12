@@ -6,34 +6,27 @@ import { Course } from "../interfaces/course";
 import ClearSavedSemestersButton from "./ClearSavedSemestersButton";
 import courseData from "../assets/courses";
 
-export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
+export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP }: {
     SET_SEMESTER_MAP: (s: Record<string, Course[]>) => void,
-    SEMESTER_MAP: Record<string, Course[]>, semesterSelect: string | null
+    SEMESTER_MAP: Record<string, Course[]>
 }): JSX.Element {
 
     function loadSave(key: string) {
         // Remove all courses and remove pre-req markers.
-        // removeAllCourses();
-
-        // // Retrieve Object from localStorage
+        removeAllCourses();
+        
+        // Retrieve Object from localStorage
         const retrievedObject = localStorage.getItem(key);
         const parsedObject = JSON.parse(""+retrievedObject) as Record<string, Course[]>;
 
-        // // Initialize all pre-reqs and add courses
+        // Initialize all pre-reqs and add courses
         addLoadedSave(parsedObject);
-        
-        // Add Courses into semester map
-
-        // SET_SEMESTER_MAP(parsedObject);
-        // console.log("retrievedObject: ", JSON.parse(""+retrievedObject));
-        // alert(parsedObject);
     }
 
     function addLoadedSave(parsedObject: Record<string, Course[]>) {
-        alert("I added");
         for (const [key, value] of Object.entries(parsedObject)) {
+            console.log(value);
             Object.values(parsedObject[key]).forEach(course => {
-                console.log(course);
                 addCourse(course.id, key);
             });
         }
@@ -111,15 +104,15 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
     }
 
     function removeAllCourses() {
-        alert("I removed first");
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP}; 
         for (const [key] of Object.entries(NEW_SEMESTER_MAP)) {
             Object.values(NEW_SEMESTER_MAP[key]).forEach(course => {
                 removePreReq(course);
+                NEW_SEMESTER_MAP[key].pop();
             });
             NEW_SEMESTER_MAP[key]=[];
-            SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
         }
+        SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
     }
 
     function removePreReq(course: Course) {
