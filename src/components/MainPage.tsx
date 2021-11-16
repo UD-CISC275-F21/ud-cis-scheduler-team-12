@@ -27,7 +27,7 @@ function MainPage({ visibleView, setVisibleView }: {
     const SAVE_BIN_INIT: Course[] = [];
     const [SAVE_BIN, SET_SAVE_BIN] = useState<Course[]>(SAVE_BIN_INIT);
 
-    const [semesterCount, setSemesterCount] = useState<number>(5);
+    const [semesterCount, setSemesterCount] = useState<number>(9);
     const [buttonList, setButtonList] = useState<ButtonList[]>(buttonListInit);
    
     const SEMESTER_MAP_INIT: Record<string, Course[]> = {
@@ -35,6 +35,10 @@ function MainPage({ visibleView, setVisibleView }: {
         "2": [],
         "3": [],
         "4": [],
+        "5": [],
+        "6": [],
+        "7": [],
+        "8": [],
     };
     const [SEMESTER_MAP, SET_SEMESTER_MAP] = useState<Record<string, Course[]>>(SEMESTER_MAP_INIT);
 
