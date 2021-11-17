@@ -5,16 +5,18 @@ import CourseComp from "./CourseComp";
 import ClearSemesterButton from "./ClearSemesterButton";
 import "../css/board.css";
 import courseData from "../assets/courses";
-import buttonList from "../assets/buttonList";
+
 import { AnimatePresence, motion } from "framer-motion";
+import { ButtonList } from "../interfaces/buttonList";
 import { Course } from "../interfaces/course";
 
-export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader, SET_SAVE_BIN, SAVE_BIN, binVisible }: {
+export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader, SET_SAVE_BIN, SAVE_BIN, binVisible, buttonList }: {
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterHeader: (s: string) => void, semesterHeader: string,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
-    binVisible: boolean
+    binVisible: boolean,
+    buttonList: ButtonList[]
 }):  JSX.Element {
 
     // const list variable to map out classList useState variable
