@@ -5,12 +5,13 @@ import { Col, Container, Offcanvas, Row } from "react-bootstrap";
 import "../css/SaveBin.css";
 
 import courseData from "../assets/courses";
-import BinCourseCard from "./BinCourseCard";
+import CreateNewCourseCard from "./BinCourseCard";
 import ClearBinButton from "./ClearBinButton";
 import { Course } from "../interfaces/course";
 
-export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
-    setBinVisible: (b: boolean) => void, binVisible: boolean,
+export default function CreateNewCourse({ setNewCourseVisible, newCourseVisible, SET_SAVE_BIN, SAVE_BIN, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: 
+    {
+    setNewCourseVisible: (b: boolean) => void, newCourseVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null
@@ -46,12 +47,11 @@ export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_
     function removeCourse(id: number) {
         SET_SAVE_BIN(SAVE_BIN.filter(item => item !== courseData[id]));
     }
-    
     return(
         <div>
-            <Offcanvas className="bin" show={binVisible} onHide={() => setBinVisible(false)} placement="bottom" scroll={true} backdrop={false}>
+            <Offcanvas className="bin" show={newCourseVisible} onHide={() => setNewCourseVisible(false)} placement="bottom" scroll={true} backdrop={false}>
                 <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Save For Later</Offcanvas.Title>
+                    <Offcanvas.Title>Create a New Course</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body className="bin-body">
                     <ClearBinButton
@@ -80,11 +80,11 @@ export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_
                                             duration: 0.4
                                         }}>
                                         <Col >
-                                            <BinCourseCard
+                                            <CreateNewCourseCard
                                                 course={binListToPrint}
                                                 SET_SAVE_BIN={SET_SAVE_BIN}
                                                 SAVE_BIN={SAVE_BIN}
-                                            ></BinCourseCard>
+                                            ></CreateNewCourseCard>
                                         </Col>
                                     </motion.div>
                                 )}
