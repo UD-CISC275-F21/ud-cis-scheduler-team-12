@@ -51,13 +51,17 @@ function MainPage({ visibleView, setVisibleView }: {
             <header className="App-header">
                 UD CIS Scheduler
                 <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
-                
+
                 <SaveButton
                     SEMESTER_MAP={SEMESTER_MAP}
                 ></SaveButton>
                 { localStorage.length > 0 && <AccessSavedSemestersButton
                     SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                     SEMESTER_MAP={SEMESTER_MAP}
+                    setSemesterCount={setSemesterCount}
+                    semesterCount={semesterCount}
+                    setButtonList={setButtonList}
+                    buttonList={buttonList}
                 ></AccessSavedSemestersButton> }
                 
             </header>
