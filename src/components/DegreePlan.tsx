@@ -4,10 +4,11 @@ import "../css/calender.css";
 // import CourseComp from "./CourseComp";
 import SemesterComp from "./SemesterComp";
 // import ClearSemesterButton from "./ClearSemesterButton";
-import { Course } from "../interfaces/course";
 import SELECT_MAP_INIT from "../assets/radioToggle";
 import courseData from "../assets/courses";
+import { ButtonList } from "../interfaces/buttonList";
 
+import { Course } from "../interfaces/course";
 /**
  * 
  * export function Calender({ setNumberOfCourses, numberOfCourses, courseID }: {
@@ -18,10 +19,11 @@ import courseData from "../assets/courses";
  */
 
 
-export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, setSemesterHeader }: {
+export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, setSemesterHeader, buttonList }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterSelect: (s: string | null) => void,
-    setSemesterHeader: (s: string) => void
+    setSemesterHeader: (s: string) => void,
+    buttonList: ButtonList[]
 }):  JSX.Element {
 
     const [SELECT_MAP, SET_SELECT_MAP] = useState<Record<string, boolean>>(SELECT_MAP_INIT);
@@ -89,6 +91,7 @@ export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, 
                                     setSemesterHeader={setSemesterHeader}
                                     SET_SELECT_MAP={SET_SELECT_MAP}
                                     SELECT_MAP={SELECT_MAP}
+                                    buttonList={buttonList}
                                 ></SemesterComp>
                             </Col>
                         )}
