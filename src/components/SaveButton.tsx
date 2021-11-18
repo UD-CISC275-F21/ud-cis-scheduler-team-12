@@ -8,31 +8,53 @@ export default function SaveButton({ SEMESTER_MAP }: {
 }): JSX.Element {
     
     function saveSemester() {
-        Swal.fire({
-            title: "Give your saved plan a name!",
-            text: "Name:",
-            input: "text",
-            showCancelButton: true        
-        }).then((result) => {
-            if (result.value) {
-                localStorage.setItem(result.value, JSON.stringify(SEMESTER_MAP));
-                const retrievedObject = localStorage.getItem(result.value);
-                console.log("retrievedObject: ", JSON.parse(""+retrievedObject));
+        const preReqError = findPreReqErrorInEntirePlan();
 
-                Swal.fire(
-                    "Saved!",
-                    `${result.value} is now saved 🚀.`,
-                    "success"
-                );
+        if (preReqError){
+            Swal.fire(
+                "Save Error",
+                "Error: Cannot save plan due to existing preReq error 🧐.",
+                "error"
+            );
+        } else {
+            Swal.fire({
+                title: "Give your saved plan a name!",
+                text: "Name:",
+                input: "text",
+                showCancelButton: true        
+            }).then((result) => {
+                if (result.value) {
+                    localStorage.setItem(result.value, JSON.stringify(SEMESTER_MAP));
+                    const retrievedObject = localStorage.getItem(result.value);
+                    console.log("retrievedObject: ", JSON.parse(""+retrievedObject));
+    
+                    Swal.fire(
+                        "Saved!",
+                        `${result.value} is now saved 🚀.`,
+                        "success"
+                    );
+    
+                } else {
+                    Swal.fire(
+                        "Canceled Save",
+                        "You did not save your plan 😅.",
+                        "info"
+                    );
+                }
+            });
+        }
+    }
 
-            } else {
-                Swal.fire(
-                    "Canceled Save",
-                    "You did not save your plan 😅.",
-                    "info"
-                );
-            }
+    function findPreReqErrorInEntirePlan() {
+        let flag = false;
+        Object.keys(SEMESTER_MAP).forEach(key => {
+            SEMESTER_MAP[key].forEach(course => {
+                if (course.preReqCheck === "red") {
+                    flag = true;
+                }
+            });
         });
+        return flag;
     }
 
     return(

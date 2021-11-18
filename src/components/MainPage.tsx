@@ -16,6 +16,7 @@ import RemoveSemesterButton from "./RemoveSemesterButton";
 import { ButtonList } from "../interfaces/buttonList";
 import buttonListInit from "../assets/buttonList";
 import CreateNewCourse from "./CreateNewCourse";
+import SelectedSaveHeader from "./SelectedSaveHeader";
 
 function MainPage({ visibleView, setVisibleView }: {
     setVisibleView: (s: string | null) => void, visibleView: string | null
@@ -24,7 +25,9 @@ function MainPage({ visibleView, setVisibleView }: {
     const [semesterHeader, setSemesterHeader] = useState<string>("Fall 1");
 
     const [newCourseVisible, setNewCourseVisible] = useState<boolean>(false);
-    //Pre-req Check Variables
+    
+    // Selected Save Variable
+    const [selectedSave, setSelectedSave] = useState<string>("No Save Selected");
     
     // Bin Variables
     const [binVisible, setBinVisible] = useState<boolean>(false);
@@ -55,14 +58,22 @@ function MainPage({ visibleView, setVisibleView }: {
                 <SaveButton
                     SEMESTER_MAP={SEMESTER_MAP}
                 ></SaveButton>
-                { localStorage.length > 0 && <AccessSavedSemestersButton
-                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
-                    SEMESTER_MAP={SEMESTER_MAP}
-                    setSemesterCount={setSemesterCount}
-                    semesterCount={semesterCount}
-                    setButtonList={setButtonList}
-                    buttonList={buttonList}
-                ></AccessSavedSemestersButton> }
+                { localStorage.length > 0 && 
+                <div>
+                    <AccessSavedSemestersButton
+                        SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                        SEMESTER_MAP={SEMESTER_MAP}
+                        setSemesterCount={setSemesterCount}
+                        semesterCount={semesterCount}
+                        setButtonList={setButtonList}
+                        buttonList={buttonList}
+                        setSelectedSave={setSelectedSave}
+                    ></AccessSavedSemestersButton> 
+                    <SelectedSaveHeader
+                        selectedSave={selectedSave}
+                    ></SelectedSaveHeader>
+                </div>
+                }
                 
             </header>
             <section className="cell-left">
@@ -105,6 +116,8 @@ function MainPage({ visibleView, setVisibleView }: {
                     SAVE_BIN={SAVE_BIN}
                     binVisible={binVisible}
                     buttonList={buttonList}
+                    setSelectedSave={setSelectedSave}
+                    selectedSave={selectedSave}
                 ></Board> }
                 
                 { visibleView === "3" && <DegreePlan

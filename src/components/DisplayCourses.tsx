@@ -24,7 +24,8 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
 
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
-        const foundCourse = findCourse(id);
+        const foundCourse = findCourseInSemester(id);
+        const foundCourseInPlan = findCourseInEntirePlan(id);
         
         // If bin is open, add courses to bin
         if (binVisible){
@@ -39,13 +40,20 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                 SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
             }
         } else {
-            if (foundCourse) {
-                Swal.fire({
-                    title: "Duplicate Course!",
-                    text: `${courseData[id].name} is already added to this semester. Please select another course.`,
-                    icon: "error",
-                    imageUrl: SpiderMan
-                });
+            if (foundCourse || foundCourseInPlan) {
+                foundCourse ?
+                    Swal.fire({
+                        title: "Duplicate Course!",
+                        text: `${courseData[id].name} is already added to this semester. Please select another course.`,
+                        icon: "error",
+                        imageUrl: SpiderMan
+                    }) :
+                    Swal.fire({
+                        title: "Duplicate Course!",
+                        text: `${courseData[id].name} is already added to your plan. Please select another course.`,
+                        icon: "error",
+                        imageUrl: SpiderMan
+                    });
             } else {
                 //  PREREQ MET IN PRIOR SEMESTER
                 if (Object.keys(courseData[id].preReq).length > 0){
@@ -105,8 +113,21 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
         return course.preReqCheck;
     }
     
-    function findCourse(id: number) {
+    function findCourseInSemester(id: number) {
         return SEMESTER_MAP[""+semesterSelect].includes(courseData[id]);
+    }
+
+    function findCourseInEntirePlan(id: number) {
+        let flag = false;
+        Object.keys(SEMESTER_MAP).forEach(key => {
+            SEMESTER_MAP[key].forEach(course => {
+                if (course.id === id) {
+                    flag = true;
+                }
+            });
+        });
+
+        return flag;
     }
     
 
@@ -121,9 +142,8 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
     return (
         <div>
             <div className="menu-button">
-                <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-                    <Dropdown.Item as="button">Search Course</Dropdown.Item>
-                    <Dropdown.Item as="button" onClick={() => showBin()}>Save Courses for Later</Dropdown.Item>
+                <DropdownButton id="dropdown-basic-button" title="Course Options">
+                    <Dropdown.Item as="button" onClick={() => showBin()}>Save Later Bin</Dropdown.Item>
                     <Dropdown.Item as="button" onClick={() => showCreateNewCourse()}>Create A New Course</Dropdown.Item>
                 </DropdownButton>
             </div>
