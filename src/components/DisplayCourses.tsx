@@ -9,17 +9,17 @@ import { Dropdown, DropdownButton } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import AddCourseAlert from "./AddCourseAlert";
 
-export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, newCourseVisible, SET_SAVE_BIN, SAVE_BIN }: {
+export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,
     setBinVisible: (b: boolean) => void, binVisible: boolean,
-    setNewCourseVisible: (b: boolean) => void, newCourseVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
 }): JSX.Element {
 
     const [query, setQuery] = useState<string>("");
-    
-    newCourseVisible;
+
+    //for adding course title button
+    const [addTitle, setAddTitle] = useState<string>("");
 
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
