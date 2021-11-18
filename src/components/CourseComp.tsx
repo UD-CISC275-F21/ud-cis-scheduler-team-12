@@ -16,30 +16,30 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
 }):  JSX.Element {
     
     const [input, setInput] = useState<string>("");
-    const [visable, setVisable] = useState<number>(0);
+    const [visible, setVisible] = useState<number>(0);
     const [description, setDescription] = useState<string>(course.description);
     const [title, setTitle] = useState<string>(course.name);
-    const [titleVisable, setTitleVisable] = useState<number>(0);
+    const [titleVisible, setTitleVisible] = useState<number>(0);
 
  
     function editTitle() {
-        setTitleVisable(1);
+        setTitleVisible(1);
     }
 
     function submitTitle() {
         setTitle(input);
-        setTitleVisable(0);
+        setTitleVisible(0);
     }
 
     function editDescription() {
 
-        setVisable(1);
+        setVisible(1);
         //alert(input);
     }
 
     function submitDescription() {
         setDescription(input);
-        setVisable(0);
+        setVisible(0);
     }
     
     function removeCourse(id: number) {
@@ -78,24 +78,24 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
 
     return (
         <div>           
-            <OverlayTrigger trigger="hover" show={ Object.values(course.preReq).every(course => course === true) ? false : true } placement={ SEMESTER_MAP[""+semesterSelect].indexOf(course) > 2 ? "bottom" : "top" } overlay={
+            <OverlayTrigger trigger={["hover", "focus"]} show={ Object.values(course.preReq).every(course => course === true) ? false : true } placement={ SEMESTER_MAP[""+semesterSelect].indexOf(course) > 2 ? "bottom" : "top" } overlay={
                 <Popover className="popover" id="tooltip-preReq">Missing: {Object.keys(course.preReq).filter(courseName => 
                     course.preReq[courseName] === false).map(course => 
                     <div key={course}>{course}</div>)} </Popover>}>
-                <Card className="card" style={{ width: "100%", color: updateColor(course) }}>
+                <Card className="card" data-testid="course-card" style={{ width: "100%", color: updateColor(course) }}>
                     <Container>
                         <Row>
                             <Col>
                                 <Card.Title>{title}</Card.Title>
-                                { titleVisable === 1 && <TitleInput 
+                                { titleVisible === 1 && <TitleInput 
                                     setInput={setInput}
                                 ></TitleInput> }
-                                {titleVisable === 1 && <button onClick={() => submitTitle()}>Submit</button>
+                                {titleVisible === 1 && <button onClick={() => submitTitle()}>Submit</button>
                                 }
                             
                                 <button className="delete-button" onClick={() => removeCourse(course.id)}>
                                     <MdDeleteForever></MdDeleteForever></button>
-                                <button className="edit-button" onClick={() => editTitle()}><GrEdit></GrEdit></button>
+                                <button className="edit-button" data-testid="title-edit-btn" onClick={() => editTitle()}><GrEdit></GrEdit></button>
                             </Col>                        
                         </Row>
                     </Container>
@@ -120,12 +120,12 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                                     <Accordion.Header>Details</Accordion.Header>
                                     <Accordion.Body>
                                         {description}
-                                        { visable === 1 && <TextInput 
+                                        { visible === 1 && <TextInput 
                                             setInput={setInput}
                                         ></TextInput>}
                                         
-                                        { visable === 0 && <button className="edit-desc-button" onClick={() => editDescription()}><GrEdit></GrEdit></button> }
-                                        { visable === 1 && <button className="" onClick={() => submitDescription()}>Enter</button> }   
+                                        { visible === 0 && <button className="edit-desc-button" onClick={() => editDescription()}><GrEdit></GrEdit></button> }
+                                        { visible === 1 && <button className="" onClick={() => submitDescription()}>Enter</button> }   
                                         
                                     </Accordion.Body>
                                 </Accordion.Item>

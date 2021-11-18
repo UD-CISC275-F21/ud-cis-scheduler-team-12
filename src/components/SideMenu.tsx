@@ -13,7 +13,7 @@ export default function SideMenu( {setVisibleView} : {
                 <Nav.Link eventKey="2">Semester View</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="3">Degree Plan View</Nav.Link>
+                <Nav.Link data-testid="degree-view-nav" eventKey="3">Degree Plan View</Nav.Link>
             </Nav.Item>
   
         </Nav>

@@ -38,6 +38,6 @@ export default function AddSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, setS
     }
 
     return(
-        <button className="add_button" onClick={() => addSemester()}>Add Semester</button>
+        <button className="add_button" data-testid="btn-add-semester" onClick={() => addSemester()}>Add Semester</button>
     );
 }
