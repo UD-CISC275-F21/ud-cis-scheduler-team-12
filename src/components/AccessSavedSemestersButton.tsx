@@ -22,11 +22,12 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         const parsedObject = JSON.parse(""+retrievedObject) as Record<string, Course[]>;
 
         // add necessary amount of semesters
-        const semesterCountBuffer = getNumberOfSemesters(parsedObject);
-        setSemesterCount(semesterCountBuffer);
+        
+        getNumberOfSemesters(parsedObject);
+        console.log(semesterCount);
 
         // Initialize all pre-reqs and add courses
-        //addLoadedSave(parsedObject);
+        // addLoadedSave(parsedObject);
     }
 
     function addLoadedSave(parsedObject: Record<string, Course[]>) {
@@ -41,29 +42,34 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
     function getNumberOfSemesters(parsedObject: Record<string, Course[]>) {
         const count = Object.keys(parsedObject).length;
         const numberOfVisibleSemesters = semesterCount - 1;
-        let semesterCountBuffer = semesterCount;
+        const semesterCountBuffer: number[] = [];
+        // let buttonListBuffer = buttonList;
+        
 
         if (numberOfVisibleSemesters < count) {
             for (let i = numberOfVisibleSemesters; i < count; i++){
-                addSemester(semesterCountBuffer);
-                semesterCountBuffer++;
+                semesterCountBuffer.push(i+1);
                 console.log(`NUMBER: ${semesterCountBuffer}`);
-                
             }
         }
+        setSemesterCount(count+1);
+        addSemester(semesterCountBuffer);
+        // setButtonList(buttonListBuffer);
 
         return semesterCountBuffer;
 
     }
 
-    function addSemester(semesterCountBuffer: number) {
+    function addSemester(semesterCountBuffer: number[]) {
         //let count = semesterCount;
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
 
-        buttonList.push({name: getSemesterName(semesterCountBuffer), value: semesterCountBuffer});
-        setButtonList(buttonList);
+        semesterCountBuffer.forEach(key => {
+            buttonList.push({name: getSemesterName(key), value: key});
+            NEW_SEMESTER_MAP[""+key] = [];
+        });
 
-        NEW_SEMESTER_MAP[""+semesterCount] = [];
+        setButtonList(buttonList);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
         
         return buttonList;
