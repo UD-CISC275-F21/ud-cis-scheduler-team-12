@@ -50,7 +50,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
             Object.keys(value.preReq).forEach(courseName => {
                 //console.log(courseName);
                 if(courseName === courseData[id].name) {
-                    console.log(courseName);
+                    console.log(`found ${courseName}`);
                     value.preReq[courseName] = false;
                 }
             });
