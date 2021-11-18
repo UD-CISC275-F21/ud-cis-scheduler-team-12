@@ -48,8 +48,6 @@ function MainPage({ visibleView, setVisibleView }: {
             <header className="App-header">
                 UD CIS Scheduler
                 <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
-                
-                
             </header>
             <section className="cell-left">
                 <p>Menu</p>

@@ -7,8 +7,9 @@ import { Accordion, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import { Course } from "../interfaces/course";
+import AddCourseAlert from "./AddCourseAlert";
 
-export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, setNewCourseVisible, newCourseVisible, SET_SAVE_BIN, SAVE_BIN }: {
+export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, newCourseVisible, SET_SAVE_BIN, SAVE_BIN }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,
     setBinVisible: (b: boolean) => void, binVisible: boolean,
@@ -99,10 +100,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
     function showBin() {
         setBinVisible(!binVisible);
     }
-    
-    function showCreateNewCourse() {
-        setNewCourseVisible(!newCourseVisible);
-    }
+
 
     return (
         <div>
@@ -110,7 +108,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                 <DropdownButton id="dropdown-basic-button" title="Dropdown button">
                     <Dropdown.Item as="button">Search Course</Dropdown.Item>
                     <Dropdown.Item as="button" onClick={() => showBin()}>Save Courses for Later</Dropdown.Item>
-                    <Dropdown.Item as="button" onClick={() => showCreateNewCourse()}>Create A New Course</Dropdown.Item>
+                    <Dropdown.Item as="button" onClick={() => AddCourseAlert()}>Create A New Course</Dropdown.Item>
                 </DropdownButton>
             </div>
             <SearchBar
