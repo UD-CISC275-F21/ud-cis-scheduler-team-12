@@ -52,10 +52,11 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
                 console.log(`NUMBER: ${semesterCountBuffer}`);
             }
             addSemester(semesterCountBuffer, parsedObject);
+            setSemesterCount(count+1);
+
         } else {
             addLoadedSave(parsedObject);
         }
-        setSemesterCount(count+1);
         
         
         // setButtonList(buttonListBuffer);
@@ -85,7 +86,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
                                     if (Object.values(courseData[course.id].preReq).every(course => course === true)){
                                         courseData[course.id].preReqCheck = "black";
                                     } else {
-                                        alert("Warning: Pre-Reqs not met.");
+                                        // alert("Warning: Pre-Reqs not met.");
                                         courseData[course.id].preReqCheck = "red";
                                     }
                                     updateColor(courseData[course.id]);
