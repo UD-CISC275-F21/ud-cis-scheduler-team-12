@@ -1,4 +1,4 @@
-const buttonList = [
+const buttonListInit = [
     { name: "Fall 1", value: 1 },
     { name: "Spring 1", value: 2 },
     { name: "Fall 2", value: 3 },
@@ -8,4 +8,4 @@ const buttonList = [
     { name: "Fall 4", value: 7 },
     { name: "Spring 4", value: 8 },
 ];
-export default buttonList;
+export default buttonListInit;

@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { Card,Col, Row, Container, Accordion, OverlayTrigger, Popover } from "react-bootstrap/";
 import "../css/courses.css";
 import "../assets/courses";
-import { Course } from "../interfaces/course";
 import { GrEdit } from "react-icons/gr";
 import { MdDeleteForever } from "react-icons/md";
 import courseData from "../assets/courses";
 import TextInput from "./TextInput";
 import TitleInput from "./TitleInput";
-
+import { Course } from "../interfaces/course";
 
 export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     course: Course,
