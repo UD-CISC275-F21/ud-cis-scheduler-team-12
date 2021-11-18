@@ -115,8 +115,6 @@ function MainPage({ visibleView, setVisibleView }: {
                     SAVE_BIN={SAVE_BIN}
                     binVisible={binVisible}
                     buttonList={buttonList}
-                    setSelectedSave={setSelectedSave}
-                    selectedSave={selectedSave}
                 ></Board> }
                 
                 { visibleView === "3" && <DegreePlan
