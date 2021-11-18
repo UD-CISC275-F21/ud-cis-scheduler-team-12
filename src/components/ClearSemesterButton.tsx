@@ -46,6 +46,6 @@ export default function ClearSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, se
     }
 
     return (
-        <button onClick={removeAllCourses}>Clear All Courses</button>
+        <button onClick={removeAllCourses}>Clear Current Semester</button>
     );
 }

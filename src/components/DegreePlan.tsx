@@ -101,7 +101,7 @@ export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, 
                 </Container>
             </div>
             <div>
-                <button onClick={removeAllSemesters}>Clear All Semesters</button>
+                <button style={{margin: "5%"}}onClick={removeAllSemesters}>Clear All Semesters</button>
             </div>
         </div>
     );
