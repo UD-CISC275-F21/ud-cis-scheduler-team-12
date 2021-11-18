@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Dropdown } from "react-bootstrap";
 import { ImCross } from "react-icons/im";
 import Swal from "sweetalert2";
@@ -51,28 +51,73 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
                 semesterCountBuffer.push(i+1);
                 console.log(`NUMBER: ${semesterCountBuffer}`);
             }
+            addSemester(semesterCountBuffer, parsedObject);
+        } else {
+            addLoadedSave(parsedObject);
         }
         setSemesterCount(count+1);
-        addSemester(semesterCountBuffer);
+        
+        
         // setButtonList(buttonListBuffer);
 
         return semesterCountBuffer;
 
     }
 
-    function addSemester(semesterCountBuffer: number[]) {
+    function addSemester(semesterCountBuffer: number[], parsedObject: Record<string, Course[]>) {
         //let count = semesterCount;
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
 
         semesterCountBuffer.forEach(key => {
             buttonList.push({name: getSemesterName(key), value: key});
             NEW_SEMESTER_MAP[""+key] = [];
+            Object.keys(NEW_SEMESTER_MAP).forEach(mapKey => {
+                console.log(mapKey);
+                Object.keys(parsedObject).forEach(objKey => {
+                    if (""+mapKey === objKey) {
+                        console.log(`Object key matched: ${mapKey}`);
+                        Object.values(parsedObject[objKey]).forEach(course => {
+                            console.log(`Found an object ${course.name}`);
+                            if (!NEW_SEMESTER_MAP[mapKey].includes(course)){
+                                //  PREREQ MET IN PRIOR SEMESTER
+                                if (Object.keys(courseData[course.id].preReq).length > 0){
+                                    console.log(courseData[course.id].preReq);
+                                    if (Object.values(courseData[course.id].preReq).every(course => course === true)){
+                                        courseData[course.id].preReqCheck = "black";
+                                    } else {
+                                        alert("Warning: Pre-Reqs not met.");
+                                        courseData[course.id].preReqCheck = "red";
+                                    }
+                                    updateColor(courseData[course.id]);
+                                }
+                                NEW_SEMESTER_MAP[mapKey].push(course);
+
+                                for (const [key, value] of Object.entries(NEW_SEMESTER_MAP)) {
+                                    console.log([key,value]);
+                                    NEW_SEMESTER_MAP[key].forEach(item => {
+                                        if(Object.keys(item.preReq).length > 0) {
+                                            if (Object.values(item.preReq).every(course => course === true)){
+                                                item.preReqCheck = "black";
+                                            } else {
+                                                item.preReqCheck = "red";
+                                            }
+                                            updateColor(item);
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+            
+            
         });
 
         setButtonList(buttonList);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
         
-        return buttonList;
+        return NEW_SEMESTER_MAP;
     }
 
     function getSemesterName(count: number) {
