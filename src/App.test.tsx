@@ -5,27 +5,35 @@ import App from "./App";
 describe("App", () => {
     beforeEach(() => {
         render(<App />);
+    });
+
+    // Because of Landing Page, all tests after the first require the "enter" fire event to access main page
+    it("loads the landing page on start", () => {
+        const element = screen.getByText("Start Building Your Plan");
+
+        expect(element).toBeInTheDocument();
+    });
+
+
+    it("shows a single semester of courses", () => {
         const enter = screen.getByTestId("enter-main");
         act(() => {
             fireEvent.click(enter);
         });
-    });
 
-    //          TESTING AUTOMATICALLY SKIPS LANDING PAGE
-    // it("loads the landing page on start", () => {
-    //     const element = screen.getByText("Start Building Your Plan");
-
-    //     expect(element).toBeInTheDocument();
-    // })
-
-    it("shows a single semester of courses", () => {
         const element = screen.getByTestId("semester-view");
         const board = screen.getByTestId("board");
         expect(element).toBeInTheDocument();
         expect(board).toBeInTheDocument();
     });
 
+
     it("shows multiple semesters of courses", () => {
+        const enter = screen.getByTestId("enter-main");
+        act(() => {
+            fireEvent.click(enter);
+        });
+
         const changeView = screen.getByTestId("degree-view-nav");
         act(() => {
             fireEvent.click(changeView);
@@ -37,7 +45,13 @@ describe("App", () => {
         }
     });
 
+
     it("a course can be added to plan in Semester View", () => {
+        const enter = screen.getByTestId("enter-main");
+        act(() => {
+            fireEvent.click(enter);
+        });
+        
         let course = screen.queryByTestId("course-card");
         expect(course).not.toBeInTheDocument();
 
@@ -49,7 +63,13 @@ describe("App", () => {
         expect(course).toBeInTheDocument();
     });
 
+
     it("a course can be added to plan in Degree View", () => {
+        const enter = screen.getByTestId("enter-main");
+        act(() => {
+            fireEvent.click(enter);
+        });
+        
         const changeView = screen.getByTestId("degree-view-nav");
         act(() => {
             fireEvent.click(changeView);
@@ -82,36 +102,50 @@ describe("App", () => {
         expect(courseList[1]).toBeInTheDocument(); // a new course, HIST 100, is added to the document
     });
 
+
     it("can clear out all existing courses in a semester", () => {
+        const enter = screen.getByTestId("enter-main");
+        act(() => {
+            fireEvent.click(enter);
+        });
+        
+        const changeView = screen.getByTestId("degree-view-nav");
+        act(() => {
+            fireEvent.click(changeView);
+        });
         // adding courses to semester
-        let addBtn = screen.getByTestId("CISC 100");
+        const addCisc = screen.getByTestId("CISC 100");
+        const addMath = screen.getByTestId("MATH 100");
+        const addHist = screen.getByTestId("HIST 100");
+        const addEngl = screen.getByTestId("ENGL 100");
         act(() => {
-            fireEvent.click(addBtn);
-        });
-        addBtn = screen.getByTestId("MATH 100");
-        act(() => {
-            fireEvent.click(addBtn);
-        });
-        addBtn = screen.getByTestId("ENGL 100");
-        act(() => {
-            fireEvent.click(addBtn);
+            fireEvent.click(addCisc);
+            fireEvent.click(addMath);
+            fireEvent.click(addHist);
+            fireEvent.click(addEngl);
         });
 
-        const courseList = screen.queryAllByTestId("course-card");
+        const courseList = screen.queryAllByTestId("semester-comp-card");
         for (let i = 0; i < courseList.length; i++) {
             expect(courseList[i]).toBeInTheDocument(); // courses in document
         }
 
-        const removeBtn = screen.getByTestId("btn-clear-semester");
+        const removeCourses = screen.getByTestId("btn-remove-semesters");
         act(() => {
-            fireEvent.click(removeBtn);
+            fireEvent.click(removeCourses); // clear out semester
         });
 
-        const courseCheck = screen.queryByTestId("course-card");
+        const courseCheck = screen.queryByTestId("semester-comp-card");
         expect(courseCheck).not.toBeInTheDocument();
     });
 
+
     it("can clear out all existing semesters in a plan", () => {
+        const enter = screen.getByTestId("enter-main");
+        act(() => {
+            fireEvent.click(enter);
+        });
+        
         const changeView = screen.getByTestId("degree-view-nav");
         act(() => {
             fireEvent.click(changeView);
@@ -144,14 +178,83 @@ describe("App", () => {
 
         const removeSemesters = screen.getByTestId("btn-remove-semesters");
         act(() => {
-            fireEvent.click(removeSemesters); // add course to semester (by default, semester 0)
+            fireEvent.click(removeSemesters);
         });
         const checkForCourses = screen.queryByTestId("semester-comp-card");
         expect(checkForCourses).not.toBeInTheDocument(); // no courses in document
     });
 
-    // it("course name can be edited", () => {
-    //     const 
-    // });
 
+    it("semesters can be removed", () => {
+        const enter = screen.getByTestId("enter-main");
+        act(() => {
+            fireEvent.click(enter);
+        });
+        
+        const semesterList = screen.getAllByTestId("btn-semester"); // 8 semesters by default
+        expect(semesterList[7]).toBeInTheDocument();
+
+        const spring4 = screen.getByText("Spring 4");
+        expect(spring4).toBeInTheDocument();
+
+        const removeSemester = screen.getByTestId("btn-remove-semester");
+        act(() => {
+            fireEvent.click(removeSemester);
+        });
+
+        const lastSemester = screen.queryByText("Spring 4");
+        expect(lastSemester).not.toBeInTheDocument(); // removed spring 4 (last semester)
+
+        const semesterListNew = screen.getAllByTestId("btn-semester"); // 7 semesters now
+        expect(semesterList).not.toEqual(semesterListNew);
+    });
+
+
+    it("semesters can be added", () => {
+        const enter = screen.getByTestId("enter-main");
+        act(() => {
+            fireEvent.click(enter);
+        });
+        
+        const semesterList = screen.getAllByTestId("btn-semester"); // 8 semesters by default
+
+        let fall5 = screen.queryByText("Fall 5");
+        expect(fall5).not.toBeInTheDocument();
+
+        const addSemester = screen.getByTestId("btn-add-semester");
+        act(() => {
+            fireEvent.click(addSemester);
+        });
+
+        fall5 = screen.queryByText("Fall 5");
+        expect(fall5).toBeInTheDocument(); // added new semester
+
+        const semesterListNew = screen.getAllByTestId("btn-semester"); // 9 semesters now
+        expect(semesterList).not.toEqual(semesterListNew);
+    });
+    
+
+    // it("course name can be edited", () => {
+    //     const enter = screen.getByTestId("enter-main");
+    //     act(() => {
+    //         fireEvent.click(enter);
+    //     });
+        
+    //     const addBtn = screen.getByTestId("CISC 100");
+    //     act(() => {
+    //         fireEvent.click(addBtn);
+    //     });
+    //     const titleBtn = screen.getByTestId("title-edit-btn");
+    //     act(() => {
+    //         fireEvent.click(titleBtn);
+    //     });
+
+    //     const titleBox = screen.getByTestId("input-title");
+    //     act(() => {
+    //         fireEvent.change(titleBox, "New Name");
+    //     });
+        
+    //     const checkTitle = screen.getByText("New Name");
+    //     expect(checkTitle).toBeInTheDocument();
+    // });
 });

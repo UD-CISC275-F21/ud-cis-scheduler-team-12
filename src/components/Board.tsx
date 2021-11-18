@@ -87,6 +87,7 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
                 <ToggleButtonGroup className="semester-button" name="options" value={+buttonToggle} onChange={handleSelect}>
                     {buttonList.map((radio, idx) =>
                         <ToggleButton
+                            data-testid="btn-semester"
                             key={idx}
                             id={`radio-${idx}`}
                             type="radio"

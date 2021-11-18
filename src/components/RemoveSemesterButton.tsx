@@ -79,6 +79,6 @@ export default function RemoveSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, s
     }
 
     return(
-        <button className="remove_button" onClick={() => removeSemester()}>Remove Semester</button>
+        <button className="remove_button" data-testid="btn-remove-semester" onClick={() => removeSemester()}>Remove Semester</button>
     );
 }

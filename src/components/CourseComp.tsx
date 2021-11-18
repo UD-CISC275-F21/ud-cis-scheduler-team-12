@@ -95,7 +95,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                             
                                 <button className="delete-button" onClick={() => removeCourse(course.id)}>
                                     <MdDeleteForever></MdDeleteForever></button>
-                                <button className="edit-button" onClick={() => editTitle()}><GrEdit></GrEdit></button>
+                                <button className="edit-button" data-testid="title-edit-btn" onClick={() => editTitle()}><GrEdit></GrEdit></button>
                             </Col>                        
                         </Row>
                     </Container>
