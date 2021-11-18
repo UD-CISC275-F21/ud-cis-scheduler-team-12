@@ -15,9 +15,6 @@ export default function SideMenu( {setVisibleView} : {
             <Nav.Item>
                 <Nav.Link eventKey="3">Degree Plan View</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-                <Nav.Link eventKey="4">Calendar View</Nav.Link>
-            </Nav.Item>
   
         </Nav>
     );

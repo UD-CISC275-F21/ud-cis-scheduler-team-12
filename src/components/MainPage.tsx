@@ -5,7 +5,6 @@ import "../css/App.css";
 import { Board } from "../components/Board";
 import DisplayCourses from "../components/DisplayCourses";
 import SideMenu from "../components/SideMenu";
-import Calender from "../components/Calender";
 import DegreePlan from "../components/DegreePlan";
 import { Course } from "../interfaces/course";
 import SaveBin from "./SaveBin";
@@ -127,9 +126,6 @@ function MainPage({ visibleView, setVisibleView }: {
                     setSemesterHeader={setSemesterHeader}
                     buttonList={buttonList}
                 ></DegreePlan> }
-
-                { visibleView === "4" && <Calender></Calender> }
-
                 
             </section>
             <section className="cell-right">
