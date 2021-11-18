@@ -16,7 +16,7 @@ export default function LandingPage({ setVisibleView }: {
             <div className="centered">
                 <h1>UD CIS Scheduler</h1>
                 <h2>Start Building Your Plan</h2>
-                <button onClick={() => changeView()}>Enter</button>
+                <button data-testid="enter-main" onClick={() => changeView()}>Enter</button>
             </div>
         </div>
     );

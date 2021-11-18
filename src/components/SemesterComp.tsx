@@ -53,7 +53,7 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
                 <button className="delete-button" onClick={removeAllCourses}>
                     <MdDeleteForever></MdDeleteForever>
                 </button>
-                { !SELECT_MAP[+semesterIndex] && <button className="select-button-off" onClick={() => selectToggle(""+semesterSelect)}>
+                { !SELECT_MAP[+semesterIndex] && <button className="select-button-off" data-testid="select-button" onClick={() => selectToggle(""+semesterSelect)}>
                     <ImRadioUnchecked></ImRadioUnchecked> 
                 </button>}
                 { SELECT_MAP[+semesterIndex] && <button className="select-button-on" onClick={() => selectToggle(""+semesterSelect)}>
@@ -69,10 +69,10 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
                                 <th scope="col">Credit(s)</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody data-testid="semester-table">
                             {courseList.map((course, id) =>
 
-                                <tr key={id}>
+                                <tr key={id} data-testid="semester-comp-card">
                                     <th>{course.name}</th>
                                     <td>{course.credits}</td>
                                     <button className="delete-course" onClick={() => removeCourse(course.id)}>

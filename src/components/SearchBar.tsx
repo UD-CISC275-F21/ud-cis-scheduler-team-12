@@ -7,7 +7,7 @@ export default function SearchBar({ setQuery }: {
 }): JSX.Element {
     return(
         <div>
-            <input className="form__field" placeholder="Enter Course" onChange={event => setQuery(event.target.value)}/>
+            <input className="form__field" data-testid="search-bar" placeholder="Enter Course" onChange={event => setQuery(event.target.value)}/>
         </div>
     );
 }

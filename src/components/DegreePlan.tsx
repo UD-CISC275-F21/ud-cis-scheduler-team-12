@@ -39,7 +39,7 @@ export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, 
             
             <h2>Degree Plan View</h2>
 
-            <div>
+            <div data-testid="degree-view">
                 <Container>
                     
                     <Row xs={2} md={2}>
@@ -64,7 +64,7 @@ export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, 
                 </Container>
             </div>
             <div>
-                <button onClick={removeAllSemesters}>Clear All Semesters</button>
+                <button onClick={removeAllSemesters} data-testid="btn-remove-semesters">Clear All Semesters</button>
             </div>
         </div>
     );

@@ -80,7 +80,7 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
     }
 
     return (
-        <div>
+        <div data-testid="semester-view">
             <div>
                 <h2>Semester View - {semesterHeader}</h2>
                 <ToggleButtonGroup className="semester-button" name="options" value={+buttonToggle} onChange={handleSelect}>
@@ -100,8 +100,8 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
             </div>
 
             <div>
-                <Container>
-                    <Row xs={1} md={3}>
+                <Container data-testid="board">
+                    <Row data-testid="board-row-1" xs={1} md={3}>
                         <AnimatePresence>
                             {classListToPrint.map(classListToPrint =>
                                 <motion.div
