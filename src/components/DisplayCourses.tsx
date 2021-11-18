@@ -7,6 +7,8 @@ import { Accordion, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import { Course } from "../interfaces/course";
+import SpiderMan from "../assets/spiderman_meme.jpeg";
+import Swal from "sweetalert2";
 
 export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, setNewCourseVisible, newCourseVisible, SET_SAVE_BIN, SAVE_BIN }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
@@ -27,13 +29,23 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
         // If bin is open, add courses to bin
         if (binVisible){
             if (SAVE_BIN.includes(courseData[id])) {
-                alert(`${courseData[id].name} is already added to your bin. Please select another course.`);
+                Swal.fire({
+                    title: "Duplicate Course!",
+                    text: `${courseData[id].name} is already added to your bin. Please select another course.`,
+                    icon: "error",
+                    imageUrl: SpiderMan
+                });
             } else {
                 SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
             }
         } else {
             if (foundCourse) {
-                alert(`${courseData[id].name} is already added to this semester. Please select another course.`);
+                Swal.fire({
+                    title: "Duplicate Course!",
+                    text: `${courseData[id].name} is already added to this semester. Please select another course.`,
+                    icon: "error",
+                    imageUrl: SpiderMan
+                });
             } else {
                 //  PREREQ MET IN PRIOR SEMESTER
                 if (Object.keys(courseData[id].preReq).length > 0){
@@ -41,14 +53,22 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                     if (Object.values(courseData[id].preReq).every(course => course === true)){
                         courseData[id].preReqCheck = "black";
                     } else {
-                        alert("Warning: Pre-Reqs not met.");
+                        Swal.fire(
+                            "Pre-Req Error!",
+                            "Warning: Pre-Reqs not met 🤔.",
+                            "error"
+                        );
                         courseData[id].preReqCheck = "red";
                     }
                     updateColor(courseData[id]);
                 }
 
                 if (SEMESTER_MAP["" + semesterSelect].length === 6) {
-                    alert("Max number of courses selected for semester.");
+                    Swal.fire(
+                        "Getting Studious!",
+                        "Warning: Max number of courses selected for semester 📚.",
+                        "error"
+                    );
                 } else {
                     for (const [key, value] of Object.entries(courseData)) {
                         console.log([key,value]);
@@ -77,12 +97,6 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                         }
                     });
                 }
-
-                // SEMESTER_MAP[""+semesterSelect].length === 6 ? alert("Max number of courses selected for semester.")
-                //     : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), 
-                //     SET_SEMESTER_MAP(NEW_SEMESTER_MAP));
-
-            
             }
         }   
     }

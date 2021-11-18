@@ -13,6 +13,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
     setButtonList: (b: ButtonList[]) => void, buttonList: ButtonList[]
 }): JSX.Element {
 
+    // Main Load Function
     function loadSave(key: string) {
         // Remove all courses and remove pre-req markers.
         removeAllCourses();
@@ -21,13 +22,8 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         const retrievedObject = localStorage.getItem(key);
         const parsedObject = JSON.parse(""+retrievedObject) as Record<string, Course[]>;
 
-        // add necessary amount of semesters
-        
+        // add necessary amount of semesters and courses respectively
         getNumberOfSemesters(parsedObject);
-        console.log(semesterCount);
-
-        // Initialize all pre-reqs and add courses
-        // addLoadedSave(parsedObject);
     }
 
     function addLoadedSave(parsedObject: Record<string, Course[]>) {
@@ -65,21 +61,22 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
 
     }
 
+    // I promise this code works... It needs to be cleaned up big time
     function addSemester(semesterCountBuffer: number[], parsedObject: Record<string, Course[]>) {
-        //let count = semesterCount;
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
 
         semesterCountBuffer.forEach(key => {
             buttonList.push({name: getSemesterName(key), value: key});
             NEW_SEMESTER_MAP[""+key] = [];
             Object.keys(NEW_SEMESTER_MAP).forEach(mapKey => {
-                console.log(mapKey);
+                // console.log(mapKey);
                 Object.keys(parsedObject).forEach(objKey => {
                     if (""+mapKey === objKey) {
-                        console.log(`Object key matched: ${mapKey}`);
+                        // console.log(`Object key matched: ${mapKey}`);
                         Object.values(parsedObject[objKey]).forEach(course => {
-                            console.log(`Found an object ${course.name}`);
+                            // console.log(`Found an object ${course.name}`);
                             if (!NEW_SEMESTER_MAP[mapKey].includes(course)){
+
                                 //  PREREQ MET IN PRIOR SEMESTER
                                 if (Object.keys(courseData[course.id].preReq).length > 0){
                                     console.log(courseData[course.id].preReq);
@@ -145,14 +142,14 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
             if (Object.values(courseData[id].preReq).every(course => course === true)){
                 courseData[id].preReqCheck = "black";
             } else {
-                alert("Warning: Pre-Reqs not met.");
+                preReqAlert();
                 courseData[id].preReqCheck = "red";
             }
             updateColor(courseData[id]);
         }
 
         if (SEMESTER_MAP[key].length === 6) {
-            alert("Max number of courses selected for semester.");
+            maxNumberOfCoursesAlert();
         } else {
             for (const [key, value] of Object.entries(courseData)) {
                 console.log([key,value]);
@@ -187,18 +184,34 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         Swal.fire({
             title: `Are you sure you want to delete "${key}"?`,
             showDenyButton: true,
-            showCancelButton: true,
             confirmButtonText: `Delete "${key}"`,
             denyButtonText: "Don't delete",
+            icon: "warning"
         }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 localStorage.removeItem(key);
-                Swal.fire(`"${key}" Deleted!`, "", "success");
+                Swal.fire(`"${key}" Deleted 😁!`, "", "success");
             } else if (result.isDenied) {
-                Swal.fire(`"${key}" was not Deleted.`, "", "info");
+                Swal.fire(`"${key}" was not Deleted 😮‍💨.`, "", "info");
             }
         });
+    }
+
+    function preReqAlert() {
+        Swal.fire(
+            "Pre-Req Error!",
+            "Warning: Pre-Reqs not met 🤔.",
+            "error"
+        );
+    }
+
+    function maxNumberOfCoursesAlert() {
+        Swal.fire(
+            "Getting Studious!",
+            "Warning: Max number of courses selected for semester 📚.",
+            "error"
+        );
     }
 
     function removeAllCourses() {

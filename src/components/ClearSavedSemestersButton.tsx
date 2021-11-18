@@ -7,17 +7,17 @@ export default function ClearSavedSemestersButton(): JSX.Element {
         Swal.fire({
             title: "Are you sure you want to delete all of your saved semesters?",
             showDenyButton: true,
-            showCancelButton: true,
-            confirmButtonText: "Delete All",
-            denyButtonText: "Don't delete",
+            confirmButtonText: "Delete All Saves",
+            denyButtonText: "Don't delete All Saves",
+            icon: "warning"
         }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 localStorage.clear();
                 console.log(localStorage);
-                Swal.fire("All Saved Semesters Deleted!", "", "success");
+                Swal.fire("All Saved Semesters Deleted 😁!", "", "success");
             } else if (result.isDenied) {
-                Swal.fire("Semesters are not Deleted.", "", "info");
+                Swal.fire("Semesters are not Deleted 😮‍💨.", "", "info");
             }
         });
         

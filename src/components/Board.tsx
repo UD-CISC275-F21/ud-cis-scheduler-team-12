@@ -9,6 +9,8 @@ import courseData from "../assets/courses";
 import { AnimatePresence, motion } from "framer-motion";
 import { ButtonList } from "../interfaces/buttonList";
 import { Course } from "../interfaces/course";
+import Swal from "sweetalert2";
+import SpiderMan from "../assets/spiderman_meme.jpeg";
 
 export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader, SET_SAVE_BIN, SAVE_BIN, binVisible, buttonList }: {
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
@@ -29,7 +31,12 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
         
         if (binVisible){
             if (SAVE_BIN.includes(courseData[id])) {
-                alert(`${courseData[id].name} is already added to your bin. It will now be removed from the semester.`);
+                Swal.fire({
+                    title: "Duplicate Course!",
+                    text: `${courseData[id].name} is already added to your bin. It will now be removed from the semester.`,
+                    icon: "error",
+                    imageUrl: SpiderMan
+                });
             } else {
                 SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
             }
