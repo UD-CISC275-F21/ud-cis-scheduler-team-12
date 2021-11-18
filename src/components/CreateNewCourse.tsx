@@ -3,11 +3,13 @@ import React from "react";
 import { Col, Container, Offcanvas, Row } from "react-bootstrap";
 
 import "../css/SaveBin.css";
+import SpiderMan from "../assets/spiderman_meme.jpeg";
 
 import courseData from "../assets/courses";
 import CreateNewCourseCard from "./BinCourseCard";
 import ClearBinButton from "./ClearBinButton";
 import { Course } from "../interfaces/course";
+import Swal from "sweetalert2";
 
 export default function CreateNewCourse({ setNewCourseVisible, newCourseVisible, SET_SAVE_BIN, SAVE_BIN, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: 
     {
@@ -25,7 +27,12 @@ export default function CreateNewCourse({ setNewCourseVisible, newCourseVisible,
         
         // If there are less than 6 courses, add the selected course onto the end of the classList
         if (SEMESTER_MAP[""+semesterSelect].includes(courseData[id])) {
-            alert(`${courseData[id].name} is already added to this semester. Please select another course.`);
+            Swal.fire({
+                title: "Duplicate Course!",
+                text: `${courseData[id].name} is already added to this semester. Please select another course.`,
+                icon: "error",
+                imageUrl: SpiderMan
+            });
         } else {
             // for (const [key, value] of Object.entries(SEMESTER_MAP)) {
             //     console.log(key,value);
@@ -35,7 +42,12 @@ export default function CreateNewCourse({ setNewCourseVisible, newCourseVisible,
             // }
 
             // After adding course to the semester, remove it from the save-later bin
-            SEMESTER_MAP[""+semesterSelect].length === 6 ? alert("Max number of courses selected for semester.")
+            SEMESTER_MAP[""+semesterSelect].length === 6 ? 
+                Swal.fire(
+                    "Getting Studious!",
+                    "Warning: Max number of courses selected for semester 📚.",
+                    "error"
+                )
                 : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), SET_SEMESTER_MAP(NEW_SEMESTER_MAP),
                 removeCourse(id));
         }

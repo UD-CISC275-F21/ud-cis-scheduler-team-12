@@ -9,6 +9,9 @@ import BinCourseCard from "./BinCourseCard";
 import ClearBinButton from "./ClearBinButton";
 import { Course } from "../interfaces/course";
 
+import SpiderMan from "../assets/spiderman_meme.jpeg";
+import Swal from "sweetalert2";
+
 export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     setBinVisible: (b: boolean) => void, binVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
@@ -24,17 +27,20 @@ export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_
         
         // If there are less than 6 courses, add the selected course onto the end of the classList
         if (SEMESTER_MAP[""+semesterSelect].includes(courseData[id])) {
-            alert(`${courseData[id].name} is already added to this semester. Please select another course.`);
+            Swal.fire({
+                title: "Duplicate Course!",
+                text: `${courseData[id].name} is already added to this semester. Please select another course.`,
+                icon: "error",
+                imageUrl: SpiderMan
+            });
         } else {
-            // for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-            //     console.log(key,value);
-            //     if (SEMESTER_MAP[key].includes(courseData[id])) {
-            //         alert(`Warning: ${courseData[id].name} is already added to semester ${key}.`);
-            //     }
-            // }
-
             // After adding course to the semester, remove it from the save-later bin
-            SEMESTER_MAP[""+semesterSelect].length === 6 ? alert("Max number of courses selected for semester.")
+            SEMESTER_MAP[""+semesterSelect].length === 6 ? 
+                Swal.fire(
+                    "Getting Studious!",
+                    "Warning: Max number of courses selected for semester 📚.",
+                    "error"
+                )
                 : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), SET_SEMESTER_MAP(NEW_SEMESTER_MAP),
                 removeCourse(id));
         }

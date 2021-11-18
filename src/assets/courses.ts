@@ -1,4 +1,6 @@
-const courseData = [
+import { Course } from "../interfaces/course";
+
+const courseData: Course[] = [
     {
         "id": 0,
         "name": "CISC 100",
@@ -7,7 +9,7 @@ const courseData = [
         "schedule": "MWF",
         "description": "This is Computer Science 100, section 10.",
         "credits": 3,
-        "preReq": <Record<string, boolean>>{},
+        "preReq": {},
         "preReqCheck": "black"
     },
     {
@@ -18,7 +20,7 @@ const courseData = [
         "schedule": "MWF",
         "description": "This is Computer Science 200, section 10.",
         "credits": 4,
-        "preReq": <Record<string, boolean>>{"CISC 100": false},
+        "preReq": {"CISC 100": false},
         "preReqCheck": "black"
     },
     {
@@ -29,7 +31,7 @@ const courseData = [
         "schedule": "TR",
         "description": "This is Computer Science 300, section 10.",
         "credits": 3,
-        "preReq": <Record<string, boolean>>{"CISC 200": false, "MATH 100": false},
+        "preReq": {"CISC 200": false, "MATH 100": false},
         "preReqCheck": "black"
     },
     {
@@ -40,7 +42,7 @@ const courseData = [
         "schedule": "MWF",
         "description": "This is Mathematics 100, section 10.",
         "credits": 3,
-        "preReq": <Record<string, boolean>>{},
+        "preReq": {},
         "preReqCheck": "black"
     },
     {
@@ -51,7 +53,7 @@ const courseData = [
         "schedule": "TR",
         "description": "This is Mathematics 200, section 10.",
         "credits": 3,
-        "preReq": <Record<string, boolean>>{"MATH 100": false},
+        "preReq": {"MATH 100": false},
         "preReqCheck": "black"
     },
     {
@@ -62,7 +64,7 @@ const courseData = [
         "schedule": "MWF",
         "description": "This is English 100, section 10.",
         "credits": 3,
-        "preReq": <Record<string, boolean>>{},
+        "preReq": {},
         "preReqCheck": "black"
     },
     {
@@ -73,7 +75,7 @@ const courseData = [
         "schedule": "TR",
         "description": "This is Computer Engineering 100, section 10.",
         "credits": 3,
-        "preReq": <Record<string, boolean>>{},
+        "preReq": {},
         "preReqCheck": "black"
     },
     {
@@ -84,7 +86,7 @@ const courseData = [
         "schedule": "TR",
         "description": "This is Computer Engineering 200, section 10.",
         "credits": 4,
-        "preReq": <Record<string, boolean>>{"CPEG 100": false, "MATH 100": false},
+        "preReq": {"CPEG 100": false, "MATH 100": false},
         "preReqCheck": "black"
     },
     {
@@ -95,7 +97,7 @@ const courseData = [
         "schedule": "MWF",
         "description": "This is Computer Engineering 300, section 10.",
         "credits": 4,
-        "preReq": <Record<string, boolean>>{"CPEG 200": false, "MATH 100": false},
+        "preReq": {"CPEG 200": false, "MATH 100": false},
         "preReqCheck": "black"
     },
     {
@@ -106,7 +108,7 @@ const courseData = [
         "schedule": "TR",
         "description": "This is Computer Engineering 400, section 10.",
         "credits": 3,
-        "preReq": <Record<string, boolean>>{"CPEG 300": false, "MATH 200": false},
+        "preReq": {"CPEG 300": false, "MATH 200": false},
         "preReqCheck": "black"
     },
     {
@@ -117,7 +119,7 @@ const courseData = [
         "schedule": "TR",
         "description": "This is Mathematics 300, section 10.",
         "credits": 3,
-        "preReq": <Record<string, boolean>>{"MATH 200": false},
+        "preReq": {"MATH 200": false},
         "preReqCheck": "black"
     },
     {
@@ -128,7 +130,7 @@ const courseData = [
         "schedule": "MWF",
         "description": "This is Mathematics 400, section 10.",
         "credits": 3,
-        "preReq": <Record<string, boolean>>{"MATH 300": false},
+        "preReq": {"MATH 300": false},
         "preReqCheck": "black"
     },
     {
@@ -139,7 +141,7 @@ const courseData = [
         "schedule": "TR",
         "description": "This is Computer Engineering 355, section 10.",
         "credits": 4,
-        "preReq": <Record<string, boolean>>{"CPEG 300": false, "CISC 200": false},
+        "preReq": {"CPEG 300": false, "CISC 200": false},
         "preReqCheck": "black"
     },
     {
@@ -150,7 +152,7 @@ const courseData = [
         "schedule": "MWF",
         "description": "This is Computer Science 400, section 10.",
         "credits": 3,
-        "preReq": <Record<string, boolean>>{"CISC 300": false},
+        "preReq": {"CISC 300": false},
         "preReqCheck": "black"
     },
     {
@@ -161,7 +163,7 @@ const courseData = [
         "schedule": "TR",
         "description": "This is English 200, section 10.",
         "credits": 3,
-        "preReq": <Record<string, boolean>>{"ENGL 100": false},
+        "preReq": {"ENGL 100": false},
         "preReqCheck": "black"
     },
     {
@@ -172,7 +174,7 @@ const courseData = [
         "schedule": "MWF",
         "description": "This is English 300, section 10.",
         "credits": 3,
-        "preReq": <Record<string, boolean>>{"ENGL 200": false},
+        "preReq": {"ENGL 200": false},
         "preReqCheck": "black"
     },
     {
@@ -183,7 +185,7 @@ const courseData = [
         "schedule": "MWF",
         "description": "This is English 400, section 10.",
         "credits": 3,
-        "preReq": <Record<string, boolean>>{"ENGL 300": false},
+        "preReq": {"ENGL 300": false},
         "preReqCheck": "black"
     },
     {
@@ -194,7 +196,7 @@ const courseData = [
         "schedule": "TR",
         "description": "This is History 100, section 10.",
         "credits": 3,
-        "preReq": <Record<string, boolean>>{},
+        "preReq": {},
         "preReqCheck": "black"
     },
     {
@@ -205,7 +207,7 @@ const courseData = [
         "schedule": "TR",
         "description": "This is Physics 100, section 10.",
         "credits": 4,
-        "preReq": <Record<string, boolean>>{},
+        "preReq": {},
         "preReqCheck": "black"
     },
     {
@@ -216,7 +218,7 @@ const courseData = [
         "schedule": "MWF",
         "description": "This is Physics 200, section 10.",
         "credits": 4,
-        "preReq": <Record<string, boolean>>{"PHYS 100": false, "MATH 200": false},
+        "preReq": {"PHYS 100": false, "MATH 200": false},
         "preReqCheck": "black"
     }
 ];

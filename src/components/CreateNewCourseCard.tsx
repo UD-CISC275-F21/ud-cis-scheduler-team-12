@@ -26,8 +26,6 @@ export default function CreateNewCourseCard({ course, SET_SAVE_BIN, SAVE_BIN }: 
     function removeCourse(id: number) {
         SET_SAVE_BIN(SAVE_BIN.filter(item => item !== courseData[id]));
     }
-
-    alert("bruh2");
     
     return (
         <div>           

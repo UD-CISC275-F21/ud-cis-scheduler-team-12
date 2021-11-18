@@ -9,8 +9,10 @@ import courseData from "../assets/courses";
 import { AnimatePresence, motion } from "framer-motion";
 import { ButtonList } from "../interfaces/buttonList";
 import { Course } from "../interfaces/course";
+import Swal from "sweetalert2";
+import SpiderMan from "../assets/spiderman_meme.jpeg";
 
-export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader, SET_SAVE_BIN, SAVE_BIN, binVisible, buttonList }: {
+export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader, SET_SAVE_BIN, SAVE_BIN, binVisible, buttonList}: {
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterHeader: (s: string) => void, semesterHeader: string,
@@ -29,7 +31,12 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
         
         if (binVisible){
             if (SAVE_BIN.includes(courseData[id])) {
-                alert(`${courseData[id].name} is already added to your bin. It will now be removed from the semester.`);
+                Swal.fire({
+                    title: "Duplicate Course!",
+                    text: `${courseData[id].name} is already added to your bin. It will now be removed from the semester.`,
+                    icon: "error",
+                    imageUrl: SpiderMan
+                });
             } else {
                 SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
             }
@@ -78,6 +85,42 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
 
     function updateColor(course: Course) {
         return course.preReqCheck;
+    }
+
+    function removeAllSemesters() {
+        const NEW_SEMESTER_MAP = {...SEMESTER_MAP}; 
+        for (const [key] of Object.entries(NEW_SEMESTER_MAP)) {
+            Object.values(NEW_SEMESTER_MAP[key]).forEach(course => {
+                removePreReq(course);
+            });
+            NEW_SEMESTER_MAP[key]=[];
+            SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
+        }
+    }
+    function removePreReq(course: Course) {
+        for (const [key, value] of Object.entries(courseData)) {
+            console.log([key,value]);
+            Object.keys(value.preReq).forEach(courseName => {
+                //console.log(courseName);
+                if(courseName === course.name) {
+                    console.log(courseName);
+                    value.preReq[courseName] = false;
+                }
+            });
+        }
+        for (const [key, value] of Object.entries(SEMESTER_MAP)) {
+            console.log([key,value]);
+            SEMESTER_MAP[key].forEach(item => {
+                if(Object.keys(item.preReq).length > 0) {
+                    if (Object.values(item.preReq).every(course => course === true)){
+                        item.preReqCheck = "black";
+                    } else {
+                        item.preReqCheck = "red";
+                    }
+                    updateColor(item);
+                }
+            });
+        }
     }
 
     return (
@@ -137,11 +180,15 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
                         </AnimatePresence>
                     </Row>
                 </Container>
-                { SEMESTER_MAP[""+semesterSelect].length > 0 && <ClearSemesterButton
-                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
-                    SEMESTER_MAP={SEMESTER_MAP}
-                    semesterSelect={semesterSelect}
-                ></ClearSemesterButton> }
+                { SEMESTER_MAP[""+semesterSelect].length > 0 && 
+                <div>
+                    <ClearSemesterButton
+                        SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                        SEMESTER_MAP={SEMESTER_MAP}
+                        semesterSelect={semesterSelect}
+                    ></ClearSemesterButton>
+                    <button style={{margin: "5%"}} onClick={removeAllSemesters}>Clear All Semesters</button>
+                </div> }
             </div>
 
         </div>
