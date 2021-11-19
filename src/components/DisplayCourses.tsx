@@ -139,7 +139,6 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
             <div className="menu-button">
                 <DropdownButton id="dropdown-basic-button" title="Course Options">
                     <Dropdown.Item as="button" onClick={() => showBin()}>Save Later Bin</Dropdown.Item>
-                    <Dropdown.Item as="button" onClick={() => showBin()}>Create A New Course</Dropdown.Item>
                 </DropdownButton>
             </div>
             <SearchBar
