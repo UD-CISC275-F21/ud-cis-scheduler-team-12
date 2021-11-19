@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/ud-cis-scheduler-team-12/static/css/main.4cc54e0f.chunk.css",
-    "main.js": "/ud-cis-scheduler-team-12/static/js/main.eb8f6020.chunk.js",
-    "main.js.map": "/ud-cis-scheduler-team-12/static/js/main.eb8f6020.chunk.js.map",
-    "runtime-main.js": "/ud-cis-scheduler-team-12/static/js/runtime-main.4b79984d.js",
-    "runtime-main.js.map": "/ud-cis-scheduler-team-12/static/js/runtime-main.4b79984d.js.map",
+    "main.css": "/ud-cis-scheduler-team-12/static/css/main.3af1ef30.chunk.css",
+    "main.js": "/ud-cis-scheduler-team-12/static/js/main.9263826b.chunk.js",
+    "main.js.map": "/ud-cis-scheduler-team-12/static/js/main.9263826b.chunk.js.map",
+    "runtime-main.js": "/ud-cis-scheduler-team-12/static/js/runtime-main.91a4d859.js",
+    "runtime-main.js.map": "/ud-cis-scheduler-team-12/static/js/runtime-main.91a4d859.js.map",
     "static/css/2.f2512455.chunk.css": "/ud-cis-scheduler-team-12/static/css/2.f2512455.chunk.css",
-    "static/js/2.c4261d2c.chunk.js": "/ud-cis-scheduler-team-12/static/js/2.c4261d2c.chunk.js",
-    "static/js/2.c4261d2c.chunk.js.map": "/ud-cis-scheduler-team-12/static/js/2.c4261d2c.chunk.js.map",
-    "static/js/3.43524559.chunk.js": "/ud-cis-scheduler-team-12/static/js/3.43524559.chunk.js",
-    "static/js/3.43524559.chunk.js.map": "/ud-cis-scheduler-team-12/static/js/3.43524559.chunk.js.map",
+    "static/js/2.fe5d6198.chunk.js": "/ud-cis-scheduler-team-12/static/js/2.fe5d6198.chunk.js",
+    "static/js/2.fe5d6198.chunk.js.map": "/ud-cis-scheduler-team-12/static/js/2.fe5d6198.chunk.js.map",
+    "static/js/3.29d9b51c.chunk.js": "/ud-cis-scheduler-team-12/static/js/3.29d9b51c.chunk.js",
+    "static/js/3.29d9b51c.chunk.js.map": "/ud-cis-scheduler-team-12/static/js/3.29d9b51c.chunk.js.map",
     "index.html": "/ud-cis-scheduler-team-12/index.html",
     "static/css/2.f2512455.chunk.css.map": "/ud-cis-scheduler-team-12/static/css/2.f2512455.chunk.css.map",
-    "static/css/main.4cc54e0f.chunk.css.map": "/ud-cis-scheduler-team-12/static/css/main.4cc54e0f.chunk.css.map",
-    "static/js/2.c4261d2c.chunk.js.LICENSE.txt": "/ud-cis-scheduler-team-12/static/js/2.c4261d2c.chunk.js.LICENSE.txt",
+    "static/css/main.3af1ef30.chunk.css.map": "/ud-cis-scheduler-team-12/static/css/main.3af1ef30.chunk.css.map",
+    "static/js/2.fe5d6198.chunk.js.LICENSE.txt": "/ud-cis-scheduler-team-12/static/js/2.fe5d6198.chunk.js.LICENSE.txt",
     "static/media/spiderman_meme.4235d597.jpeg": "/ud-cis-scheduler-team-12/static/media/spiderman_meme.4235d597.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4b79984d.js",
+    "static/js/runtime-main.91a4d859.js",
     "static/css/2.f2512455.chunk.css",
-    "static/js/2.c4261d2c.chunk.js",
-    "static/css/main.4cc54e0f.chunk.css",
-    "static/js/main.eb8f6020.chunk.js"
+    "static/js/2.fe5d6198.chunk.js",
+    "static/css/main.3af1ef30.chunk.css",
+    "static/js/main.9263826b.chunk.js"
   ]
 }
