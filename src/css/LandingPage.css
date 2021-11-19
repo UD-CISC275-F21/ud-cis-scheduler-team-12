@@ -24,7 +24,7 @@
 }
 
 .home button {
-    background-color: #f5611779;
+    background-color: #0682ca;
     border-radius: 20px;
     border: 0px;
     margin: 10%;
@@ -36,5 +36,5 @@
 }
 .home button:hover {
     transform: scale(1.05);
-    background-color: #f56117f1;
+    background-color: #0e5781;
 }

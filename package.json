@@ -14,6 +14,7 @@
     "@types/sweetalert": "^2.0.4",
     "boostrap": "^2.0.0",
     "bootstrap": "^5.1.1",
+    "edit-json-file": "^1.6.2",
     "framer-motion": "^4.1.17",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-rc.1",
