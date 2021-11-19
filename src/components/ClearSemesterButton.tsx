@@ -1,6 +1,6 @@
 import React from "react";
-import { Course } from "../interfaces/course";
 import courseData from "../assets/courses";
+import { Course } from "../interfaces/course";
 
 export default function ClearSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, 
@@ -46,6 +46,6 @@ export default function ClearSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, se
     }
 
     return (
-        <button onClick={removeAllCourses}>Clear All Courses</button>
+        <button onClick={removeAllCourses} data-testid="btn-clear-semester">Clear Current Semester</button>
     );
 }

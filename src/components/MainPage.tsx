@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 import "../css/App.css";
 
-import { Course } from "../interfaces/course";
 
 import { Board } from "../components/Board";
 import DisplayCourses from "../components/DisplayCourses";
 import SideMenu from "../components/SideMenu";
-import Calender from "../components/Calender";
 import DegreePlan from "../components/DegreePlan";
+import { Course } from "../interfaces/course";
 import SaveBin from "./SaveBin";
+import SaveButton from "./SaveButton";
+import AccessSavedSemestersButton from "./AccessSavedSemestersButton";
+import AddSemesterButton from "./AddSemesterButton";
+import RemoveSemesterButton from "./RemoveSemesterButton";
+import { ButtonList } from "../interfaces/buttonList";
+import buttonListInit from "../assets/buttonList";
+import CreateNewCourse from "./CreateNewCourse";
+import SelectedSaveHeader from "./SelectedSaveHeader";
 
 import SEMESTER_MAP_INIT from "../assets/semesterMap";
 
@@ -18,12 +25,18 @@ function MainPage({ visibleView, setVisibleView }: {
     const [semesterSelect, setSemesterSelect] = useState<string | null>("1");
     const [semesterHeader, setSemesterHeader] = useState<string>("Fall 1");
 
-    //Pre-req Check Variables
+    const [newCourseVisible, setNewCourseVisible] = useState<boolean>(false);
+    
+    // Selected Save Variable
+    const [selectedSave, setSelectedSave] = useState<string>("No Save Selected");
     
     // Bin Variables
     const [binVisible, setBinVisible] = useState<boolean>(false);
     const SAVE_BIN_INIT: Course[] = [];
     const [SAVE_BIN, SET_SAVE_BIN] = useState<Course[]>(SAVE_BIN_INIT);
+
+    const [semesterCount, setSemesterCount] = useState<number>(9);
+    const [buttonList, setButtonList] = useState<ButtonList[]>(buttonListInit);
    
     // useState to update the course array inside of a semester
     const [SEMESTER_MAP, SET_SEMESTER_MAP] = useState<Record<string, Course[]>>(SEMESTER_MAP_INIT);
@@ -33,6 +46,27 @@ function MainPage({ visibleView, setVisibleView }: {
             <header className="App-header">
                 UD CIS Scheduler
                 <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
+
+                <SaveButton
+                    SEMESTER_MAP={SEMESTER_MAP}
+                ></SaveButton>
+                { localStorage.length > 0 && 
+                <div>
+                    <AccessSavedSemestersButton
+                        SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                        SEMESTER_MAP={SEMESTER_MAP}
+                        setSemesterCount={setSemesterCount}
+                        semesterCount={semesterCount}
+                        setButtonList={setButtonList}
+                        buttonList={buttonList}
+                        setSelectedSave={setSelectedSave}
+                    ></AccessSavedSemestersButton> 
+                    <SelectedSaveHeader
+                        selectedSave={selectedSave}
+                    ></SelectedSaveHeader>
+                </div>
+                }
+                
             </header>
             <section className="cell-left">
                 <p>Menu</p>
@@ -41,6 +75,28 @@ function MainPage({ visibleView, setVisibleView }: {
                 ></SideMenu>
             </section>
             <section className="cell-main">
+
+                <RemoveSemesterButton
+                    setSemesterSelect={setSemesterSelect}
+                    setSemesterHeader={setSemesterHeader}
+                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                    SEMESTER_MAP={SEMESTER_MAP}
+                    setSemesterCount={setSemesterCount}
+                    semesterCount={semesterCount}
+                    setButtonList={setButtonList}
+                    buttonList={buttonList}
+                ></RemoveSemesterButton>
+                
+                <AddSemesterButton
+                    SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                    SEMESTER_MAP={SEMESTER_MAP}
+                    setSemesterCount={setSemesterCount}
+                    semesterCount={semesterCount}
+                    setButtonList={setButtonList}
+                    buttonList={buttonList}
+                ></AddSemesterButton>
+
+                
                 { visibleView === "2" && <Board
                     semesterHeader={semesterHeader}
                     setSemesterHeader={setSemesterHeader}
@@ -51,6 +107,7 @@ function MainPage({ visibleView, setVisibleView }: {
                     SET_SAVE_BIN={SET_SAVE_BIN}
                     SAVE_BIN={SAVE_BIN}
                     binVisible={binVisible}
+                    buttonList={buttonList}
                 ></Board> }
                 
                 { visibleView === "3" && <DegreePlan
@@ -58,10 +115,8 @@ function MainPage({ visibleView, setVisibleView }: {
                     SEMESTER_MAP={SEMESTER_MAP}
                     setSemesterSelect={setSemesterSelect}
                     setSemesterHeader={setSemesterHeader}
+                    buttonList={buttonList}
                 ></DegreePlan> }
-
-                { visibleView === "4" && <Calender></Calender> }
-
                 
             </section>
             <section className="cell-right">
@@ -73,6 +128,8 @@ function MainPage({ visibleView, setVisibleView }: {
                     binVisible={binVisible}
                     SET_SAVE_BIN={SET_SAVE_BIN}
                     SAVE_BIN={SAVE_BIN}
+                    newCourseVisible={newCourseVisible}
+                    setNewCourseVisible={setNewCourseVisible}
                 ></DisplayCourses> }            
             </section>
 
@@ -85,6 +142,16 @@ function MainPage({ visibleView, setVisibleView }: {
                 SEMESTER_MAP={SEMESTER_MAP}
                 semesterSelect={semesterSelect}
             ></SaveBin>
+
+            <CreateNewCourse
+                setNewCourseVisible={setNewCourseVisible}
+                newCourseVisible={newCourseVisible}
+                SET_SAVE_BIN={SET_SAVE_BIN}
+                SAVE_BIN={SAVE_BIN}
+                SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                SEMESTER_MAP={SEMESTER_MAP}
+                semesterSelect={semesterSelect}
+            ></CreateNewCourse>
         </div>
     );
 }

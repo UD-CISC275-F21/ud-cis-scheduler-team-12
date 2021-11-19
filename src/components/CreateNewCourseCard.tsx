@@ -8,7 +8,7 @@ import courseData from "../assets/courses";
 import { Course } from "../interfaces/course";
 
 
-export default function CourseCard({ course, SET_SAVE_BIN, SAVE_BIN }: {
+export default function CreateNewCourseCard({ course, SET_SAVE_BIN, SAVE_BIN }: {
     course: Course,
     SET_SAVE_BIN: (b: Course[]) => void, SAVE_BIN: Course[]
 }): JSX.Element {
@@ -26,7 +26,7 @@ export default function CourseCard({ course, SET_SAVE_BIN, SAVE_BIN }: {
     function removeCourse(id: number) {
         SET_SAVE_BIN(SAVE_BIN.filter(item => item !== courseData[id]));
     }
-
+    
     return (
         <div>           
             <Card className="card" style={{ width: "19rem" }}>

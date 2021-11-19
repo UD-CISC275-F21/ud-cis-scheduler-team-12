@@ -2,19 +2,21 @@ import React from "react";
 import { Card, Table } from "react-bootstrap/";
 import "../css/courses.css";
 import "../assets/courses";
-import { Course } from "../interfaces/course";
+
 import { MdDeleteForever } from "react-icons/md";
 import { ImCross, ImRadioChecked, ImRadioUnchecked } from "react-icons/im";
-
 import courseData from "../assets/courses";
-import buttonList from "../assets/buttonList";
+import { ButtonList } from "../interfaces/buttonList";
+import { Course } from "../interfaces/course";
 
-function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterSelect, semesterSelect, setSemesterHeader, SET_SELECT_MAP, SELECT_MAP }: {
+
+function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterSelect, semesterSelect, setSemesterHeader, SET_SELECT_MAP, SELECT_MAP, buttonList }: {
     courseList: Course[],
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterHeader: (s: string) => void,
-    SET_SELECT_MAP: (s: Record<string, boolean>) => void, SELECT_MAP: Record<string, boolean>
+    SET_SELECT_MAP: (s: Record<string, boolean>) => void, SELECT_MAP: Record<string, boolean>,
+    buttonList: ButtonList[]
 }):  JSX.Element {
 
     const semesterIndex = ""+semesterSelect;
@@ -53,7 +55,7 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
                 <button className="delete-button" onClick={removeAllCourses}>
                     <MdDeleteForever></MdDeleteForever>
                 </button>
-                { !SELECT_MAP[+semesterIndex] && <button className="select-button-off" onClick={() => selectToggle(""+semesterSelect)}>
+                { !SELECT_MAP[+semesterIndex] && <button className="select-button-off" data-testid="select-button" onClick={() => selectToggle(""+semesterSelect)}>
                     <ImRadioUnchecked></ImRadioUnchecked> 
                 </button>}
                 { SELECT_MAP[+semesterIndex] && <button className="select-button-on" onClick={() => selectToggle(""+semesterSelect)}>
@@ -69,10 +71,10 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
                                 <th scope="col">Credit(s)</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody data-testid="semester-table">
                             {courseList.map((course, id) =>
 
-                                <tr key={id}>
+                                <tr key={id} data-testid="semester-comp-card">
                                     <th>{course.name}</th>
                                     <td>{course.credits}</td>
                                     <button className="delete-course" onClick={() => removeCourse(course.id)}>

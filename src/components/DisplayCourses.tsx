@@ -1,37 +1,59 @@
 import React, { useState } from "react";
 import courseData from "../assets/courses";
 import { MdAdd } from "react-icons/md";
-import { Course } from "../interfaces/course";
 import "../css/DisplayCourses.css";
 import SearchBar from "./SearchBar";
 import { Accordion, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Dropdown, DropdownButton } from "react-bootstrap";
+import { Course } from "../interfaces/course";
+import SpiderMan from "../assets/spiderman_meme.jpeg";
+import Swal from "sweetalert2";
 
-
-export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN }: {
+export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, setNewCourseVisible, newCourseVisible, SET_SAVE_BIN, SAVE_BIN }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,
     setBinVisible: (b: boolean) => void, binVisible: boolean,
+    setNewCourseVisible: (b: boolean) => void, newCourseVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
 }): JSX.Element {
 
     const [query, setQuery] = useState<string>("");
+    
+    newCourseVisible;
 
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
-        const foundCourse = findCourse(id);
+        const foundCourse = findCourseInSemester(id);
+        const foundCourseInPlan = findCourseInEntirePlan(id);
         
         // If bin is open, add courses to bin
         if (binVisible){
             if (SAVE_BIN.includes(courseData[id])) {
-                alert(`${courseData[id].name} is already added to your bin. Please select another course.`);
+                Swal.fire({
+                    title: "Duplicate Course!",
+                    text: `${courseData[id].name} is already added to your bin. Please select another course.`,
+                    icon: "error",
+                    imageUrl: SpiderMan
+                });
             } else {
                 SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
             }
         } else {
-            if (foundCourse) {
-                alert(`${courseData[id].name} is already added to this semester. Please select another course.`);
+            if (foundCourse || foundCourseInPlan) {
+                foundCourse ?
+                    Swal.fire({
+                        title: "Duplicate Course!",
+                        text: `${courseData[id].name} is already added to this semester. Please select another course.`,
+                        icon: "error",
+                        imageUrl: SpiderMan
+                    }) :
+                    Swal.fire({
+                        title: "Duplicate Course!",
+                        text: `${courseData[id].name} is already added to your plan. Please select another course.`,
+                        icon: "error",
+                        imageUrl: SpiderMan
+                    });
             } else {
                 //  PREREQ MET IN PRIOR SEMESTER
                 if (Object.keys(courseData[id].preReq).length > 0){
@@ -39,14 +61,22 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                     if (Object.values(courseData[id].preReq).every(course => course === true)){
                         courseData[id].preReqCheck = "black";
                     } else {
-                        alert("Warning: Pre-Reqs not met.");
+                        Swal.fire(
+                            "Pre-Req Error!",
+                            "Warning: Pre-Reqs not met 🤔.",
+                            "error"
+                        );
                         courseData[id].preReqCheck = "red";
                     }
                     updateColor(courseData[id]);
                 }
 
                 if (SEMESTER_MAP["" + semesterSelect].length === 6) {
-                    alert("Max number of courses selected for semester.");
+                    Swal.fire(
+                        "Getting Studious!",
+                        "Warning: Max number of courses selected for semester 📚.",
+                        "error"
+                    );
                 } else {
                     for (const [key, value] of Object.entries(courseData)) {
                         console.log([key,value]);
@@ -75,12 +105,6 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                         }
                     });
                 }
-
-                // SEMESTER_MAP[""+semesterSelect].length === 6 ? alert("Max number of courses selected for semester.")
-                //     : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), 
-                //     SET_SEMESTER_MAP(NEW_SEMESTER_MAP));
-
-            
             }
         }   
     }
@@ -89,21 +113,38 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
         return course.preReqCheck;
     }
     
-    function findCourse(id: number) {
+    function findCourseInSemester(id: number) {
         return SEMESTER_MAP[""+semesterSelect].includes(courseData[id]);
+    }
+
+    function findCourseInEntirePlan(id: number) {
+        let flag = false;
+        Object.keys(SEMESTER_MAP).forEach(key => {
+            SEMESTER_MAP[key].forEach(course => {
+                if (course.id === id) {
+                    flag = true;
+                }
+            });
+        });
+
+        return flag;
     }
     
 
     function showBin() {
         setBinVisible(!binVisible);
     }
+    
+    function showCreateNewCourse() {
+        setNewCourseVisible(!newCourseVisible);
+    }
 
     return (
         <div>
             <div className="menu-button">
-                <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-                    <Dropdown.Item as="button">Search Course</Dropdown.Item>
-                    <Dropdown.Item as="button" onClick={() => showBin()}>Save Courses for Later</Dropdown.Item>
+                <DropdownButton id="dropdown-basic-button" title="Course Options">
+                    <Dropdown.Item as="button" onClick={() => showBin()}>Save Later Bin</Dropdown.Item>
+                    <Dropdown.Item as="button" onClick={() => showCreateNewCourse()}>Create A New Course</Dropdown.Item>
                 </DropdownButton>
             </div>
             <SearchBar
@@ -135,7 +176,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                             duration: 1,
                         }}>
                         <li className="course" key={courseData.id}>{courseData.name}
-                            <button className="add-button" onClick={() => addCourse(courseData.id)}>
+                            <button className="add-button" data-testid={courseData.name} onClick={() => addCourse(courseData.id)}>
                                 <MdAdd />
                             </button>
                             { Object.keys(courseData.preReq).length > 0 && <Col className="prereq-accordion">
