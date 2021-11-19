@@ -3,7 +3,7 @@ import { Card, Table } from "react-bootstrap/";
 import "../css/courses.css";
 import "../assets/courses";
 
-import { MdDeleteForever } from "react-icons/md";
+import { BsEraserFill } from "react-icons/bs";
 import { ImCross, ImRadioChecked, ImRadioUnchecked } from "react-icons/im";
 import courseData from "../assets/courses";
 import { ButtonList } from "../interfaces/buttonList";
@@ -53,7 +53,7 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
         <div>
             <Card className="card" style={{ width: "100%" }}>
                 <button className="delete-button" onClick={removeAllCourses}>
-                    <MdDeleteForever></MdDeleteForever>
+                    <BsEraserFill></BsEraserFill>
                 </button>
                 { !SELECT_MAP[+semesterIndex] && <button className="select-button-off" data-testid="select-button" onClick={() => selectToggle(""+semesterSelect)}>
                     <ImRadioUnchecked></ImRadioUnchecked> 

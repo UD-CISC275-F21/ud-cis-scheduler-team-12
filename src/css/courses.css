@@ -47,7 +47,7 @@ code {
   size: 0.01px;
 }
 .card:hover .delete-button {
-  right: 0px;
+  right: 5px;
   transform: scale(1.75);
   visibility: visible;
 }

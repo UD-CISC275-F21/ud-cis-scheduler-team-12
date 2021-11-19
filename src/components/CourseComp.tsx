@@ -21,7 +21,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
     const [title, setTitle] = useState<string>(course.name);
     const [titleVisible, setTitleVisible] = useState<number>(0);
 
- 
+
     function editTitle() {
         setTitleVisible(1);
     }

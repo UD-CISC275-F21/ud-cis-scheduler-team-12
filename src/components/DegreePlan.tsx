@@ -7,7 +7,6 @@ import SemesterComp from "./SemesterComp";
 import SELECT_MAP_INIT from "../assets/radioToggle";
 import courseData from "../assets/courses";
 import { ButtonList } from "../interfaces/buttonList";
-
 import { Course } from "../interfaces/course";
 /**
  * 
@@ -70,11 +69,12 @@ export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, 
         return course.preReqCheck;
     }
 
+
+
     return (
         <div>
-            
             <h2>Degree Plan View</h2>
-
+            
             <div data-testid="degree-view">
                 <Container>
                     
