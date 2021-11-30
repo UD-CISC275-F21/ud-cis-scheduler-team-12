@@ -77,7 +77,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                     );
                 } else {
                     for (const [key, value] of Object.entries(courseData)) {
-                        console.log([key,value]);
+                        //console.log([key,value]);
                         Object.keys(value.preReq).forEach(courseName => {
                             //console.log(courseName);
                             if(courseName === courseData[id].name) {
@@ -91,7 +91,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                 }
 
                 for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-                    console.log([key,value]);
+                    //console.log([key,value]);
                     SEMESTER_MAP[key].forEach(item => {
                         if(Object.keys(item.preReq).length > 0) {
                             if (Object.values(item.preReq).every(course => course === true)){
@@ -128,7 +128,20 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
         return flag;
     }
     
+    function test() {
+        console.log(Object.values(SEMESTER_MAP));
+        
+    }
 
+    function test2(id: number) {
+        const semester_array = Object.values(SEMESTER_MAP);
+
+        //select desired spot in semester map array
+        const bruh3 = Object.keys(semester_array)[3];
+        const bruh4 = Object.keys(Object.values(SEMESTER_MAP))[id];
+        console.log(bruh3);
+        console.log(bruh4);
+    }
 
     function showBin() {
         setBinVisible(!binVisible);
@@ -141,6 +154,11 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                     <Dropdown.Item as="button" onClick={() => showBin()}>Save Later Bin</Dropdown.Item>
                 </DropdownButton>
             </div>
+            <div>
+                <button onClick={() => test()}> SEMESTER_MAP </button>
+                <button onClick={() => test2(5)}> bruh </button>
+            </div>
+
             <SearchBar
                 setQuery={setQuery}
             ></SearchBar>
