@@ -133,14 +133,31 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
         
     }
 
-    function test2(id: number) {
-        const semester_array = Object.values(SEMESTER_MAP);
+    function test2(numEnter: number) {
+        //const semester_array = Object.values(SEMESTER_MAP);
 
         //select desired spot in semester map array
-        const bruh3 = Object.keys(semester_array)[3];
-        const bruh4 = Object.keys(Object.values(SEMESTER_MAP))[id];
-        console.log(bruh3);
-        console.log(bruh4);
+        //const bruh3 = Object.keys(semester_array)[3];
+
+        //select key for double array
+        const bruh1 = Object.keys(SEMESTER_MAP);
+        const bruh2 = Object.keys(courseData[0]);
+
+
+        const bruh3 = Object.keys(Object.values(SEMESTER_MAP));
+        const bruh4 = Object.keys(Object.values(SEMESTER_MAP))[numEnter];
+
+        const bruh5 = Object.entries(SEMESTER_MAP);
+        const bruh6 = Object.entries(SEMESTER_MAP)[numEnter];
+        const bruh7 = Object.entries(SEMESTER_MAP)[0][0];
+
+        console.log("keys of SEMESTER_MAP", bruh1);
+        console.log("keys of course data", bruh2);
+        console.log("keys, values of SEMESTER_MAP",  bruh3);
+        console.log("keys, values of SEMESTER_MAP at position id", bruh4);
+        console.log("entries of SEMESTER_MAP", bruh5);
+        console.log("entries of SEMESTER_MAP at position id", bruh6);
+        console.log(bruh7);
     }
 
     function showBin() {
@@ -156,7 +173,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
             </div>
             <div>
                 <button onClick={() => test()}> SEMESTER_MAP </button>
-                <button onClick={() => test2(5)}> bruh </button>
+                <button onClick={() => test2(0)}> bruh </button>
             </div>
 
             <SearchBar
