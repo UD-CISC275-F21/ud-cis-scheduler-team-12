@@ -140,24 +140,48 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
         //const bruh3 = Object.keys(semester_array)[3];
 
         //select key for double array
-        const bruh1 = Object.keys(SEMESTER_MAP);
-        const bruh2 = Object.keys(courseData[0]);
 
 
-        const bruh3 = Object.keys(Object.values(SEMESTER_MAP));
-        const bruh4 = Object.keys(Object.values(SEMESTER_MAP))[numEnter];
+        // const bruh3 = Object.keys(Object.values(SEMESTER_MAP));
+        // const bruh4 = Object.keys(Object.values(SEMESTER_MAP))[numEnter];
 
-        const bruh5 = Object.entries(SEMESTER_MAP);
-        const bruh6 = Object.entries(SEMESTER_MAP)[numEnter];
-        const bruh7 = Object.entries(SEMESTER_MAP)[0][0];
+        // const bruh5 = Object.entries(SEMESTER_MAP);
+        // const bruh6 = Object.entries(SEMESTER_MAP)[numEnter];
+        // const bruh7 = Object.entries(SEMESTER_MAP)[0][0];
 
-        console.log("keys of SEMESTER_MAP", bruh1);
-        console.log("keys of course data", bruh2);
-        console.log("keys, values of SEMESTER_MAP",  bruh3);
-        console.log("keys, values of SEMESTER_MAP at position id", bruh4);
-        console.log("entries of SEMESTER_MAP", bruh5);
-        console.log("entries of SEMESTER_MAP at position id", bruh6);
-        console.log(bruh7);
+
+        // console.log("keys, values of SEMESTER_MAP",  bruh3);
+        // console.log("keys, values of SEMESTER_MAP at position id", bruh4);
+        // console.log("entries of SEMESTER_MAP", bruh5);
+        // console.log("entries of SEMESTER_MAP at position id", bruh6);
+        // console.log(bruh7);
+        const fuckOff = numEnter;
+
+        const bruh1 = Object.keys(courseData[0]);
+        const bruh2 = Object.values(courseData[0]);
+
+
+        //ok so i can get the key of the object to get id
+        const bruh3 = Object.keys(courseData[0])[1];
+        const bruh4 = Object.values(courseData[0])[1];
+
+        //doesnt work
+        Object.values(courseData[0])[1] = "newName";
+  
+        
+        console.log("keys ", bruh1);
+        console.log("values ", bruh2);
+        console.log(bruh3);
+        console.log(bruh4);
+        console.log(Object.values(courseData[1])[1]);
+
+
+
+        let man1 = courseData[1].name;
+        man1 = "bruh";
+
+        console.log("man1 value:", man1);
+        console.log(Object.values(courseData[1])[1]);
     }
 
     function showBin() {
