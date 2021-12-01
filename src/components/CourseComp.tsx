@@ -26,9 +26,14 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
         setTitleVisible(1);
     }
 
-    function submitTitle() {
+    function submitTitle(id: number) {
         setTitle(input);
         setTitleVisible(0);
+        Object.values(courseData).forEach(course => {
+            if (course.id === id) {
+                course.name = input;
+            }
+        });
     }
 
     function editDescription() {
@@ -90,7 +95,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                                 { titleVisible === 1 && <TitleInput 
                                     setInput={setInput}
                                 ></TitleInput> }
-                                {titleVisible === 1 && <button onClick={() => submitTitle()}>Submit</button>
+                                {titleVisible === 1 && <button onClick={() => submitTitle(course.id)}>Submit</button>
                                 }
                             
                                 <button className="delete-button" onClick={() => removeCourse(course.id)}>
