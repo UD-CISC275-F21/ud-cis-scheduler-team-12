@@ -1,14 +1,14 @@
+// Source Imports
 import React from "react";
 import { Card, Table } from "react-bootstrap/";
-import "../css/courses.css";
-import "../assets/courses";
-
 import { BsEraserFill } from "react-icons/bs";
 import { ImCross, ImRadioChecked, ImRadioUnchecked } from "react-icons/im";
 import courseData from "../assets/courses";
 import { ButtonList } from "../interfaces/buttonList";
 import { Course } from "../interfaces/course";
 
+// Design Imports
+import "../css/courses.css";
 
 function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterSelect, semesterSelect, setSemesterHeader, SET_SELECT_MAP, SELECT_MAP, buttonList }: {
     courseList: Course[],

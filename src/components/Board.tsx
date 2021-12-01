@@ -1,15 +1,18 @@
+// Source Imports
 import React from "react";
 import { Col, Row, Container, ToggleButtonGroup, ToggleButton } from "react-bootstrap";
-
-import CourseComp from "./CourseComp";
-import ClearSemesterButton from "./ClearSemesterButton";
-import "../css/board.css";
-import courseData from "../assets/courses";
-
+import Swal from "sweetalert2";
 import { AnimatePresence, motion } from "framer-motion";
+import courseData from "../assets/courses";
 import { ButtonList } from "../interfaces/buttonList";
 import { Course } from "../interfaces/course";
-import Swal from "sweetalert2";
+
+// Component Imports
+import CourseComp from "./CourseComp";
+import ClearSemesterButton from "./ClearSemesterButton";
+
+// Design Imports
+import "../css/board.css";
 import SpiderMan from "../assets/images/spiderman_meme.jpeg";
 
 export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader, SET_SAVE_BIN, SAVE_BIN, binVisible, buttonList}: {

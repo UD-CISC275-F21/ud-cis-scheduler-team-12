@@ -1,6 +1,9 @@
+// Source Imports
 import React from "react";
 import { Course } from "../interfaces/course";
 import { ButtonList } from "../interfaces/buttonList";
+
+// Design Imports
 import "../css/AddRemoveSemester.css";
 
 export default function AddSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount, setButtonList, buttonList }: {

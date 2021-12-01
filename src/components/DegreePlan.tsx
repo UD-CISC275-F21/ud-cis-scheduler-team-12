@@ -1,21 +1,16 @@
+// Source Imports
 import React, { useState } from "react";
 import { Row, Col, Container} from "react-bootstrap";
-import "../css/calender.css";
-// import CourseComp from "./CourseComp";
-import SemesterComp from "./SemesterComp";
-// import ClearSemesterButton from "./ClearSemesterButton";
-import SELECT_MAP_INIT from "../assets/radioToggle";
+import SELECT_MAP_INIT from "../assets/stateInitializers/radioToggle";
 import courseData from "../assets/courses";
 import { ButtonList } from "../interfaces/buttonList";
 import { Course } from "../interfaces/course";
-/**
- * 
- * export function Calender({ setNumberOfCourses, numberOfCourses, courseID }: {
-    setNumberOfCourses: (s: number) => void,  numberOfCourses: number, courseID: number
-}):  JSX.Element {
 
- * at symbol returns 
- */
+// Component Imports
+import SemesterComp from "./SemesterComp";
+
+// Design Imports
+import "../css/calender.css";
 
 
 export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, setSemesterHeader, buttonList }: {
@@ -106,38 +101,5 @@ export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, 
         </div>
     );
 }
-
-/**
- * 
- * 
- * DONT DELETE!!!!
-export function Calender():  JSX.Element {
-    return (
-        <Container>
-            <h2>Calender</h2>
-            <Row>
-                <div className="cal-container">
-                    {Weekdays.map(day => 
-                        <div key={day.id}>{day.name}</div>
-                    )}
-                </div>
-            </Row>
-            <Row>
-                <div className = "cal-background">
-                    <Col>
-                        <div>
-                            {Hours.map(value =>
-                                <div key={value.id}>{value.time}</div>
-                            )}
-                        </div>
-                    </Col>
-                </div>
-            </Row>
-        </Container>
-    );
-}
-
-
-*/
 
 export default DegreePlan;

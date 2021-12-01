@@ -1,9 +1,13 @@
+// Source Imports
 import React from "react";
 import courseData from "../assets/courses";
 import { ButtonList } from "../interfaces/buttonList";
 import { Course } from "../interfaces/course";
-import "../css/AddRemoveSemester.css";
 import Swal from "sweetalert2";
+
+// Design Imports
+import "../css/AddRemoveSemester.css";
+
 
 export default function RemoveSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount, setButtonList, buttonList, setSemesterSelect, setSemesterHeader }: {
     SET_SEMESTER_MAP: (s: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,

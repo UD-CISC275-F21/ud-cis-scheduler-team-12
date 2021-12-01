@@ -1,12 +1,13 @@
+// Source Imports
 import React from "react";
 import { Card,Col, Row, Container, Accordion } from "react-bootstrap/";
-import "../css/courses.css";
-import "../assets/courses";
 import { GrEdit } from "react-icons/gr";
 import { MdDeleteForever } from "react-icons/md";
 import courseData from "../assets/courses";
 import { Course } from "../interfaces/course";
 
+// Design Imports
+import "../css/courses.css";
 
 export default function CourseCard({ course, SET_SAVE_BIN, SAVE_BIN }: {
     course: Course,
