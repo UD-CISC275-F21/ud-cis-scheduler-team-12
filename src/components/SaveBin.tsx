@@ -9,7 +9,7 @@ import BinCourseCard from "./BinCourseCard";
 import ClearBinButton from "./ClearBinButton";
 import { Course } from "../interfaces/course";
 
-import SpiderMan from "../assets/spiderman_meme.jpeg";
+import SpiderMan from "../assets/images/spiderman_meme.jpeg";
 import Swal from "sweetalert2";
 
 export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {

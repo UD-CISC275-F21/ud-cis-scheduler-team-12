@@ -7,7 +7,7 @@ import { Accordion, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import { Course } from "../interfaces/course";
-import SpiderMan from "../assets/spiderman_meme.jpeg";
+import SpiderMan from "../assets/images/spiderman_meme.jpeg";
 import Swal from "sweetalert2";
 
 export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN }: {

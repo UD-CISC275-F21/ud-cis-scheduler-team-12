@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ButtonList } from "../interfaces/buttonList";
 import { Course } from "../interfaces/course";
 import Swal from "sweetalert2";
-import SpiderMan from "../assets/spiderman_meme.jpeg";
+import SpiderMan from "../assets/images/spiderman_meme.jpeg";
 
 export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader, SET_SAVE_BIN, SAVE_BIN, binVisible, buttonList}: {
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
