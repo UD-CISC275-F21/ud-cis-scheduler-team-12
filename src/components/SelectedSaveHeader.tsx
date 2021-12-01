@@ -2,6 +2,8 @@ import React from "react";
 
 import "../css/SelectedSave.css";
 
+// Breadcrumbs:
+// Main Page / SelectedSaveHeader
 export default function SelectedSaveHeader({ selectedSave }: {
     selectedSave: string
 }): JSX.Element {

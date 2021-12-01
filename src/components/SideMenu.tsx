@@ -1,6 +1,8 @@
 import React from "react";
 import { Nav } from "react-bootstrap/";
 
+// Breadcrumbs:
+// Main Page / SideMenu - left hand side menu to change views
 export default function SideMenu( {setVisibleView} : {
     setVisibleView: (s: string | null) => void
 }): JSX.Element {

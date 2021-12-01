@@ -9,7 +9,9 @@ import { Course } from "../interfaces/course";
 // Design Imports
 import "../css/courses.css";
 
-export default function CourseCard({ course, SET_SAVE_BIN, SAVE_BIN }: {
+// Breadcrumbs:
+// Main Page / SaveBin / BinCourseCard - card rendered to handle adding/removing from the "save later bin"
+export default function BinCourseCard({ course, SET_SAVE_BIN, SAVE_BIN }: {
     course: Course,
     SET_SAVE_BIN: (b: Course[]) => void, SAVE_BIN: Course[]
 }): JSX.Element {

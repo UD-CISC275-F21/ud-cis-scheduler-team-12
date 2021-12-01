@@ -14,6 +14,8 @@ import SearchBar from "./SearchBar";
 import "../css/DisplayCourses.css";
 import SpiderMan from "../assets/images/spiderman_meme.jpeg";
 
+// Breadcrumbs:
+// Main Page / DisplayCourses - displays list of scrollable courses on right hand side
 export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,

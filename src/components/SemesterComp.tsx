@@ -10,6 +10,8 @@ import { Course } from "../interfaces/course";
 // Design Imports
 import "../css/courses.css";
 
+// Breadcrumbs:
+// Main Page / DegreePlan / SemesterComp - card that holds all courses in a semester in table form
 function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterSelect, semesterSelect, setSemesterHeader, SET_SELECT_MAP, SELECT_MAP, buttonList }: {
     courseList: Course[],
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,

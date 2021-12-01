@@ -13,6 +13,8 @@ import TitleInput from "./TitleInput";
 // Design Imports
 import "../css/courses.css";
 
+// Breadcrumbs:
+// Main Page / Board / CourseComp - Course Card that holds information on course
 export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     course: Course,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,

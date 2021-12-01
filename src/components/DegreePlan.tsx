@@ -12,7 +12,8 @@ import SemesterComp from "./SemesterComp";
 // Design Imports
 import "../css/calender.css";
 
-
+// Breadcrumbs:
+// Main Page / DegreePlan - shows all semesters at once in the Degree Plan View
 export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, setSemesterHeader, buttonList }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterSelect: (s: string | null) => void,

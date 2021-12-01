@@ -20,7 +20,8 @@ import SelectedSaveHeader from "./SelectedSaveHeader";
 // Design Imports
 import "../css/App.css";
 
-
+// Breadcrumbs:
+// Main Page
 function MainPage({ visibleView, setVisibleView }: {
     setVisibleView: (s: string | null) => void, visibleView: string | null
 }): JSX.Element {

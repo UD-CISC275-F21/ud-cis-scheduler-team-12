@@ -6,6 +6,8 @@ import { ButtonList } from "../interfaces/buttonList";
 // Design Imports
 import "../css/AddRemoveSemester.css";
 
+// Breadcrumbs:
+// Main Page / AddSemesterButton - appends new semester
 export default function AddSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount, setButtonList, buttonList }: {
     SET_SEMESTER_MAP: (s: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterCount: (c: number) => void, semesterCount: number,

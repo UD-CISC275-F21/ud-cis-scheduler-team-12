@@ -2,6 +2,8 @@
 import React from "react";
 import Swal from "sweetalert2";
 
+// Breadcrumbs:
+// Main Page / AccessSavedSemesterButton / ClearSavedSemestersButton
 export default function ClearSavedSemestersButton(): JSX.Element {
     
     function clearAllSavedSemesters() {

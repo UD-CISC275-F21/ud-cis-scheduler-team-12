@@ -2,7 +2,8 @@ import React from "react";
 import Swal from "sweetalert2";
 import { Course } from "../interfaces/course";
 
-
+// Breadcrumbs:
+// Main Page / SaveButton
 export default function SaveButton({ SEMESTER_MAP }: {
     SEMESTER_MAP: Record<string, Course[]>
 }): JSX.Element {
