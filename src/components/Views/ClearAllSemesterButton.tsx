@@ -1,21 +1,21 @@
 // Source Imports
 import React from "react";
-import courseData from "../assets/courses";
-import { Course } from "../interfaces/course";
+import courseData from "../../assets/courses";
+import { Course } from "../../interfaces/course";
 
-// Breadcrumbs:
-// Main Page / Board / ClearSemesterButton
-export default function ClearSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
-    SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, 
-    SEMESTER_MAP: Record<string, Course[]>, semesterSelect: string | null
+export default function ClearAllSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP}: {
+    SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>
 }): JSX.Element {
-
-    function removeAllCourses() {    
-        for (const [key, value] of Object.entries(SEMESTER_MAP[""+semesterSelect])) {
-            console.log(key);
-            removePreReq(value);
+    
+    function removeAllSemesters() {
+        const NEW_SEMESTER_MAP = {...SEMESTER_MAP}; 
+        for (const [key] of Object.entries(NEW_SEMESTER_MAP)) {
+            Object.values(NEW_SEMESTER_MAP[key]).forEach(course => {
+                removePreReq(course);
+            });
+            NEW_SEMESTER_MAP[key]=[];
+            SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
         }
-        SET_SEMESTER_MAP({...SEMESTER_MAP, [""+semesterSelect]: []}); // Set classList to an empty array to clear all selected courses
     }
 
     function removePreReq(course: Course) {
@@ -49,6 +49,6 @@ export default function ClearSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, se
     }
 
     return (
-        <button onClick={removeAllCourses} data-testid="btn-clear-semester">Clear Current Semester</button>
+        <button style={{margin: "5%"}} onClick={removeAllSemesters}>Clear All Semesters</button>
     );
 }

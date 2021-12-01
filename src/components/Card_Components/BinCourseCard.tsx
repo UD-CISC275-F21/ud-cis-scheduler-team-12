@@ -3,14 +3,14 @@ import React from "react";
 import { Card,Col, Row, Container, Accordion } from "react-bootstrap/";
 import { GrEdit } from "react-icons/gr";
 import { MdDeleteForever } from "react-icons/md";
-import courseData from "../assets/courses";
-import { Course } from "../interfaces/course";
+import courseData from "../../assets/courses";
+import { Course } from "../../interfaces/course";
 
 // Design Imports
-import "../css/courses.css";
+import "../../css/courses.css";
 
 // Breadcrumbs:
-// Main Page / SaveBin / BinCourseCard - card rendered to handle adding/removing from the "save later bin"
+// Main Page / SaveBin / BinCourseCard - card rendered to handle adding/removing from the "save later bin" (similar to CourseComp)
 export default function BinCourseCard({ course, SET_SAVE_BIN, SAVE_BIN }: {
     course: Course,
     SET_SAVE_BIN: (b: Course[]) => void, SAVE_BIN: Course[]

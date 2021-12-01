@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../css/SearchBar.css";
+import "../../css/SearchBar.css";
 
 // Breadcrumbs:
 // Main Page / DisplayCourses / SearchBar

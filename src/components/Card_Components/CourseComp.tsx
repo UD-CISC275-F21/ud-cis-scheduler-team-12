@@ -3,15 +3,15 @@ import React, { useState } from "react";
 import { Card,Col, Row, Container, Accordion, OverlayTrigger, Popover } from "react-bootstrap/";
 import { GrEdit } from "react-icons/gr";
 import { MdDeleteForever } from "react-icons/md";
-import courseData from "../assets/courses";
-import { Course } from "../interfaces/course";
+import courseData from "../../assets/courses";
+import { Course } from "../../interfaces/course";
 
 // Component Imports
-import TextInput from "./TextInput";
-import TitleInput from "./TitleInput";
+import TextInput from "../TextInput";
+import TitleInput from "../TitleInput";
 
 // Design Imports
-import "../css/courses.css";
+import "../../css/courses.css";
 
 // Breadcrumbs:
 // Main Page / Board / CourseComp - Course Card that holds information on course

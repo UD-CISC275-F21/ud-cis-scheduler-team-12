@@ -1,10 +1,10 @@
 // Source Imports
 import React from "react";
-import { Course } from "../interfaces/course";
-import { ButtonList } from "../interfaces/buttonList";
+import { Course } from "../../interfaces/course";
+import { ButtonList } from "../../interfaces/buttonList";
 
 // Design Imports
-import "../css/AddRemoveSemester.css";
+import "../../css/AddRemoveSemester.css";
 
 // Breadcrumbs:
 // Main Page / AddSemesterButton - appends new semester

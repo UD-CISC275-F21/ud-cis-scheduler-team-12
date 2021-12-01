@@ -1,6 +1,6 @@
 import React from "react";
 import Swal from "sweetalert2";
-import { Course } from "../interfaces/course";
+import { Course } from "../../interfaces/course";
 
 // Breadcrumbs:
 // Main Page / SaveButton

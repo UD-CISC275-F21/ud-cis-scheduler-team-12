@@ -3,12 +3,12 @@ import React from "react";
 import { Card, Table } from "react-bootstrap/";
 import { BsEraserFill } from "react-icons/bs";
 import { ImCross, ImRadioChecked, ImRadioUnchecked } from "react-icons/im";
-import courseData from "../assets/courses";
-import { ButtonList } from "../interfaces/buttonList";
-import { Course } from "../interfaces/course";
+import courseData from "../../assets/courses";
+import { ButtonList } from "../../interfaces/buttonList";
+import { Course } from "../../interfaces/course";
 
 // Design Imports
-import "../css/courses.css";
+import "../../css/courses.css";
 
 // Breadcrumbs:
 // Main Page / DegreePlan / SemesterComp - card that holds all courses in a semester in table form

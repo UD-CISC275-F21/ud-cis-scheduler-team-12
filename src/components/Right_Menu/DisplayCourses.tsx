@@ -1,18 +1,18 @@
 // Source Imports
 import React, { useState } from "react";
-import courseData from "../assets/courses";
+import courseData from "../../assets/courses";
 import { MdAdd } from "react-icons/md";
 import { Accordion, Col, Dropdown, DropdownButton } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { Course } from "../interfaces/course";
+import { Course } from "../../interfaces/course";
 import Swal from "sweetalert2";
 
 // Component Imports
 import SearchBar from "./SearchBar";
 
 // Design Imports
-import "../css/DisplayCourses.css";
-import SpiderMan from "../assets/images/spiderman_meme.jpeg";
+import "../../css/DisplayCourses.css";
+import SpiderMan from "../../assets/images/spiderman_meme.jpeg";
 
 // Breadcrumbs:
 // Main Page / DisplayCourses - displays list of scrollable courses on right hand side

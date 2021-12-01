@@ -6,16 +6,16 @@ import SEMESTER_MAP_INIT from "../assets/stateInitializers/semesterMap";
 import buttonListInit from "../assets/stateInitializers/buttonList";
 
 // Component Imports
-import { Board } from "./Board";
-import DisplayCourses from "./DisplayCourses";
-import SideMenu from "./SideMenu";
-import DegreePlan from "./DegreePlan";
-import SaveBin from "./SaveBin";
-import SaveButton from "./SaveButton";
-import AccessSavedSemestersButton from "./AccessSavedSemestersButton";
-import AddSemesterButton from "./AddSemesterButton";
-import RemoveSemesterButton from "./RemoveSemesterButton";
-import SelectedSaveHeader from "./SelectedSaveHeader";
+import { Board } from "./Views/Board";
+import DisplayCourses from "./Right_Menu/DisplayCourses";
+import SideMenu from "./Left_Menu/SideMenu";
+import DegreePlan from "./Views/DegreePlan";
+import SaveBin from "./Save_Later_Bin/SaveBin";
+import SaveButton from "./Save_Load_Semesters/SaveButton";
+import AccessSavedSemestersButton from "./Save_Load_Semesters/AccessSavedSemestersButton";
+import AddSemesterButton from "./Add_Remove_Semesters/AddSemesterButton";
+import RemoveSemesterButton from "./Add_Remove_Semesters/RemoveSemesterButton";
+import SelectedSaveHeader from "./Save_Load_Semesters/SelectedSaveHeader";
 
 // Design Imports
 import "../css/App.css";

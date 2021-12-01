@@ -1,12 +1,12 @@
 // Source Imports
 import React from "react";
-import courseData from "../assets/courses";
-import { ButtonList } from "../interfaces/buttonList";
-import { Course } from "../interfaces/course";
+import courseData from "../../assets/courses";
+import { ButtonList } from "../../interfaces/buttonList";
+import { Course } from "../../interfaces/course";
 import Swal from "sweetalert2";
 
 // Design Imports
-import "../css/AddRemoveSemester.css";
+import "../../css/AddRemoveSemester.css";
 
 // Breadcrumbs:
 // Main Page / RemoveSemesterButton - clears courses and removes semester

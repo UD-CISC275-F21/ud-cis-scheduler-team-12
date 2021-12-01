@@ -3,16 +3,16 @@ import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { Col, Container, Offcanvas, Row } from "react-bootstrap";
 import Swal from "sweetalert2";
-import courseData from "../assets/courses";
-import { Course } from "../interfaces/course";
+import courseData from "../../assets/courses";
+import { Course } from "../../interfaces/course";
 
 // Component Imports
-import BinCourseCard from "./BinCourseCard";
+import BinCourseCard from "../Card_Components/BinCourseCard";
 import ClearBinButton from "./ClearBinButton";
 
 // Design Imports
-import "../css/SaveBin.css";
-import SpiderMan from "../assets/images/spiderman_meme.jpeg";
+import "../../css/SaveBin.css";
+import SpiderMan from "../../assets/images/spiderman_meme.jpeg";
 
 // Breadcrumbs:
 // Main Page / SaveBin - bin that pops up to save courses for later

@@ -3,17 +3,18 @@ import React from "react";
 import { Col, Row, Container, ToggleButtonGroup, ToggleButton } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { AnimatePresence, motion } from "framer-motion";
-import courseData from "../assets/courses";
-import { ButtonList } from "../interfaces/buttonList";
-import { Course } from "../interfaces/course";
+import courseData from "../../assets/courses";
+import { ButtonList } from "../../interfaces/buttonList";
+import { Course } from "../../interfaces/course";
 
 // Component Imports
-import CourseComp from "./CourseComp";
+import CourseComp from "../Card_Components/CourseComp";
 import ClearSemesterButton from "./ClearSemesterButton";
 
 // Design Imports
-import "../css/board.css";
-import SpiderMan from "../assets/images/spiderman_meme.jpeg";
+import "../../css/board.css";
+import SpiderMan from "../../assets/images/spiderman_meme.jpeg";
+import ClearAllSemesterButton from "./ClearAllSemesterButton";
 
 // Breadcrumbs:
 // Main Page / Board - renders each semester and its classes
@@ -92,42 +93,6 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
         return course.preReqCheck;
     }
 
-    function removeAllSemesters() {
-        const NEW_SEMESTER_MAP = {...SEMESTER_MAP}; 
-        for (const [key] of Object.entries(NEW_SEMESTER_MAP)) {
-            Object.values(NEW_SEMESTER_MAP[key]).forEach(course => {
-                removePreReq(course);
-            });
-            NEW_SEMESTER_MAP[key]=[];
-            SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
-        }
-    }
-    function removePreReq(course: Course) {
-        for (const [key, value] of Object.entries(courseData)) {
-            console.log([key,value]);
-            Object.keys(value.preReq).forEach(courseName => {
-                //console.log(courseName);
-                if(courseName === course.name) {
-                    console.log(courseName);
-                    value.preReq[courseName] = false;
-                }
-            });
-        }
-        for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-            console.log([key,value]);
-            SEMESTER_MAP[key].forEach(item => {
-                if(Object.keys(item.preReq).length > 0) {
-                    if (Object.values(item.preReq).every(course => course === true)){
-                        item.preReqCheck = "black";
-                    } else {
-                        item.preReqCheck = "red";
-                    }
-                    updateColor(item);
-                }
-            });
-        }
-    }
-
     return (
         <div data-testid="semester-view">
             <div>
@@ -192,7 +157,10 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
                         SEMESTER_MAP={SEMESTER_MAP}
                         semesterSelect={semesterSelect}
                     ></ClearSemesterButton>
-                    <button style={{margin: "5%"}} onClick={removeAllSemesters}>Clear All Semesters</button>
+                    <ClearAllSemesterButton
+                        SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                        SEMESTER_MAP={SEMESTER_MAP}
+                    ></ClearAllSemesterButton>
                 </div> }
             </div>
 

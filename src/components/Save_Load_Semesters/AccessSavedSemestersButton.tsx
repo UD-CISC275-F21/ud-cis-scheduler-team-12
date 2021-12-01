@@ -3,9 +3,9 @@ import React from "react";
 import { Dropdown } from "react-bootstrap";
 import { ImCross } from "react-icons/im";
 import Swal from "sweetalert2";
-import courseData from "../assets/courses";
-import { ButtonList } from "../interfaces/buttonList";
-import { Course } from "../interfaces/course";
+import courseData from "../../assets/courses";
+import { ButtonList } from "../../interfaces/buttonList";
+import { Course } from "../../interfaces/course";
 
 // Component Imports
 import ClearSavedSemestersButton from "./ClearSavedSemestersButton";

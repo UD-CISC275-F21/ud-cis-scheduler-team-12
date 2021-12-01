@@ -1,6 +1,6 @@
 // Source Imports
 import React from "react";
-import { Course } from "../interfaces/course";
+import { Course } from "../../interfaces/course";
 
 // Breadcrumbs:
 // Main Page / SaveBin / ClearBinButton
