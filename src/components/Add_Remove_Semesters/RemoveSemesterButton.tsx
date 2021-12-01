@@ -1,10 +1,15 @@
+// Source Imports
 import React from "react";
-import courseData from "../assets/courses";
-import { ButtonList } from "../interfaces/buttonList";
-import { Course } from "../interfaces/course";
-import "../css/AddRemoveSemester.css";
+import courseData from "../../assets/courses";
+import { ButtonList } from "../../interfaces/buttonList";
+import { Course } from "../../interfaces/course";
 import Swal from "sweetalert2";
 
+// Design Imports
+import "../../css/AddRemoveSemester.css";
+
+// Breadcrumbs:
+// Main Page / RemoveSemesterButton - clears courses and removes semester
 export default function RemoveSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount, setButtonList, buttonList, setSemesterSelect, setSemesterHeader }: {
     SET_SEMESTER_MAP: (s: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterCount: (c: number) => void, semesterCount: number,
@@ -44,27 +49,23 @@ export default function RemoveSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         }
     }
 
-    function removeAllCourses() {    
-        for (const [key, value] of Object.entries(SEMESTER_MAP[semesterCount-1])) {
-            console.log(key);
-            removePreReq(value);
-        }
+    function removeAllCourses() {
+        Object.values(SEMESTER_MAP[semesterCount-1]).forEach(course => {
+            removePreReq(course);
+        });
         SET_SEMESTER_MAP({...SEMESTER_MAP, [semesterCount-1]: []}); // Set classList to an empty array to clear all selected courses
     }
 
     function removePreReq(course: Course) {
-        for (const [key, value] of Object.entries(courseData)) {
-            console.log([key,value]);
-            Object.keys(value.preReq).forEach(courseName => {
-                //console.log(courseName);
+        Object.values(courseData).forEach(value => {
+            Object.keys(course.preReq).forEach(courseName => {
                 if(courseName === course.name) {
-                    console.log(courseName);
                     value.preReq[courseName] = false;
                 }
             });
-        }
-        for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-            console.log([key,value]);
+        });
+
+        Object.keys(SEMESTER_MAP).forEach(key => {
             SEMESTER_MAP[key].forEach(item => {
                 if(Object.keys(item.preReq).length > 0) {
                     if (Object.values(item.preReq).every(course => course === true)){
@@ -75,7 +76,7 @@ export default function RemoveSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, s
                     updateColor(item);
                 }
             });
-        }
+        });
         
     }
 

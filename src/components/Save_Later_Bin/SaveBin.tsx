@@ -1,17 +1,21 @@
+// Source Imports
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { Col, Container, Offcanvas, Row } from "react-bootstrap";
-
-import "../css/SaveBin.css";
-
-import courseData from "../assets/courses";
-import BinCourseCard from "./BinCourseCard";
-import ClearBinButton from "./ClearBinButton";
-import { Course } from "../interfaces/course";
-
-import SpiderMan from "../assets/spiderman_meme.jpeg";
 import Swal from "sweetalert2";
+import courseData from "../../assets/courses";
+import { Course } from "../../interfaces/course";
 
+// Component Imports
+import BinCourseCard from "../Card_Components/BinCourseCard";
+import ClearBinButton from "./ClearBinButton";
+
+// Design Imports
+import "../../css/SaveBin.css";
+import SpiderMan from "../../assets/images/spiderman_meme.jpeg";
+
+// Breadcrumbs:
+// Main Page / SaveBin - bin that pops up to save courses for later
 export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     setBinVisible: (b: boolean) => void, binVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
