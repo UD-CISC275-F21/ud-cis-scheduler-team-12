@@ -6,6 +6,7 @@ import { Accordion, Col, Dropdown, DropdownButton } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Course } from "../../interfaces/course";
 import Swal from "sweetalert2";
+import PassEditedTitle from "../PassEditedTitle";
 
 // Component Imports
 import SearchBar from "./SearchBar";
@@ -16,11 +17,13 @@ import SpiderMan from "../../assets/images/spiderman_meme.jpeg";
 
 // Breadcrumbs:
 // Main Page / DisplayCourses - displays list of scrollable courses on right hand side
-export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN }: {
+export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, title, setTitle }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,
     setBinVisible: (b: boolean) => void, binVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
+    setTitle: (s: string) => void, title: string,
+
 }): JSX.Element {
 
     const [query, setQuery] = useState<string>("");
@@ -134,10 +137,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
         return flag;
     }
     
-    function test() {
-        console.log(Object.values(SEMESTER_MAP));
-        
-    }
+
 
     function test2(numEnter: number) {
         //const semester_array = Object.values(SEMESTER_MAP);
@@ -169,25 +169,44 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
 
         //ok so i can get the key of the object to get id
         const bruh3 = Object.keys(courseData[0])[1];
-        const bruh4 = Object.values(courseData[0])[1];
+
 
         //doesnt work
-        Object.values(courseData[0])[1] = "newName";
+        // Object.values(courseData[0])[1] = "newName";
   
         
-        console.log("keys ", bruh1);
-        console.log("values ", bruh2);
-        console.log(bruh3);
+        // console.log("keys ", bruh1);
+        // console.log("values fuck", bruh2);
+        // console.log(bruh3);
+
+        // console.log("ur a dumbass",bruh4);
+
+        // console.log( Object.values(courseData[1])[1]);
+
+
+
+        // let man1 = courseData[1].name;
+        // man1 = "bruh";
+
+        // console.log("man1 value:", man1);
+        // console.log(Object.values(courseData[1])[1]);
+    }
+
+    function titleUpdate(checkOldTitle: string, updatedID: number){
+        const newTitle: string = Object.values(courseData[updatedID])[1];
+
+        if (newTitle !== checkOldTitle){
+            console.log("case of titles not matching");
+        }
+        //console.log("bruhbruhbruh", bruh, bruh4);
+    }
+
+    function test() {
+        const bruh4 = Object.values(courseData[0])[1];
         console.log(bruh4);
-        console.log(Object.values(courseData[1])[1]);
-
-
-
-        let man1 = courseData[1].name;
-        man1 = "bruh";
-
-        console.log("man1 value:", man1);
-        console.log(Object.values(courseData[1])[1]);
+        //if (bruh4 !== courseData.name){
+        //  console.log("yes fucking finally it should be ", bruh4);
+        //}
     }
 
     function showBin() {
@@ -195,6 +214,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
     }
     
     return (
+
         <div>
             <div className="menu-button">
                 <DropdownButton id="dropdown-basic-button" title="Course Options">
@@ -234,6 +254,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                             ease: "easeInOut",
                             duration: 1,
                         }}>
+                        {/* {titleUpdate(courseData.name, courseData.id) } */}
                         <li className="course" key={courseData.id}>{courseData.name}
                             <button className="add-button" data-testid={courseData.name} onClick={() => addCourse(courseData.id)}>
                                 <MdAdd />
