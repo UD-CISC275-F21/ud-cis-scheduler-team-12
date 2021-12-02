@@ -1,15 +1,21 @@
+// Source Imports
 import React, { useState } from "react";
-import courseData from "../assets/courses";
+import courseData from "../../assets/courses";
 import { MdAdd } from "react-icons/md";
-import "../css/DisplayCourses.css";
-import SearchBar from "./SearchBar";
-import { Accordion, Col } from "react-bootstrap";
+import { Accordion, Col, Dropdown, DropdownButton } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { Dropdown, DropdownButton } from "react-bootstrap";
-import { Course } from "../interfaces/course";
-import SpiderMan from "../assets/spiderman_meme.jpeg";
+import { Course } from "../../interfaces/course";
 import Swal from "sweetalert2";
 
+// Component Imports
+import SearchBar from "./SearchBar";
+
+// Design Imports
+import "../../css/DisplayCourses.css";
+import SpiderMan from "../../assets/images/spiderman_meme.jpeg";
+
+// Breadcrumbs:
+// Main Page / DisplayCourses - displays list of scrollable courses on right hand side
 export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,

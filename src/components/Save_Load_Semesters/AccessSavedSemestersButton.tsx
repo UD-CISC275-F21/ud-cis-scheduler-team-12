@@ -1,12 +1,17 @@
+// Source Imports
 import React from "react";
 import { Dropdown } from "react-bootstrap";
 import { ImCross } from "react-icons/im";
 import Swal from "sweetalert2";
-import { Course } from "../interfaces/course";
-import ClearSavedSemestersButton from "./ClearSavedSemestersButton";
-import courseData from "../assets/courses";
-import { ButtonList } from "../interfaces/buttonList";
+import courseData from "../../assets/courses";
+import { ButtonList } from "../../interfaces/buttonList";
+import { Course } from "../../interfaces/course";
 
+// Component Imports
+import ClearSavedSemestersButton from "./ClearSavedSemestersButton";
+
+// Breadcrumbs:
+// Main Page / AccessSavedSemesterButton
 export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount, setButtonList, buttonList, setSelectedSave }: {
     SET_SEMESTER_MAP: (s: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterCount: (c: number) => void, semesterCount: number,
