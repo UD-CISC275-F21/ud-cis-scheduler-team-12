@@ -18,7 +18,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
     const [input, setInput] = useState<string>("");
     const [visible, setVisible] = useState<number>(0);
     const [description, setDescription] = useState<string>(course.description);
-    //const [title, setTitle] = useState<string>(course.name);
+    const [title, setTitle] = useState<string>(course.name);
     const [titleVisible, setTitleVisible] = useState<number>(0);
 
 
@@ -34,6 +34,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
 
     function submitTitle() {
         course.name = input;
+        setTitle(input);
         setTitleVisible(0);
     }
 
@@ -46,6 +47,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
     }
 
     function submitDescription() {
+        course.description = input;
         setDescription(input);
         setVisible(0);
     }
@@ -94,7 +96,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                     <Container>
                         <Row>
                             <Col>
-                                <Card.Title>{course.name}</Card.Title>
+                                <Card.Title>{title}</Card.Title>
                                 { titleVisible === 1 && <TitleInput 
                                     setInput={setInput}
                                 ></TitleInput> }
