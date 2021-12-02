@@ -28,8 +28,10 @@ function MainPage({ visibleView, setVisibleView }: {
     const [semesterSelect, setSemesterSelect] = useState<string | null>("1");
     const [semesterHeader, setSemesterHeader] = useState<string>("Fall 1");
 
-    
-    
+    //edit course information states
+    const [courseTitle, setCourseTitle] = useState<string>("");
+    const [courseDescription, setCourseDescription] = useState<string>("");
+
     // Selected Save Variable
     const [selectedSave, setSelectedSave] = useState<string>("No Save Selected");
     
@@ -112,6 +114,10 @@ function MainPage({ visibleView, setVisibleView }: {
                     SAVE_BIN={SAVE_BIN}
                     binVisible={binVisible}
                     buttonList={buttonList}
+                    courseTitle={courseTitle}
+                    setCourseTitle={setCourseTitle}
+                    courseDescription={courseDescription}
+                    setCourseDescription={setCourseDescription}
                 ></Board> }
                 
                 { visibleView === "3" && <DegreePlan
@@ -132,8 +138,8 @@ function MainPage({ visibleView, setVisibleView }: {
                     binVisible={binVisible}
                     SET_SAVE_BIN={SET_SAVE_BIN}
                     SAVE_BIN={SAVE_BIN}
-                    title={title}
-                    set
+                    courseTitle={courseTitle}
+                    setCourseTitle={setCourseTitle}
                 ></DisplayCourses> }            
             </section>
 

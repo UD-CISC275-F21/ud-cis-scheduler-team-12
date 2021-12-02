@@ -6,7 +6,7 @@ import { Accordion, Col, Dropdown, DropdownButton } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Course } from "../../interfaces/course";
 import Swal from "sweetalert2";
-import PassEditedTitle from "../PassEditedTitle";
+
 
 // Component Imports
 import SearchBar from "./SearchBar";
@@ -17,12 +17,12 @@ import SpiderMan from "../../assets/images/spiderman_meme.jpeg";
 
 // Breadcrumbs:
 // Main Page / DisplayCourses - displays list of scrollable courses on right hand side
-export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, title, setTitle }: {
+export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, courseTitle, setCourseTitle }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,
     setBinVisible: (b: boolean) => void, binVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
-    setTitle: (s: string) => void, title: string,
+    setCourseTitle: (s: string) => void, courseTitle: string,
 
 }): JSX.Element {
 
@@ -169,7 +169,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
 
         //ok so i can get the key of the object to get id
         const bruh3 = Object.keys(courseData[0])[1];
-
+        
 
         //doesnt work
         // Object.values(courseData[0])[1] = "newName";
@@ -192,21 +192,25 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
         // console.log(Object.values(courseData[1])[1]);
     }
 
-    function titleUpdate(checkOldTitle: string, updatedID: number){
-        const newTitle: string = Object.values(courseData[updatedID])[1];
 
-        if (newTitle !== checkOldTitle){
-            console.log("case of titles not matching");
-        }
-        //console.log("bruhbruhbruh", bruh, bruh4);
-    }
 
     function test() {
-        const bruh4 = Object.values(courseData[0])[1];
-        console.log(bruh4);
+        //const bruh4 = Object.values(courseData[0])[1];
+        //console.log(bruh4);
         //if (bruh4 !== courseData.name){
         //  console.log("yes fucking finally it should be ", bruh4);
         //}
+        // for (const [key, value] of Object.entries(courseData)) {
+        //     console.log([key,value]);
+        //     Object.keys(value.preReq).forEach(courseName => {
+        //         // console.log(courseName);
+        //         if(courseName === courseData[0].name) {
+        //             console.log(courseName);
+        //             value.preReq[courseName] = false;
+        //         }
+        //     });
+        // }
+        console.log(Object.values(courseData[0])[1]);
     }
 
     function showBin() {
@@ -254,7 +258,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                             ease: "easeInOut",
                             duration: 1,
                         }}>
-                        {/* {titleUpdate(courseData.name, courseData.id) } */}
+                        {console.log(courseData.name)}
                         <li className="course" key={courseData.id}>{courseData.name}
                             <button className="add-button" data-testid={courseData.name} onClick={() => addCourse(courseData.id)}>
                                 <MdAdd />

@@ -12,23 +12,23 @@ import TitleInput from "../Edit_Course_Inputs/TitleInput";
 
 // Design Imports
 import "../../css/courses.css";
-import PassEditedTitle from "../PassEditedTitle";
+
 
 // Breadcrumbs:
 // Main Page / Board / CourseComp - Course Card that holds information on course
-export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
+export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setCourseTitle }: {
     course: Course,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,
     setSemesterHeader: (s: string) => void, semesterHeader: string,
-
+    setCourseTitle: (c: string) => void,
 
 }):  JSX.Element {
     
     const [input, setInput] = useState<string>("");
     const [visible, setVisible] = useState<number>(0);
-    const [description, setDescription] = useState<string>(course.description);
-    const [title, setTitle] = useState<string>(course.name);
+    
+    //const [title, setTitle] = useState<string>(course.name);
     const [titleVisible, setTitleVisible] = useState<number>(0);
 
 
@@ -39,7 +39,8 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
 
     function submitTitle() {
         course.name = input;
-        setTitle(input);
+        setCourseTitle(input);
+        //setTitle(input);
         setTitleVisible(0);
     }
 
@@ -91,13 +92,10 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
         return course.preReqCheck;
     }
 
+
+
     return (
         <div>
-
-            <PassEditedTitle 
-                title={title}
-                setTitle={setTitle}
-            ></PassEditedTitle>
             
             <OverlayTrigger trigger={["hover", "focus"]} show={ Object.values(course.preReq).every(course => course === true) ? false : true } placement={ SEMESTER_MAP[""+semesterSelect].indexOf(course) > 2 ? "bottom" : "top" } overlay={
                 <Popover className="popover" id="tooltip-preReq">Missing: {Object.keys(course.preReq).filter(courseName => 
@@ -107,7 +105,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                     <Container>
                         <Row>
                             <Col>
-                                <Card.Title>{title}</Card.Title>
+                                <Card.Title>{Object.values(courseData[course.id])[1]}</Card.Title>
                                 { titleVisible === 1 && <TitleInput 
                                     setInput={setInput}
                                 ></TitleInput> }
