@@ -23,12 +23,13 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
     setBinVisible: (b: boolean) => void, binVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
     setCourseTitle: (s: string) => void, courseTitle: string,
-    
+
     setCourseDescription: (d: string) => void, courseDescription: string,
 }): JSX.Element {
 
     const [query, setQuery] = useState<string>("");
-    
+    setCourseDescription(courseDescription);
+    setCourseTitle(courseTitle);
 
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
