@@ -7,24 +7,28 @@ import courseData from "../../assets/courses";
 import { Course } from "../../interfaces/course";
 
 // Component Imports
-import TextInput from "../TextInput";
-import TitleInput from "../TitleInput";
+import TextInput from "../Edit_Course_Inputs/TextInput";
+import TitleInput from "../Edit_Course_Inputs/TitleInput";
 
 // Design Imports
 import "../../css/courses.css";
 
+
 // Breadcrumbs:
 // Main Page / Board / CourseComp - Course Card that holds information on course
-export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
+export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setCourseTitle, setCourseDescription }: {
     course: Course,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
-    semesterSelect: string | null
+    semesterSelect: string | null,
+    setSemesterHeader: (s: string) => void, semesterHeader: string,
+    setCourseTitle: (c: string) => void,
+    setCourseDescription: (d: string) => void,
+
 }):  JSX.Element {
     
+    //visibility states for coures
     const [input, setInput] = useState<string>("");
     const [visible, setVisible] = useState<number>(0);
-    const [description, setDescription] = useState<string>(course.description);
-    const [title, setTitle] = useState<string>(course.name);
     const [titleVisible, setTitleVisible] = useState<number>(0);
 
 
@@ -32,10 +36,15 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
         setTitleVisible(1);
     }
 
+
     function submitTitle() {
-        setTitle(input);
+        course.name = input;
+        setCourseTitle(input);
+        //setTitle(input);
         setTitleVisible(0);
     }
+
+
 
     function editDescription() {
 
@@ -44,7 +53,8 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
     }
 
     function submitDescription() {
-        setDescription(input);
+        course.description = input;
+        setCourseDescription(input);
         setVisible(0);
     }
     
@@ -82,8 +92,11 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
         return course.preReqCheck;
     }
 
+
+
     return (
-        <div>           
+        <div>
+            
             <OverlayTrigger trigger={["hover", "focus"]} show={ Object.values(course.preReq).every(course => course === true) ? false : true } placement={ SEMESTER_MAP[""+semesterSelect].indexOf(course) > 2 ? "bottom" : "top" } overlay={
                 <Popover className="popover" id="tooltip-preReq">Missing: {Object.keys(course.preReq).filter(courseName => 
                     course.preReq[courseName] === false).map(course => 
@@ -92,7 +105,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                     <Container>
                         <Row>
                             <Col>
-                                <Card.Title>{title}</Card.Title>
+                                <Card.Title>{Object.values(courseData[course.id])[1]}</Card.Title>
                                 { titleVisible === 1 && <TitleInput 
                                     setInput={setInput}
                                 ></TitleInput> }
@@ -125,7 +138,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                                 <Accordion.Item eventKey="0">
                                     <Accordion.Header>Details</Accordion.Header>
                                     <Accordion.Body>
-                                        {description}
+                                        {Object.values(courseData[course.id])[5]}
                                         { visible === 1 && <TextInput 
                                             setInput={setInput}
                                         ></TextInput>}
