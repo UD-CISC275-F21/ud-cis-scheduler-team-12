@@ -16,19 +16,19 @@ import "../../css/courses.css";
 
 // Breadcrumbs:
 // Main Page / Board / CourseComp - Course Card that holds information on course
-export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setCourseTitle }: {
+export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setCourseTitle, setCourseDescription }: {
     course: Course,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,
     setSemesterHeader: (s: string) => void, semesterHeader: string,
     setCourseTitle: (c: string) => void,
+    setCourseDescription: (d: string) => void,
 
 }):  JSX.Element {
     
+    //visibility states for coures
     const [input, setInput] = useState<string>("");
     const [visible, setVisible] = useState<number>(0);
-    
-    //const [title, setTitle] = useState<string>(course.name);
     const [titleVisible, setTitleVisible] = useState<number>(0);
 
 
@@ -54,7 +54,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
 
     function submitDescription() {
         course.description = input;
-        setDescription(input);
+        setCourseDescription(input);
         setVisible(0);
     }
     
@@ -138,7 +138,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                                 <Accordion.Item eventKey="0">
                                     <Accordion.Header>Details</Accordion.Header>
                                     <Accordion.Body>
-                                        {description}
+                                        {Object.values(courseData[course.id])[5]}
                                         { visible === 1 && <TextInput 
                                             setInput={setInput}
                                         ></TextInput>}

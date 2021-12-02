@@ -17,13 +17,14 @@ import SpiderMan from "../../assets/images/spiderman_meme.jpeg";
 
 // Breadcrumbs:
 // Main Page / DisplayCourses - displays list of scrollable courses on right hand side
-export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, courseTitle, setCourseTitle }: {
+export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, courseTitle, setCourseTitle, courseDescription, setCourseDescription }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,
     setBinVisible: (b: boolean) => void, binVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
     setCourseTitle: (s: string) => void, courseTitle: string,
-
+    
+    setCourseDescription: (d: string) => void, courseDescription: string,
 }): JSX.Element {
 
     const [query, setQuery] = useState<string>("");
@@ -86,7 +87,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                     );
                 } else {
                     for (const [key, value] of Object.entries(courseData)) {
-                        //console.log([key,value]);
+                        console.log([key,value]);
                         Object.keys(value.preReq).forEach(courseName => {
                             //console.log(courseName);
                             if(courseName === courseData[id].name) {
@@ -100,7 +101,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                 }
 
                 for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-                    //console.log([key,value]);
+                    console.log([key,value]);
                     SEMESTER_MAP[key].forEach(item => {
                         if(Object.keys(item.preReq).length > 0) {
                             if (Object.values(item.preReq).every(course => course === true)){
@@ -138,81 +139,6 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
     }
     
 
-
-    function test2(numEnter: number) {
-        //const semester_array = Object.values(SEMESTER_MAP);
-
-        //select desired spot in semester map array
-        //const bruh3 = Object.keys(semester_array)[3];
-
-        //select key for double array
-
-
-        // const bruh3 = Object.keys(Object.values(SEMESTER_MAP));
-        // const bruh4 = Object.keys(Object.values(SEMESTER_MAP))[numEnter];
-
-        // const bruh5 = Object.entries(SEMESTER_MAP);
-        // const bruh6 = Object.entries(SEMESTER_MAP)[numEnter];
-        // const bruh7 = Object.entries(SEMESTER_MAP)[0][0];
-
-
-        // console.log("keys, values of SEMESTER_MAP",  bruh3);
-        // console.log("keys, values of SEMESTER_MAP at position id", bruh4);
-        // console.log("entries of SEMESTER_MAP", bruh5);
-        // console.log("entries of SEMESTER_MAP at position id", bruh6);
-        // console.log(bruh7);
-        const fuckOff = numEnter;
-
-        const bruh1 = Object.keys(courseData[0]);
-        const bruh2 = Object.values(courseData[0]);
-
-
-        //ok so i can get the key of the object to get id
-        const bruh3 = Object.keys(courseData[0])[1];
-        
-
-        //doesnt work
-        // Object.values(courseData[0])[1] = "newName";
-  
-        
-        // console.log("keys ", bruh1);
-        // console.log("values fuck", bruh2);
-        // console.log(bruh3);
-
-        // console.log("ur a dumbass",bruh4);
-
-        // console.log( Object.values(courseData[1])[1]);
-
-
-
-        // let man1 = courseData[1].name;
-        // man1 = "bruh";
-
-        // console.log("man1 value:", man1);
-        // console.log(Object.values(courseData[1])[1]);
-    }
-
-
-
-    function test() {
-        //const bruh4 = Object.values(courseData[0])[1];
-        //console.log(bruh4);
-        //if (bruh4 !== courseData.name){
-        //  console.log("yes fucking finally it should be ", bruh4);
-        //}
-        // for (const [key, value] of Object.entries(courseData)) {
-        //     console.log([key,value]);
-        //     Object.keys(value.preReq).forEach(courseName => {
-        //         // console.log(courseName);
-        //         if(courseName === courseData[0].name) {
-        //             console.log(courseName);
-        //             value.preReq[courseName] = false;
-        //         }
-        //     });
-        // }
-        console.log(Object.values(courseData[0])[1]);
-    }
-
     function showBin() {
         setBinVisible(!binVisible);
     }
@@ -225,11 +151,6 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                     <Dropdown.Item as="button" onClick={() => showBin()}>Save Later Bin</Dropdown.Item>
                 </DropdownButton>
             </div>
-            <div>
-                <button onClick={() => test()}> SEMESTER_MAP </button>
-                <button onClick={() => test2(0)}> bruh </button>
-            </div>
-
             <SearchBar
                 setQuery={setQuery}
             ></SearchBar>

@@ -114,9 +114,7 @@ function MainPage({ visibleView, setVisibleView }: {
                     SAVE_BIN={SAVE_BIN}
                     binVisible={binVisible}
                     buttonList={buttonList}
-                    courseTitle={courseTitle}
                     setCourseTitle={setCourseTitle}
-                    courseDescription={courseDescription}
                     setCourseDescription={setCourseDescription}
                 ></Board> }
                 
@@ -140,6 +138,8 @@ function MainPage({ visibleView, setVisibleView }: {
                     SAVE_BIN={SAVE_BIN}
                     courseTitle={courseTitle}
                     setCourseTitle={setCourseTitle}
+                    courseDescription={courseDescription}
+                    setCourseDescription={setCourseDescription}
                 ></DisplayCourses> }            
             </section>
 

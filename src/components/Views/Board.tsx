@@ -18,15 +18,15 @@ import ClearAllSemesterButton from "./ClearAllSemesterButton";
 
 // Breadcrumbs:
 // Main Page / Board - renders each semester and its classes
-export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader, SET_SAVE_BIN, SAVE_BIN, binVisible, buttonList, courseTitle, setCourseTitle, courseDescription, setCourseDescription }: {
+export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader, SET_SAVE_BIN, SAVE_BIN, binVisible, buttonList, setCourseTitle, setCourseDescription }: {
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterHeader: (s: string) => void, semesterHeader: string,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
     binVisible: boolean,
     buttonList: ButtonList[],
-    setCourseTitle: (c: string) => void, courseTitle: string,
-    setCourseDescription:(d: string) => void, curseDescription: string
+    setCourseTitle: (c: string) => void,
+    setCourseDescription:(d: string) => void,
 }):  JSX.Element {
 
     // const list variable to map out classList useState variable
@@ -149,6 +149,7 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
                                             setSemesterHeader={setSemesterHeader}
                                             semesterHeader={semesterHeader}
                                             setCourseTitle={setCourseTitle}
+                                            setCourseDescription={setCourseDescription}
                                         ></CourseComp>
                                     </Col>
                                 </motion.div>
