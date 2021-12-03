@@ -125,6 +125,10 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
                                 </tr>
 
                             )}
+                            <tr>
+                                <th>Total Credits: </th>
+                                <td>{Object.values(courseList).reduce((acc, val) => acc + val.credits, 0)}</td>
+                            </tr>
                         </tbody>
                     </Table>
                 </Card.Body>
