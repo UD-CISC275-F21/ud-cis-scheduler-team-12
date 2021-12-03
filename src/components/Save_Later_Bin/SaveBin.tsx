@@ -28,29 +28,94 @@ export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_
 
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        const foundCourse = findCourseInSemester(id);
+        const foundCourseInPlan = findCourseInEntirePlan(id);
         
         // If there are less than 6 courses, add the selected course onto the end of the classList
-        if (SEMESTER_MAP[""+semesterSelect].includes(courseData[id])) {
-            Swal.fire({
-                title: "Duplicate Course!",
-                text: `${courseData[id].name} is already added to this semester. Please select another course.`,
-                icon: "error",
-                imageUrl: SpiderMan
-            });
+        if (foundCourse || foundCourseInPlan) {
+            foundCourse ?
+                Swal.fire({
+                    title: "Duplicate Course!",
+                    text: `${courseData[id].name} is already added to this semester. Please select another course.`,
+                    icon: "error",
+                    imageUrl: SpiderMan
+                }) :
+                Swal.fire({
+                    title: "Duplicate Course!",
+                    text: `${courseData[id].name} is already added to your plan. Please select another course.`,
+                    icon: "error",
+                    imageUrl: SpiderMan
+                });
         } else {
-            // After adding course to the semester, remove it from the save-later bin
-            SEMESTER_MAP[""+semesterSelect].length === 6 ? 
+            //  PREREQ MET IN PRIOR SEMESTER
+            if (Object.keys(courseData[id].preReq).length > 0){
+                if (Object.values(courseData[id].preReq).every(course => course === true)){
+                    courseData[id].preReqCheck = "black";
+                } else {
+                    Swal.fire(
+                        "Pre-Req Error!",
+                        "Warning: Pre-Reqs not met 🤔.",
+                        "error"
+                    );
+                    courseData[id].preReqCheck = "red";
+                }
+                updateColor(courseData[id]);
+            }
+
+            if (SEMESTER_MAP["" + semesterSelect].length === 6) {
                 Swal.fire(
                     "Getting Studious!",
                     "Warning: Max number of courses selected for semester 📚.",
                     "error"
-                )
-                : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), SET_SEMESTER_MAP(NEW_SEMESTER_MAP),
-                removeCourse(id));
+                );
+            } else {
+                Object.values(courseData).forEach(value => {
+                    Object.keys(value.preReq).forEach(courseName => {
+                        if(courseName === courseData[id].name) {
+                            value.preReq[courseName] = true;
+                        }
+                    });
+                });
+                
+                NEW_SEMESTER_MAP["" + semesterSelect].push(courseData[id]);
+                SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
+                removeCourse(id);
+            }
+
+            Object.keys(SEMESTER_MAP).forEach(key => {
+                SEMESTER_MAP[key].forEach(item => {
+                    if(Object.keys(item.preReq).length > 0) {
+                        if (Object.values(item.preReq).every(course => course === true)){
+                            item.preReqCheck = "black";
+                        } else {
+                            item.preReqCheck = "red";
+                        }
+                        updateColor(item);
+                    }
+                });
+            }); 
         }
+    }
 
-        
+    function updateColor(course: Course) {
+        return course.preReqCheck;
+    }
 
+    function findCourseInSemester(id: number) {
+        return SEMESTER_MAP[""+semesterSelect].includes(courseData[id]);
+    }
+
+    function findCourseInEntirePlan(id: number) {
+        let flag = false;
+        Object.keys(SEMESTER_MAP).forEach(key => {
+            SEMESTER_MAP[key].forEach(course => {
+                if (course.id === id) {
+                    flag = true;
+                }
+            });
+        });
+
+        return flag;
     }
 
     function removeCourse(id: number) {
