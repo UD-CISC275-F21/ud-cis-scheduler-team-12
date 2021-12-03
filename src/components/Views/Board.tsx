@@ -156,20 +156,22 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
                         </AnimatePresence>
                     </Row>
                 </Container>
-                { SEMESTER_MAP[""+semesterSelect].length > 0 && 
                 <div>
-                    <ClearSemesterButton
-                        SET_SEMESTER_MAP={SET_SEMESTER_MAP}
-                        SEMESTER_MAP={SEMESTER_MAP}
-                        semesterSelect={semesterSelect}
-                    ></ClearSemesterButton>
-                    <ClearAllSemesterButton
-                        SET_SEMESTER_MAP={SET_SEMESTER_MAP}
-                        SEMESTER_MAP={SEMESTER_MAP}
-                    ></ClearAllSemesterButton>
-                </div> }
+                    <div>
+                        { SEMESTER_MAP[""+semesterSelect].length > 0 && <ClearSemesterButton
+                            SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                            SEMESTER_MAP={SEMESTER_MAP}
+                            semesterSelect={semesterSelect}
+                        ></ClearSemesterButton> }
+                    </div>
+                    <div>
+                        <ClearAllSemesterButton
+                            SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                            SEMESTER_MAP={SEMESTER_MAP}
+                        ></ClearAllSemesterButton>
+                    </div>
+                </div>
             </div>
-
         </div>
     );
 }
