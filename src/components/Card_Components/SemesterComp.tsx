@@ -39,8 +39,37 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
         setSemesterHeader(buttonList[+val-1].name);
     }
 
+    function updateColor(course: Course) {
+        return course.preReqCheck;
+    }
+
     function removeCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+
+        if (courseData[id].name === "") {
+            NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
+            delete courseData[id];
+        } else {
+            Object.values(courseData).forEach(value => {
+                Object.keys(value.preReq).forEach(courseName => {
+                    if(courseName === courseData[id].name) {
+                        value.preReq[courseName] = false;
+                    }
+                });
+            });
+            Object.keys(SEMESTER_MAP).forEach(key => {
+                SEMESTER_MAP[key].forEach(item => {
+                    if(Object.keys(item.preReq).length > 0) {
+                        if (Object.values(item.preReq).every(course => course === true)){
+                            item.preReqCheck = "black";
+                        } else {
+                            item.preReqCheck = "red";
+                        }
+                        updateColor(item);
+                    }
+                });
+            });
+        }
         
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
@@ -77,7 +106,7 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
                             {courseList.map((course, id) =>
 
                                 <tr key={id} data-testid="semester-comp-card">
-                                    <th>{course.name}</th>
+                                    <th style={{color: course.preReqCheck}}>{course.name}</th>
                                     <td>{course.credits}</td>
                                     <button className="delete-course" onClick={() => removeCourse(course.id)}>
                                         <ImCross></ImCross>
