@@ -35,25 +35,22 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
     }
 
     function addLoadedSave(parsedObject: Record<string, Course[]>) {
-        for (const [key, value] of Object.entries(parsedObject)) {
-            console.log(value);
+        Object.keys(parsedObject).forEach(key => {
             Object.values(parsedObject[key]).forEach(course => {
                 addCourse(course.id, key);
             });
-        }
+        }); 
     }
 
     function getNumberOfSemesters(parsedObject: Record<string, Course[]>) {
         const count = Object.keys(parsedObject).length;
         const numberOfVisibleSemesters = semesterCount - 1;
         const semesterCountBuffer: number[] = [];
-        // let buttonListBuffer = buttonList;
         
-
         if (numberOfVisibleSemesters < count) {
             for (let i = numberOfVisibleSemesters; i < count; i++){
                 semesterCountBuffer.push(i+1);
-                console.log(`NUMBER: ${semesterCountBuffer}`);
+                // console.log(`NUMBER: ${semesterCountBuffer}`);
             }
             addSemester(semesterCountBuffer, parsedObject);
             setSemesterCount(count+1);
@@ -62,11 +59,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
             addLoadedSave(parsedObject);
         }
         
-        
-        // setButtonList(buttonListBuffer);
-
         return semesterCountBuffer;
-
     }
 
     // I promise this code works... It needs to be cleaned up big time

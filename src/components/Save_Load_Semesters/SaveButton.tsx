@@ -26,8 +26,8 @@ export default function SaveButton({ SEMESTER_MAP }: {
             }).then((result) => {
                 if (result.value) {
                     localStorage.setItem(result.value, JSON.stringify(SEMESTER_MAP));
-                    const retrievedObject = localStorage.getItem(result.value);
-                    console.log("retrievedObject: ", JSON.parse(""+retrievedObject));
+                    // const retrievedObject = localStorage.getItem(result.value);
+                    // console.log("retrievedObject: ", JSON.parse(""+retrievedObject));
     
                     Swal.fire(
                         "Saved!",
