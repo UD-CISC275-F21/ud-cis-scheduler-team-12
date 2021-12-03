@@ -230,7 +230,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
 
     function removePreReq(course: Course) {
         Object.values(courseData).forEach(value => {
-            Object.keys(course.preReq).forEach(courseName => {
+            Object.keys(value.preReq).forEach(courseName => {
                 if(courseName === course.name) {
                     value.preReq[courseName] = false;
                 }
@@ -240,7 +240,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         Object.keys(SEMESTER_MAP).forEach(key => {
             SEMESTER_MAP[key].forEach(item => {
                 if(Object.keys(item.preReq).length > 0) {
-                    if (Object.values(item.preReq).every(course => course === true)){
+                    if (Object.values(item.preReq).every(courseCheck => courseCheck === true)){
                         item.preReqCheck = "black";
                     } else {
                         item.preReqCheck = "red";

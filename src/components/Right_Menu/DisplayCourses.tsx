@@ -189,7 +189,6 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                             ease: "easeInOut",
                             duration: 1,
                         }}>
-                        {console.log(courseData.name)}
                         <li className="course" key={courseData.id}>{courseData.name}
                             <button className="add-button" data-testid={courseData.name} onClick={() => addCourse(courseData.id)}>
                                 <MdAdd />
