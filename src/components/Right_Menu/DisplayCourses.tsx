@@ -133,10 +133,27 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
 
         return flag;
     }
-    
 
     function showBin() {
         setBinVisible(!binVisible);
+    }
+
+    function createCourse() {
+        const SEMESTER_MAP_BUFFER = {...SEMESTER_MAP};
+
+        courseData.push({ 
+            id: courseData.length,
+            name: "",
+            timeStart: 1300,
+            timeEnd: 1400,
+            schedule: "MWF",
+            description: "",
+            credits: 0,
+            preReq: {},
+            preReqCheck: "black" });
+        
+        addCourse(courseData[courseData.length-1].id);
+        SET_SEMESTER_MAP(SEMESTER_MAP_BUFFER);
     }
     
     return (
@@ -145,6 +162,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
             <div className="menu-button">
                 <DropdownButton id="dropdown-basic-button" title="Course Options">
                     <Dropdown.Item as="button" onClick={() => showBin()}>Save Later Bin</Dropdown.Item>
+                    <Dropdown.Item as="button" onClick={() => createCourse()}>Create New Course</Dropdown.Item>
                 </DropdownButton>
             </div>
             <SearchBar

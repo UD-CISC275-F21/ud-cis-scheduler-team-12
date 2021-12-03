@@ -35,40 +35,45 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
     function removeCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
         
-        if (binVisible){
-            if (SAVE_BIN.includes(courseData[id])) {
-                Swal.fire({
-                    title: "Duplicate Course!",
-                    text: `${courseData[id].name} is already added to your bin. It will now be removed from the semester.`,
-                    icon: "error",
-                    imageUrl: SpiderMan
-                });
-            } else {
-                SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
+        if (courseData[id].name === "") {
+            NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
+            delete courseData[id];
+        } else {
+            if (binVisible){
+                if (SAVE_BIN.includes(courseData[id])) {
+                    Swal.fire({
+                        title: "Duplicate Course!",
+                        text: `${courseData[id].name} is already added to your bin. It will now be removed from the semester.`,
+                        icon: "error",
+                        imageUrl: SpiderMan
+                    });
+                } else {
+                    SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
+                }
             }
-        }
-        for (const [key, value] of Object.entries(courseData)) {
-            console.log([key,value]);
-            Object.keys(value.preReq).forEach(courseName => {
-                // console.log(courseName);
-                if(courseName === courseData[id].name) {
-                    console.log(courseName);
-                    value.preReq[courseName] = false;
-                }
-            });
-        }
-        for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-            console.log([key,value]);
-            SEMESTER_MAP[key].forEach(item => {
-                if(Object.keys(item.preReq).length > 0) {
-                    if (Object.values(item.preReq).every(course => course === true)){
-                        item.preReqCheck = "black";
-                    } else {
-                        item.preReqCheck = "red";
+            for (const [key, value] of Object.entries(courseData)) {
+                console.log([key,value]);
+                Object.keys(value.preReq).forEach(courseName => {
+                    // console.log(courseName);
+                    if(courseName === courseData[id].name) {
+                        console.log(courseName);
+                        value.preReq[courseName] = false;
                     }
-                    updateColor(item);
-                }
-            });
+                });
+            }
+            for (const [key, value] of Object.entries(SEMESTER_MAP)) {
+                console.log([key,value]);
+                SEMESTER_MAP[key].forEach(item => {
+                    if(Object.keys(item.preReq).length > 0) {
+                        if (Object.values(item.preReq).every(course => course === true)){
+                            item.preReqCheck = "black";
+                        } else {
+                            item.preReqCheck = "red";
+                        }
+                        updateColor(item);
+                    }
+                });
+            }
         }
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
