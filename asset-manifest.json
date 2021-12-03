@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/ud-cis-scheduler-team-12/static/css/main.5f647f18.chunk.css",
-    "main.js": "/ud-cis-scheduler-team-12/static/js/main.3d054a07.chunk.js",
-    "main.js.map": "/ud-cis-scheduler-team-12/static/js/main.3d054a07.chunk.js.map",
-    "runtime-main.js": "/ud-cis-scheduler-team-12/static/js/runtime-main.91a4d859.js",
-    "runtime-main.js.map": "/ud-cis-scheduler-team-12/static/js/runtime-main.91a4d859.js.map",
+    "main.js": "/ud-cis-scheduler-team-12/static/js/main.2a81cc96.chunk.js",
+    "main.js.map": "/ud-cis-scheduler-team-12/static/js/main.2a81cc96.chunk.js.map",
+    "runtime-main.js": "/ud-cis-scheduler-team-12/static/js/runtime-main.4b79984d.js",
+    "runtime-main.js.map": "/ud-cis-scheduler-team-12/static/js/runtime-main.4b79984d.js.map",
     "static/css/2.f2512455.chunk.css": "/ud-cis-scheduler-team-12/static/css/2.f2512455.chunk.css",
-    "static/js/2.bcf9a279.chunk.js": "/ud-cis-scheduler-team-12/static/js/2.bcf9a279.chunk.js",
-    "static/js/2.bcf9a279.chunk.js.map": "/ud-cis-scheduler-team-12/static/js/2.bcf9a279.chunk.js.map",
-    "static/js/3.29d9b51c.chunk.js": "/ud-cis-scheduler-team-12/static/js/3.29d9b51c.chunk.js",
-    "static/js/3.29d9b51c.chunk.js.map": "/ud-cis-scheduler-team-12/static/js/3.29d9b51c.chunk.js.map",
+    "static/js/2.2790372e.chunk.js": "/ud-cis-scheduler-team-12/static/js/2.2790372e.chunk.js",
+    "static/js/2.2790372e.chunk.js.map": "/ud-cis-scheduler-team-12/static/js/2.2790372e.chunk.js.map",
+    "static/js/3.43524559.chunk.js": "/ud-cis-scheduler-team-12/static/js/3.43524559.chunk.js",
+    "static/js/3.43524559.chunk.js.map": "/ud-cis-scheduler-team-12/static/js/3.43524559.chunk.js.map",
     "index.html": "/ud-cis-scheduler-team-12/index.html",
     "static/css/2.f2512455.chunk.css.map": "/ud-cis-scheduler-team-12/static/css/2.f2512455.chunk.css.map",
     "static/css/main.5f647f18.chunk.css.map": "/ud-cis-scheduler-team-12/static/css/main.5f647f18.chunk.css.map",
-    "static/js/2.bcf9a279.chunk.js.LICENSE.txt": "/ud-cis-scheduler-team-12/static/js/2.bcf9a279.chunk.js.LICENSE.txt",
+    "static/js/2.2790372e.chunk.js.LICENSE.txt": "/ud-cis-scheduler-team-12/static/js/2.2790372e.chunk.js.LICENSE.txt",
     "static/media/spiderman_meme.4235d597.jpeg": "/ud-cis-scheduler-team-12/static/media/spiderman_meme.4235d597.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.91a4d859.js",
+    "static/js/runtime-main.4b79984d.js",
     "static/css/2.f2512455.chunk.css",
-    "static/js/2.bcf9a279.chunk.js",
+    "static/js/2.2790372e.chunk.js",
     "static/css/main.5f647f18.chunk.css",
-    "static/js/main.3d054a07.chunk.js"
+    "static/js/main.2a81cc96.chunk.js"
   ]
 }
