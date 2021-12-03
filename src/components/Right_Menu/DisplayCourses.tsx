@@ -61,7 +61,6 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
             } else {
                 //  PREREQ MET IN PRIOR SEMESTER
                 if (Object.keys(courseData[id].preReq).length > 0){
-                    console.log(courseData[id].preReq);
                     if (Object.values(courseData[id].preReq).every(course => course === true)){
                         courseData[id].preReqCheck = "black";
                     } else {
@@ -74,7 +73,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                     }
                     updateColor(courseData[id]);
                 }
-
+    
                 if (SEMESTER_MAP["" + semesterSelect].length === 6) {
                     Swal.fire(
                         "Getting Studious!",
@@ -82,22 +81,19 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                         "error"
                     );
                 } else {
-                    for (const [key, value] of Object.entries(courseData)) {
-                        console.log([key,value]);
+                    Object.values(courseData).forEach(value => {
                         Object.keys(value.preReq).forEach(courseName => {
-                            //console.log(courseName);
                             if(courseName === courseData[id].name) {
-                                console.log(courseName);
                                 value.preReq[courseName] = true;
                             }
                         });
-                    }
+                    });
+                    
                     NEW_SEMESTER_MAP["" + semesterSelect].push(courseData[id]);
                     SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
                 }
-
-                for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-                    console.log([key,value]);
+    
+                Object.keys(SEMESTER_MAP).forEach(key => {
                     SEMESTER_MAP[key].forEach(item => {
                         if(Object.keys(item.preReq).length > 0) {
                             if (Object.values(item.preReq).every(course => course === true)){
@@ -108,9 +104,9 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                             updateColor(item);
                         }
                     });
-                }
+                }); 
             }
-        }   
+        }
     }
     
     function updateColor(course: Course) {
