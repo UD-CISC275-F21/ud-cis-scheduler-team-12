@@ -62,55 +62,27 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         return semesterCountBuffer;
     }
 
-    // I promise this code works... It needs to be cleaned up big time
     function addSemester(semesterCountBuffer: number[], parsedObject: Record<string, Course[]>) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
 
         semesterCountBuffer.forEach(key => {
+            // Create each new Semester
             buttonList.push({name: getSemesterName(key), value: key});
             NEW_SEMESTER_MAP[""+key] = [];
             Object.keys(NEW_SEMESTER_MAP).forEach(mapKey => {
-                // console.log(mapKey);
                 Object.keys(parsedObject).forEach(objKey => {
                     if (""+mapKey === objKey) {
-                        // console.log(`Object key matched: ${mapKey}`);
+                        // While in the same semester for both the current and saved semester
                         Object.values(parsedObject[objKey]).forEach(course => {
-                            // console.log(`Found an object ${course.name}`);
                             if (!NEW_SEMESTER_MAP[mapKey].includes(course)){
-
-                                //  PREREQ MET IN PRIOR SEMESTER
-                                if (Object.keys(courseData[course.id].preReq).length > 0){
-                                    console.log(courseData[course.id].preReq);
-                                    if (Object.values(courseData[course.id].preReq).every(course => course === true)){
-                                        courseData[course.id].preReqCheck = "black";
-                                    } else {
-                                        // alert("Warning: Pre-Reqs not met.");
-                                        courseData[course.id].preReqCheck = "red";
-                                    }
-                                    updateColor(courseData[course.id]);
-                                }
-                                NEW_SEMESTER_MAP[mapKey].push(course);
-
-                                for (const [key, value] of Object.entries(NEW_SEMESTER_MAP)) {
-                                    console.log([key,value]);
-                                    NEW_SEMESTER_MAP[key].forEach(item => {
-                                        if(Object.keys(item.preReq).length > 0) {
-                                            if (Object.values(item.preReq).every(course => course === true)){
-                                                item.preReqCheck = "black";
-                                            } else {
-                                                item.preReqCheck = "red";
-                                            }
-                                            updateColor(item);
-                                        }
-                                    });
-                                }
+                                /* If the course in the saved semester is not present in 
+                                the current semester then AddCourse */
+                                addCourses(course, mapKey, NEW_SEMESTER_MAP);
                             }
                         });
                     }
                 });
             });
-            
-            
         });
 
         setButtonList(buttonList);
@@ -181,6 +153,35 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         }
     }
 
+    function addCourses(course: Course, mapKey: string, NEW_SEMESTER_MAP: Record<string, Course[]>) {
+        //  PREREQ MET IN PRIOR SEMESTER
+        if (Object.keys(courseData[course.id].preReq).length > 0){
+            console.log(courseData[course.id].preReq);
+            if (Object.values(courseData[course.id].preReq).every(course => course === true)){
+                courseData[course.id].preReqCheck = "black";
+            } else {
+                // alert("Warning: Pre-Reqs not met.");
+                courseData[course.id].preReqCheck = "red";
+            }
+            updateColor(courseData[course.id]);
+        }
+        NEW_SEMESTER_MAP[mapKey].push(course);
+
+        for (const [key, value] of Object.entries(NEW_SEMESTER_MAP)) {
+            console.log([key,value]);
+            NEW_SEMESTER_MAP[key].forEach(item => {
+                if(Object.keys(item.preReq).length > 0) {
+                    if (Object.values(item.preReq).every(course => course === true)){
+                        item.preReqCheck = "black";
+                    } else {
+                        item.preReqCheck = "red";
+                    }
+                    updateColor(item);
+                }
+            });
+        }
+    }
+
     function deleteSavedSemester(key: string) {
         Swal.fire({
             title: `Are you sure you want to delete "${key}"?`,
@@ -228,18 +229,15 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
     }
 
     function removePreReq(course: Course) {
-        for (const [key, value] of Object.entries(courseData)) {
-            console.log([key,value]);
-            Object.keys(value.preReq).forEach(courseName => {
-                //console.log(courseName);
+        Object.values(courseData).forEach(value => {
+            Object.keys(course.preReq).forEach(courseName => {
                 if(courseName === course.name) {
-                    console.log(courseName);
                     value.preReq[courseName] = false;
                 }
             });
-        }
-        for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-            console.log([key,value]);
+        });
+
+        Object.keys(SEMESTER_MAP).forEach(key => {
             SEMESTER_MAP[key].forEach(item => {
                 if(Object.keys(item.preReq).length > 0) {
                     if (Object.values(item.preReq).every(course => course === true)){
@@ -250,7 +248,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
                     updateColor(item);
                 }
             });
-        }
+        });
     }
 
     function updateColor(course: Course) {
