@@ -17,19 +17,14 @@ import SpiderMan from "../../assets/images/spiderman_meme.jpeg";
 
 // Breadcrumbs:
 // Main Page / DisplayCourses - displays list of scrollable courses on right hand side
-export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, courseTitle, setCourseTitle, courseDescription, setCourseDescription }: {
+export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,
     setBinVisible: (b: boolean) => void, binVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
-    setCourseTitle: (s: string) => void, courseTitle: string,
-
-    setCourseDescription: (d: string) => void, courseDescription: string,
 }): JSX.Element {
 
     const [query, setQuery] = useState<string>("");
-    setCourseDescription(courseDescription);
-    setCourseTitle(courseTitle);
 
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
@@ -138,10 +133,27 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
 
         return flag;
     }
-    
 
     function showBin() {
         setBinVisible(!binVisible);
+    }
+
+    function createCourse() {
+        const SEMESTER_MAP_BUFFER = {...SEMESTER_MAP};
+
+        courseData.push({ 
+            id: courseData.length,
+            name: "",
+            timeStart: 1300,
+            timeEnd: 1400,
+            schedule: "MWF",
+            description: "",
+            credits: 0,
+            preReq: {},
+            preReqCheck: "black" });
+        
+        addCourse(courseData[courseData.length-1].id);
+        SET_SEMESTER_MAP(SEMESTER_MAP_BUFFER);
     }
     
     return (
@@ -150,6 +162,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
             <div className="menu-button">
                 <DropdownButton id="dropdown-basic-button" title="Course Options">
                     <Dropdown.Item as="button" onClick={() => showBin()}>Save Later Bin</Dropdown.Item>
+                    <Dropdown.Item as="button" onClick={() => createCourse()}>Create New Course</Dropdown.Item>
                 </DropdownButton>
             </div>
             <SearchBar

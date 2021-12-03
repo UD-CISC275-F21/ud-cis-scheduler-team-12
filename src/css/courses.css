@@ -28,6 +28,12 @@ code {
   cursor: -webkit-grabbing; cursor: grabbing;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.card:hover .card-title{
+  cursor: -webkit-grab; cursor: pointer;
+}
+.card:hover .card-description{
+  cursor: -webkit-grab; cursor: pointer;
+}
 .delete-button {
   position: absolute;
   right: -10px;

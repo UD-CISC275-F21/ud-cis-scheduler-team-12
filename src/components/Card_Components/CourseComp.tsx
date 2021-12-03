@@ -1,88 +1,59 @@
 // Source Imports
 import React, { useState } from "react";
-import { Card,Col, Row, Container, Accordion, OverlayTrigger, Popover } from "react-bootstrap/";
-import { GrEdit } from "react-icons/gr";
+import { Card,Col, Row, Container, Accordion, OverlayTrigger, Popover, Form } from "react-bootstrap/";
 import { MdDeleteForever } from "react-icons/md";
 import courseData from "../../assets/courses";
 import { Course } from "../../interfaces/course";
-
-// Component Imports
-import TextInput from "../Edit_Course_Inputs/TextInput";
-import TitleInput from "../Edit_Course_Inputs/TitleInput";
+import Swal from "sweetalert2";
 
 // Design Imports
 import "../../css/courses.css";
-
+import { motion } from "framer-motion";
+import SpiderMan from "../../assets/images/spiderman_meme.jpeg";
 
 // Breadcrumbs:
 // Main Page / Board / CourseComp - Course Card that holds information on course
-export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setCourseTitle, setCourseDescription }: {
+export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
     course: Course,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
-    semesterSelect: string | null,
-    setSemesterHeader: (s: string) => void, semesterHeader: string,
-    setCourseTitle: (c: string) => void,
-    setCourseDescription: (d: string) => void,
-
+    semesterSelect: string | null
 }):  JSX.Element {
     
-    //visibility states for coures
-    const [input, setInput] = useState<string>("");
-    const [visible, setVisible] = useState<number>(0);
-    const [titleVisible, setTitleVisible] = useState<number>(0);
-
-
-    function editTitle() {
-        setTitleVisible(1);
-    }
-
-
-    function submitTitle() {
-        course.name = input;
-        setCourseTitle(input);
-        //setTitle(input);
-        setTitleVisible(0);
-    }
-
-
-
-    function editDescription() {
-
-        setVisible(1);
-        //alert(input);
-    }
-
-    function submitDescription() {
-        course.description = input;
-        setCourseDescription(input);
-        setVisible(0);
-    }
+    //visibility states for courses
+    const [titleEditMode, setTitleEditMode] = useState<boolean>(false);
+    const [descriptionEditMode, setDescriptionEditMode] = useState<boolean>(false);
+    const [creditsEditMode, setCreditsEditMode] = useState<boolean>(false);
     
     function removeCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
-        
-        for (const [key, value] of Object.entries(courseData)) {
-            console.log([key,value]);
-            Object.keys(value.preReq).forEach(courseName => {
-                //console.log(courseName);
-                if(courseName === courseData[id].name) {
-                    console.log(`found ${courseName}`);
-                    value.preReq[courseName] = false;
-                }
-            });
-        }
-        for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-            console.log([key,value]);
-            SEMESTER_MAP[key].forEach(item => {
-                if(Object.keys(item.preReq).length > 0) {
-                    if (Object.values(item.preReq).every(course => course === true)){
-                        item.preReqCheck = "black";
-                    } else {
-                        item.preReqCheck = "red";
+
+        if (courseData[id].name === "") {
+            NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
+            delete courseData[id];
+        } else {
+            for (const [key, value] of Object.entries(courseData)) {
+                console.log([key,value]);
+                Object.keys(value.preReq).forEach(courseName => {
+                    //console.log(courseName);
+                    if(courseName === courseData[id].name) {
+                        console.log(`found ${courseName}`);
+                        value.preReq[courseName] = false;
                     }
-                    updateColor(item);
-                }
-            });
+                });
+            }
+            for (const [key, value] of Object.entries(SEMESTER_MAP)) {
+                console.log([key,value]);
+                SEMESTER_MAP[key].forEach(item => {
+                    if(Object.keys(item.preReq).length > 0) {
+                        if (Object.values(item.preReq).every(course => course === true)){
+                            item.preReqCheck = "black";
+                        } else {
+                            item.preReqCheck = "red";
+                        }
+                        updateColor(item);
+                    }
+                });
+            }
         }
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
@@ -92,6 +63,83 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
         return course.preReqCheck;
     }
 
+    function isCourseInCourseData(name: string) {
+        let flag = false;
+        Object.values(courseData).forEach(course => {
+            if (course.name.toLowerCase().replace(/\s/g, "") === name.toLowerCase().replace(/\s/g, "")) {
+                flag = true;
+            }
+        });
+        return flag;
+    }
+
+    function changeName(id: number, enteredName: string) {
+        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        const duplicateCourse = isCourseInCourseData(enteredName);
+        
+        if (!duplicateCourse) {
+            // Removing Pre-Req for all other courses
+            Object.values(courseData).forEach(item => {
+                Object.keys(item.preReq).forEach(req => {
+                    if (req === enteredName) {
+                        item.preReq[req] = true;
+                    } else if (req === courseData[id].name) {
+                        item.preReq[req] = false;
+                    }
+                });
+                if (Object.values(item.preReq).every(course => course === true)){
+                    item.preReqCheck = "black";
+                } else {
+                    item.preReqCheck = "red";
+                }
+                updateColor(item);
+            });
+            courseData[id].name = enteredName;
+            SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
+            setTitleEditMode(false);
+        } else {
+            Swal.fire({
+                title: "Course Already Exists!",
+                text: `${enteredName} already exists. Please enter another course name.`,
+                icon: "error",
+                imageUrl: SpiderMan
+            });
+        }
+    }
+
+    function changeDescription(id: number, enteredDescription: string) {
+        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        
+        courseData[id].description = enteredDescription;
+        SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
+        setDescriptionEditMode(false);
+    }
+
+    function changeCredits(id: number, enteredCredits: string) {
+        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        
+        courseData[id].credits = +enteredCredits;
+        SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
+        setCreditsEditMode(false);
+    }
+
+    const handleSubmit = (id: number, cardProperty: string) => (event: { preventDefault: () => void; stopPropagation: () => void; currentTarget: HTMLFormElement; }) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const form = event.currentTarget;
+        
+        switch(cardProperty){
+        case "name":
+            changeName(id, form.floatingInput.value);
+            break;
+        case "credits":
+            changeCredits(id, form.floatingInput.value);
+            break;
+        case "description":
+            changeDescription(id, form.floatingInput.value);
+            break;
+        }
+    };
 
 
     return (
@@ -105,23 +153,61 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                     <Container>
                         <Row>
                             <Col>
-                                <Card.Title>{Object.values(courseData[course.id])[1]}</Card.Title>
-                                { titleVisible === 1 && <TitleInput 
-                                    setInput={setInput}
-                                ></TitleInput> }
-                                {titleVisible === 1 && <button onClick={() => submitTitle()}>Submit</button>
-                                }
-                            
+                                <motion.div
+                                    onClick={() => setTitleEditMode(!titleEditMode)}
+                                >
+                                    <Card.Title className="card-title">
+                                        { !titleEditMode && course.name}
+                                        { (course.name === "" || titleEditMode) && <Form onSubmit={handleSubmit(course.id, "name")}>
+                                            <Form.Control 
+                                                style={{
+                                                    color: "black",
+                                                    outline: "0",
+                                                    border: "1px solid #fff",
+                                                    boxShadow: "none",
+                                                    textAlign: "center",
+                                                    
+                                                }}
+                                                autoFocus
+                                                size="lg" 
+                                                id="floatingInput" 
+                                                type="task" 
+                                                placeholder={ course.name === "" ? "Enter Name" : course.name }
+                                            />
+                                        </Form> }
+                                    </Card.Title>
+                                </motion.div>                
                                 <button className="delete-button" onClick={() => removeCourse(course.id)}>
-                                    <MdDeleteForever></MdDeleteForever></button>
-                                <button className="edit-button" data-testid="title-edit-btn" onClick={() => editTitle()}><GrEdit></GrEdit></button>
+                                    <MdDeleteForever></MdDeleteForever>
+                                </button>
                             </Col>                        
                         </Row>
                     </Container>
                     <Card.Body className="card-body">
-                        <Card.Text>
-                            Credits: {course.credits}
-                        </Card.Text>
+                        <motion.div
+                            onClick={() => setCreditsEditMode(!creditsEditMode)}
+                        >
+                            <Card.Text>
+                                Credits: { (!creditsEditMode && course.credits !== 0) && course.credits}
+                                { (course.credits === 0 || creditsEditMode) && <Form onSubmit={handleSubmit(course.id, "credits")}>
+                                    <Form.Control 
+                                        style={{
+                                            color: "black",
+                                            outline: "0",
+                                            border: "1px solid #fff",
+                                            boxShadow: "none",
+                                            textAlign: "center",
+                                            
+                                        }}
+                                        autoFocus
+                                        size="sm" 
+                                        id="floatingInput" 
+                                        type="task" 
+                                        placeholder={ course.credits === 0 ? "Enter Credit Hours" : ""+course.credits }
+                                    />
+                                </Form> }
+                            </Card.Text>
+                        </motion.div>
                         <Card.Text>
                             From: {course.timeStart} To: {course.timeEnd}
                         </Card.Text>
@@ -134,19 +220,33 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                         </Col>
                     
                         <Col className="card-accordion">
-                            <Accordion>
+                            <Accordion defaultActiveKey={course.description === "" ? "0" : "1"}>
                                 <Accordion.Item eventKey="0">
-                                    <Accordion.Header>Details</Accordion.Header>
-                                    <Accordion.Body>
-                                        {Object.values(courseData[course.id])[5]}
-                                        { visible === 1 && <TextInput 
-                                            setInput={setInput}
-                                        ></TextInput>}
-                                        
-                                        { visible === 0 && <button className="edit-desc-button" onClick={() => editDescription()}><GrEdit></GrEdit></button> }
-                                        { visible === 1 && <button className="" onClick={() => submitDescription()}>Enter</button> }   
-                                        
-                                    </Accordion.Body>
+                                    <Accordion.Header onClick={() => setDescriptionEditMode(false)}>Details</Accordion.Header>
+                                    <motion.div
+                                        onClick={() => setDescriptionEditMode(!descriptionEditMode)}
+                                    >
+                                        <Accordion.Body className="card-description">
+                                            { !descriptionEditMode && course.description}
+                                            { (course.description === "" || descriptionEditMode) && <Form onSubmit={handleSubmit(course.id, "description")}>
+                                                <Form.Control 
+                                                    style={{
+                                                        color: "black",
+                                                        outline: "0",
+                                                        border: "1px solid #fff",
+                                                        boxShadow: "none",
+                                                        textAlign: "center",
+                                                        
+                                                    }}
+                                                    autoFocus
+                                                    size="sm" 
+                                                    id="floatingInput" 
+                                                    type="task" 
+                                                    placeholder={ course.description === "" ? "Enter Description" : course.description }
+                                                />
+                                            </Form> }
+                                        </Accordion.Body>
+                                    </motion.div>
                                 </Accordion.Item>
                             </Accordion>
                         </Col>
