@@ -1,6 +1,6 @@
 // Source Imports
 import React from "react";
-import { Card, Table } from "react-bootstrap/";
+import { Card, Table, OverlayTrigger, Popover } from "react-bootstrap/";
 import { BsEraserFill } from "react-icons/bs";
 import { ImCross, ImRadioChecked, ImRadioUnchecked } from "react-icons/im";
 import courseData from "../../assets/courses";
@@ -39,8 +39,37 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
         setSemesterHeader(buttonList[+val-1].name);
     }
 
+    function updateColor(course: Course) {
+        return course.preReqCheck;
+    }
+
     function removeCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+
+        if (courseData[id].name === "") {
+            NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
+            delete courseData[id];
+        } else {
+            Object.values(courseData).forEach(value => {
+                Object.keys(value.preReq).forEach(courseName => {
+                    if(courseName === courseData[id].name) {
+                        value.preReq[courseName] = false;
+                    }
+                });
+            });
+            Object.keys(SEMESTER_MAP).forEach(key => {
+                SEMESTER_MAP[key].forEach(item => {
+                    if(Object.keys(item.preReq).length > 0) {
+                        if (Object.values(item.preReq).every(course => course === true)){
+                            item.preReqCheck = "black";
+                        } else {
+                            item.preReqCheck = "red";
+                        }
+                        updateColor(item);
+                    }
+                });
+            });
+        }
         
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
@@ -48,7 +77,13 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
     }
 
     function removeAllCourses() {
-        SET_SEMESTER_MAP({...SEMESTER_MAP, [""+semesterSelect]: []}); // Set classList to an empty array to clear all selected courses
+        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        
+        Object.values(NEW_SEMESTER_MAP[""+semesterSelect]).forEach(course => {
+            removeCourse(course.id);
+        });
+
+        SET_SEMESTER_MAP({...NEW_SEMESTER_MAP, [""+semesterSelect]: []}); // Set classList to an empty array to clear all selected courses
     }
 
     return (
@@ -77,7 +112,12 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
                             {courseList.map((course, id) =>
 
                                 <tr key={id} data-testid="semester-comp-card">
-                                    <th>{course.name}</th>
+                                    <OverlayTrigger trigger={["hover", "focus"]} show={ Object.values(course.preReq).every(course => course === true) ? false : true } placement={ SEMESTER_MAP[""+semesterSelect].indexOf(course) > 2 ? "bottom" : "top" } overlay={
+                                        <Popover className="popover" id="tooltip-preReq">Missing: {Object.keys(course.preReq).filter(courseName => 
+                                            course.preReq[courseName] === false).map(course => 
+                                            <div key={course}>{course}</div>)} </Popover>}>
+                                        <th style={{color: course.preReqCheck}}>{course.name}</th>
+                                    </OverlayTrigger>
                                     <td>{course.credits}</td>
                                     <button className="delete-course" onClick={() => removeCourse(course.id)}>
                                         <ImCross></ImCross>

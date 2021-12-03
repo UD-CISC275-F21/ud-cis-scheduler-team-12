@@ -1,7 +1,6 @@
 // Source Imports
 import React from "react";
 import { Card,Col, Row, Container, Accordion } from "react-bootstrap/";
-import { GrEdit } from "react-icons/gr";
 import { MdDeleteForever } from "react-icons/md";
 import courseData from "../../assets/courses";
 import { Course } from "../../interfaces/course";
@@ -16,16 +15,6 @@ export default function BinCourseCard({ course, SET_SAVE_BIN, SAVE_BIN }: {
     SET_SAVE_BIN: (b: Course[]) => void, SAVE_BIN: Course[]
 }): JSX.Element {
     
-    function editDescription() {
-        <form>
-            <label>
-                Name:
-                <input type="text" name="name" />
-            </label>
-            <input type="submit" value="Submit" />
-        </form>;
-    }
-
     function removeCourse(id: number) {
         SET_SAVE_BIN(SAVE_BIN.filter(item => item !== courseData[id]));
     }
@@ -64,8 +53,6 @@ export default function BinCourseCard({ course, SET_SAVE_BIN, SAVE_BIN }: {
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Details</Accordion.Header>
                                 <Accordion.Body>
-                                    <button className="edit-button" onClick={() => editDescription()}>
-                                        <GrEdit></GrEdit></button>
                                     Course description: {course.description}
                                 </Accordion.Body>
                             </Accordion.Item>
