@@ -9,6 +9,8 @@ import Swal from "sweetalert2";
 
 // Function Imports
 import updateColor from "../../utilities/updateColor";
+import findCourseInSemester from "../../utilities/findCourseInSemester";
+import findCourseInEntirePlan from "../../utilities/findCourseInEntirePlan";
 
 // Component Imports
 import SearchBar from "./SearchBar";
@@ -30,8 +32,8 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
 
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
-        const foundCourse = findCourseInSemester(id);
-        const foundCourseInPlan = findCourseInEntirePlan(id);
+        const foundCourse = findCourseInSemester(id, semesterSelect, SEMESTER_MAP);
+        const foundCourseInPlan = findCourseInEntirePlan(id, SEMESTER_MAP);
         
         // If bin is open, add courses to bin
         if (binVisible){
@@ -109,23 +111,6 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                 }); 
             }
         }
-    }
-    
-    function findCourseInSemester(id: number) {
-        return SEMESTER_MAP[""+semesterSelect].includes(courseData[id]);
-    }
-
-    function findCourseInEntirePlan(id: number) {
-        let flag = false;
-        Object.keys(SEMESTER_MAP).forEach(key => {
-            SEMESTER_MAP[key].forEach(course => {
-                if (course.id === id) {
-                    flag = true;
-                }
-            });
-        });
-
-        return flag;
     }
 
     function showBin() {
