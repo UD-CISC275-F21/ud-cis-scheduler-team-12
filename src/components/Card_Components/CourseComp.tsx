@@ -104,7 +104,7 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
                         <motion.div
                             onClick={() => setCreditsEditMode(!creditsEditMode)}
                         >
-                            <Card.Text>
+                            <Card.Text className="card-credits">
                                 Credits: {(!creditsEditMode && course.credits !== 0) && course.credits}
                                 {(course.credits === 0 || creditsEditMode) && <Form onSubmit={handleSubmit(course.id, "credits")}>
                                     <Form.Control
