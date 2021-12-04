@@ -12,3 +12,16 @@ export default function findCourseInEntirePlan(id: number, SEMESTER_MAP: Record<
 
     return flag;
 }
+
+export function findAnyCourseInEntirePlan( SEMESTER_MAP: Record<string, Course[]>): boolean {
+    let flag = false;
+    Object.keys(SEMESTER_MAP).forEach(key => {
+        SEMESTER_MAP[key].forEach(course => {
+            if (course) {
+                flag = true;
+            }
+        });
+    });
+
+    return flag;
+}

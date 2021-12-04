@@ -3,7 +3,6 @@ import React from "react";
 import { Card, Table, OverlayTrigger, Popover } from "react-bootstrap/";
 import { BsEraserFill } from "react-icons/bs";
 import { ImCross, ImRadioChecked, ImRadioUnchecked } from "react-icons/im";
-import courseData from "../../assets/courses";
 import { ButtonList } from "../../interfaces/buttonList";
 import { Course } from "../../interfaces/course";
 
@@ -15,13 +14,14 @@ import "../../css/courses.css";
 
 // Breadcrumbs:
 // Main Page / DegreePlan / SemesterComp - card that holds all courses in a semester in table form
-function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterSelect, semesterSelect, setSemesterHeader, SET_SELECT_MAP, SELECT_MAP, buttonList }: {
+function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterSelect, semesterSelect, setSemesterHeader, SET_SELECT_MAP, SELECT_MAP, buttonList, courseData, setCourseData }: {
     courseList: Course[],
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterHeader: (s: string) => void,
     SET_SELECT_MAP: (s: Record<string, boolean>) => void, SELECT_MAP: Record<string, boolean>,
-    buttonList: ButtonList[]
+    buttonList: ButtonList[],
+    setCourseData: (c: Course[]) => void, courseData: Course[]
 }):  JSX.Element {
 
     const semesterIndex = ""+semesterSelect;
@@ -47,9 +47,10 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
 
         if (courseData[id].name === "") {
             NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
-            delete courseData[id];
+            courseData.pop();
+            setCourseData(courseData);
         } else {
-            removePreReq(courseData[id], SEMESTER_MAP);
+            removePreReq(courseData[id], SEMESTER_MAP, courseData);
         }
         
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
