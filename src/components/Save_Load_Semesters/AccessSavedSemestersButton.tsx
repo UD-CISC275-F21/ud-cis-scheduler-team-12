@@ -39,7 +39,6 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
                 denyButtonText: "Go Back",
                 icon: "warning"
             }).then((result) => {
-                /* Read more about isConfirmed, isDenied below */
                 if (result.isConfirmed) {
                     loadSave(key);
                 } else if (result.isDenied) {
@@ -131,7 +130,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         
         //  PREREQ MET IN PRIOR SEMESTER
         if (Object.keys(courseData[id].preReq).length > 0){
-            console.log(courseData[id].preReq);
+            // console.log(courseData[id].preReq);
             if (Object.values(courseData[id].preReq).every(course => course === true)){
                 courseData[id].preReqCheck = "black";
             } else {
@@ -144,22 +143,19 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         if (SEMESTER_MAP[key].length === 6) {
             maxNumberOfCoursesAlert();
         } else {
-            for (const [key, value] of Object.entries(courseData)) {
-                console.log([key,value]);
+            Object.values(courseData).forEach(value => {
                 Object.keys(value.preReq).forEach(courseName => {
-                    //console.log(courseName);
                     if(courseName === courseData[id].name) {
-                        console.log(courseName);
                         value.preReq[courseName] = true;
                     }
                 });
-            }
+            });
+
             NEW_SEMESTER_MAP[key].push(courseData[id]);
             SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
         }
 
-        for (const [key, value] of Object.entries(SEMESTER_MAP)) {
-            console.log([key,value]);
+        Object.keys(SEMESTER_MAP).forEach(key => {
             SEMESTER_MAP[key].forEach(item => {
                 if(Object.keys(item.preReq).length > 0) {
                     if (Object.values(item.preReq).every(course => course === true)){
@@ -170,13 +166,13 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
                     updateColor(item);
                 }
             });
-        }
+        }); 
     }
 
     function addCourses(course: Course, mapKey: string, NEW_SEMESTER_MAP: Record<string, Course[]>, courseData: Course[]) {
         //  PREREQ MET IN PRIOR SEMESTER
         if (Object.keys(courseData[course.id].preReq).length > 0){
-            console.log(courseData[course.id].preReq);
+            // console.log(courseData[course.id].preReq);
             if (Object.values(courseData[course.id].preReq).every(course => course === true)){
                 courseData[course.id].preReqCheck = "black";
             } else {
@@ -187,8 +183,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         }
         NEW_SEMESTER_MAP[mapKey].push(course);
 
-        for (const [key, value] of Object.entries(NEW_SEMESTER_MAP)) {
-            console.log([key,value]);
+        Object.keys(NEW_SEMESTER_MAP).forEach(key => {
             NEW_SEMESTER_MAP[key].forEach(item => {
                 if(Object.keys(item.preReq).length > 0) {
                     if (Object.values(item.preReq).every(course => course === true)){
@@ -199,7 +194,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
                     updateColor(item);
                 }
             });
-        }
+        }); 
     }
 
     function deleteSavedSemester(key: string) {
