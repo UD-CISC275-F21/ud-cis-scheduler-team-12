@@ -12,22 +12,45 @@ import removePreReq from "../../utilities/removePreReq";
 import getSemesterName from "../../utilities/getSemesterName";
 import preReqAlert from "../../utilities/preReqAlert";
 import maxNumberOfCoursesAlert from "../../utilities/maxNumberOfCourses";
+import { findAnyCourseInEntirePlan } from "../../utilities/findCourseInEntirePlan";
 
 // Component Imports
 import ClearSavedSemestersButton from "./ClearSavedSemestersButton";
-import courseData from "../../assets/courses";
 
 // Breadcrumbs:
 // Main Page / AccessSavedSemesterButton
-export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount, setButtonList, buttonList, setSelectedSave, setCourseData }: {
+export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount, setButtonList, buttonList, setSelectedSave, setCourseData, courseData }: {
     SET_SEMESTER_MAP: (s: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterCount: (c: number) => void, semesterCount: number,
     setButtonList: (b: ButtonList[]) => void, buttonList: ButtonList[],
     setSelectedSave: (s: string) => void,
-    setCourseData: (d: Course[]) => void
+    setCourseData: (d: Course[]) => void, courseData: Course[]
 }): JSX.Element {
 
     // Main Load Function
+    function loadSaveHandler(key: string) {
+
+        if (findAnyCourseInEntirePlan(SEMESTER_MAP) || courseData.length > 20){
+            Swal.fire({
+                title: "Overwrite Warning!",
+                text: "Your current schedule and custom courses will be overwritten. Please go back and save your current plan if you wish to use it again.",
+                showDenyButton: true,
+                confirmButtonText: "Continue",
+                denyButtonText: "Go Back",
+                icon: "warning"
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    loadSave(key);
+                } else if (result.isDenied) {
+                    Swal.fire(`"${key}" was not Loaded 😮‍💨.`, "", "info");
+                }
+            });
+        } else {
+            loadSave(key);
+        }
+    }
+
     function loadSave(key: string) {
         // Remove all courses and remove pre-req markers.
         removeAllCourses();
@@ -220,7 +243,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
                         style={{display: "inline-flex"}} 
                         key={key}>
                         <Dropdown.Item 
-                            onClick={() => loadSave(key)}
+                            onClick={() => loadSaveHandler(key)}
                         >{key}
                             
                         </Dropdown.Item>

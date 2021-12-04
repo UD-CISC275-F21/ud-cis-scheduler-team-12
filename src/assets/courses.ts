@@ -1,6 +1,6 @@
 import { Course } from "../interfaces/course";
 
-const courseData: Course[] = [
+const courseDataInit: Course[] = [
     {
         "id": 0,
         "name": "CISC 100",
@@ -222,4 +222,4 @@ const courseData: Course[] = [
         "preReqCheck": "black"
     }
 ];
-export default courseData;
+export default courseDataInit;

@@ -69,6 +69,7 @@ function MainPage({ visibleView, setVisibleView }: {
                         buttonList={buttonList}
                         setSelectedSave={setSelectedSave}
                         setCourseData={setCourseData}
+                        courseData={courseData}
                     ></AccessSavedSemestersButton> 
                     <SelectedSaveHeader
                         selectedSave={selectedSave}
