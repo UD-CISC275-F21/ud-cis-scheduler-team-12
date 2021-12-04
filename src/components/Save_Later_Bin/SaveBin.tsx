@@ -2,7 +2,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { Col, Container, Offcanvas, Row } from "react-bootstrap";
-import Swal from "sweetalert2";
 import courseData from "../../assets/courses";
 import { Course } from "../../interfaces/course";
 
@@ -11,6 +10,8 @@ import updateColor from "../../utilities/updateColor";
 import removeCourseFromBin from "../../utilities/removeCourseFromBin";
 import findCourseInSemester from "../../utilities/findCourseInSemester";
 import findCourseInEntirePlan from "../../utilities/findCourseInEntirePlan";
+import preReqAlert from "../../utilities/preReqAlert";
+import duplicateCourseAlert from "../../utilities/duplicateCourse";
 
 // Component Imports
 import BinCourseCard from "../Card_Components/BinCourseCard";
@@ -18,7 +19,7 @@ import ClearBinButton from "./ClearBinButton";
 
 // Design Imports
 import "../../css/SaveBin.css";
-import SpiderMan from "../../assets/images/spiderman_meme.jpeg";
+import maxNumberOfCoursesAlert from "../../utilities/maxNumberOfCourses";
 
 // Breadcrumbs:
 // Main Page / SaveBin - bin that pops up to save courses for later
@@ -39,41 +40,21 @@ export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_
         
         // If there are less than 6 courses, add the selected course onto the end of the classList
         if (foundCourse || foundCourseInPlan) {
-            foundCourse ?
-                Swal.fire({
-                    title: "Duplicate Course!",
-                    text: `${courseData[id].name} is already added to this semester. Please select another course.`,
-                    icon: "error",
-                    imageUrl: SpiderMan
-                }) :
-                Swal.fire({
-                    title: "Duplicate Course!",
-                    text: `${courseData[id].name} is already added to your plan. Please select another course.`,
-                    icon: "error",
-                    imageUrl: SpiderMan
-                });
+            foundCourse ? duplicateCourseAlert(id, "semester") : duplicateCourseAlert(id, "plan");
         } else {
             //  PREREQ MET IN PRIOR SEMESTER
             if (Object.keys(courseData[id].preReq).length > 0){
                 if (Object.values(courseData[id].preReq).every(course => course === true)){
                     courseData[id].preReqCheck = "black";
                 } else {
-                    Swal.fire(
-                        "Pre-Req Error!",
-                        "Warning: Pre-Reqs not met 🤔.",
-                        "error"
-                    );
+                    preReqAlert();
                     courseData[id].preReqCheck = "red";
                 }
                 updateColor(courseData[id]);
             }
 
             if (SEMESTER_MAP["" + semesterSelect].length === 6) {
-                Swal.fire(
-                    "Getting Studious!",
-                    "Warning: Max number of courses selected for semester 📚.",
-                    "error"
-                );
+                maxNumberOfCoursesAlert();
             } else {
                 Object.values(courseData).forEach(value => {
                     Object.keys(value.preReq).forEach(courseName => {

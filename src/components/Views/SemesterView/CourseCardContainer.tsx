@@ -4,17 +4,16 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Col, Row, Container } from "react-bootstrap";
 import { Course } from "../../../interfaces/course";
 import courseData from "../../../assets/courses";
-import Swal from "sweetalert2";
 
 // Function Imports
-import updateColor from "../../../utilities/updateColor";
+import removePreReq from "../../../utilities/removePreReq";
 
 // Component Imports
 import CourseComp from "../../Card_Components/CourseComp";
 
 // Design Imports
 import "../../../css/board.css";
-import SpiderMan from "../../../assets/images/spiderman_meme.jpeg";
+import duplicateCourseAlert from "../../../utilities/duplicateCourse";
 
 // Breadcrumbs:
 // Main Page / Board / CourseCardContainer
@@ -38,35 +37,12 @@ export default function CourseCardContainer({ SET_SEMESTER_MAP, SEMESTER_MAP, se
         } else {
             if (binVisible){
                 if (SAVE_BIN.includes(courseData[id])) {
-                    Swal.fire({
-                        title: "Duplicate Course!",
-                        text: `${courseData[id].name} is already added to your bin. It will now be removed from the semester.`,
-                        icon: "error",
-                        imageUrl: SpiderMan
-                    });
+                    duplicateCourseAlert(id, "bin");
                 } else {
                     SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
                 }
             }
-            Object.values(courseData).forEach(value => {
-                Object.keys(value.preReq).forEach(courseName => {
-                    if(courseName === courseData[id].name) {
-                        value.preReq[courseName] = false;
-                    }
-                });
-            });
-            Object.keys(SEMESTER_MAP).forEach(key => {
-                SEMESTER_MAP[key].forEach(item => {
-                    if(Object.keys(item.preReq).length > 0) {
-                        if (Object.values(item.preReq).every(course => course === true)){
-                            item.preReqCheck = "black";
-                        } else {
-                            item.preReqCheck = "red";
-                        }
-                        updateColor(item);
-                    }
-                });
-            });
+            removePreReq(courseData[id], SEMESTER_MAP);
         }
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);

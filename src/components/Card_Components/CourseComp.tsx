@@ -4,15 +4,15 @@ import { Card,Col, Row, Container, Accordion, OverlayTrigger, Popover, Form } fr
 import { MdDeleteForever } from "react-icons/md";
 import courseData from "../../assets/courses";
 import { Course } from "../../interfaces/course";
-import Swal from "sweetalert2";
 
 // Function Imports
 import updateColor from "../../utilities/updateColor";
+import removePreReq from "../../utilities/removePreReq";
+import { changeName, changeCredits, changeDescription } from "../../utilities/EditCourseFunctions";
 
 // Design Imports
 import "../../css/courses.css";
 import { motion } from "framer-motion";
-import SpiderMan from "../../assets/images/spiderman_meme.jpeg";
 
 // Breadcrumbs:
 // Main Page / Board / CourseComp - Course Card that holds information on course
@@ -34,88 +34,10 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
             NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
             delete courseData[id];
         } else {
-            Object.values(courseData).forEach(value => {
-                Object.keys(value.preReq).forEach(courseName => {
-                    if(courseName === courseData[id].name) {
-                        value.preReq[courseName] = false;
-                    }
-                });
-            });
-            Object.keys(SEMESTER_MAP).forEach(key => {
-                SEMESTER_MAP[key].forEach(item => {
-                    if(Object.keys(item.preReq).length > 0) {
-                        if (Object.values(item.preReq).every(course => course === true)){
-                            item.preReqCheck = "black";
-                        } else {
-                            item.preReqCheck = "red";
-                        }
-                        updateColor(item);
-                    }
-                });
-            });
+            removePreReq(courseData[id], SEMESTER_MAP);
         }
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
-    }
-
-    function isCourseInCourseData(name: string) {
-        let flag = false;
-        Object.values(courseData).forEach(course => {
-            if (course.name.toLowerCase().replace(/\s/g, "") === name.toLowerCase().replace(/\s/g, "")) {
-                flag = true;
-            }
-        });
-        return flag;
-    }
-
-    function changeName(id: number, enteredName: string) {
-        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
-        const duplicateCourse = isCourseInCourseData(enteredName);
-        
-        if (!duplicateCourse) {
-            // Removing Pre-Req for all other courses
-            Object.values(courseData).forEach(item => {
-                Object.keys(item.preReq).forEach(req => {
-                    if (req === enteredName) {
-                        item.preReq[req] = true;
-                    } else if (req === courseData[id].name) {
-                        item.preReq[req] = false;
-                    }
-                });
-                if (Object.values(item.preReq).every(course => course === true)){
-                    item.preReqCheck = "black";
-                } else {
-                    item.preReqCheck = "red";
-                }
-                updateColor(item);
-            });
-            courseData[id].name = enteredName;
-            SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
-            setTitleEditMode(false);
-        } else {
-            Swal.fire({
-                title: "Course Already Exists!",
-                text: `${enteredName} already exists. Please enter another course name.`,
-                icon: "error",
-                imageUrl: SpiderMan
-            });
-        }
-    }
-
-    function changeDescription(id: number, enteredDescription: string) {
-        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
-        
-        courseData[id].description = enteredDescription;
-        SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
-        setDescriptionEditMode(false);
-    }
-
-    function changeCredits(id: number, enteredCredits: string) {
-        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
-        
-        courseData[id].credits = +enteredCredits;
-        SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
-        setCreditsEditMode(false);
     }
 
     const handleSubmit = (id: number, cardProperty: string) => (event: { preventDefault: () => void; stopPropagation: () => void; currentTarget: HTMLFormElement; }) => {
@@ -125,17 +47,16 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
         
         switch(cardProperty){
         case "name":
-            changeName(id, form.floatingInput.value);
+            changeName(id, form.floatingInput.value, SEMESTER_MAP, SET_SEMESTER_MAP, setTitleEditMode);
             break;
         case "credits":
-            changeCredits(id, form.floatingInput.value);
+            changeCredits(id, form.floatingInput.value, SEMESTER_MAP, SET_SEMESTER_MAP, setCreditsEditMode);
             break;
         case "description":
-            changeDescription(id, form.floatingInput.value);
+            changeDescription(id, form.floatingInput.value, SEMESTER_MAP, SET_SEMESTER_MAP, setDescriptionEditMode);
             break;
         }
     };
-
 
     return (
         <div>

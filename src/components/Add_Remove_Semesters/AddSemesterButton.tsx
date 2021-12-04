@@ -3,6 +3,9 @@ import React from "react";
 import { Course } from "../../interfaces/course";
 import { ButtonList } from "../../interfaces/buttonList";
 
+// Function Imports
+import getSemesterName from "../../utilities/getSemesterName";
+
 // Design Imports
 import "../../css/AddRemoveSemester.css";
 
@@ -25,21 +28,6 @@ export default function AddSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, setS
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
         count++;
         setSemesterCount(count);
-    }
-
-    function getSemesterName(count: number) {
-        let newCount = count;
-        let season = "";
-        if (count % 2 !== 0) {
-            newCount = (count+1) / 2;
-            season = "Fall";
-        } else {
-            newCount = count/2;
-            season = "Spring";
-        }
-
-        return `${season} ${newCount}`;
-
     }
 
     return(

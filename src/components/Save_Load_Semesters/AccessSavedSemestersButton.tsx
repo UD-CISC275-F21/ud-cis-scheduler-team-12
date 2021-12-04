@@ -10,6 +10,9 @@ import { Course } from "../../interfaces/course";
 // Function Imports
 import updateColor from "../../utilities/updateColor";
 import removePreReq from "../../utilities/removePreReq";
+import getSemesterName from "../../utilities/getSemesterName";
+import preReqAlert from "../../utilities/preReqAlert";
+import maxNumberOfCoursesAlert from "../../utilities/maxNumberOfCourses";
 
 // Component Imports
 import ClearSavedSemestersButton from "./ClearSavedSemestersButton";
@@ -93,21 +96,6 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
         
         return NEW_SEMESTER_MAP;
-    }
-
-    function getSemesterName(count: number) {
-        let newCount = count;
-        let season = "";
-        if (count % 2 !== 0) {
-            newCount = (count+1) / 2;
-            season = "Fall";
-        } else {
-            newCount = count/2;
-            season = "Spring";
-        }
-
-        return `${season} ${newCount}`;
-
     }
 
     function addCourse(id: number, key: string) {
@@ -202,22 +190,6 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
                 Swal.fire(`"${key}" was not Deleted 😮‍💨.`, "", "info");
             }
         });
-    }
-
-    function preReqAlert() {
-        Swal.fire(
-            "Pre-Req Error!",
-            "Warning: Pre-Reqs not met 🤔.",
-            "error"
-        );
-    }
-
-    function maxNumberOfCoursesAlert() {
-        Swal.fire(
-            "Getting Studious!",
-            "Warning: Max number of courses selected for semester 📚.",
-            "error"
-        );
     }
 
     function removeAllCourses() {
