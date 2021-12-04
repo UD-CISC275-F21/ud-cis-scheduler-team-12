@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import { Course } from "../../interfaces/course";
 import Swal from "sweetalert2";
 
+// Function Imports
+import updateColor from "../../utilities/updateColor";
 
 // Component Imports
 import SearchBar from "./SearchBar";
@@ -107,10 +109,6 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                 }); 
             }
         }
-    }
-    
-    function updateColor(course: Course) {
-        return course.preReqCheck;
     }
     
     function findCourseInSemester(id: number) {

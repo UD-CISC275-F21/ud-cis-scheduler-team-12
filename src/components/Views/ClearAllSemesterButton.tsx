@@ -3,6 +3,9 @@ import React from "react";
 import courseData from "../../assets/courses";
 import { Course } from "../../interfaces/course";
 
+// Function Imports
+import updateColor from "../../utilities/updateColor";
+
 export default function ClearAllSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP}: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>
 }): JSX.Element {
@@ -38,10 +41,6 @@ export default function ClearAllSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP}
                 }
             });
         });
-    }
-
-    function updateColor(course: Course) {
-        return course.preReqCheck;
     }
 
     return (

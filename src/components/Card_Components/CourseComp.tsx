@@ -6,6 +6,9 @@ import courseData from "../../assets/courses";
 import { Course } from "../../interfaces/course";
 import Swal from "sweetalert2";
 
+// Function Imports
+import updateColor from "../../utilities/updateColor";
+
 // Design Imports
 import "../../css/courses.css";
 import { motion } from "framer-motion";
@@ -53,10 +56,6 @@ export default function CourseComp({ course, SET_SEMESTER_MAP, SEMESTER_MAP, sem
         }
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
-    }
-
-    function updateColor(course: Course) {
-        return course.preReqCheck;
     }
 
     function isCourseInCourseData(name: string) {

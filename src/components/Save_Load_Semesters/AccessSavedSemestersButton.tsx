@@ -7,6 +7,9 @@ import courseData from "../../assets/courses";
 import { ButtonList } from "../../interfaces/buttonList";
 import { Course } from "../../interfaces/course";
 
+// Function Imports
+import updateColor from "../../utilities/updateColor";
+
 // Component Imports
 import ClearSavedSemestersButton from "./ClearSavedSemestersButton";
 
@@ -249,10 +252,6 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
                 }
             });
         });
-    }
-
-    function updateColor(course: Course) {
-        return course.preReqCheck;
     }
 
     return(

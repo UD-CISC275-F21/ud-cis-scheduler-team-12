@@ -6,6 +6,9 @@ import { Course } from "../../../interfaces/course";
 import courseData from "../../../assets/courses";
 import Swal from "sweetalert2";
 
+// Function Imports
+import updateColor from "../../../utilities/updateColor";
+
 // Component Imports
 import CourseComp from "../../Card_Components/CourseComp";
 
@@ -67,10 +70,6 @@ export default function CourseCardContainer({ SET_SEMESTER_MAP, SEMESTER_MAP, se
         }
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
-    }
-
-    function updateColor(course: Course) {
-        return course.preReqCheck;
     }
 
     return(

@@ -5,6 +5,9 @@ import { ButtonList } from "../../interfaces/buttonList";
 import { Course } from "../../interfaces/course";
 import Swal from "sweetalert2";
 
+// Function Imports
+import updateColor from "../../utilities/updateColor";
+
 // Design Imports
 import "../../css/AddRemoveSemester.css";
 
@@ -78,10 +81,6 @@ export default function RemoveSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, s
             });
         });
         
-    }
-
-    function updateColor(course: Course) {
-        return course.preReqCheck;
     }
 
     return(

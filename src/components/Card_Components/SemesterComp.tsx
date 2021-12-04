@@ -7,6 +7,9 @@ import courseData from "../../assets/courses";
 import { ButtonList } from "../../interfaces/buttonList";
 import { Course } from "../../interfaces/course";
 
+// Function Imports
+import updateColor from "../../utilities/updateColor";
+
 // Design Imports
 import "../../css/courses.css";
 
@@ -37,10 +40,6 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
 
     function handleSelect (val: string) {
         setSemesterHeader(buttonList[+val-1].name);
-    }
-
-    function updateColor(course: Course) {
-        return course.preReqCheck;
     }
 
     function removeCourse(id: number) {
