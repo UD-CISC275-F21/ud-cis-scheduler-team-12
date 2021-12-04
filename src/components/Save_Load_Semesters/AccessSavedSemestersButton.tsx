@@ -19,11 +19,12 @@ import courseData from "../../assets/courses";
 
 // Breadcrumbs:
 // Main Page / AccessSavedSemesterButton
-export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount, setButtonList, buttonList, setSelectedSave }: {
+export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount, setButtonList, buttonList, setSelectedSave, setCourseData }: {
     SET_SEMESTER_MAP: (s: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterCount: (c: number) => void, semesterCount: number,
     setButtonList: (b: ButtonList[]) => void, buttonList: ButtonList[],
-    setSelectedSave: (s: string) => void
+    setSelectedSave: (s: string) => void,
+    setCourseData: (d: Course[]) => void
 }): JSX.Element {
 
     // Main Load Function
@@ -37,7 +38,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
 
         const parsedSemesterMap = parsedObject["semesterMap"] as Record<string, Course[]>;
         const courseData = parsedObject["courseData"] as Course[];
-        
+        setCourseData(courseData);
 
         // add necessary amount of semesters and courses respectively
         getNumberOfSemesters(parsedSemesterMap, courseData);
