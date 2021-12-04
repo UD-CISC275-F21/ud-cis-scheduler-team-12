@@ -95,6 +95,7 @@ function MainPage({ visibleView, setVisibleView }: {
                     semesterCount={semesterCount}
                     setButtonList={setButtonList}
                     buttonList={buttonList}
+                    courseData={courseData}
                 ></RemoveSemesterButton>
                 
                 <AddSemesterButton

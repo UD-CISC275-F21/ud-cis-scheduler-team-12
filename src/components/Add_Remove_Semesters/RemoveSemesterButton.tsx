@@ -9,16 +9,16 @@ import removePreReq from "../../utilities/removePreReq";
 
 // Design Imports
 import "../../css/AddRemoveSemester.css";
-import courseData from "../../assets/courses";
 
 // Breadcrumbs:
 // Main Page / RemoveSemesterButton - clears courses and removes semester
-export default function RemoveSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount, setButtonList, buttonList, setSemesterSelect, setSemesterHeader }: {
+export default function RemoveSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount, setButtonList, buttonList, setSemesterSelect, setSemesterHeader, courseData }: {
     SET_SEMESTER_MAP: (s: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterCount: (c: number) => void, semesterCount: number,
     setButtonList: (b: ButtonList[]) => void, buttonList: ButtonList[],
     setSemesterSelect: (s: string | null) => void,
-    setSemesterHeader: (h: string) => void
+    setSemesterHeader: (h: string) => void,
+    courseData: Course[]
 }): JSX.Element {
     
     function removeSemester() {
