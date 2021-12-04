@@ -1,9 +1,8 @@
 import { Course } from "../interfaces/course";
-import courseData from "../assets/courses";
 
 import updateColor from "./updateColor";
 
-export default function removePreReq(course: Course, SEMESTER_MAP: Record<string, Course[]>): void {
+export default function removePreReq(course: Course, SEMESTER_MAP: Record<string, Course[]>, courseData: Course[]): void {
     Object.values(courseData).forEach(value => {
         Object.keys(value.preReq).forEach(courseName => {
             if(courseName === course.name) {

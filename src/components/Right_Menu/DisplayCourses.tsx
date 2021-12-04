@@ -1,6 +1,5 @@
 // Source Imports
 import React, { useState } from "react";
-import courseData from "../../assets/courses";
 import { MdAdd } from "react-icons/md";
 import { Accordion, Col, Dropdown, DropdownButton } from "react-bootstrap";
 import { motion } from "framer-motion";
@@ -22,30 +21,31 @@ import duplicateCourseAlert from "../../utilities/duplicateCourse";
 
 // Breadcrumbs:
 // Main Page / DisplayCourses - displays list of scrollable courses on right hand side
-export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN }: {
+export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, courseData, setCourseData }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,
     setBinVisible: (b: boolean) => void, binVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
+    setCourseData: (c: Course[]) => void, courseData: Course[]
 }): JSX.Element {
 
     const [query, setQuery] = useState<string>("");
 
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
-        const foundCourse = findCourseInSemester(id, semesterSelect, SEMESTER_MAP);
+        const foundCourse = findCourseInSemester(id, semesterSelect, SEMESTER_MAP, courseData);
         const foundCourseInPlan = findCourseInEntirePlan(id, SEMESTER_MAP);
         
         // If bin is open, add courses to bin
         if (binVisible){
             if (SAVE_BIN.includes(courseData[id])) {
-                duplicateCourseAlert(id, "bin");
+                duplicateCourseAlert(id, "bin", courseData);
             } else {
                 SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
             }
         } else {
             if (foundCourse || foundCourseInPlan) {
-                foundCourse ? duplicateCourseAlert(id, "semester") : duplicateCourseAlert(id, "plan");
+                foundCourse ? duplicateCourseAlert(id, "semester", courseData) : duplicateCourseAlert(id, "plan", courseData);
             } else {
                 //  PREREQ MET IN PRIOR SEMESTER
                 if (Object.keys(courseData[id].preReq).length > 0){
@@ -108,6 +108,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
             preReqCheck: "black" });
         
         addCourse(courseData[courseData.length-1].id);
+        setCourseData(courseData);
         SET_SEMESTER_MAP(SEMESTER_MAP_BUFFER);
     }
     

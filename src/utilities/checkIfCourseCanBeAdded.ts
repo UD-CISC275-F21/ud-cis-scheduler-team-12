@@ -1,4 +1,3 @@
-import courseData from "../assets/courses";
 import updateColor from "./updateColor";
 import findCourseInEntirePlan from "./findCourseInEntirePlan";
 import findCourseInSemester from "./findCourseInSemester";
@@ -7,12 +6,12 @@ import preReqAlert from "./preReqAlert";
 import maxNumberOfCoursesAlert from "./maxNumberOfCourses";
 import duplicateCourseAlert from "./duplicateCourse";
 
-export default function checkIfCourseCanBeAdded(id: number, semesterSelect: string | null, SEMESTER_MAP: Record<string, Course[]>): void {
-    const foundCourse = findCourseInSemester(id, semesterSelect, SEMESTER_MAP);
+export default function checkIfCourseCanBeAdded(id: number, semesterSelect: string | null, SEMESTER_MAP: Record<string, Course[]>, courseData: Course[]): void {
+    const foundCourse = findCourseInSemester(id, semesterSelect, SEMESTER_MAP, courseData);
     const foundCourseInPlan = findCourseInEntirePlan(id, SEMESTER_MAP);
 
     if (foundCourse || foundCourseInPlan) {
-        foundCourse ? duplicateCourseAlert(id, "semester") : duplicateCourseAlert(id, "plan");
+        foundCourse ? duplicateCourseAlert(id, "semester", courseData) : duplicateCourseAlert(id, "plan", courseData);
     } else {
         //  PREREQ MET IN PRIOR SEMESTER
         if (Object.keys(courseData[id].preReq).length > 0){

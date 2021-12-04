@@ -3,7 +3,6 @@ import React from "react";
 import { Dropdown } from "react-bootstrap";
 import { ImCross } from "react-icons/im";
 import Swal from "sweetalert2";
-import courseData from "../../assets/courses";
 import { ButtonList } from "../../interfaces/buttonList";
 import { Course } from "../../interfaces/course";
 
@@ -16,6 +15,7 @@ import maxNumberOfCoursesAlert from "../../utilities/maxNumberOfCourses";
 
 // Component Imports
 import ClearSavedSemestersButton from "./ClearSavedSemestersButton";
+import courseData from "../../assets/courses";
 
 // Breadcrumbs:
 // Main Page / AccessSavedSemesterButton
@@ -33,23 +33,27 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         
         // Retrieve Object from localStorage
         const retrievedObject = localStorage.getItem(key);
-        const parsedObject = JSON.parse(""+retrievedObject) as Record<string, Course[]>;
+        const parsedObject = JSON.parse(""+retrievedObject);
+
+        const parsedSemesterMap = parsedObject["semesterMap"] as Record<string, Course[]>;
+        const courseData = parsedObject["courseData"] as Course[];
+        
 
         // add necessary amount of semesters and courses respectively
-        getNumberOfSemesters(parsedObject);
+        getNumberOfSemesters(parsedSemesterMap, courseData);
 
         setSelectedSave(key);
     }
 
-    function addLoadedSave(parsedObject: Record<string, Course[]>) {
+    function addLoadedSave(parsedObject: Record<string, Course[]>, courseData: Course[]) {
         Object.keys(parsedObject).forEach(key => {
             Object.values(parsedObject[key]).forEach(course => {
-                addCourse(course.id, key);
+                addCourse(course.id, key, courseData);
             });
         }); 
     }
 
-    function getNumberOfSemesters(parsedObject: Record<string, Course[]>) {
+    function getNumberOfSemesters(parsedObject: Record<string, Course[]>, courseData: Course[]) {
         const count = Object.keys(parsedObject).length;
         const numberOfVisibleSemesters = semesterCount - 1;
         const semesterCountBuffer: number[] = [];
@@ -59,17 +63,17 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
                 semesterCountBuffer.push(i+1);
                 // console.log(`NUMBER: ${semesterCountBuffer}`);
             }
-            addSemester(semesterCountBuffer, parsedObject);
+            addSemester(semesterCountBuffer, parsedObject, courseData);
             setSemesterCount(count+1);
 
         } else {
-            addLoadedSave(parsedObject);
+            addLoadedSave(parsedObject, courseData);
         }
         
         return semesterCountBuffer;
     }
 
-    function addSemester(semesterCountBuffer: number[], parsedObject: Record<string, Course[]>) {
+    function addSemester(semesterCountBuffer: number[], parsedObject: Record<string, Course[]>, courseData: Course[]) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
 
         semesterCountBuffer.forEach(key => {
@@ -84,7 +88,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
                             if (!NEW_SEMESTER_MAP[mapKey].includes(course)){
                                 /* If the course in the saved semester is not present in 
                                 the current semester then AddCourse */
-                                addCourses(course, mapKey, NEW_SEMESTER_MAP);
+                                addCourses(course, mapKey, NEW_SEMESTER_MAP, courseData);
                             }
                         });
                     }
@@ -98,7 +102,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         return NEW_SEMESTER_MAP;
     }
 
-    function addCourse(id: number, key: string) {
+    function addCourse(id: number, key: string, courseData: Course[]) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
         
         //  PREREQ MET IN PRIOR SEMESTER
@@ -145,7 +149,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         }
     }
 
-    function addCourses(course: Course, mapKey: string, NEW_SEMESTER_MAP: Record<string, Course[]>) {
+    function addCourses(course: Course, mapKey: string, NEW_SEMESTER_MAP: Record<string, Course[]>, courseData: Course[]) {
         //  PREREQ MET IN PRIOR SEMESTER
         if (Object.keys(courseData[course.id].preReq).length > 0){
             console.log(courseData[course.id].preReq);
@@ -196,7 +200,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP}; 
         for (const [key] of Object.entries(NEW_SEMESTER_MAP)) {
             Object.values(NEW_SEMESTER_MAP[key]).forEach(course => {
-                removePreReq(course, SEMESTER_MAP);
+                removePreReq(course, SEMESTER_MAP, courseData);
                 NEW_SEMESTER_MAP[key].pop();
             });
             NEW_SEMESTER_MAP[key]=[];

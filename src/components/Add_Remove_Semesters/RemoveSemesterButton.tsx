@@ -9,6 +9,7 @@ import removePreReq from "../../utilities/removePreReq";
 
 // Design Imports
 import "../../css/AddRemoveSemester.css";
+import courseData from "../../assets/courses";
 
 // Breadcrumbs:
 // Main Page / RemoveSemesterButton - clears courses and removes semester
@@ -53,7 +54,7 @@ export default function RemoveSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, s
 
     function removeAllCourses() {
         Object.values(SEMESTER_MAP[semesterCount-1]).forEach(course => {
-            removePreReq(course, SEMESTER_MAP);
+            removePreReq(course, SEMESTER_MAP, courseData);
         });
         SET_SEMESTER_MAP({...SEMESTER_MAP, [semesterCount-1]: []}); // Set classList to an empty array to clear all selected courses
     }
