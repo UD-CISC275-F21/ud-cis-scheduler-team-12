@@ -1,9 +1,11 @@
 // Source Imports
 import React from "react";
-import courseData from "../../assets/courses";
 import { ButtonList } from "../../interfaces/buttonList";
 import { Course } from "../../interfaces/course";
 import Swal from "sweetalert2";
+
+// Function Imports
+import removePreReq from "../../utilities/removePreReq";
 
 // Design Imports
 import "../../css/AddRemoveSemester.css";
@@ -51,37 +53,9 @@ export default function RemoveSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, s
 
     function removeAllCourses() {
         Object.values(SEMESTER_MAP[semesterCount-1]).forEach(course => {
-            removePreReq(course);
+            removePreReq(course, SEMESTER_MAP);
         });
         SET_SEMESTER_MAP({...SEMESTER_MAP, [semesterCount-1]: []}); // Set classList to an empty array to clear all selected courses
-    }
-
-    function removePreReq(course: Course) {
-        Object.values(courseData).forEach(value => {
-            Object.keys(course.preReq).forEach(courseName => {
-                if(courseName === course.name) {
-                    value.preReq[courseName] = false;
-                }
-            });
-        });
-
-        Object.keys(SEMESTER_MAP).forEach(key => {
-            SEMESTER_MAP[key].forEach(item => {
-                if(Object.keys(item.preReq).length > 0) {
-                    if (Object.values(item.preReq).every(course => course === true)){
-                        item.preReqCheck = "black";
-                    } else {
-                        item.preReqCheck = "red";
-                    }
-                    updateColor(item);
-                }
-            });
-        });
-        
-    }
-
-    function updateColor(course: Course) {
-        return course.preReqCheck;
     }
 
     return(

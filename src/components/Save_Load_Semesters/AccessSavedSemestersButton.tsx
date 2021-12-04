@@ -7,6 +7,13 @@ import courseData from "../../assets/courses";
 import { ButtonList } from "../../interfaces/buttonList";
 import { Course } from "../../interfaces/course";
 
+// Function Imports
+import updateColor from "../../utilities/updateColor";
+import removePreReq from "../../utilities/removePreReq";
+import getSemesterName from "../../utilities/getSemesterName";
+import preReqAlert from "../../utilities/preReqAlert";
+import maxNumberOfCoursesAlert from "../../utilities/maxNumberOfCourses";
+
 // Component Imports
 import ClearSavedSemestersButton from "./ClearSavedSemestersButton";
 
@@ -89,21 +96,6 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
         
         return NEW_SEMESTER_MAP;
-    }
-
-    function getSemesterName(count: number) {
-        let newCount = count;
-        let season = "";
-        if (count % 2 !== 0) {
-            newCount = (count+1) / 2;
-            season = "Fall";
-        } else {
-            newCount = count/2;
-            season = "Spring";
-        }
-
-        return `${season} ${newCount}`;
-
     }
 
     function addCourse(id: number, key: string) {
@@ -200,59 +192,16 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         });
     }
 
-    function preReqAlert() {
-        Swal.fire(
-            "Pre-Req Error!",
-            "Warning: Pre-Reqs not met 🤔.",
-            "error"
-        );
-    }
-
-    function maxNumberOfCoursesAlert() {
-        Swal.fire(
-            "Getting Studious!",
-            "Warning: Max number of courses selected for semester 📚.",
-            "error"
-        );
-    }
-
     function removeAllCourses() {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP}; 
         for (const [key] of Object.entries(NEW_SEMESTER_MAP)) {
             Object.values(NEW_SEMESTER_MAP[key]).forEach(course => {
-                removePreReq(course);
+                removePreReq(course, SEMESTER_MAP);
                 NEW_SEMESTER_MAP[key].pop();
             });
             NEW_SEMESTER_MAP[key]=[];
         }
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
-    }
-
-    function removePreReq(course: Course) {
-        Object.values(courseData).forEach(value => {
-            Object.keys(course.preReq).forEach(courseName => {
-                if(courseName === course.name) {
-                    value.preReq[courseName] = false;
-                }
-            });
-        });
-
-        Object.keys(SEMESTER_MAP).forEach(key => {
-            SEMESTER_MAP[key].forEach(item => {
-                if(Object.keys(item.preReq).length > 0) {
-                    if (Object.values(item.preReq).every(course => course === true)){
-                        item.preReqCheck = "black";
-                    } else {
-                        item.preReqCheck = "red";
-                    }
-                    updateColor(item);
-                }
-            });
-        });
-    }
-
-    function updateColor(course: Course) {
-        return course.preReqCheck;
     }
 
     return(

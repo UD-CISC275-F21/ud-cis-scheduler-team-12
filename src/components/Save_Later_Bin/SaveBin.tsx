@@ -2,9 +2,16 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { Col, Container, Offcanvas, Row } from "react-bootstrap";
-import Swal from "sweetalert2";
 import courseData from "../../assets/courses";
 import { Course } from "../../interfaces/course";
+
+// Function Imports
+import updateColor from "../../utilities/updateColor";
+import removeCourseFromBin from "../../utilities/removeCourseFromBin";
+import findCourseInSemester from "../../utilities/findCourseInSemester";
+import findCourseInEntirePlan from "../../utilities/findCourseInEntirePlan";
+import preReqAlert from "../../utilities/preReqAlert";
+import duplicateCourseAlert from "../../utilities/duplicateCourse";
 
 // Component Imports
 import BinCourseCard from "../Card_Components/BinCourseCard";
@@ -12,7 +19,7 @@ import ClearBinButton from "./ClearBinButton";
 
 // Design Imports
 import "../../css/SaveBin.css";
-import SpiderMan from "../../assets/images/spiderman_meme.jpeg";
+import maxNumberOfCoursesAlert from "../../utilities/maxNumberOfCourses";
 
 // Breadcrumbs:
 // Main Page / SaveBin - bin that pops up to save courses for later
@@ -28,33 +35,53 @@ export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_
 
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        const foundCourse = findCourseInSemester(id, semesterSelect, SEMESTER_MAP);
+        const foundCourseInPlan = findCourseInEntirePlan(id, SEMESTER_MAP);
         
         // If there are less than 6 courses, add the selected course onto the end of the classList
-        if (SEMESTER_MAP[""+semesterSelect].includes(courseData[id])) {
-            Swal.fire({
-                title: "Duplicate Course!",
-                text: `${courseData[id].name} is already added to this semester. Please select another course.`,
-                icon: "error",
-                imageUrl: SpiderMan
-            });
+        if (foundCourse || foundCourseInPlan) {
+            foundCourse ? duplicateCourseAlert(id, "semester") : duplicateCourseAlert(id, "plan");
         } else {
-            // After adding course to the semester, remove it from the save-later bin
-            SEMESTER_MAP[""+semesterSelect].length === 6 ? 
-                Swal.fire(
-                    "Getting Studious!",
-                    "Warning: Max number of courses selected for semester 📚.",
-                    "error"
-                )
-                : (NEW_SEMESTER_MAP[""+semesterSelect].push(courseData[id]), SET_SEMESTER_MAP(NEW_SEMESTER_MAP),
-                removeCourse(id));
+            //  PREREQ MET IN PRIOR SEMESTER
+            if (Object.keys(courseData[id].preReq).length > 0){
+                if (Object.values(courseData[id].preReq).every(course => course === true)){
+                    courseData[id].preReqCheck = "black";
+                } else {
+                    preReqAlert();
+                    courseData[id].preReqCheck = "red";
+                }
+                updateColor(courseData[id]);
+            }
+
+            if (SEMESTER_MAP["" + semesterSelect].length === 6) {
+                maxNumberOfCoursesAlert();
+            } else {
+                Object.values(courseData).forEach(value => {
+                    Object.keys(value.preReq).forEach(courseName => {
+                        if(courseName === courseData[id].name) {
+                            value.preReq[courseName] = true;
+                        }
+                    });
+                });
+                
+                NEW_SEMESTER_MAP["" + semesterSelect].push(courseData[id]);
+                SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
+                removeCourseFromBin(id, SET_SAVE_BIN, SAVE_BIN);
+            }
+
+            Object.keys(SEMESTER_MAP).forEach(key => {
+                SEMESTER_MAP[key].forEach(item => {
+                    if(Object.keys(item.preReq).length > 0) {
+                        if (Object.values(item.preReq).every(course => course === true)){
+                            item.preReqCheck = "black";
+                        } else {
+                            item.preReqCheck = "red";
+                        }
+                        updateColor(item);
+                    }
+                });
+            }); 
         }
-
-        
-
-    }
-
-    function removeCourse(id: number) {
-        SET_SAVE_BIN(SAVE_BIN.filter(item => item !== courseData[id]));
     }
     
     return(

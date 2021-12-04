@@ -1,7 +1,9 @@
 // Source Imports
 import React from "react";
-import courseData from "../../assets/courses";
 import { Course } from "../../interfaces/course";
+
+// Function Imports
+import removePreReq from "../../utilities/removePreReq";
 
 // Breadcrumbs:
 // Main Page / Board / ClearSemesterButton
@@ -12,36 +14,10 @@ export default function ClearSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, se
 
     function removeAllCourses() {    
         Object.values(SEMESTER_MAP[""+semesterSelect]).forEach(value => {
-            removePreReq(value);
+            removePreReq(value, SEMESTER_MAP);
         }); 
         
         SET_SEMESTER_MAP({...SEMESTER_MAP, [""+semesterSelect]: []}); // Set classList to an empty array to clear all selected courses
-    }
-
-    function removePreReq(course: Course) {
-        Object.values(courseData).forEach(value => {
-            Object.keys(value.preReq).forEach(courseName => {
-                if(courseName === course.name) {
-                    value.preReq[courseName] = false;
-                }
-            });
-        });
-        Object.keys(SEMESTER_MAP).forEach(key => {
-            SEMESTER_MAP[key].forEach(item => {
-                if(Object.keys(item.preReq).length > 0) {
-                    if (Object.values(item.preReq).every(course => course === true)){
-                        item.preReqCheck = "black";
-                    } else {
-                        item.preReqCheck = "red";
-                    }
-                    updateColor(item);
-                }
-            });
-        });
-    }
-
-    function updateColor(course: Course) {
-        return course.preReqCheck;
     }
 
     return (

@@ -7,6 +7,9 @@ import courseData from "../../assets/courses";
 import { ButtonList } from "../../interfaces/buttonList";
 import { Course } from "../../interfaces/course";
 
+// Function Imports
+import removePreReq from "../../utilities/removePreReq";
+
 // Design Imports
 import "../../css/courses.css";
 
@@ -39,10 +42,6 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
         setSemesterHeader(buttonList[+val-1].name);
     }
 
-    function updateColor(course: Course) {
-        return course.preReqCheck;
-    }
-
     function removeCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
 
@@ -50,25 +49,7 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
             NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
             delete courseData[id];
         } else {
-            Object.values(courseData).forEach(value => {
-                Object.keys(value.preReq).forEach(courseName => {
-                    if(courseName === courseData[id].name) {
-                        value.preReq[courseName] = false;
-                    }
-                });
-            });
-            Object.keys(SEMESTER_MAP).forEach(key => {
-                SEMESTER_MAP[key].forEach(item => {
-                    if(Object.keys(item.preReq).length > 0) {
-                        if (Object.values(item.preReq).every(course => course === true)){
-                            item.preReqCheck = "black";
-                        } else {
-                            item.preReqCheck = "red";
-                        }
-                        updateColor(item);
-                    }
-                });
-            });
+            removePreReq(courseData[id], SEMESTER_MAP);
         }
         
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);

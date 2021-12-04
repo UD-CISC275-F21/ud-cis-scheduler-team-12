@@ -1,7 +1,9 @@
 // Source Imports
 import React from "react";
-import courseData from "../../assets/courses";
 import { Course } from "../../interfaces/course";
+
+// Function Imports
+import removePreReq from "../../utilities/removePreReq";
 
 export default function ClearAllSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP}: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>
@@ -11,37 +13,11 @@ export default function ClearAllSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP}
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP}; 
         for (const [key] of Object.entries(NEW_SEMESTER_MAP)) {
             Object.values(NEW_SEMESTER_MAP[key]).forEach(course => {
-                removePreReq(course);
+                removePreReq(course, SEMESTER_MAP);
             });
             NEW_SEMESTER_MAP[key]=[];
             SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
         }
-    }
-
-    function removePreReq(course: Course) {
-        Object.values(courseData).forEach(value => {
-            Object.keys(value.preReq).forEach(courseName => {
-                if(courseName === course.name) {
-                    value.preReq[courseName] = false;
-                }
-            });
-        });
-        Object.keys(SEMESTER_MAP).forEach(key => {
-            SEMESTER_MAP[key].forEach(item => {
-                if(Object.keys(item.preReq).length > 0) {
-                    if (Object.values(item.preReq).every(course => course === true)){
-                        item.preReqCheck = "black";
-                    } else {
-                        item.preReqCheck = "red";
-                    }
-                    updateColor(item);
-                }
-            });
-        });
-    }
-
-    function updateColor(course: Course) {
-        return course.preReqCheck;
     }
 
     return (
