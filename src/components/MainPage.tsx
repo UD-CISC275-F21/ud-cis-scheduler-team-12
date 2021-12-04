@@ -4,6 +4,7 @@ import { Course } from "../interfaces/course";
 import { ButtonList } from "../interfaces/buttonList";
 import SEMESTER_MAP_INIT from "../assets/stateInitializers/semesterMap";
 import buttonListInit from "../assets/stateInitializers/buttonList";
+import SELECT_MAP_INIT from "../assets/stateInitializers/radioToggle";
 
 // Component Imports
 import { Board } from "./Views/Board";
@@ -36,8 +37,11 @@ function MainPage({ visibleView, setVisibleView }: {
     const SAVE_BIN_INIT: Course[] = [];
     const [SAVE_BIN, SET_SAVE_BIN] = useState<Course[]>(SAVE_BIN_INIT);
 
+    // Is one value above the current semesters
     const [semesterCount, setSemesterCount] = useState<number>(9);
+    
     const [buttonList, setButtonList] = useState<ButtonList[]>(buttonListInit);
+    const [SELECT_MAP, SET_SELECT_MAP] = useState<Record<string, boolean>>(SELECT_MAP_INIT);
    
     // SEMESTER_MAP: useState to modify each semester and its courses
     const [SEMESTER_MAP, SET_SEMESTER_MAP] = useState<Record<string, Course[]>>(SEMESTER_MAP_INIT);
@@ -96,6 +100,8 @@ function MainPage({ visibleView, setVisibleView }: {
                     semesterCount={semesterCount}
                     setButtonList={setButtonList}
                     buttonList={buttonList}
+                    SET_SELECT_MAP={SET_SELECT_MAP}
+                    SELECT_MAP={SELECT_MAP}
                 ></AddSemesterButton>
 
                 
@@ -118,6 +124,8 @@ function MainPage({ visibleView, setVisibleView }: {
                     setSemesterSelect={setSemesterSelect}
                     setSemesterHeader={setSemesterHeader}
                     buttonList={buttonList}
+                    SET_SELECT_MAP={SET_SELECT_MAP}
+                    SELECT_MAP={SELECT_MAP}
                 ></DegreePlan> }
                 
             </section>

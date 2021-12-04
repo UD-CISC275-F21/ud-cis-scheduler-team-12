@@ -1,7 +1,6 @@
 // Source Imports
-import React, { useState } from "react";
+import React from "react";
 import { Row, Col, Container} from "react-bootstrap";
-import SELECT_MAP_INIT from "../../assets/stateInitializers/radioToggle";
 import { ButtonList } from "../../interfaces/buttonList";
 import { Course } from "../../interfaces/course";
 
@@ -14,14 +13,14 @@ import "../../css/calender.css";
 
 // Breadcrumbs:
 // Main Page / DegreePlan - shows all semesters at once in the Degree Plan View
-export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, setSemesterHeader, buttonList }: {
+export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, setSemesterHeader, buttonList, SET_SELECT_MAP, SELECT_MAP }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterSelect: (s: string | null) => void,
     setSemesterHeader: (s: string) => void,
-    buttonList: ButtonList[]
+    buttonList: ButtonList[],
+    SET_SELECT_MAP: (s: Record<string, boolean>) => void, SELECT_MAP: Record<string, boolean>
 }):  JSX.Element {
 
-    const [SELECT_MAP, SET_SELECT_MAP] = useState<Record<string, boolean>>(SELECT_MAP_INIT);
     const SEMESTER_MAP_TO_PRINT = {...SEMESTER_MAP};
 
     return (
