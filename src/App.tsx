@@ -9,15 +9,16 @@ function App(): JSX.Element {
 
     return (
         <div>
-            
-            {visibleView === "0" && <LandingPage
-                setVisibleView={setVisibleView}
-            ></LandingPage> }
-        
-            {visibleView !== "0" && <MainPage
-                setVisibleView={setVisibleView}
-                visibleView={visibleView}
-            ></MainPage> }
+
+            { visibleView === "0" ? 
+                <LandingPage
+                    setVisibleView={setVisibleView}
+                ></LandingPage> :
+
+                <MainPage
+                    setVisibleView={setVisibleView}
+                    visibleView={visibleView}
+                ></MainPage> }
         
         </div>
     );

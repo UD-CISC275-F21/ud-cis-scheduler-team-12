@@ -6,6 +6,12 @@ import Swal from "sweetalert2";
 import courseData from "../../assets/courses";
 import { Course } from "../../interfaces/course";
 
+// Function Imports
+import updateColor from "../../utilities/updateColor";
+import removeCourseFromBin from "../../utilities/removeCourseFromBin";
+import findCourseInSemester from "../../utilities/findCourseInSemester";
+import findCourseInEntirePlan from "../../utilities/findCourseInEntirePlan";
+
 // Component Imports
 import BinCourseCard from "../Card_Components/BinCourseCard";
 import ClearBinButton from "./ClearBinButton";
@@ -28,8 +34,8 @@ export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_
 
     function addCourse(id: number) {
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
-        const foundCourse = findCourseInSemester(id);
-        const foundCourseInPlan = findCourseInEntirePlan(id);
+        const foundCourse = findCourseInSemester(id, semesterSelect, SEMESTER_MAP);
+        const foundCourseInPlan = findCourseInEntirePlan(id, SEMESTER_MAP);
         
         // If there are less than 6 courses, add the selected course onto the end of the classList
         if (foundCourse || foundCourseInPlan) {
@@ -79,7 +85,7 @@ export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_
                 
                 NEW_SEMESTER_MAP["" + semesterSelect].push(courseData[id]);
                 SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
-                removeCourse(id);
+                removeCourseFromBin(id, SET_SAVE_BIN, SAVE_BIN);
             }
 
             Object.keys(SEMESTER_MAP).forEach(key => {
@@ -95,31 +101,6 @@ export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_
                 });
             }); 
         }
-    }
-
-    function updateColor(course: Course) {
-        return course.preReqCheck;
-    }
-
-    function findCourseInSemester(id: number) {
-        return SEMESTER_MAP[""+semesterSelect].includes(courseData[id]);
-    }
-
-    function findCourseInEntirePlan(id: number) {
-        let flag = false;
-        Object.keys(SEMESTER_MAP).forEach(key => {
-            SEMESTER_MAP[key].forEach(course => {
-                if (course.id === id) {
-                    flag = true;
-                }
-            });
-        });
-
-        return flag;
-    }
-
-    function removeCourse(id: number) {
-        SET_SAVE_BIN(SAVE_BIN.filter(item => item !== courseData[id]));
     }
     
     return(
