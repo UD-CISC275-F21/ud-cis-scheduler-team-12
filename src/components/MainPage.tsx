@@ -88,6 +88,7 @@ function MainPage({ visibleView, setVisibleView }: {
 
                 <RemoveSemesterButton
                     setSemesterSelect={setSemesterSelect}
+                    semesterSelect={semesterSelect}
                     setSemesterHeader={setSemesterHeader}
                     SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                     SEMESTER_MAP={SEMESTER_MAP}
@@ -96,6 +97,8 @@ function MainPage({ visibleView, setVisibleView }: {
                     setButtonList={setButtonList}
                     buttonList={buttonList}
                     courseData={courseData}
+                    SET_SELECT_MAP={SET_SELECT_MAP}
+                    SELECT_MAP={SELECT_MAP}
                 ></RemoveSemesterButton>
                 
                 <AddSemesterButton

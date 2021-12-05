@@ -150,7 +150,10 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                             duration: 1,
                         }}>
                         <li className="course" key={courseData.id}>{courseData.name}
-                            <button className="add-button" data-testid={courseData.name} onClick={() => addCourse(courseData.id)}>
+                            <button
+                                className="add-button" 
+                                data-testid={courseData.name} 
+                                onClick={() => addCourse(courseData.id)}>
                                 <MdAdd />
                             </button>
                             { Object.keys(courseData.preReq).length > 0 && <Col className="prereq-accordion">
