@@ -12,6 +12,7 @@ import removePreReq from "../../utilities/removePreReq";
 // Design Imports
 import "../../css/courses.css";
 import { motion } from "framer-motion";
+import copySemesterMap from "../../utilities/copySemesterMap";
 
 // Breadcrumbs:
 // Main Page / DegreePlan / SemesterComp - card that holds all courses in a semester in table form
@@ -60,7 +61,7 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
     }
 
     function removeAllCourses() {
-        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        const NEW_SEMESTER_MAP = copySemesterMap(SEMESTER_MAP);
         
         Object.values(NEW_SEMESTER_MAP[""+semesterSelect]).forEach(course => {
             removeCourse(course.id);
