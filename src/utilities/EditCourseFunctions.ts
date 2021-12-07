@@ -2,6 +2,7 @@ import updateColor from "./updateColor";
 import Swal from "sweetalert2";
 import SpiderMan from "../assets/images/spiderman_meme.jpeg";
 import { Course } from "../interfaces/course";
+import copySemesterMap from "./copySemesterMap";
 
 
 export function isCourseInCourseData(name: string, courseData: Course[]): boolean {
@@ -18,7 +19,7 @@ export function changeName(id: number, enteredName: string,
     SEMESTER_MAP: Record<string, Course[]>, SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, 
     setTitleEditMode: (t: boolean) => void, courseData: Course[], setCourseData: (d: Course[]) => void): void {
 
-    const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+    const NEW_SEMESTER_MAP = copySemesterMap(SEMESTER_MAP);
     const duplicateCourse = isCourseInCourseData(enteredName, courseData);
     
     if (!duplicateCourse) {
@@ -55,7 +56,7 @@ export function changeName(id: number, enteredName: string,
 export function changeDescription(id: number, enteredDescription: string, SEMESTER_MAP: Record<string, Course[]>, SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, 
     setDescriptionEditMode: (d: boolean) => void, courseData: Course[], setCourseData: (d: Course[]) => void): void {
         
-    const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+    const NEW_SEMESTER_MAP = copySemesterMap(SEMESTER_MAP);
     
     courseData[id].description = enteredDescription;
     setCourseData(courseData);
@@ -66,7 +67,7 @@ export function changeDescription(id: number, enteredDescription: string, SEMEST
 export function changeCredits(id: number, enteredCredits: string, SEMESTER_MAP: Record<string, Course[]>, SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, 
     setCreditsEditMode: (c: boolean) => void, courseData: Course[], setCourseData: (d: Course[]) => void): void {
 
-    const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+    const NEW_SEMESTER_MAP = copySemesterMap(SEMESTER_MAP);
     
     courseData[id].credits = +enteredCredits;
     setCourseData(courseData);

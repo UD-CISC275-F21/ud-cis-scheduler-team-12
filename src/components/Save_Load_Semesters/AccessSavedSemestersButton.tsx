@@ -219,7 +219,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP}; 
         for (const [key] of Object.entries(NEW_SEMESTER_MAP)) {
             Object.values(NEW_SEMESTER_MAP[key]).forEach(course => {
-                removePreReq(course, SEMESTER_MAP, courseData);
+                removePreReq(course, NEW_SEMESTER_MAP, courseData);
                 NEW_SEMESTER_MAP[key].pop();
             });
             NEW_SEMESTER_MAP[key]=[];

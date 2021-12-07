@@ -11,6 +11,8 @@ import findCourseInSemester from "../../utilities/findCourseInSemester";
 import findCourseInEntirePlan from "../../utilities/findCourseInEntirePlan";
 import preReqAlert from "../../utilities/preReqAlert";
 import duplicateCourseAlert from "../../utilities/duplicateCourse";
+import maxNumberOfCoursesAlert from "../../utilities/maxNumberOfCourses";
+import copySemesterMap from "../../utilities/copySemesterMap";
 
 // Component Imports
 import BinCourseCard from "../Card_Components/BinCourseCard";
@@ -18,7 +20,6 @@ import ClearBinButton from "./ClearBinButton";
 
 // Design Imports
 import "../../css/SaveBin.css";
-import maxNumberOfCoursesAlert from "../../utilities/maxNumberOfCourses";
 
 // Breadcrumbs:
 // Main Page / SaveBin - bin that pops up to save courses for later
@@ -34,7 +35,7 @@ export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_
     const binListToPrint = SAVE_BIN;
 
     function addCourse(id: number) {
-        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        const NEW_SEMESTER_MAP = copySemesterMap(SEMESTER_MAP);
         const foundCourse = findCourseInSemester(id, semesterSelect, SEMESTER_MAP, courseData);
         const foundCourseInPlan = findCourseInEntirePlan(id, SEMESTER_MAP);
         

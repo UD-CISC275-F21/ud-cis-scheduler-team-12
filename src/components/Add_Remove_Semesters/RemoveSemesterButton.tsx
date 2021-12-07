@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 
 // Function Imports
 import removePreReq from "../../utilities/removePreReq";
+import copySemesterMap from "../../utilities/copySemesterMap";
 
 // Design Imports
 import "../../css/AddRemoveSemester.css";
@@ -24,7 +25,7 @@ export default function RemoveSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, s
     
     function removeSemester() {
         let count = semesterCount;
-        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        const NEW_SEMESTER_MAP = copySemesterMap(SEMESTER_MAP);
         const SELECT_MAP_BUFFER = {...SELECT_MAP};
 
         if (count === 2) {
