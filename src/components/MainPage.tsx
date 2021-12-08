@@ -16,9 +16,11 @@ import AccessSavedSemestersButton from "./Save_Load_Semesters/AccessSavedSemeste
 import AddSemesterButton from "./Add_Remove_Semesters/AddSemesterButton";
 import RemoveSemesterButton from "./Add_Remove_Semesters/RemoveSemesterButton";
 import SelectedSaveHeader from "./Save_Load_Semesters/SelectedSaveHeader";
+import ImportCSV from "./Import_Export_CSV/ImportCSV";
 
 // Design Imports
 import "../css/App.css";
+import { Col, Row } from "react-bootstrap";
 
 // Breadcrumbs:
 // Main Page
@@ -49,25 +51,37 @@ function MainPage({ visibleView, setVisibleView }: {
                 UD CIS Scheduler
                 <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
 
-                <SaveButton
-                    SEMESTER_MAP={SEMESTER_MAP}
-                ></SaveButton>
-                { localStorage.length > 0 && 
-                <div>
-                    <AccessSavedSemestersButton
-                        SET_SEMESTER_MAP={SET_SEMESTER_MAP}
-                        SEMESTER_MAP={SEMESTER_MAP}
-                        setSemesterCount={setSemesterCount}
-                        semesterCount={semesterCount}
-                        setButtonList={setButtonList}
-                        buttonList={buttonList}
-                        setSelectedSave={setSelectedSave}
-                    ></AccessSavedSemestersButton> 
-                    <SelectedSaveHeader
-                        selectedSave={selectedSave}
-                    ></SelectedSaveHeader>
-                </div>
-                }
+                <Row>
+                    <Col id="save">
+                        <SaveButton
+                            SEMESTER_MAP={SEMESTER_MAP}
+                        ></SaveButton>
+                        { localStorage.length > 0 && 
+                        <div>
+                            <AccessSavedSemestersButton
+                                SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                                SEMESTER_MAP={SEMESTER_MAP}
+                                setSemesterCount={setSemesterCount}
+                                semesterCount={semesterCount}
+                                setButtonList={setButtonList}
+                                buttonList={buttonList}
+                                setSelectedSave={setSelectedSave}
+                            ></AccessSavedSemestersButton> 
+                            <SelectedSaveHeader
+                                selectedSave={selectedSave}
+                            ></SelectedSaveHeader>
+                        </div>
+                        }
+                    </Col>
+                    <Col id="import-export">
+                        <ImportCSV
+                            SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                            SEMESTER_MAP={SEMESTER_MAP}
+                            setSemesterCount={setSemesterCount}
+                            semesterCount={semesterCount}
+                        />
+                    </Col>
+                </Row>
                 
             </header>
             <section className="cell-left">
