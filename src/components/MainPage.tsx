@@ -75,13 +75,22 @@ function MainPage({ visibleView, setVisibleView }: {
                         }
                     </Col>
                     <Col id="import-export">
-                        <ImportCSV
-                            SET_SEMESTER_MAP={SET_SEMESTER_MAP}
-                            SEMESTER_MAP={SEMESTER_MAP}
-                        />
-                        <ExportCSV
-                            SEMESTER_MAP={SEMESTER_MAP}
-                        />
+                        <Row id="import-csv">
+                            <ImportCSV
+                                SET_SEMESTER_MAP={SET_SEMESTER_MAP}
+                                SEMESTER_MAP={SEMESTER_MAP}
+                            />
+                        </Row>
+                        <br></br>
+                        <Row id="export-csv">
+                            <Col>
+                                <ExportCSV
+                                    SEMESTER_MAP={SEMESTER_MAP}
+                                />
+                            </Col>
+                            <Col></Col>
+                            <Col></Col>
+                        </Row>
                     </Col>
                 </Row>
                 

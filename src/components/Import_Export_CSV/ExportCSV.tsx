@@ -37,7 +37,7 @@ export default function exportCSV({ SEMESTER_MAP }: { SEMESTER_MAP: Record<strin
         <div className="file-export">
             <button
                 onClick={exportResult}
-            > Export as CSV </button>
+            > Export File </button>
         </div>
         
     );
