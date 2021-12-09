@@ -79,6 +79,8 @@ function MainPage({ visibleView, setVisibleView }: {
                             SEMESTER_MAP={SEMESTER_MAP}
                             setSemesterCount={setSemesterCount}
                             semesterCount={semesterCount}
+                            setButtonList={setButtonList}
+                            buttonList={buttonList}
                         />
                     </Col>
                 </Row>
