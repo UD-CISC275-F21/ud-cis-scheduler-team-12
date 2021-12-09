@@ -99,10 +99,14 @@ function SemesterComp({ SET_SEMESTER_MAP, SEMESTER_MAP, courseList, setSemesterS
                                 {courseList.map((course, id) =>
 
                                     <tr key={id} data-testid="semester-comp-card">
-                                        <OverlayTrigger trigger={["hover", "focus"]} show={ Object.values(course.preReq).every(course => course === true) ? false : true } placement={ SEMESTER_MAP[""+semesterSelect].indexOf(course) > 2 ? "bottom" : "top" } overlay={
-                                            <Popover className="popover" id="tooltip-preReq">Missing: {Object.keys(course.preReq).filter(courseName => 
-                                                course.preReq[courseName] === false).map(course => 
-                                                <div key={course}>{course}</div>)} </Popover>}>
+                                        <OverlayTrigger 
+                                            trigger={["hover", "focus"]} 
+                                            show={ Object.values(course.preReq).every(course => course === true) ? false : true } 
+                                            placement={ SEMESTER_MAP[""+semesterSelect].indexOf(course) > 2 ? "bottom" : "top" } 
+                                            overlay={
+                                                <Popover className="popover" id="tooltip-preReq">Missing: {Object.keys(course.preReq).filter(courseName => 
+                                                    course.preReq[courseName] === false).map(course => 
+                                                    <div key={course}>{course}</div>)} </Popover>}>
                                             <th style={{color: course.preReqCheck}}>{course.name}</th>
                                         </OverlayTrigger>
                                         <td>{course.credits}</td>
