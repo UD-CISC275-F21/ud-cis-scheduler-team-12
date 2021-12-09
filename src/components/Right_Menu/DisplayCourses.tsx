@@ -12,7 +12,6 @@ import findCourseInEntirePlan from "../../utilities/findCourseInEntirePlan";
 import preReqAlert from "../../utilities/preReqAlert";
 import maxNumberOfCoursesAlert from "../../utilities/maxNumberOfCourses";
 import duplicateCourseAlert from "../../utilities/duplicateCourse";
-import copySemesterMap from "../../utilities/copySemesterMap";
 
 // Component Imports
 import SearchBar from "./SearchBar";
@@ -33,7 +32,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
     const [query, setQuery] = useState<string>("");
 
     function addCourse(id: number) {
-        const NEW_SEMESTER_MAP = copySemesterMap(SEMESTER_MAP);
+        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
         const foundCourse = findCourseInSemester(id, semesterSelect, SEMESTER_MAP, courseData);
         const foundCourseInPlan = findCourseInEntirePlan(id, SEMESTER_MAP);
         
@@ -95,7 +94,7 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
     }
 
     function createCourse() {
-        const SEMESTER_MAP_BUFFER = copySemesterMap(SEMESTER_MAP);
+        const SEMESTER_MAP_BUFFER = {...SEMESTER_MAP};
 
         courseData.push({ 
             id: courseData.length,
