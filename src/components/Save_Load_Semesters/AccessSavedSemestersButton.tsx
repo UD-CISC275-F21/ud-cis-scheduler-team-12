@@ -17,6 +17,8 @@ import { findAnyCourseInEntirePlan } from "../../utilities/findCourseInEntirePla
 // Component Imports
 import ClearSavedSemestersButton from "./ClearSavedSemestersButton";
 
+import "../../css/AccessSaved.css";
+
 // Breadcrumbs:
 // Main Page / AccessSavedSemesterButton
 export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount, setButtonList, buttonList, setSelectedSave, setCourseData, courseData }: {
@@ -242,7 +244,7 @@ export default function AccessSavedSemesters({ SET_SEMESTER_MAP, SEMESTER_MAP, s
                         >{key}
                             
                         </Dropdown.Item>
-                        <button onClick={() => deleteSavedSemester(key)}>
+                        <button className="delete_save" onClick={() => deleteSavedSemester(key)}>
                             <ImCross></ImCross>
                         </button>
                     </div>
