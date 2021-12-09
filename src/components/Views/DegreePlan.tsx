@@ -8,6 +8,9 @@ import { Course } from "../../interfaces/course";
 import SemesterComp from "../Card_Components/SemesterComp";
 import ClearAllSemesterButton from "./ClearAllSemesterButton";
 
+// Function Imports
+import copySemesterMap from "../../utilities/copySemesterMap";
+
 // Design Imports
 import "../../css/calender.css";
 
@@ -22,7 +25,7 @@ export function DegreePlan({ SET_SEMESTER_MAP ,SEMESTER_MAP, setSemesterSelect, 
     setCourseData: (d: Course[]) => void, courseData: Course[]
 }):  JSX.Element {
 
-    const SEMESTER_MAP_TO_PRINT = {...SEMESTER_MAP};
+    const SEMESTER_MAP_TO_PRINT = copySemesterMap(SEMESTER_MAP);
 
     return (
         <div>

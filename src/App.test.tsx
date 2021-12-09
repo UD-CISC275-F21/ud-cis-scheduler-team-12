@@ -2,6 +2,9 @@ import React from "react";
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import App from "./App";
 
+import createRandomSemesterMap from "./utilities/createRandomSemesterMap";
+import copySemesterMap from "./utilities/copySemesterMap";
+
 describe("App", () => {
     beforeEach(() => {
         render(<App />);
@@ -257,4 +260,11 @@ describe("App", () => {
     //     const checkTitle = screen.getByText("New Name");
     //     expect(checkTitle).toBeInTheDocument();
     // });
+
+    it("Creates a deep clone of a semesterMap object", () => {
+        const semesterMap = createRandomSemesterMap();
+        const semesterMapCopy = copySemesterMap(semesterMap);
+
+        expect(JSON.stringify(semesterMap) === JSON.stringify(semesterMapCopy));
+    });
 });

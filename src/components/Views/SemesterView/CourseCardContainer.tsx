@@ -6,13 +6,14 @@ import { Course } from "../../../interfaces/course";
 
 // Function Imports
 import removePreReq from "../../../utilities/removePreReq";
+import duplicateCourseAlert from "../../../utilities/duplicateCourse";
+import copySemesterMap from "../../../utilities/copySemesterMap";
 
 // Component Imports
 import CourseComp from "../../Card_Components/CourseComp";
 
 // Design Imports
 import "../../../css/board.css";
-import duplicateCourseAlert from "../../../utilities/duplicateCourse";
 
 // Breadcrumbs:
 // Main Page / Board / CourseCardContainer
@@ -29,7 +30,7 @@ export default function CourseCardContainer({ SET_SEMESTER_MAP, SEMESTER_MAP, se
 
 
     function removeCourse(id: number) {
-        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        const NEW_SEMESTER_MAP = copySemesterMap(SEMESTER_MAP);
         
         if (courseData[id].name === "") {
             NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);

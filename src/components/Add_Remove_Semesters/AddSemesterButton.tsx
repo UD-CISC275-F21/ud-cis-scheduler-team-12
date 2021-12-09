@@ -5,6 +5,7 @@ import { ButtonList } from "../../interfaces/buttonList";
 
 // Function Imports
 import getSemesterName from "../../utilities/getSemesterName";
+import copySemesterMap from "../../utilities/copySemesterMap";
 
 // Design Imports
 import "../../css/AddRemoveSemester.css";
@@ -20,7 +21,7 @@ export default function AddSemesterButton({ SET_SEMESTER_MAP, SEMESTER_MAP, setS
     
     function addSemester() {
         let count = semesterCount;
-        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        const NEW_SEMESTER_MAP = copySemesterMap(SEMESTER_MAP);
         const SELECT_MAP_BUFFER = {...SELECT_MAP};
 
         buttonList.push({name: getSemesterName(semesterCount), value: semesterCount});

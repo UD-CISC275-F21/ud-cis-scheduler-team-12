@@ -9,15 +9,15 @@ import { Course } from "../../interfaces/course";
 import updateColor from "../../utilities/updateColor";
 import findCourseInSemester from "../../utilities/findCourseInSemester";
 import findCourseInEntirePlan from "../../utilities/findCourseInEntirePlan";
+import preReqAlert from "../../utilities/preReqAlert";
+import maxNumberOfCoursesAlert from "../../utilities/maxNumberOfCourses";
+import duplicateCourseAlert from "../../utilities/duplicateCourse";
 
 // Component Imports
 import SearchBar from "./SearchBar";
 
 // Design Imports
 import "../../css/DisplayCourses.css";
-import preReqAlert from "../../utilities/preReqAlert";
-import maxNumberOfCoursesAlert from "../../utilities/maxNumberOfCourses";
-import duplicateCourseAlert from "../../utilities/duplicateCourse";
 
 // Breadcrumbs:
 // Main Page / DisplayCourses - displays list of scrollable courses on right hand side
@@ -150,7 +150,10 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                             duration: 1,
                         }}>
                         <li className="course" key={courseData.id}>{courseData.name}
-                            <button className="add-button" data-testid={courseData.name} onClick={() => addCourse(courseData.id)}>
+                            <button
+                                className="add-button" 
+                                data-testid={courseData.name} 
+                                onClick={() => addCourse(courseData.id)}>
                                 <MdAdd />
                             </button>
                             { Object.keys(courseData.preReq).length > 0 && <Col className="prereq-accordion">
