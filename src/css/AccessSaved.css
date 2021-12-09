@@ -1,0 +1,18 @@
+.delete_save {
+    background: transparent;
+    color: black;
+    border: none;
+    transition: 0.3s;
+}
+.delete_save:hover {
+    color: crimson;
+}
+
+.clear_all {
+    color: black;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+.clear_all:hover {
+    color: crimson;
+}

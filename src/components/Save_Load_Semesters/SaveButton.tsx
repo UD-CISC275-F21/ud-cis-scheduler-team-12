@@ -1,6 +1,7 @@
 import React from "react";
 import Swal from "sweetalert2";
 import { Course } from "../../interfaces/course";
+import "../../css/save.css";
 
 // Breadcrumbs:
 // Main Page / SaveButton
@@ -64,6 +65,6 @@ export default function SaveButton({ SEMESTER_MAP, courseData }: {
     }
 
     return(
-        <button onClick={() => saveSemester()}>Save Semester</button>
+        <button className="save_button" onClick={() => saveSemester()}>Save Semester</button>
     );
 }
