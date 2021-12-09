@@ -177,6 +177,7 @@ function MainPage({ visibleView, setVisibleView }: {
                     SAVE_BIN={SAVE_BIN}
                     setCourseData={setCourseData}
                     courseData={courseData}
+                    visibleView={visibleView}
                 ></DisplayCourses> }            
             </section>
 

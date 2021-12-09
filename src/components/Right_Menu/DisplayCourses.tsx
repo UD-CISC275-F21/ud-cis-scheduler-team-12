@@ -1,7 +1,7 @@
 // Source Imports
 import React, { useState } from "react";
 import { MdAdd } from "react-icons/md";
-import { Accordion, Col, Dropdown, DropdownButton } from "react-bootstrap";
+import { Accordion, Col, Dropdown, DropdownButton, OverlayTrigger, Popover } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Course } from "../../interfaces/course";
 
@@ -21,12 +21,13 @@ import "../../css/DisplayCourses.css";
 
 // Breadcrumbs:
 // Main Page / DisplayCourses - displays list of scrollable courses on right hand side
-export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, courseData, setCourseData }: {
+export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, courseData, setCourseData, visibleView }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,
     setBinVisible: (b: boolean) => void, binVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
-    setCourseData: (c: Course[]) => void, courseData: Course[]
+    setCourseData: (c: Course[]) => void, courseData: Course[],
+    visibleView: string
 }): JSX.Element {
 
     const [query, setQuery] = useState<string>("");
@@ -116,10 +117,16 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
 
         <div>
             <div className="menu-button">
-                <DropdownButton id="dropdown-basic-button" title="Course Options">
-                    <Dropdown.Item as="button" onClick={() => showBin()}>Save Later Bin</Dropdown.Item>
-                    <Dropdown.Item as="button" onClick={() => createCourse()}>Create New Course</Dropdown.Item>
-                </DropdownButton>
+                <OverlayTrigger
+                    trigger={["hover", "focus"]} 
+                    placement= "top"
+                    overlay={
+                        <Popover className="popover" id="tooltip-preReq">Drag to add courses into each semester bucket</Popover>}>
+                    <DropdownButton id="dropdown-basic-button" title="Course Options">
+                        <Dropdown.Item as="button" onClick={() => showBin()}>Save Later Bin</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={() => createCourse()}>Create New Course</Dropdown.Item>
+                    </DropdownButton>
+                </OverlayTrigger>
             </div>
             <SearchBar
                 setQuery={setQuery}
@@ -151,7 +158,8 @@ export default function DisplayCourses({ SET_SEMESTER_MAP, SEMESTER_MAP, semeste
                         }}>
                         <li className="course" key={courseData.id}>{courseData.name}
                             <button
-                                className="add-button" 
+                                className="add-button"
+                                disabled= {visibleView === "3" ? true : false }
                                 data-testid={courseData.name} 
                                 onClick={() => addCourse(courseData.id)}>
                                 <MdAdd />
