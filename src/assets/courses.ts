@@ -222,4 +222,5 @@ const courseDataInit: Course[] = [
         "preReqCheck": "black"
     }
 ];
+
 export default courseDataInit;
