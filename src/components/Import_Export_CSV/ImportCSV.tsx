@@ -7,15 +7,12 @@ import { ImportedCourse } from "../../interfaces/importedCourse";
 
 // Function Imports
 import updateColor from "../../utilities/updateColor";
-import getSemesterName from "../../utilities/getSemesterName";
-import { ButtonList } from "../../interfaces/buttonList";
 import removePreReq from "../../utilities/removePreReq";
 
-
-export default function ImportCSV({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount,setButtonList, buttonList }: {
-    SET_SEMESTER_MAP: (s: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
-    setSemesterCount: (c: number) => void, semesterCount: number,
-    setButtonList: (b: ButtonList[]) => void, buttonList: ButtonList[]
+// Breadcrumbs:
+// Main Page / ImportCSV
+export default function ImportCSV({ SET_SEMESTER_MAP, SEMESTER_MAP }: {
+    SET_SEMESTER_MAP: (s: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>
 }): JSX.Element {
     const [importedCourses, setImportedCourses] = useState<ImportedCourse[]>([]);
 
@@ -43,18 +40,6 @@ export default function ImportCSV({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterC
             }
         });
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
-        // Object.keys(SEMESTER_MAP).forEach(key => {
-        //     SEMESTER_MAP[key].forEach(item => {
-        //         if(Object.keys(item.preReq).length > 0) {
-        //             if (Object.values(item.preReq).every(course => course === true)){
-        //                 item.preReqCheck = "black";
-        //             } else {
-        //                 item.preReqCheck = "red";
-        //             }
-        //             updateColor(item);
-        //         }
-        //     });
-        // });
     }
 
     
@@ -88,10 +73,7 @@ export default function ImportCSV({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterC
                 updateColor(courseData[id]);
             }
         }
-        // while (semesterSelect > semesterCount) {
-        //     addSemester();
-        //     setSemesterCount(semesterCount++);
-        // }
+
         NEW_SEMESTER_MAP["" + semesterSelect].push(courseData[id]);
     }
 
@@ -106,19 +88,6 @@ export default function ImportCSV({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterC
         }
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
     }
-
-    // function addSemester() {
-    //     let count = semesterCount;
-    //     const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
-
-    //     buttonList.push({name: getSemesterName(semesterCount), value: semesterCount});
-    //     setButtonList(buttonList);
-
-    //     NEW_SEMESTER_MAP[""+semesterCount] = [];
-    //     SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
-    //     count++;
-    //     setSemesterCount(count);
-    // }
     
     return(
         <div className="file-import">

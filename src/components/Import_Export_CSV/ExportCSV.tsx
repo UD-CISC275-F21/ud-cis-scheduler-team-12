@@ -1,12 +1,13 @@
+// Source Imports
 import React from "react";
 import { Course } from "../../interfaces/course";
 
-let urlLink = "";
-
+// Breadcrumbs:
+// Main Page / ImportCSV
 export default function exportCSV({ SEMESTER_MAP }: { SEMESTER_MAP: Record<string, Course[]> }): JSX.Element {
 
     function exportResult () {
-        let joined = "semester,name,credits,schedule,prerequisites";
+        let joined = "semester,name,credits,schedule,time,prerequisites";
         Object.keys(SEMESTER_MAP).forEach(key => {
             SEMESTER_MAP[key].forEach(item => {
                 joined = joined.concat("\n", 
@@ -14,6 +15,7 @@ export default function exportCSV({ SEMESTER_MAP }: { SEMESTER_MAP: Record<strin
                     item.name, ",",
                     "" + item.credits, ",",
                     item.schedule, ",",
+                    "" + item.timeStart, "-", "" + item.timeEnd, ",",
                     JSON.stringify(item.preReq)
                 );
             });
@@ -27,7 +29,6 @@ export default function exportCSV({ SEMESTER_MAP }: { SEMESTER_MAP: Record<strin
 
         const pom = document.createElement("a");
         pom.href = url;
-        urlLink = url;
         pom.setAttribute("download", filename);
         pom.click();
     }

@@ -78,10 +78,6 @@ function MainPage({ visibleView, setVisibleView }: {
                         <ImportCSV
                             SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                             SEMESTER_MAP={SEMESTER_MAP}
-                            setSemesterCount={setSemesterCount}
-                            semesterCount={semesterCount}
-                            setButtonList={setButtonList}
-                            buttonList={buttonList}
                         />
                         <ExportCSV
                             SEMESTER_MAP={SEMESTER_MAP}
