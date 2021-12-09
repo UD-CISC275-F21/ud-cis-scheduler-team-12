@@ -4,8 +4,9 @@ import { Course } from "../../interfaces/course";
 
 // Breadcrumbs:
 // Main Page / SaveButton
-export default function SaveButton({ SEMESTER_MAP }: {
-    SEMESTER_MAP: Record<string, Course[]>
+export default function SaveButton({ SEMESTER_MAP, courseData }: {
+    SEMESTER_MAP: Record<string, Course[]>,
+    courseData: Course[]
 }): JSX.Element {
     
     function saveSemester() {
@@ -25,7 +26,11 @@ export default function SaveButton({ SEMESTER_MAP }: {
                 showCancelButton: true        
             }).then((result) => {
                 if (result.value) {
-                    localStorage.setItem(result.value, JSON.stringify(SEMESTER_MAP));
+                    const savedPlan = {
+                        "semesterMap": SEMESTER_MAP,
+                        "courseData": courseData
+                    };
+                    localStorage.setItem(result.value, JSON.stringify(savedPlan));
                     // const retrievedObject = localStorage.getItem(result.value);
                     // console.log("retrievedObject: ", JSON.parse(""+retrievedObject));
     

@@ -1,9 +1,9 @@
 import Swal from "sweetalert2";
 import SpiderMan from "../assets/images/spiderman_meme.jpeg";
+import { Course } from "../interfaces/course";
 
-import courseData from "../assets/courses";
 
-export default function duplicateCourseAlert(id:number, duplicateReason: string): void {
+export default function duplicateCourseAlert(id: number, duplicateReason: string, courseData: Course[]): void {
     switch(duplicateReason){
     case "bin":
         Swal.fire({

@@ -4,6 +4,8 @@ import { Course } from "../interfaces/course";
 import { ButtonList } from "../interfaces/buttonList";
 import SEMESTER_MAP_INIT from "../assets/stateInitializers/semesterMap";
 import buttonListInit from "../assets/stateInitializers/buttonList";
+import SELECT_MAP_INIT from "../assets/stateInitializers/radioToggle";
+import courseDataInit from "../assets/courses";
 
 // Component Imports
 import { Board } from "./Views/Board";
@@ -39,23 +41,27 @@ function MainPage({ visibleView, setVisibleView }: {
     const SAVE_BIN_INIT: Course[] = [];
     const [SAVE_BIN, SET_SAVE_BIN] = useState<Course[]>(SAVE_BIN_INIT);
 
+    // Is one value above the current semesters
     const [semesterCount, setSemesterCount] = useState<number>(9);
+    
     const [buttonList, setButtonList] = useState<ButtonList[]>(buttonListInit);
+    const [SELECT_MAP, SET_SELECT_MAP] = useState<Record<string, boolean>>(SELECT_MAP_INIT);
    
     // SEMESTER_MAP: useState to modify each semester and its courses
     const [SEMESTER_MAP, SET_SEMESTER_MAP] = useState<Record<string, Course[]>>(SEMESTER_MAP_INIT);
-
+    const [courseData, setCourseData] = useState<Course[]>(courseDataInit);
 
     return (
         <div className="App">
             <header className="App-header">
                 UD CIS Scheduler
                 <p>Srinath Venkatesh, Elliot Tingey, Geoffrey Linderman</p>
-
+              
                 <Row>
                     <Col id="save">
                         <SaveButton
                             SEMESTER_MAP={SEMESTER_MAP}
+                            courseData={courseData}
                         ></SaveButton>
                         { localStorage.length > 0 && 
                         <div>
@@ -67,6 +73,8 @@ function MainPage({ visibleView, setVisibleView }: {
                                 setButtonList={setButtonList}
                                 buttonList={buttonList}
                                 setSelectedSave={setSelectedSave}
+                                setCourseData={setCourseData}
+                                courseData={courseData}
                             ></AccessSavedSemestersButton> 
                             <SelectedSaveHeader
                                 selectedSave={selectedSave}
@@ -105,6 +113,7 @@ function MainPage({ visibleView, setVisibleView }: {
 
                 <RemoveSemesterButton
                     setSemesterSelect={setSemesterSelect}
+                    semesterSelect={semesterSelect}
                     setSemesterHeader={setSemesterHeader}
                     SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                     SEMESTER_MAP={SEMESTER_MAP}
@@ -112,6 +121,9 @@ function MainPage({ visibleView, setVisibleView }: {
                     semesterCount={semesterCount}
                     setButtonList={setButtonList}
                     buttonList={buttonList}
+                    courseData={courseData}
+                    SET_SELECT_MAP={SET_SELECT_MAP}
+                    SELECT_MAP={SELECT_MAP}
                 ></RemoveSemesterButton>
                 
                 <AddSemesterButton
@@ -121,6 +133,8 @@ function MainPage({ visibleView, setVisibleView }: {
                     semesterCount={semesterCount}
                     setButtonList={setButtonList}
                     buttonList={buttonList}
+                    SET_SELECT_MAP={SET_SELECT_MAP}
+                    SELECT_MAP={SELECT_MAP}
                 ></AddSemesterButton>
 
                 
@@ -135,6 +149,8 @@ function MainPage({ visibleView, setVisibleView }: {
                     SAVE_BIN={SAVE_BIN}
                     binVisible={binVisible}
                     buttonList={buttonList}
+                    setCourseData={setCourseData}
+                    courseData={courseData}
                 ></Board> }
                 
                 { visibleView === "3" && <DegreePlan
@@ -143,6 +159,10 @@ function MainPage({ visibleView, setVisibleView }: {
                     setSemesterSelect={setSemesterSelect}
                     setSemesterHeader={setSemesterHeader}
                     buttonList={buttonList}
+                    SET_SELECT_MAP={SET_SELECT_MAP}
+                    SELECT_MAP={SELECT_MAP}
+                    setCourseData={setCourseData}
+                    courseData={courseData}
                 ></DegreePlan> }
                 
             </section>
@@ -155,6 +175,8 @@ function MainPage({ visibleView, setVisibleView }: {
                     binVisible={binVisible}
                     SET_SAVE_BIN={SET_SAVE_BIN}
                     SAVE_BIN={SAVE_BIN}
+                    setCourseData={setCourseData}
+                    courseData={courseData}
                 ></DisplayCourses> }            
             </section>
 
@@ -166,6 +188,7 @@ function MainPage({ visibleView, setVisibleView }: {
                 SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                 SEMESTER_MAP={SEMESTER_MAP}
                 semesterSelect={semesterSelect}
+                courseData={courseData}
             ></SaveBin>
         </div>
     );

@@ -3,25 +3,26 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Col, Row, Container } from "react-bootstrap";
 import { Course } from "../../../interfaces/course";
-import courseData from "../../../assets/courses";
 
 // Function Imports
 import removePreReq from "../../../utilities/removePreReq";
+import duplicateCourseAlert from "../../../utilities/duplicateCourse";
+import copySemesterMap from "../../../utilities/copySemesterMap";
 
 // Component Imports
 import CourseComp from "../../Card_Components/CourseComp";
 
 // Design Imports
 import "../../../css/board.css";
-import duplicateCourseAlert from "../../../utilities/duplicateCourse";
 
 // Breadcrumbs:
 // Main Page / Board / CourseCardContainer
-export default function CourseCardContainer({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, SET_SAVE_BIN, SAVE_BIN, binVisible }: {
+export default function CourseCardContainer({ SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, SET_SAVE_BIN, SAVE_BIN, binVisible, setCourseData, courseData }: {
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     semesterSelect: string | null,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
-    binVisible: boolean
+    binVisible: boolean,
+    setCourseData: (c: Course[]) => void, courseData: Course[]
 }): JSX.Element {
 
     // const list variable to map out classList useState variable
@@ -29,20 +30,21 @@ export default function CourseCardContainer({ SET_SEMESTER_MAP, SEMESTER_MAP, se
 
 
     function removeCourse(id: number) {
-        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+        const NEW_SEMESTER_MAP = copySemesterMap(SEMESTER_MAP);
         
         if (courseData[id].name === "") {
             NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
-            delete courseData[id];
+            courseData.pop();
+            setCourseData(courseData);
         } else {
             if (binVisible){
                 if (SAVE_BIN.includes(courseData[id])) {
-                    duplicateCourseAlert(id, "bin");
+                    duplicateCourseAlert(id, "bin", courseData);
                 } else {
                     SET_SAVE_BIN([...SAVE_BIN, courseData[id]]);
                 }
             }
-            removePreReq(courseData[id], SEMESTER_MAP);
+            removePreReq(courseData[id], SEMESTER_MAP, courseData);
         }
         NEW_SEMESTER_MAP[""+semesterSelect] = NEW_SEMESTER_MAP[""+semesterSelect].filter(item => item !== courseData[id]);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
@@ -80,6 +82,8 @@ export default function CourseCardContainer({ SET_SEMESTER_MAP, SEMESTER_MAP, se
                                         SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                                         SEMESTER_MAP={SEMESTER_MAP}
                                         semesterSelect={semesterSelect}
+                                        setCourseData={setCourseData}
+                                        courseData={courseData}
                                     ></CourseComp>
                                 </Col>
                             </motion.div>

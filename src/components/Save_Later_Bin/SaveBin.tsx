@@ -2,7 +2,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { Col, Container, Offcanvas, Row } from "react-bootstrap";
-import courseData from "../../assets/courses";
 import { Course } from "../../interfaces/course";
 
 // Function Imports
@@ -12,6 +11,8 @@ import findCourseInSemester from "../../utilities/findCourseInSemester";
 import findCourseInEntirePlan from "../../utilities/findCourseInEntirePlan";
 import preReqAlert from "../../utilities/preReqAlert";
 import duplicateCourseAlert from "../../utilities/duplicateCourse";
+import maxNumberOfCoursesAlert from "../../utilities/maxNumberOfCourses";
+import copySemesterMap from "../../utilities/copySemesterMap";
 
 // Component Imports
 import BinCourseCard from "../Card_Components/BinCourseCard";
@@ -19,28 +20,28 @@ import ClearBinButton from "./ClearBinButton";
 
 // Design Imports
 import "../../css/SaveBin.css";
-import maxNumberOfCoursesAlert from "../../utilities/maxNumberOfCourses";
 
 // Breadcrumbs:
 // Main Page / SaveBin - bin that pops up to save courses for later
-export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect }: {
+export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_BIN, SET_SEMESTER_MAP, SEMESTER_MAP, semesterSelect, courseData }: {
     setBinVisible: (b: boolean) => void, binVisible: boolean,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
-    semesterSelect: string | null
+    semesterSelect: string | null,
+    courseData: Course[]
 }): JSX.Element {
 
     // const list variable to map out SAVE_BIN useState variable
     const binListToPrint = SAVE_BIN;
 
     function addCourse(id: number) {
-        const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
-        const foundCourse = findCourseInSemester(id, semesterSelect, SEMESTER_MAP);
+        const NEW_SEMESTER_MAP = copySemesterMap(SEMESTER_MAP);
+        const foundCourse = findCourseInSemester(id, semesterSelect, SEMESTER_MAP, courseData);
         const foundCourseInPlan = findCourseInEntirePlan(id, SEMESTER_MAP);
         
         // If there are less than 6 courses, add the selected course onto the end of the classList
         if (foundCourse || foundCourseInPlan) {
-            foundCourse ? duplicateCourseAlert(id, "semester") : duplicateCourseAlert(id, "plan");
+            foundCourse ? duplicateCourseAlert(id, "semester", courseData) : duplicateCourseAlert(id, "plan", courseData);
         } else {
             //  PREREQ MET IN PRIOR SEMESTER
             if (Object.keys(courseData[id].preReq).length > 0){
@@ -66,7 +67,7 @@ export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_
                 
                 NEW_SEMESTER_MAP["" + semesterSelect].push(courseData[id]);
                 SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
-                removeCourseFromBin(id, SET_SAVE_BIN, SAVE_BIN);
+                removeCourseFromBin(id, SET_SAVE_BIN, SAVE_BIN, courseData);
             }
 
             Object.keys(SEMESTER_MAP).forEach(key => {
@@ -121,6 +122,7 @@ export default function SaveBin({ setBinVisible, binVisible, SET_SAVE_BIN, SAVE_
                                                 course={binListToPrint}
                                                 SET_SAVE_BIN={SET_SAVE_BIN}
                                                 SAVE_BIN={SAVE_BIN}
+                                                courseData={courseData}
                                             ></BinCourseCard>
                                         </Col>
                                     </motion.div>

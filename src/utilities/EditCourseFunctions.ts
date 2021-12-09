@@ -1,11 +1,11 @@
 import updateColor from "./updateColor";
-import courseData from "../assets/courses";
 import Swal from "sweetalert2";
 import SpiderMan from "../assets/images/spiderman_meme.jpeg";
 import { Course } from "../interfaces/course";
+import copySemesterMap from "./copySemesterMap";
 
 
-export function isCourseInCourseData(name: string): boolean {
+export function isCourseInCourseData(name: string, courseData: Course[]): boolean {
     let flag = false;
     Object.values(courseData).forEach(course => {
         if (course.name.toLowerCase().replace(/\s/g, "") === name.toLowerCase().replace(/\s/g, "")) {
@@ -17,10 +17,10 @@ export function isCourseInCourseData(name: string): boolean {
 
 export function changeName(id: number, enteredName: string, 
     SEMESTER_MAP: Record<string, Course[]>, SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, 
-    setTitleEditMode: (t: boolean) => void): void {
+    setTitleEditMode: (t: boolean) => void, courseData: Course[], setCourseData: (d: Course[]) => void): void {
 
-    const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
-    const duplicateCourse = isCourseInCourseData(enteredName);
+    const NEW_SEMESTER_MAP = copySemesterMap(SEMESTER_MAP);
+    const duplicateCourse = isCourseInCourseData(enteredName, courseData);
     
     if (!duplicateCourse) {
         // Removing Pre-Req for all other courses
@@ -40,6 +40,7 @@ export function changeName(id: number, enteredName: string,
             updateColor(item);
         });
         courseData[id].name = enteredName;
+        setCourseData(courseData);
         SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
         setTitleEditMode(false);
     } else {
@@ -53,21 +54,23 @@ export function changeName(id: number, enteredName: string,
 }
 
 export function changeDescription(id: number, enteredDescription: string, SEMESTER_MAP: Record<string, Course[]>, SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, 
-    setDescriptionEditMode: (d: boolean) => void): void {
+    setDescriptionEditMode: (d: boolean) => void, courseData: Course[], setCourseData: (d: Course[]) => void): void {
         
-    const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+    const NEW_SEMESTER_MAP = copySemesterMap(SEMESTER_MAP);
     
     courseData[id].description = enteredDescription;
+    setCourseData(courseData);
     SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
     setDescriptionEditMode(false);
 }
 
 export function changeCredits(id: number, enteredCredits: string, SEMESTER_MAP: Record<string, Course[]>, SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, 
-    setCreditsEditMode: (c: boolean) => void): void {
+    setCreditsEditMode: (c: boolean) => void, courseData: Course[], setCourseData: (d: Course[]) => void): void {
 
-    const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
+    const NEW_SEMESTER_MAP = copySemesterMap(SEMESTER_MAP);
     
     courseData[id].credits = +enteredCredits;
+    setCourseData(courseData);
     SET_SEMESTER_MAP(NEW_SEMESTER_MAP);
     setCreditsEditMode(false);
 }

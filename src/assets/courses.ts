@@ -1,6 +1,6 @@
 import { Course } from "../interfaces/course";
 
-const courseData: Course[] = [
+const courseDataInit: Course[] = [
     {
         "id": 0,
         "name": "CISC 100",
@@ -223,12 +223,4 @@ const courseData: Course[] = [
     }
 ];
 
-// demo code to convert courses.ts to a key : val system for more efficient indexing
-// const result : Map<string, string> = courseData.reduce(function(accum : Course[], currentVal : Course) {
-//     accum[currentVal.name] = currentVal.id;
-//     return accum;
-//   }, {});
-  
-//   console.log(result);
-
-export default courseData;
+export default courseDataInit;

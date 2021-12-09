@@ -2,7 +2,6 @@
 import React from "react";
 import { Card,Col, Row, Container, Accordion } from "react-bootstrap/";
 import { MdDeleteForever } from "react-icons/md";
-import courseData from "../../assets/courses";
 import { Course } from "../../interfaces/course";
 
 // Design Imports
@@ -10,9 +9,10 @@ import "../../css/courses.css";
 
 // Breadcrumbs:
 // Main Page / SaveBin / BinCourseCard - card rendered to handle adding/removing from the "save later bin" (similar to CourseComp)
-export default function BinCourseCard({ course, SET_SAVE_BIN, SAVE_BIN }: {
+export default function BinCourseCard({ course, SET_SAVE_BIN, SAVE_BIN, courseData }: {
     course: Course,
-    SET_SAVE_BIN: (b: Course[]) => void, SAVE_BIN: Course[]
+    SET_SAVE_BIN: (b: Course[]) => void, SAVE_BIN: Course[],
+    courseData: Course[]
 }): JSX.Element {
     
     function removeCourse(id: number) {

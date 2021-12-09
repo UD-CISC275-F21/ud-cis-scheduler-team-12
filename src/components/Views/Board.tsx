@@ -14,13 +14,14 @@ import CourseCardContainer from "./SemesterView/CourseCardContainer";
 
 // Breadcrumbs:
 // Main Page / Board - renders each semester and its classes
-export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader, SET_SAVE_BIN, SAVE_BIN, binVisible, buttonList }: {
+export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterHeader, semesterHeader, SET_SAVE_BIN, SAVE_BIN, binVisible, buttonList, setCourseData, courseData }: {
     setSemesterSelect: (s: string | null) => void, semesterSelect: string | null,
     SET_SEMESTER_MAP: (m: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterHeader: (s: string) => void, semesterHeader: string,
     SET_SAVE_BIN: (s: Course[]) => void, SAVE_BIN: Course[],
     binVisible: boolean,
     buttonList: ButtonList[],
+    setCourseData: (d: Course[]) => void, courseData: Course[]
 }):  JSX.Element {
 
     return (
@@ -45,6 +46,8 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
                     SAVE_BIN={SAVE_BIN}
                     semesterSelect={semesterSelect}
                     binVisible={binVisible}
+                    setCourseData={setCourseData}
+                    courseData={courseData}
                 ></CourseCardContainer>
                 <div>
                     <div>
@@ -52,12 +55,14 @@ export function Board({ setSemesterSelect, semesterSelect, SET_SEMESTER_MAP, SEM
                             SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                             SEMESTER_MAP={SEMESTER_MAP}
                             semesterSelect={semesterSelect}
+                            courseData={courseData}
                         ></ClearSemesterButton> }
                     </div>
                     <div>
                         <ClearAllSemesterButton
                             SET_SEMESTER_MAP={SET_SEMESTER_MAP}
                             SEMESTER_MAP={SEMESTER_MAP}
+                            courseData={courseData}
                         ></ClearAllSemesterButton>
                     </div>
                 </div>
