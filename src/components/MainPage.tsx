@@ -17,6 +17,7 @@ import AddSemesterButton from "./Add_Remove_Semesters/AddSemesterButton";
 import RemoveSemesterButton from "./Add_Remove_Semesters/RemoveSemesterButton";
 import SelectedSaveHeader from "./Save_Load_Semesters/SelectedSaveHeader";
 import ImportCSV from "./Import_Export_CSV/ImportCSV";
+import ExportCSV from "./Import_Export_CSV/ExportCSV";
 
 // Design Imports
 import "../css/App.css";
@@ -81,6 +82,9 @@ function MainPage({ visibleView, setVisibleView }: {
                             semesterCount={semesterCount}
                             setButtonList={setButtonList}
                             buttonList={buttonList}
+                        />
+                        <ExportCSV
+                            SEMESTER_MAP={SEMESTER_MAP}
                         />
                     </Col>
                 </Row>

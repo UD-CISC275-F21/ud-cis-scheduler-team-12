@@ -11,18 +11,20 @@ import getSemesterName from "../../utilities/getSemesterName";
 import { ButtonList } from "../../interfaces/buttonList";
 import removePreReq from "../../utilities/removePreReq";
 
+
 export default function ImportCSV({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterCount, semesterCount,setButtonList, buttonList }: {
     SET_SEMESTER_MAP: (s: Record<string, Course[]>) => void, SEMESTER_MAP: Record<string, Course[]>,
     setSemesterCount: (c: number) => void, semesterCount: number,
     setButtonList: (b: ButtonList[]) => void, buttonList: ButtonList[]
 }): JSX.Element {
-    
     const [importedCourses, setImportedCourses] = useState<ImportedCourse[]>([]);
 
     function handleFile (element: HTMLInputElement) {
+
         removeAllCourses();
         const NEW_SEMESTER_MAP = {...SEMESTER_MAP};
         setImportedCourses([]);
+
         if (!element.files) {
             alert("Error: invalid file!");
             return;
@@ -34,6 +36,7 @@ export default function ImportCSV({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterC
                 setImportedCourses(results.data as ImportedCourse[]);
             },
         });
+
         importedCourses.map((course) => {
             if (course.name != "") {
                 addCourse(course.name, course.semester, NEW_SEMESTER_MAP);
@@ -118,11 +121,14 @@ export default function ImportCSV({ SET_SEMESTER_MAP, SEMESTER_MAP, setSemesterC
     // }
     
     return(
-        <input
-            type="file"
-            accept=".csv"
-            onChange={(e: SyntheticEvent) => handleFile(e.currentTarget as HTMLInputElement)}
-            // onChange={handleFile(this.currentTarget as HTMLInputElement)}
-        />
+        <div className="file-import">
+            <input
+                type="file"
+                accept=".csv"
+                onChange={(e: SyntheticEvent) => {
+                    handleFile(e.currentTarget as HTMLInputElement);
+                }}
+            />
+        </div>
     );
 }
