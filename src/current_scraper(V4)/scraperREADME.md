@@ -147,7 +147,7 @@ NOTE: This section is written a little different since I was aftively working on
  -  fixed some code not being properly block commented, causing VSCode to complain
 
 
- Unfortionatly, I ran out of time right at the end before I could finish the end of the logic for the most complicated prereq requirements
+ Unfortionately, I ran out of time right at the end before I could finish the end of the logic for the most complicated prereq requirements
  and put it into our system. The final coursedata file has about 90% of the prereq requirements accurate, but not 100%.
  There also was not enough time to convert the file to JSON. Its a little disapointing, I got within an hours work of having it work
  perfectly. There were too many inconsistancies in the UD system and it took too much time to find and fix all of them. It ended
