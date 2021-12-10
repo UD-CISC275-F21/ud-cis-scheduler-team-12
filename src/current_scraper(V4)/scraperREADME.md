@@ -125,7 +125,7 @@ with the rest of the course scraping. There are several CSV documents in the tes
 
 NOTE: This section is written a little different since I was aftively working on the readme while coding this
 # CHANGES
- -  cleaned up code
+ -  cleaned up code in general
  -  restructered entire script
  -  fixed page html parsing happening twice
  -  removed many useless variables
