@@ -1,0 +1,5783 @@
+Class ID,PreReqs
+ACCT200010,{'required': {}}
+ACCT207010,{'required': {}}
+ACCT207011,{'required': {}}
+ACCT207012,{'required': {}}
+ACCT207013,{'required': {}}
+ACCT207014,{'required': {}}
+ACCT207015,{'required': {}}
+ACCT207016,{'required': {}}
+ACCT207017,{'required': {}}
+ACCT207018,{'required': {}}
+ACCT207019,{'required': {}}
+ACCT207020,{'required': {}}
+ACCT207050,{'required': {}}
+ACCT207051,{'required': {}}
+ACCT207070,{'required': {}}
+ACCT207075,{'required': {}}
+ACCT207080,{'required': {}}
+ACCT208010,{'required': {'ACCT207': 'false'}}
+ACCT208011,{'required': {'ACCT207': 'false'}}
+ACCT208012,{'required': {'ACCT207': 'false'}}
+ACCT208013,{'required': {'ACCT207': 'false'}}
+ACCT208014,{'required': {'ACCT207': 'false'}}
+ACCT208015,{'required': {'ACCT207': 'false'}}
+ACCT208016,{'required': {'ACCT207': 'false'}}
+ACCT208017,{'required': {'ACCT207': 'false'}}
+ACCT208018,{'required': {'ACCT207': 'false'}}
+ACCT208019,{'required': {'ACCT207': 'false'}}
+ACCT208020,{'required': {'ACCT207': 'false'}}
+ACCT208021,{'required': {'ACCT207': 'false'}}
+ACCT208022,{'required': {'ACCT207': 'false'}}
+ACCT208023,{'required': {'ACCT207': 'false'}}
+ACCT208050,{'required': {'ACCT207': 'false'}}
+ACCT208051,{'required': {'ACCT207': 'false'}}
+ACCT302010,{'required': {}}
+ACCT302080,{'required': {}}
+ACCT315010,{'required': {}}
+ACCT315011,{'required': {}}
+ACCT316010,{'required': {'ACCT315': 'false'}}
+ACCT327010,{'required': {'ACCT208': 'false'}}
+ACCT327011,{'required': {'ACCT208': 'false'}}
+ACCT350010,{'required': {}}
+ACCT350080,{'required': {}}
+ACCT351010,{'required': {'ACCT350': 'false'}}
+ACCT351080,{'required': {'ACCT350': 'false'}}
+ACCT352010,{'required': {}}
+ACCT352011,{'required': {}}
+ACCT352012,{'required': {}}
+ACCT352013,{'required': {}}
+ACCT352014,{'required': {}}
+ACCT352014,{'required': {}}
+ACCT352015,{'required': {}}
+ACCT352016,{'required': {}}
+ACCT352017,{'required': {}}
+ACCT363000,{'required': {}}
+ACCT366000,{'required': {}}
+ACCT402010,{'required': {}}
+ACCT413010,{'required': {'ACCT315': 'false'}}
+ACCT413011,{'required': {'ACCT315': 'false'}}
+ACCT414010,{'required': {'ACCT413': 'false'}}
+ACCT414011,{'required': {'ACCT413': 'false'}}
+ACCT415010,{'required': {'ACCT316': 'false'}}
+ACCT416010,{'required': {}}
+ACCT417010,{'required': {'ACCT316': 'false'}}
+ACCT418050,{'required': {}}
+ACCT418051,{'required': {}}
+ACCT420010,{'required': {'ACCT315': 'false'}}
+ACCT425010,{'required': {}}
+ACCT425050,{'required': {}}
+ACCT425080,{'required': {}}
+ACCT425082,{'required': {}}
+ACCT457050,{'required': {}}
+ACCT600196,{'required': {}}
+ACCT600197,{'required': {}}
+ACCT600198,{'required': {}}
+ACCT600199,{'required': {}}
+ACCT602010,{'required': {}}
+ACCT604196,{'required': {}}
+ACCT604197,{'required': {}}
+ACCT606050,{'required': {'ACCT604': 'false'}}
+ACCT610196,{'required': {'ACCT207': 'false'}}
+ACCT611198,{'required': {'ACCT610': 'false'}}
+ACCT613010,{'required': {}}
+ACCT613011,{'required': {}}
+ACCT614010,{'required': {'ACCT413': 'false'}}
+ACCT614011,{'required': {'ACCT413': 'false'}}
+ACCT615010,{'required': {'ACCT612': 'false'}}
+ACCT615196,{'required': {'ACCT612': 'false'}}
+ACCT617010,{'required': {'ACCT612': 'false'}}
+ACCT617011,{'required': {'ACCT612': 'false'}}
+ACCT618050,{'required': {}}
+ACCT618051,{'required': {}}
+ACCT620010,{'required': {'ACCT316': 'false'}}
+ACCT653198,{'required': {'ACCT207': 'false'}}
+ACCT657050,{'required': {}}
+ACCT683050,{'required': {}}
+ADMN102010,{'required': {}}
+ADMN119010,{'required': {}}
+ADMN562011,{'required': {}}
+ADMN562011,{'required': {}}
+ADMN562015,{'required': {}}
+AFRA107010,{'required': {}}
+AFRA107011,{'required': {}}
+AFRA110010,{'required': {}}
+AFRA110012,{'required': {}}
+AFRA110710,{'required': {}}
+AFRA205010,{'required': {}}
+AFRA206010,{'required': {}}
+AFRA206710,{'required': {}}
+AFRA215010,{'required': {}}
+AFRA220010,{'required': {}}
+AFRA220710,{'required': {}}
+AFRA227010,{'required': {}}
+AFRA230010,{'required': {}}
+AFRA240010,{'required': {}}
+AFRA306010,{'required': {}}
+AFRA306011,{'required': {}}
+AFRA307010,{'required': {}}
+AFRA321010,{'required': {}}
+AFRA324010,{'required': {}}
+AFRA334010,{'required': {}}
+AFRA334011,{'required': {}}
+AFRA336010,{'required': {}}
+AFRA336011,{'required': {}}
+AFRA355010,{'required': {}}
+AFRA373010,{'required': {}}
+AFRA418010,{'required': {'SOCI201': 'false'}}
+AFRA445010,{'required': {}}
+AFRA490010,{'required': {'AFRA391': 'false'}}
+AFRA601001D,{'required': {'AFRA600': 'false'}}
+AFRA643010,{'required': {}}
+AFRA645010,{'required': {}}
+AFRA649010,{'required': {}}
+AFRA650010,{'required': {}}
+AFRA666010,{'required': {}}
+AFSC111010,{'required': {}}
+AFSC151010L,{'required': {}}
+AFSC211010,{'required': {}}
+AFSC251010L,{'required': {}}
+AFSC311010,{'required': {}}
+AFSC351010L,{'required': {}}
+AFSC411010,{'required': {}}
+AFSC451010L,{'required': {}}
+AGRI217010,{'required': {}}
+AGRI400010,{'required': {}}
+ANFS102010,{'required': {}}
+ANFS102080,{'required': {}}
+ANFS166000,{'required': {}}
+ANFS166000,{'required': {}}
+ANFS218010,{'required': {}}
+ANFS240010,{'required': {}}
+ANFS240020L,{'required': {}}
+ANFS240021L,{'required': {}}
+ANFS240022L,{'required': {}}
+ANFS240023L,{'required': {}}
+ANFS240024L,{'required': {}}
+ANFS240080,{'required': {}}
+ANFS240081L,{'required': {}}
+ANFS240082L,{'required': {}}
+ANFS240083L,{'required': {}}
+ANFS240084L,{'required': {}}
+ANFS240085L,{'required': {}}
+ANFS251010,{'required': {'ANFS101': 'false'}}
+ANFS251011,{'required': {'ANFS101': 'false'}}
+ANFS252020D,{'required': {}}
+ANFS252021D,{'required': {}}
+ANFS252022D,{'required': {}}
+ANFS252023D,{'required': {}}
+ANFS265010,{'required': {}}
+ANFS267011,{'required': {}}
+ANFS267020D,{'required': {}}
+ANFS267021D,{'required': {}}
+ANFS300010,{'required': {}}
+ANFS305010,{'required': {}}
+ANFS305080,{'required': {}}
+ANFS310010L,{'required': {}}
+ANFS310011L,{'required': {}}
+ANFS310012L,{'required': {}}
+ANFS310014L,{'required': {}}
+ANFS324010,{'required': {}}
+ANFS324080,{'required': {}}
+ANFS340010,{'required': {'MATH114': 'false'}}
+ANFS340020L,{'required': {'MATH114': 'false'}}
+ANFS366000,{'required': {}}
+ANFS399010,{'required': {}}
+ANFS404010,{'required': {'ANFS101': 'false'}}
+ANFS404020L,{'required': {'ANFS101': 'false'}}
+ANFS404080,{'required': {'ANFS101': 'false'}}
+ANFS404080L,{'required': {'ANFS101': 'false'}}
+ANFS404080,{'required': {'ANFS101': 'false'}}
+ANFS411010,{'required': {}}
+ANFS411020L,{'required': {}}
+ANFS411080L,{'required': {}}
+ANFS411080,{'required': {}}
+ANFS415010,{'required': {}}
+ANFS417010,{'required': {}}
+ANFS417020L,{'required': {}}
+ANFS417020L,{'required': {}}
+ANFS417080L,{'required': {}}
+ANFS417080,{'required': {}}
+ANFS426010,{'required': {}}
+ANFS426020L,{'required': {}}
+ANFS426080,{'required': {}}
+ANFS426080L,{'required': {}}
+ANFS429010,{'required': {}}
+ANFS429020L,{'required': {}}
+ANFS436010,{'required': {}}
+ANFS440010,{'required': {}}
+ANFS440020L,{'required': {}}
+ANFS440021L,{'required': {}}
+ANFS440022L,{'required': {}}
+ANFS443010,{'required': {'PHYS201': 'false'}}
+ANFS443020L,{'required': {'PHYS201': 'false'}}
+ANFS449010,{'required': {}}
+ANFS449020L,{'required': {}}
+ANFS449021L,{'required': {}}
+ANFS449080L,{'required': {}}
+ANFS449080,{'required': {}}
+ANFS455010,{'required': {'BISC300': 'false'}}
+ANFS455020D,{'required': {'BISC300': 'false'}}
+ANFS464000,{'required': {}}
+ANFS466000,{'required': {}}
+ANFS467011,{'required': {}}
+ANFS468000,{'required': {}}
+ANFS475010,{'required': {}}
+ANFS611010,{'required': {}}
+ANFS629010,{'required': {}}
+ANFS629020L,{'required': {}}
+ANFS636010,{'required': {}}
+ANFS640010,{'required': {'BISC208': 'false'}}
+ANFS640020L,{'required': {'BISC208': 'false'}}
+ANFS640021L,{'required': {'BISC208': 'false'}}
+ANFS640022L,{'required': {'BISC208': 'false'}}
+ANFS643010,{'required': {}}
+ANFS643020L,{'required': {}}
+ANFS649010,{'required': {}}
+ANFS649020L,{'required': {}}
+ANFS655010,{'required': {'BISC300': 'false'}}
+ANFS655020D,{'required': {'BISC300': 'false'}}
+ANFS667011,{'required': {}}
+ANFS668000,{'required': {}}
+ANFS675010,{'required': {}}
+ANFS865010,{'required': {}}
+ANFS868000,{'required': {}}
+ANFS868002,{'required': {}}
+ANFS869000,{'required': {}}
+ANFS869000,{'required': {}}
+ANFS964000,{'required': {}}
+ANFS969000,{'required': {}}
+ANTH101012,{'required': {}}
+ANTH101013,{'required': {}}
+ANTH101014,{'required': {}}
+ANTH101015,{'required': {}}
+ANTH101070,{'required': {}}
+ANTH101072,{'required': {}}
+ANTH102070,{'required': {}}
+ANTH102071,{'required': {}}
+ANTH103070,{'required': {}}
+ANTH104010,{'required': {}}
+ANTH104080,{'required': {}}
+ANTH104310,{'required': {}}
+ANTH105010,{'required': {}}
+ANTH106010,{'required': {}}
+ANTH167070,{'required': {}}
+ANTH200010,{'required': {}}
+ANTH201710,{'required': {}}
+ANTH202010,{'required': {}}
+ANTH205510,{'required': {}}
+ANTH209010,{'required': {}}
+ANTH223710,{'required': {}}
+ANTH228010,{'required': {}}
+ANTH229010,{'required': {}}
+ANTH232010,{'required': {}}
+ANTH234010,{'required': {}}
+ANTH235071,{'required': {}}
+ANTH235072,{'required': {}}
+ANTH236010,{'required': {}}
+ANTH302010,{'required': {}}
+ANTH304010,{'required': {}}
+ANTH325070,{'required': {}}
+ANTH344010,{'required': {}}
+ANTH350070,{'required': {}}
+ANTH350071,{'required': {}}
+ANTH356010,{'required': {}}
+ANTH356080,{'required': {}}
+ANTH367070,{'required': {}}
+ANTH379010,{'required': {}}
+ANTH381010,{'required': {}}
+ANTH382010,{'required': {}}
+ANTH466000,{'required': {}}
+ANTH486010,{'required': {}}
+ANTH486080,{'required': {}}
+ANTH488010,{'required': {}}
+APEC100010,{'required': {}}
+APEC135010,{'required': {}}
+APEC135010,{'required': {}}
+APEC150010,{'required': {}}
+APEC212010,{'required': {}}
+APEC266000,{'required': {}}
+APEC270010,{'required': {}}
+APEC316010,{'required': {}}
+APEC324010,{'required': {}}
+APEC343010,{'required': {}}
+APEC343070,{'required': {}}
+APEC343071,{'required': {}}
+APEC406010,{'required': {}}
+APEC409010,{'required': {'STAT200': 'false'}}
+APEC412010,{'required': {}}
+APEC480050,{'required': {}}
+APEC609010,{'required': {}}
+APEC805010,{'required': {'APEC801': 'false'}}
+APEC812010,{'required': {}}
+APEC820010,{'required': {}}
+APEC868000,{'required': {}}
+ARAB105010,{'required': {}}
+ARAB105070,{'required': {}}
+ARAB105071,{'required': {}}
+ARAB106010,{'required': {'ARAB105': 'false'}}
+ARAB107010,{'required': {'ARAB106': 'false'}}
+ARAB200010,{'required': {'ARAB107': 'false'}}
+ARAB200080,{'required': {'ARAB107': 'false'}}
+ARAB301010,{'required': {'ARAB205': 'false'}}
+ARSC104310,{'required': {}}
+ARSC104311,{'required': {}}
+ARSC104510,{'required': {}}
+ARSC104710,{'required': {}}
+ARSC104711,{'required': {}}
+ARSC120010,{'required': {}}
+ARSC167013,{'required': {}}
+ARSC293080,{'required': {}}
+ARSC297010,{'required': {}}
+ARSC300010,{'required': {}}
+ARSC301010,{'required': {}}
+ARSC301080,{'required': {}}
+ARSC316080,{'required': {}}
+ART129070,{'required': {}}
+ART129071,{'required': {}}
+ART129072,{'required': {}}
+ART129073,{'required': {}}
+ART129074,{'required': {}}
+ART129710,{'required': {}}
+ART133010,{'required': {}}
+ART133070,{'required': {}}
+ART133071,{'required': {}}
+ART133071,{'required': {}}
+ART133072,{'required': {}}
+ART133073,{'required': {}}
+ART133074,{'required': {}}
+ART167070,{'required': {}}
+ART167071,{'required': {}}
+ART180070,{'required': {}}
+ART180071,{'required': {}}
+ART180072,{'required': {}}
+ART180073,{'required': {}}
+ART180074,{'required': {}}
+ART180075,{'required': {}}
+ART180076,{'required': {}}
+ART180077,{'required': {}}
+ART180078,{'required': {}}
+ART180079,{'required': {}}
+ART180192,{'required': {}}
+ART180193,{'required': {}}
+ART180194,{'required': {}}
+ART180195,{'required': {}}
+ART200010,{'required': {}}
+ART204010,{'required': {}}
+ART204070,{'required': {}}
+ART204071,{'required': {}}
+ART204072,{'required': {}}
+ART204073,{'required': {}}
+ART205010,{'required': {}}
+ART205011,{'required': {}}
+ART208010,{'required': {'ART209': 'false'}}
+ART208011,{'required': {'ART209': 'false'}}
+ART209010,{'required': {}}
+ART209011,{'required': {}}
+ART209070,{'required': {}}
+ART218010,{'required': {}}
+ART230070,{'required': {}}
+ART230071,{'required': {}}
+ART230072,{'required': {}}
+ART231070,{'required': {}}
+ART231071,{'required': {}}
+ART231072,{'required': {}}
+ART231073,{'required': {}}
+ART231074,{'required': {}}
+ART231075,{'required': {}}
+ART231076,{'required': {}}
+ART233070,{'required': {}}
+ART233071,{'required': {}}
+ART235010,{'required': {}}
+ART236010,{'required': {'ART235': 'false'}}
+ART236011,{'required': {'ART235': 'false'}}
+ART236011,{'required': {'ART235': 'false'}}
+ART245010,{'required': {'ART235': 'false'}}
+ART245011,{'required': {'ART235': 'false'}}
+ART250070,{'required': {}}
+ART250071,{'required': {}}
+ART250710,{'required': {}}
+ART255010,{'required': {'ART295': 'false'}}
+ART255011,{'required': {'ART295': 'false'}}
+ART265010,{'required': {}}
+ART265011,{'required': {}}
+ART267072,{'required': {}}
+ART267073,{'required': {}}
+ART280010,{'required': {}}
+ART280710,{'required': {}}
+ART281070,{'required': {}}
+ART281071,{'required': {}}
+ART284010,{'required': {}}
+ART284011,{'required': {}}
+ART285010,{'required': {'ART284': 'false'}}
+ART285011,{'required': {'ART284': 'false'}}
+ART285070,{'required': {'ART284': 'false'}}
+ART289010,{'required': {}}
+ART289070,{'required': {}}
+ART289071,{'required': {}}
+ART289072,{'required': {}}
+ART289073,{'required': {}}
+ART295010,{'required': {}}
+ART295011,{'required': {}}
+ART301010,{'required': {}}
+ART307010,{'required': {'ART205': 'false'}}
+ART310010,{'required': {}}
+ART317010,{'required': {}}
+ART322010,{'required': {}}
+ART324010,{'required': {}}
+ART326010,{'required': {}}
+ART331070,{'required': {}}
+ART331071,{'required': {}}
+ART334010,{'required': {}}
+ART350010,{'required': {}}
+ART350070,{'required': {}}
+ART353010,{'required': {}}
+ART384010,{'required': {}}
+ART384070,{'required': {}}
+ART384071,{'required': {}}
+ART393010,{'required': {}}
+ART401010,{'required': {}}
+ART403010,{'required': {}}
+ART408002,{'required': {}}
+ART408003,{'required': {}}
+ART408003,{'required': {}}
+ART416010,{'required': {}}
+ART417002,{'required': {}}
+ART417003,{'required': {}}
+ART419010,{'required': {'ART416': 'false'}}
+ART432070,{'required': {}}
+ART450010,{'required': {'ART350': 'false'}}
+ART481010L,{'required': {}}
+ART481011L,{'required': {}}
+ART600010,{'required': {}}
+ART679000,{'required': {}}
+ART698010,{'required': {}}
+ART699010,{'required': {}}
+ARTC302010,{'required': {}}
+ARTC302080,{'required': {}}
+ARTC464002,{'required': {}}
+ARTC464006,{'required': {}}
+ARTC464013,{'required': {}}
+ARTC467011,{'required': {}}
+ARTC467012,{'required': {}}
+ARTC488010,{'required': {}}
+ARTC616010,{'required': {'ARTC615': 'false'}}
+ARTC650050,{'required': {}}
+ARTC657001,{'required': {}}
+ARTC659000,{'required': {}}
+ARTC666000,{'required': {}}
+ARTC667013,{'required': {}}
+ARTC667016,{'required': {}}
+ARTC667017,{'required': {}}
+ARTC667018,{'required': {}}
+ARTC671010,{'required': {'ARTC670': 'false'}}
+ARTC673010,{'required': {}}
+ARTC866000,{'required': {}}
+ARTC870000,{'required': {}}
+ARTC969000,{'required': {}}
+ARTH101010,{'required': {}}
+ARTH101070,{'required': {}}
+ARTH150070,{'required': {}}
+ARTH151310,{'required': {}}
+ARTH154010,{'required': {}}
+ARTH154020D,{'required': {}}
+ARTH154021D,{'required': {}}
+ARTH154022D,{'required': {}}
+ARTH154023D,{'required': {}}
+ARTH154024D,{'required': {}}
+ARTH154025D,{'required': {}}
+ARTH154080D,{'required': {}}
+ARTH154080,{'required': {}}
+ARTH154310,{'required': {}}
+ARTH154310,{'required': {}}
+ARTH166000,{'required': {}}
+ARTH198070,{'required': {}}
+ARTH198071,{'required': {}}
+ARTH198072,{'required': {}}
+ARTH198073,{'required': {}}
+ARTH198074,{'required': {}}
+ARTH199070,{'required': {}}
+ARTH199071,{'required': {}}
+ARTH199072,{'required': {}}
+ARTH199073,{'required': {}}
+ARTH199074,{'required': {}}
+ARTH199075,{'required': {}}
+ARTH199076,{'required': {}}
+ARTH199077,{'required': {}}
+ARTH199078,{'required': {}}
+ARTH199079,{'required': {}}
+ARTH199100,{'required': {}}
+ARTH199101,{'required': {}}
+ARTH199710,{'required': {}}
+ARTH210010,{'required': {}}
+ARTH210080,{'required': {}}
+ARTH218010,{'required': {}}
+ARTH218080,{'required': {}}
+ARTH225011,{'required': {}}
+ARTH236070,{'required': {}}
+ARTH236710,{'required': {}}
+ARTH239072,{'required': {}}
+ARTH239073,{'required': {}}
+ARTH239074,{'required': {}}
+ARTH239075,{'required': {}}
+ARTH239076,{'required': {}}
+ARTH239077,{'required': {}}
+ARTH239078,{'required': {}}
+ARTH239079,{'required': {}}
+ARTH239100,{'required': {}}
+ARTH239101,{'required': {}}
+ARTH239102,{'required': {}}
+ARTH239103,{'required': {}}
+ARTH239104,{'required': {}}
+ARTH239105,{'required': {}}
+ARTH239106,{'required': {}}
+ARTH239107,{'required': {}}
+ARTH239108,{'required': {}}
+ARTH239109,{'required': {}}
+ARTH239110,{'required': {}}
+ARTH239111,{'required': {}}
+ARTH242070,{'required': {}}
+ARTH264000,{'required': {}}
+ARTH264000,{'required': {}}
+ARTH266000,{'required': {}}
+ARTH301010,{'required': {}}
+ARTH301080,{'required': {}}
+ARTH311011,{'required': {}}
+ARTH321010,{'required': {}}
+ARTH321080,{'required': {}}
+ARTH366000,{'required': {}}
+ARTH406012,{'required': {}}
+ARTH429010,{'required': {}}
+ARTH455010,{'required': {}}
+ARTH464000,{'required': {}}
+ARTH466000,{'required': {}}
+ARTH606012,{'required': {}}
+ARTH610010,{'required': {}}
+ARTH627011,{'required': {}}
+ARTH629010,{'required': {}}
+ARTH655010,{'required': {}}
+ARTH663000,{'required': {}}
+ARTH664000,{'required': {}}
+ARTH666000,{'required': {}}
+ARTH851010,{'required': {}}
+ARTH860000,{'required': {}}
+ARTH866000,{'required': {}}
+ARTH870000,{'required': {}}
+ARTH964000,{'required': {}}
+ARTH969000,{'required': {}}
+ASIA466010,{'required': {}}
+BHAN106010,{'required': {}}
+BHAN120010L,{'required': {}}
+BHAN120011L,{'required': {}}
+BHAN120012L,{'required': {}}
+BHAN120013L,{'required': {}}
+BHAN120014L,{'required': {}}
+BHAN120017L,{'required': {}}
+BHAN120018L,{'required': {}}
+BHAN120019L,{'required': {}}
+BHAN120021L,{'required': {}}
+BHAN120023L,{'required': {}}
+BHAN120024L,{'required': {}}
+BHAN120025L,{'required': {}}
+BHAN120027L,{'required': {}}
+BHAN120030L,{'required': {}}
+BHAN120032L,{'required': {}}
+BHAN120033L,{'required': {}}
+BHAN120034L,{'required': {}}
+BHAN120036L,{'required': {}}
+BHAN120037L,{'required': {}}
+BHAN120038L,{'required': {}}
+BHAN120038L,{'required': {}}
+BHAN120039L,{'required': {}}
+BHAN120043L,{'required': {}}
+BHAN120045L,{'required': {}}
+BHAN120046L,{'required': {}}
+BHAN120047L,{'required': {}}
+BHAN120052L,{'required': {}}
+BHAN120054L,{'required': {}}
+BHAN130016,{'required': {}}
+BHAN130022,{'required': {}}
+BHAN130025,{'required': {}}
+BHAN130028,{'required': {}}
+BHAN130029,{'required': {}}
+BHAN130031,{'required': {}}
+BHAN130035,{'required': {}}
+BHAN130036,{'required': {}}
+BHAN130037,{'required': {}}
+BHAN130040,{'required': {}}
+BHAN130196,{'required': {}}
+BHAN130197,{'required': {}}
+BHAN130198,{'required': {}}
+BHAN130199,{'required': {}}
+BHAN155010,{'required': {}}
+BHAN155011,{'required': {}}
+BHAN155012,{'required': {}}
+BHAN155014,{'required': {}}
+BHAN155015,{'required': {}}
+BHAN155016,{'required': {}}
+BHAN155017,{'required': {}}
+BHAN155018,{'required': {}}
+BHAN160010,{'required': {'BHAN155': 'false'}}
+BHAN166000,{'required': {}}
+BHAN168000,{'required': {}}
+BHAN256010D,{'required': {}}
+BHAN263010L,{'required': {}}
+BHAN266000,{'required': {}}
+BHAN268000,{'required': {}}
+BHAN301050,{'required': {}}
+BHAN302010,{'required': {}}
+BHAN304010,{'required': {}}
+BHAN311010,{'required': {'BHAN155': 'false'}}
+BHAN311011,{'required': {'BHAN155': 'false'}}
+BHAN326010,{'required': {'STAT200': 'false'}}
+BHAN326020D,{'required': {'STAT200': 'false'}}
+BHAN326021D,{'required': {'STAT200': 'false'}}
+BHAN332010,{'required': {'BHAN155': 'false'}}
+BHAN332011,{'required': {'BHAN155': 'false'}}
+BHAN334010,{'required': {}}
+BHAN334011,{'required': {}}
+BHAN334011,{'required': {}}
+BHAN334081,{'required': {}}
+BHAN335010,{'required': {}}
+BHAN335080,{'required': {}}
+BHAN342010,{'required': {}}
+BHAN342011,{'required': {}}
+BHAN342012,{'required': {}}
+BHAN342081,{'required': {}}
+BHAN366000,{'required': {}}
+BHAN368000,{'required': {}}
+BHAN403010L,{'required': {}}
+BHAN435010,{'required': {}}
+BHAN435070,{'required': {}}
+BHAN440010,{'required': {}}
+BHAN445050,{'required': {'BHAN342': 'false'}}
+BHAN445080,{'required': {'BHAN342': 'false'}}
+BHAN460010L,{'required': {}}
+BHAN464010,{'required': {}}
+BHAN466000,{'required': {}}
+BHAN468000,{'required': {}}
+BHAN490010,{'required': {'BHAN334': 'false'}}
+BHAN645050,{'required': {}}
+BHAN666000,{'required': {}}
+BHAN820010,{'required': {}}
+BHAN820011,{'required': {}}
+BHAN856050,{'required': {'STAT656': 'false'}}
+BINF610010,{'required': {}}
+BINF640010,{'required': {}}
+BINF640194,{'required': {}}
+BINF644010,{'required': {}}
+BINF644194,{'required': {}}
+BINF650010,{'required': {}}
+BINF666000,{'required': {}}
+BINF667016,{'required': {}}
+BINF695010,{'required': {}}
+BINF864000,{'required': {}}
+BINF865010D,{'required': {}}
+BINF869000,{'required': {}}
+BINF964000,{'required': {}}
+BINF969000,{'required': {}}
+BISC103710,{'required': {}}
+BISC104010,{'required': {}}
+BISC104011,{'required': {}}
+BISC104020L,{'required': {}}
+BISC104021L,{'required': {}}
+BISC104030L,{'required': {}}
+BISC104031L,{'required': {}}
+BISC104032L,{'required': {}}
+BISC104033L,{'required': {}}
+BISC104033L,{'required': {}}
+BISC104034L,{'required': {}}
+BISC104040L,{'required': {}}
+BISC104041L,{'required': {}}
+BISC104194,{'required': {}}
+BISC104194L,{'required': {}}
+BISC104195,{'required': {}}
+BISC104195L,{'required': {}}
+BISC104310,{'required': {}}
+BISC104310L,{'required': {}}
+BISC105192,{'required': {}}
+BISC105193,{'required': {}}
+BISC105194,{'required': {}}
+BISC105195,{'required': {}}
+BISC105710,{'required': {}}
+BISC106010,{'required': {}}
+BISC107710,{'required': {}}
+BISC113710L,{'required': {}}
+BISC115710L,{'required': {}}
+BISC171194,{'required': {}}
+BISC171195,{'required': {}}
+BISC207010,{'required': {}}
+BISC207011,{'required': {}}
+BISC207012,{'required': {}}
+BISC207020L,{'required': {}}
+BISC207021L,{'required': {}}
+BISC207022L,{'required': {}}
+BISC207023L,{'required': {}}
+BISC207024L,{'required': {}}
+BISC207030L,{'required': {}}
+BISC207031L,{'required': {}}
+BISC207032L,{'required': {}}
+BISC207033L,{'required': {}}
+BISC207034L,{'required': {}}
+BISC207040L,{'required': {}}
+BISC207041L,{'required': {}}
+BISC207042L,{'required': {}}
+BISC207043L,{'required': {}}
+BISC207044L,{'required': {}}
+BISC207070,{'required': {}}
+BISC207071,{'required': {}}
+BISC208030,{'required': {'BISC207': 'false'}}
+BISC208030L,{'required': {'BISC207': 'false'}}
+BISC208031L,{'required': {'BISC207': 'false'}}
+BISC208032L,{'required': {'BISC207': 'false'}}
+BISC208033L,{'required': {'BISC207': 'false'}}
+BISC208040,{'required': {'BISC207': 'false'}}
+BISC208040L,{'required': {'BISC207': 'false'}}
+BISC208041L,{'required': {'BISC207': 'false'}}
+BISC208041L,{'required': {'BISC207': 'false'}}
+BISC208042L,{'required': {'BISC207': 'false'}}
+BISC208043L,{'required': {'BISC207': 'false'}}
+BISC208060,{'required': {'BISC207': 'false'}}
+BISC208061L,{'required': {'BISC207': 'false'}}
+BISC208062L,{'required': {'BISC207': 'false'}}
+BISC208063L,{'required': {'BISC207': 'false'}}
+BISC208070,{'required': {'BISC207': 'false'}}
+BISC208071,{'required': {'BISC207': 'false'}}
+BISC208084,{'required': {'BISC207': 'false'}}
+BISC208084L,{'required': {'BISC207': 'false'}}
+BISC208085L,{'required': {'BISC207': 'false'}}
+BISC208085,{'required': {'BISC207': 'false'}}
+BISC208110L,{'required': {'BISC207': 'false'}}
+BISC208110,{'required': {'BISC207': 'false'}}
+BISC208111L,{'required': {'BISC207': 'false'}}
+BISC208111,{'required': {'BISC207': 'false'}}
+BISC208112L,{'required': {'BISC207': 'false'}}
+BISC208112,{'required': {'BISC207': 'false'}}
+BISC208114L,{'required': {'BISC207': 'false'}}
+BISC208114,{'required': {'BISC207': 'false'}}
+BISC208115L,{'required': {'BISC207': 'false'}}
+BISC208115,{'required': {'BISC207': 'false'}}
+BISC208116L,{'required': {'BISC207': 'false'}}
+BISC208116,{'required': {'BISC207': 'false'}}
+BISC208117L,{'required': {'BISC207': 'false'}}
+BISC208117,{'required': {'BISC207': 'false'}}
+BISC208120L,{'required': {'BISC207': 'false'}}
+BISC208120,{'required': {'BISC207': 'false'}}
+BISC208121L,{'required': {'BISC207': 'false'}}
+BISC208121,{'required': {'BISC207': 'false'}}
+BISC208122L,{'required': {'BISC207': 'false'}}
+BISC208122,{'required': {'BISC207': 'false'}}
+BISC208124L,{'required': {'BISC207': 'false'}}
+BISC208124,{'required': {'BISC207': 'false'}}
+BISC208125L,{'required': {'BISC207': 'false'}}
+BISC208125,{'required': {'BISC207': 'false'}}
+BISC208126L,{'required': {'BISC207': 'false'}}
+BISC208126,{'required': {'BISC207': 'false'}}
+BISC208127L,{'required': {'BISC207': 'false'}}
+BISC208127,{'required': {'BISC207': 'false'}}
+BISC208310,{'required': {'BISC207': 'false'}}
+BISC208310L,{'required': {'BISC207': 'false'}}
+BISC208710L,{'required': {'BISC207': 'false'}}
+BISC208710,{'required': {'BISC207': 'false'}}
+BISC267070,{'required': {}}
+BISC267071,{'required': {}}
+BISC267072,{'required': {}}
+BISC276070,{'required': {}}
+BISC276070,{'required': {}}
+BISC276194,{'required': {}}
+BISC276195,{'required': {}}
+BISC276510,{'required': {}}
+BISC300010,{'required': {'BISC207': 'false'}}
+BISC300011,{'required': {'BISC207': 'false'}}
+BISC300012,{'required': {'BISC207': 'false'}}
+BISC300013,{'required': {'BISC207': 'false'}}
+BISC300020L,{'required': {'BISC207': 'false'}}
+BISC300021L,{'required': {'BISC207': 'false'}}
+BISC300022L,{'required': {'BISC207': 'false'}}
+BISC300023L,{'required': {'BISC207': 'false'}}
+BISC300024L,{'required': {'BISC207': 'false'}}
+BISC300025L,{'required': {'BISC207': 'false'}}
+BISC300026L,{'required': {'BISC207': 'false'}}
+BISC300027L,{'required': {'BISC207': 'false'}}
+BISC300028L,{'required': {'BISC207': 'false'}}
+BISC300029L,{'required': {'BISC207': 'false'}}
+BISC300030L,{'required': {'BISC207': 'false'}}
+BISC300031L,{'required': {'BISC207': 'false'}}
+BISC302010,{'required': {'BISC208': 'false'}}
+BISC302070,{'required': {'BISC208': 'false'}}
+BISC302071,{'required': {'BISC208': 'false'}}
+BISC305010,{'required': {}}
+BISC305070,{'required': {}}
+BISC305071,{'required': {}}
+BISC306010,{'required': {'BISC208': 'false'}}
+BISC306080,{'required': {'BISC208': 'false'}}
+BISC312010,{'required': {'BISC302': 'false'}}
+BISC312020L,{'required': {'BISC302': 'false'}}
+BISC315010,{'required': {}}
+BISC315011,{'required': {}}
+BISC315020L,{'required': {}}
+BISC315030L,{'required': {}}
+BISC316010,{'required': {}}
+BISC316011,{'required': {}}
+BISC316020L,{'required': {}}
+BISC316030L,{'required': {}}
+BISC366070,{'required': {}}
+BISC367070,{'required': {}}
+BISC367071,{'required': {}}
+BISC367072,{'required': {}}
+BISC367073,{'required': {}}
+BISC367074,{'required': {}}
+BISC400010,{'required': {'BISC208': 'false'}}
+BISC400011,{'required': {'BISC208': 'false'}}
+BISC400012,{'required': {'BISC208': 'false'}}
+BISC400013,{'required': {'BISC208': 'false'}}
+BISC401010,{'required': {'BISC207': 'false'}}
+BISC401010,{'required': {'BISC207': 'false'}}
+BISC403010,{'required': {'BISC207': 'false'}}
+BISC403011,{'required': {'BISC207': 'false'}}
+BISC403012,{'required': {'BISC207': 'false'}}
+BISC411010L,{'required': {}}
+BISC413010L,{'required': {}}
+BISC414010,{'required': {}}
+BISC415010,{'required': {}}
+BISC422000,{'required': {}}
+BISC425010,{'required': {}}
+BISC435010,{'required': {'BISC302': 'false'}}
+BISC451000,{'required': {}}
+BISC452000,{'required': {'BISC451': 'false'}}
+BISC466000,{'required': {}}
+BISC467010,{'required': {}}
+BISC467011,{'required': {}}
+BISC467020L,{'required': {}}
+BISC468000,{'required': {}}
+BISC484010L,{'required': {}}
+BISC484080L,{'required': {}}
+BISC495010,{'required': {'BISC208': 'false'}}
+BISC606010,{'required': {'BISC605': 'false'}}
+BISC612010,{'required': {}}
+BISC614010,{'required': {}}
+BISC615010,{'required': {}}
+BISC625010,{'required': {}}
+BISC635010,{'required': {}}
+BISC654010,{'required': {}}
+BISC666010,{'required': {}}
+BISC667010,{'required': {}}
+BISC682010,{'required': {'BISC300': 'false'}}
+BISC690010,{'required': {}}
+BISC827010D,{'required': {}}
+BISC827011D,{'required': {}}
+BISC830010D,{'required': {}}
+BISC850010,{'required': {}}
+BISC864000,{'required': {}}
+BISC868000,{'required': {}}
+BISC869000,{'required': {}}
+BISC872000,{'required': {}}
+BISC964000,{'required': {}}
+BISC969000,{'required': {}}
+BMEG100010,{'required': {}}
+BMEG100020L,{'required': {}}
+BMEG100021L,{'required': {}}
+BMEG100022L,{'required': {}}
+BMEG230010,{'required': {'MATH242': 'false'}}
+BMEG230080,{'required': {'MATH242': 'false'}}
+BMEG260010,{'required': {'BMEG100': 'false'}}
+BMEG260010,{'required': {'BMEG100': 'false'}}
+BMEG260020L,{'required': {'BMEG100': 'false'}}
+BMEG302010,{'required': {}}
+BMEG302080,{'required': {}}
+BMEG311010,{'required': {}}
+BMEG311080,{'required': {}}
+BMEG341010,{'required': {}}
+BMEG341080,{'required': {}}
+BMEG360010,{'required': {}}
+BMEG360020L,{'required': {}}
+BMEG360021L,{'required': {}}
+BMEG360022L,{'required': {}}
+BMEG366000,{'required': {}}
+BMEG420010,{'required': {}}
+BMEG443010,{'required': {}}
+BMEG445010,{'required': {}}
+BMEG446010,{'required': {}}
+BMEG464010,{'required': {'MSEG302': 'false'}}
+BMEG466000,{'required': {}}
+BMEG471010,{'required': {}}
+BMEG643010,{'required': {'ELEG305': 'false'}}
+BMEG645010,{'required': {}}
+BMEG646010,{'required': {}}
+BMEG671010,{'required': {}}
+BMEG866000,{'required': {}}
+BMEG867011,{'required': {}}
+BMEG868000,{'required': {}}
+BMEG890015,{'required': {}}
+BMEG964000,{'required': {}}
+BMEG969000,{'required': {}}
+BMSC622010,{'required': {}}
+BMSC652010,{'required': {}}
+BMSC667013,{'required': {}}
+BMSC865010,{'required': {}}
+BMSC866000,{'required': {}}
+BMSC867010,{'required': {}}
+BMSC868000,{'required': {}}
+BMSC869000,{'required': {}}
+BMSC964000,{'required': {}}
+BMSC969000,{'required': {}}
+BUAD100194,{'required': {}}
+BUAD100195,{'required': {}}
+BUAD110011,{'required': {}}
+BUAD150194,{'required': {}}
+BUAD150195,{'required': {}}
+BUAD301010,{'required': {}}
+BUAD301011,{'required': {}}
+BUAD301012,{'required': {}}
+BUAD301013,{'required': {}}
+BUAD301013,{'required': {}}
+BUAD301014,{'required': {}}
+BUAD301015,{'required': {}}
+BUAD301016,{'required': {}}
+BUAD301017,{'required': {}}
+BUAD301018,{'required': {}}
+BUAD301019,{'required': {}}
+BUAD301070,{'required': {}}
+BUAD301072,{'required': {}}
+BUAD301073,{'required': {}}
+BUAD301074,{'required': {}}
+BUAD301075,{'required': {}}
+BUAD301076,{'required': {}}
+BUAD301194,{'required': {}}
+BUAD301195,{'required': {}}
+BUAD302010,{'required': {}}
+BUAD302011,{'required': {}}
+BUAD302012,{'required': {}}
+BUAD302070,{'required': {}}
+BUAD302071,{'required': {}}
+BUAD306010,{'required': {'STAT200': 'false'}}
+BUAD306011,{'required': {'STAT200': 'false'}}
+BUAD306012,{'required': {'STAT200': 'false'}}
+BUAD306013,{'required': {'STAT200': 'false'}}
+BUAD306014,{'required': {'STAT200': 'false'}}
+BUAD306015,{'required': {'STAT200': 'false'}}
+BUAD306016,{'required': {'STAT200': 'false'}}
+BUAD306070,{'required': {'STAT200': 'false'}}
+BUAD306072,{'required': {'STAT200': 'false'}}
+BUAD306073,{'required': {'STAT200': 'false'}}
+BUAD306074,{'required': {'STAT200': 'false'}}
+BUAD306075,{'required': {'STAT200': 'false'}}
+BUAD306076,{'required': {'STAT200': 'false'}}
+BUAD306194,{'required': {'STAT200': 'false'}}
+BUAD306195,{'required': {'STAT200': 'false'}}
+BUAD309010,{'required': {}}
+BUAD309011,{'required': {}}
+BUAD309012,{'required': {}}
+BUAD309013,{'required': {}}
+BUAD309014,{'required': {}}
+BUAD309015,{'required': {}}
+BUAD309016,{'required': {}}
+BUAD309017,{'required': {}}
+BUAD309018,{'required': {}}
+BUAD309019,{'required': {}}
+BUAD309050,{'required': {}}
+BUAD309070,{'required': {}}
+BUAD309072,{'required': {}}
+BUAD309073,{'required': {}}
+BUAD309073,{'required': {}}
+BUAD309074,{'required': {}}
+BUAD309075,{'required': {}}
+BUAD309076,{'required': {}}
+BUAD309080,{'required': {}}
+BUAD309194,{'required': {}}
+BUAD309195,{'required': {}}
+BUAD345010,{'required': {'MISY262': 'false'}}
+BUAD346010,{'required': {'BUAD306': 'false'}}
+BUAD346012,{'required': {'BUAD306': 'false'}}
+BUAD346080,{'required': {'BUAD306': 'false'}}
+BUAD350010,{'required': {}}
+BUAD350011,{'required': {}}
+BUAD350012,{'required': {}}
+BUAD350013,{'required': {}}
+BUAD350014,{'required': {}}
+BUAD350015,{'required': {}}
+BUAD350016,{'required': {}}
+BUAD350017,{'required': {}}
+BUAD350050,{'required': {}}
+BUAD350051,{'required': {}}
+BUAD351010,{'required': {}}
+BUAD351011,{'required': {}}
+BUAD351012,{'required': {}}
+BUAD364011,{'required': {}}
+BUAD364071,{'required': {}}
+BUAD364073,{'required': {}}
+BUAD364074,{'required': {}}
+BUAD364075,{'required': {}}
+BUAD364076,{'required': {}}
+BUAD364077,{'required': {}}
+BUAD367073,{'required': {}}
+BUAD384010,{'required': {}}
+BUAD384071,{'required': {}}
+BUAD384072,{'required': {}}
+BUAD384075,{'required': {}}
+BUAD384076,{'required': {}}
+BUAD384077,{'required': {}}
+BUAD384078,{'required': {}}
+BUAD384079,{'required': {}}
+BUAD386010,{'required': {}}
+BUAD386072,{'required': {}}
+BUAD386073,{'required': {}}
+BUAD386074,{'required': {}}
+BUAD415010,{'required': {}}
+BUAD421010,{'required': {'BUAD309': 'false'}}
+BUAD421011,{'required': {'BUAD309': 'false'}}
+BUAD421070,{'required': {'BUAD309': 'false'}}
+BUAD421071,{'required': {'BUAD309': 'false'}}
+BUAD421071,{'required': {'BUAD309': 'false'}}
+BUAD421072,{'required': {'BUAD309': 'false'}}
+BUAD423010,{'required': {'BUAD309': 'false'}}
+BUAD423011,{'required': {'BUAD309': 'false'}}
+BUAD423012,{'required': {'BUAD309': 'false'}}
+BUAD424010,{'required': {'BUAD309': 'false'}}
+BUAD424011,{'required': {'BUAD309': 'false'}}
+BUAD425070,{'required': {}}
+BUAD429010,{'required': {'BUAD309': 'false'}}
+BUAD429071,{'required': {'BUAD309': 'false'}}
+BUAD430010,{'required': {'BUAD309': 'false'}}
+BUAD431050,{'required': {'BUAD421': 'false'}}
+BUAD441010,{'required': {}}
+BUAD441011,{'required': {}}
+BUAD441012,{'required': {}}
+BUAD441013,{'required': {}}
+BUAD441014,{'required': {}}
+BUAD441015,{'required': {}}
+BUAD441016,{'required': {}}
+BUAD441017,{'required': {}}
+BUAD441050,{'required': {}}
+BUAD441071,{'required': {}}
+BUAD442010,{'required': {'BUAD345': 'false'}}
+BUAD444010,{'required': {'BUAD309': 'false'}}
+BUAD444011,{'required': {'BUAD309': 'false'}}
+BUAD445010,{'required': {}}
+BUAD448010,{'required': {}}
+BUAD448012,{'required': {}}
+BUAD449010,{'required': {}}
+BUAD449011,{'required': {}}
+BUAD470050,{'required': {'BUAD301': 'false'}}
+BUAD470051,{'required': {'BUAD301': 'false'}}
+BUAD471010,{'required': {'BUAD301': 'false'}}
+BUAD471011,{'required': {'BUAD301': 'false'}}
+BUAD471012,{'required': {'BUAD301': 'false'}}
+BUAD471070,{'required': {'BUAD301': 'false'}}
+BUAD471072,{'required': {'BUAD301': 'false'}}
+BUAD471194,{'required': {'BUAD301': 'false'}}
+BUAD471195,{'required': {'BUAD301': 'false'}}
+BUAD472070,{'required': {'BUAD301': 'false'}}
+BUAD473010,{'required': {'BUAD301': 'false'}}
+BUAD473011,{'required': {'BUAD301': 'false'}}
+BUAD473070,{'required': {'BUAD301': 'false'}}
+BUAD473071,{'required': {'BUAD301': 'false'}}
+BUAD473072,{'required': {'BUAD301': 'false'}}
+BUAD473073,{'required': {'BUAD301': 'false'}}
+BUAD473074,{'required': {'BUAD301': 'false'}}
+BUAD475010,{'required': {}}
+BUAD475011,{'required': {}}
+BUAD475011,{'required': {}}
+BUAD475071,{'required': {}}
+BUAD475075,{'required': {}}
+BUAD475076,{'required': {}}
+BUAD475077,{'required': {}}
+BUAD475078,{'required': {}}
+BUAD475079,{'required': {}}
+BUAD475100,{'required': {}}
+BUAD476010,{'required': {}}
+BUAD476011,{'required': {}}
+BUAD476012,{'required': {}}
+BUAD477010,{'required': {'BUAD301': 'false'}}
+BUAD477011,{'required': {'BUAD301': 'false'}}
+BUAD477071,{'required': {'BUAD301': 'false'}}
+BUAD477072,{'required': {'BUAD301': 'false'}}
+BUAD478010,{'required': {'BUAD302': 'false'}}
+BUAD478080,{'required': {'BUAD302': 'false'}}
+BUAD479010,{'required': {'BUAD302': 'false'}}
+BUAD479011,{'required': {'BUAD302': 'false'}}
+BUAD479012,{'required': {'BUAD302': 'false'}}
+BUAD479050,{'required': {'BUAD302': 'false'}}
+BUAD479080,{'required': {'BUAD302': 'false'}}
+BUAD481050,{'required': {}}
+BUAD483050,{'required': {}}
+BUAD483051,{'required': {}}
+BUAD620050,{'required': {}}
+BUAD620196,{'required': {}}
+BUAD620197,{'required': {}}
+BUAD620198,{'required': {}}
+BUAD620199,{'required': {}}
+BUAD621050,{'required': {'BUAD820': 'false'}}
+BUAD622198,{'required': {'BUAD820': 'false'}}
+BUAD622199,{'required': {'BUAD820': 'false'}}
+BUAD625050,{'required': {}}
+BUAD631050,{'required': {'BUAD620': 'false'}}
+BUAD631196,{'required': {'BUAD620': 'false'}}
+BUAD631197,{'required': {'BUAD620': 'false'}}
+BUAD631198,{'required': {'BUAD620': 'false'}}
+BUAD631199,{'required': {'BUAD620': 'false'}}
+BUAD640050,{'required': {}}
+BUAD640196,{'required': {}}
+BUAD640197,{'required': {}}
+BUAD640198,{'required': {}}
+BUAD640199,{'required': {}}
+BUAD641050,{'required': {}}
+BUAD641198,{'required': {}}
+BUAD641199,{'required': {}}
+BUAD648196,{'required': {}}
+BUAD648197,{'required': {}}
+BUAD648197,{'required': {}}
+BUAD664011,{'required': {}}
+BUAD670050,{'required': {}}
+BUAD670196,{'required': {}}
+BUAD670197,{'required': {}}
+BUAD670198,{'required': {}}
+BUAD670199,{'required': {}}
+BUAD672196,{'required': {}}
+BUAD672197,{'required': {}}
+BUAD673198,{'required': {'BUAD670': 'false'}}
+BUAD673199,{'required': {'BUAD670': 'false'}}
+BUAD678050,{'required': {'BUAD670': 'false'}}
+BUAD678198,{'required': {'BUAD670': 'false'}}
+BUAD678199,{'required': {'BUAD670': 'false'}}
+BUAD679198,{'required': {'BUAD670': 'false'}}
+BUAD679199,{'required': {'BUAD670': 'false'}}
+BUAD680050,{'required': {}}
+BUAD680198,{'required': {}}
+BUAD680199,{'required': {}}
+BUAD682196,{'required': {'BUAD680': 'false'}}
+BUAD682197,{'required': {'BUAD680': 'false'}}
+BUAD690050,{'required': {}}
+BUAD690196,{'required': {}}
+BUAD690197,{'required': {}}
+BUAD690198,{'required': {}}
+BUAD690199,{'required': {}}
+BUAD866000,{'required': {}}
+BUEC101050,{'required': {}}
+BUEC601196,{'required': {}}
+BUEC601197,{'required': {}}
+BUEC603198,{'required': {}}
+BUEC603199,{'required': {}}
+CGSC102010,{'required': {}}
+CGSC170010,{'required': {}}
+CGSC170011,{'required': {}}
+CGSC202001,{'required': {}}
+CGSC266000,{'required': {}}
+CGSC330080,{'required': {}}
+CGSC360010,{'required': {'CGSC379': 'false'}}
+CGSC366000,{'required': {}}
+CGSC376010,{'required': {'LING101': 'false'}}
+CGSC377010,{'required': {'CGSC376': 'false'}}
+CGSC377080,{'required': {'CGSC376': 'false'}}
+CGSC378010,{'required': {}}
+CGSC380010,{'required': {}}
+CGSC433010,{'required': {'LING353': 'false'}}
+CGSC433080,{'required': {'LING353': 'false'}}
+CGSC451010,{'required': {'CGSC170': 'false'}}
+CGSC466000,{'required': {}}
+CGSC466000,{'required': {}}
+CGSC470010,{'required': {}}
+CGSC470080,{'required': {}}
+CGSC481010,{'required': {}}
+CGSC496010,{'required': {}}
+CGSC633010,{'required': {}}
+CGSC651010,{'required': {}}
+CGSC666000,{'required': {}}
+CGSC670010,{'required': {}}
+CGSC681010,{'required': {'CISC220': 'false'}}
+CGSC696010,{'required': {}}
+CGSC890010,{'required': {}}
+CHEG112010,{'required': {'MATH241': 'false'}}
+CHEG112020L,{'required': {'MATH241': 'false'}}
+CHEG112021L,{'required': {'MATH241': 'false'}}
+CHEG112022L,{'required': {'MATH241': 'false'}}
+CHEG112023L,{'required': {'MATH241': 'false'}}
+CHEG112080,{'required': {'MATH241': 'false'}}
+CHEG112080L,{'required': {'MATH241': 'false'}}
+CHEG112081L,{'required': {'MATH241': 'false'}}
+CHEG112082L,{'required': {'MATH241': 'false'}}
+CHEG112083L,{'required': {'MATH241': 'false'}}
+CHEG266000,{'required': {}}
+CHEG304010,{'required': {}}
+CHEG304080,{'required': {}}
+CHEG325010,{'required': {'CHEG231': 'false'}}
+CHEG325011,{'required': {'CHEG231': 'false'}}
+CHEG342010,{'required': {'CHEG341': 'false'}}
+CHEG342011,{'required': {'CHEG341': 'false'}}
+CHEG345010,{'required': {}}
+CHEG345020L,{'required': {}}
+CHEG345021L,{'required': {}}
+CHEG345022L,{'required': {}}
+CHEG345023L,{'required': {}}
+CHEG366000,{'required': {}}
+CHEG420010,{'required': {'MATH243': 'false'}}
+CHEG432010,{'required': {}}
+CHEG432080,{'required': {}}
+CHEG466000,{'required': {}}
+CHEG474010,{'required': {}}
+CHEG603010,{'required': {}}
+CHEG603011,{'required': {}}
+CHEG615010,{'required': {'CHEG341': 'false'}}
+CHEG621010,{'required': {}}
+CHEG663010,{'required': {}}
+CHEG663011,{'required': {}}
+CHEG664010,{'required': {'CHEG661': 'false'}}
+CHEG665001,{'required': {}}
+CHEG666000,{'required': {}}
+CHEG666000,{'required': {}}
+CHEG667010,{'required': {}}
+CHEG803010,{'required': {}}
+CHEG803011,{'required': {}}
+CHEG830010,{'required': {}}
+CHEG832010,{'required': {}}
+CHEG840010,{'required': {}}
+CHEG843010,{'required': {}}
+CHEG850010,{'required': {}}
+CHEG851010,{'required': {}}
+CHEG860010,{'required': {'CHEG802': 'false'}}
+CHEG861010,{'required': {}}
+CHEG866000,{'required': {}}
+CHEG867010,{'required': {}}
+CHEG867011,{'required': {}}
+CHEG867014,{'required': {}}
+CHEG867015,{'required': {}}
+CHEG868000,{'required': {}}
+CHEG869000,{'required': {}}
+CHEG964000,{'required': {}}
+CHEG969000,{'required': {}}
+CHEM100070,{'required': {}}
+CHEM100071,{'required': {}}
+CHEM101010,{'required': {}}
+CHEM101070,{'required': {}}
+CHEM101071,{'required': {}}
+CHEM102010,{'required': {}}
+CHEM103010,{'required': {}}
+CHEM103011,{'required': {}}
+CHEM103020D,{'required': {}}
+CHEM103021D,{'required': {}}
+CHEM103022D,{'required': {}}
+CHEM103023D,{'required': {}}
+CHEM103024D,{'required': {}}
+CHEM103025D,{'required': {}}
+CHEM103030D,{'required': {}}
+CHEM103031D,{'required': {}}
+CHEM103032D,{'required': {}}
+CHEM103033D,{'required': {}}
+CHEM103034D,{'required': {}}
+CHEM103035D,{'required': {}}
+CHEM103070,{'required': {}}
+CHEM103710,{'required': {}}
+CHEM104050,{'required': {}}
+CHEM104060,{'required': {}}
+CHEM104071,{'required': {}}
+CHEM104080D,{'required': {}}
+CHEM104080,{'required': {}}
+CHEM104081D,{'required': {}}
+CHEM104081D,{'required': {}}
+CHEM104082D,{'required': {}}
+CHEM104084,{'required': {}}
+CHEM104084D,{'required': {}}
+CHEM104085D,{'required': {}}
+CHEM104085,{'required': {}}
+CHEM104110,{'required': {}}
+CHEM104111,{'required': {}}
+CHEM104112,{'required': {}}
+CHEM104114,{'required': {}}
+CHEM104115,{'required': {}}
+CHEM104116,{'required': {}}
+CHEM104117,{'required': {}}
+CHEM104120,{'required': {}}
+CHEM104121,{'required': {}}
+CHEM104122,{'required': {}}
+CHEM104124,{'required': {}}
+CHEM104125,{'required': {}}
+CHEM104126,{'required': {}}
+CHEM104127,{'required': {}}
+CHEM104310,{'required': {}}
+CHEM104510,{'required': {}}
+CHEM104710,{'required': {}}
+CHEM106010,{'required': {}}
+CHEM106020L,{'required': {}}
+CHEM106020D,{'required': {}}
+CHEM106021L,{'required': {}}
+CHEM106021D,{'required': {}}
+CHEM106022L,{'required': {}}
+CHEM106022D,{'required': {}}
+CHEM106023L,{'required': {}}
+CHEM106023D,{'required': {}}
+CHEM106024D,{'required': {}}
+CHEM106024L,{'required': {}}
+CHEM106025D,{'required': {}}
+CHEM106025L,{'required': {}}
+CHEM112010,{'required': {}}
+CHEM112020D,{'required': {}}
+CHEM112021D,{'required': {}}
+CHEM112022D,{'required': {}}
+CHEM112023D,{'required': {}}
+CHEM112024D,{'required': {}}
+CHEM112025D,{'required': {}}
+CHEM112080,{'required': {}}
+CHEM112080D,{'required': {}}
+CHEM112080,{'required': {}}
+CHEM120010,{'required': {}}
+CHEM120020L,{'required': {}}
+CHEM120021L,{'required': {}}
+CHEM120021L,{'required': {}}
+CHEM120022L,{'required': {}}
+CHEM120080L,{'required': {}}
+CHEM120080,{'required': {}}
+CHEM120080L,{'required': {}}
+CHEM120081L,{'required': {}}
+CHEM131020L,{'required': {}}
+CHEM131021L,{'required': {}}
+CHEM131022L,{'required': {}}
+CHEM131023L,{'required': {}}
+CHEM132020L,{'required': {}}
+CHEM132021L,{'required': {}}
+CHEM133010L,{'required': {}}
+CHEM133011L,{'required': {}}
+CHEM133012L,{'required': {}}
+CHEM133013L,{'required': {}}
+CHEM133014L,{'required': {}}
+CHEM133015L,{'required': {}}
+CHEM133016L,{'required': {}}
+CHEM133017L,{'required': {}}
+CHEM133018L,{'required': {}}
+CHEM133019L,{'required': {}}
+CHEM133020L,{'required': {}}
+CHEM133070L,{'required': {}}
+CHEM134010L,{'required': {}}
+CHEM134011L,{'required': {}}
+CHEM134012L,{'required': {}}
+CHEM134013L,{'required': {}}
+CHEM134014L,{'required': {}}
+CHEM134015L,{'required': {}}
+CHEM134016L,{'required': {}}
+CHEM134017L,{'required': {}}
+CHEM134018L,{'required': {}}
+CHEM134019L,{'required': {}}
+CHEM134020L,{'required': {}}
+CHEM134021L,{'required': {}}
+CHEM134022L,{'required': {}}
+CHEM134023L,{'required': {}}
+CHEM134024L,{'required': {}}
+CHEM134025L,{'required': {}}
+CHEM134071L,{'required': {}}
+CHEM134084L,{'required': {}}
+CHEM134085L,{'required': {}}
+CHEM134110L,{'required': {}}
+CHEM134111L,{'required': {}}
+CHEM134112L,{'required': {}}
+CHEM134114L,{'required': {}}
+CHEM134115L,{'required': {}}
+CHEM134116L,{'required': {}}
+CHEM134116L,{'required': {}}
+CHEM134117L,{'required': {}}
+CHEM134120L,{'required': {}}
+CHEM134121L,{'required': {}}
+CHEM134122L,{'required': {}}
+CHEM134124L,{'required': {}}
+CHEM134125L,{'required': {}}
+CHEM134126L,{'required': {}}
+CHEM134127L,{'required': {}}
+CHEM134510L,{'required': {}}
+CHEM213010,{'required': {}}
+CHEM214010,{'required': {'CHEM213': 'false'}}
+CHEM215020L,{'required': {}}
+CHEM215021L,{'required': {}}
+CHEM215022L,{'required': {}}
+CHEM216020L,{'required': {'CHEM213': 'false'}}
+CHEM216021L,{'required': {'CHEM213': 'false'}}
+CHEM216022L,{'required': {'CHEM213': 'false'}}
+CHEM216023L,{'required': {'CHEM213': 'false'}}
+CHEM216024L,{'required': {'CHEM213': 'false'}}
+CHEM216025L,{'required': {'CHEM213': 'false'}}
+CHEM216026L,{'required': {'CHEM213': 'false'}}
+CHEM216027L,{'required': {'CHEM213': 'false'}}
+CHEM216028L,{'required': {'CHEM213': 'false'}}
+CHEM220010,{'required': {}}
+CHEM221020L,{'required': {}}
+CHEM221021L,{'required': {}}
+CHEM321070,{'required': {}}
+CHEM321071,{'required': {}}
+CHEM322010,{'required': {'CHEM321': 'false'}}
+CHEM322011,{'required': {'CHEM321': 'false'}}
+CHEM322012,{'required': {'CHEM321': 'false'}}
+CHEM322070,{'required': {'CHEM321': 'false'}}
+CHEM322071,{'required': {'CHEM321': 'false'}}
+CHEM325070L,{'required': {'CHEM104': 'false'}}
+CHEM325071L,{'required': {'CHEM104': 'false'}}
+CHEM326020L,{'required': {'CHEM325': 'false'}}
+CHEM326021L,{'required': {'CHEM325': 'false'}}
+CHEM326022L,{'required': {'CHEM325': 'false'}}
+CHEM326023L,{'required': {'CHEM325': 'false'}}
+CHEM326024L,{'required': {'CHEM325': 'false'}}
+CHEM326025L,{'required': {'CHEM325': 'false'}}
+CHEM326026L,{'required': {'CHEM325': 'false'}}
+CHEM326027L,{'required': {'CHEM325': 'false'}}
+CHEM326028L,{'required': {'CHEM325': 'false'}}
+CHEM326029L,{'required': {'CHEM325': 'false'}}
+CHEM326030L,{'required': {'CHEM325': 'false'}}
+CHEM326031L,{'required': {'CHEM325': 'false'}}
+CHEM326032L,{'required': {'CHEM325': 'false'}}
+CHEM326032L,{'required': {'CHEM325': 'false'}}
+CHEM326033L,{'required': {'CHEM325': 'false'}}
+CHEM326034L,{'required': {'CHEM325': 'false'}}
+CHEM326035L,{'required': {'CHEM325': 'false'}}
+CHEM326036L,{'required': {'CHEM325': 'false'}}
+CHEM326037L,{'required': {'CHEM325': 'false'}}
+CHEM326039L,{'required': {'CHEM325': 'false'}}
+CHEM326040L,{'required': {'CHEM325': 'false'}}
+CHEM326070L,{'required': {'CHEM325': 'false'}}
+CHEM326071L,{'required': {'CHEM325': 'false'}}
+CHEM332010,{'required': {}}
+CHEM332020D,{'required': {}}
+CHEM332021D,{'required': {}}
+CHEM332023D,{'required': {}}
+CHEM334011L,{'required': {'CHEM333': 'false'}}
+CHEM334013L,{'required': {'CHEM333': 'false'}}
+CHEM334014L,{'required': {'CHEM333': 'false'}}
+CHEM334015L,{'required': {'CHEM333': 'false'}}
+CHEM334080L,{'required': {'CHEM333': 'false'}}
+CHEM342010,{'required': {'CHEM331': 'false'}}
+CHEM357010,{'required': {}}
+CHEM357020D,{'required': {}}
+CHEM402000,{'required': {}}
+CHEM419010,{'required': {'CHEM418': 'false'}}
+CHEM437010,{'required': {}}
+CHEM438021L,{'required': {}}
+CHEM438022L,{'required': {}}
+CHEM444010,{'required': {}}
+CHEM444012,{'required': {}}
+CHEM444020D,{'required': {}}
+CHEM444021D,{'required': {}}
+CHEM444022D,{'required': {}}
+CHEM444080,{'required': {}}
+CHEM445020L,{'required': {}}
+CHEM445021L,{'required': {}}
+CHEM445022L,{'required': {}}
+CHEM445023L,{'required': {}}
+CHEM445024L,{'required': {}}
+CHEM445025L,{'required': {}}
+CHEM446020L,{'required': {}}
+CHEM446021L,{'required': {}}
+CHEM446022L,{'required': {}}
+CHEM446023L,{'required': {}}
+CHEM457010,{'required': {}}
+CHEM457020D,{'required': {}}
+CHEM458020L,{'required': {}}
+CHEM458021L,{'required': {}}
+CHEM458022L,{'required': {}}
+CHEM458023L,{'required': {}}
+CHEM458023L,{'required': {}}
+CHEM458080L,{'required': {}}
+CHEM465010,{'required': {}}
+CHEM465011,{'required': {}}
+CHEM468000,{'required': {}}
+CHEM527010,{'required': {}}
+CHEM527011,{'required': {}}
+CHEM603020L,{'required': {}}
+CHEM606010,{'required': {}}
+CHEM623010,{'required': {}}
+CHEM633010,{'required': {'CHEM332': 'false'}}
+CHEM634010,{'required': {'CHEM332': 'false'}}
+CHEM636010,{'required': {}}
+CHEM642010,{'required': {'CHEM641': 'false'}}
+CHEM652010,{'required': {}}
+CHEM667014,{'required': {}}
+CHEM674010,{'required': {'CHEM444': 'false'}}
+CHEM683010,{'required': {}}
+CHEM686011,{'required': {}}
+CHEM850010,{'required': {'CHEM651': 'false'}}
+CHEM865011,{'required': {}}
+CHEM865012,{'required': {}}
+CHEM865013,{'required': {}}
+CHEM865014,{'required': {}}
+CHEM865015,{'required': {}}
+CHEM868000,{'required': {}}
+CHEM869000,{'required': {}}
+CHEM964000,{'required': {}}
+CHEM969000,{'required': {}}
+CHIN105010,{'required': {}}
+CHIN106010,{'required': {'CHIN105': 'false'}}
+CHIN107010,{'required': {'CHIN106': 'false'}}
+CHIN201010,{'required': {'CHIN107': 'false'}}
+CHIN201080,{'required': {'CHIN107': 'false'}}
+CHIN204010,{'required': {}}
+CHIN204011,{'required': {}}
+CHIN204080,{'required': {}}
+CHIN204081,{'required': {}}
+CHIN367010,{'required': {}}
+CHIN367080,{'required': {}}
+CHIN405010,{'required': {}}
+CHIN405080,{'required': {}}
+CIEG133010,{'required': {}}
+CIEG161010,{'required': {}}
+CIEG161020L,{'required': {}}
+CIEG161021L,{'required': {}}
+CIEG161022L,{'required': {}}
+CIEG161080L,{'required': {}}
+CIEG161080,{'required': {}}
+CIEG161080L,{'required': {}}
+CIEG161080,{'required': {}}
+CIEG191010,{'required': {}}
+CIEG191080,{'required': {}}
+CIEG212010,{'required': {}}
+CIEG213020L,{'required': {}}
+CIEG213021L,{'required': {}}
+CIEG213022L,{'required': {}}
+CIEG213023L,{'required': {}}
+CIEG213024L,{'required': {}}
+CIEG213025L,{'required': {}}
+CIEG214010,{'required': {'CIEG211': 'false'}}
+CIEG315010,{'required': {'MATH242': 'false'}}
+CIEG315080,{'required': {'MATH242': 'false'}}
+CIEG318010,{'required': {}}
+CIEG321010,{'required': {}}
+CIEG333010,{'required': {}}
+CIEG343010,{'required': {}}
+CIEG343080,{'required': {}}
+CIEG351010,{'required': {}}
+CIEG367010,{'required': {}}
+CIEG367020L,{'required': {}}
+CIEG367021L,{'required': {}}
+CIEG392010,{'required': {'CIEG291': 'false'}}
+CIEG392080,{'required': {'CIEG291': 'false'}}
+CIEG394010,{'required': {'CIEG191': 'false'}}
+CIEG394080,{'required': {'CIEG191': 'false'}}
+CIEG403010,{'required': {}}
+CIEG405010,{'required': {}}
+CIEG406010,{'required': {'CIEG301': 'false'}}
+CIEG411011,{'required': {'ENGL410': 'false'}}
+CIEG413010,{'required': {'CIEG301': 'false'}}
+CIEG414010,{'required': {}}
+CIEG415010,{'required': {}}
+CIEG417010,{'required': {}}
+CIEG428010,{'required': {'CIEG321': 'false'}}
+CIEG431010,{'required': {}}
+CIEG436010,{'required': {}}
+CIEG437010,{'required': {'CIEG333': 'false'}}
+CIEG437022L,{'required': {'CIEG333': 'false'}}
+CIEG437023L,{'required': {'CIEG333': 'false'}}
+CIEG438010,{'required': {'CIEG233': 'false'}}
+CIEG451010,{'required': {'CIEG351': 'false'}}
+CIEG451020L,{'required': {'CIEG351': 'false'}}
+CIEG451021L,{'required': {'CIEG351': 'false'}}
+CIEG461010,{'required': {}}
+CIEG461080,{'required': {}}
+CIEG463010,{'required': {'CIEG351': 'false'}}
+CIEG466000,{'required': {}}
+CIEG466000,{'required': {}}
+CIEG467012,{'required': {}}
+CIEG469000,{'required': {}}
+CIEG471010,{'required': {'CIEG305': 'false'}}
+CIEG486010,{'required': {}}
+CIEG486080,{'required': {}}
+CIEG491010,{'required': {}}
+CIEG495010,{'required': {}}
+CIEG605010,{'required': {'CIEG601': 'false'}}
+CIEG606010,{'required': {}}
+CIEG608010,{'required': {}}
+CIEG614010,{'required': {}}
+CIEG614194,{'required': {}}
+CIEG615010,{'required': {}}
+CIEG617010,{'required': {}}
+CIEG617194,{'required': {}}
+CIEG628010,{'required': {}}
+CIEG634010,{'required': {}}
+CIEG642010,{'required': {}}
+CIEG644010,{'required': {}}
+CIEG663010,{'required': {}}
+CIEG666000,{'required': {}}
+CIEG667012,{'required': {}}
+CIEG678010,{'required': {}}
+CIEG686001,{'required': {}}
+CIEG693010,{'required': {'MEEG690': 'false'}}
+CIEG695010,{'required': {}}
+CIEG698010,{'required': {}}
+CIEG865010,{'required': {}}
+CIEG866000,{'required': {}}
+CIEG868000,{'required': {}}
+CIEG869000,{'required': {}}
+CIEG964000,{'required': {}}
+CIEG969000,{'required': {}}
+CISC101010,{'required': {}}
+CISC101020L,{'required': {}}
+CISC101021L,{'required': {}}
+CISC101022L,{'required': {}}
+CISC101070,{'required': {}}
+CISC101071,{'required': {}}
+CISC101710,{'required': {}}
+CISC103010,{'required': {}}
+CISC103020L,{'required': {}}
+CISC103021L,{'required': {}}
+CISC103022L,{'required': {}}
+CISC103510,{'required': {}}
+CISC103710,{'required': {}}
+CISC106010,{'required': {}}
+CISC106011,{'required': {}}
+CISC106011,{'required': {}}
+CISC106020L,{'required': {}}
+CISC106021L,{'required': {}}
+CISC106030L,{'required': {}}
+CISC106031L,{'required': {}}
+CISC106070,{'required': {}}
+CISC106071,{'required': {}}
+CISC106080,{'required': {}}
+CISC106080L,{'required': {}}
+CISC106710,{'required': {}}
+CISC108010,{'required': {}}
+CISC108020L,{'required': {}}
+CISC108021L,{'required': {}}
+CISC108022L,{'required': {}}
+CISC108070,{'required': {}}
+CISC108710,{'required': {}}
+CISC167070,{'required': {}}
+CISC167071,{'required': {}}
+CISC167072,{'required': {}}
+CISC167073,{'required': {}}
+CISC167074,{'required': {}}
+CISC167075,{'required': {}}
+CISC167076,{'required': {}}
+CISC167077,{'required': {}}
+CISC181010,{'required': {}}
+CISC181011,{'required': {}}
+CISC181012,{'required': {}}
+CISC181020L,{'required': {}}
+CISC181021L,{'required': {}}
+CISC181022L,{'required': {}}
+CISC181030L,{'required': {}}
+CISC181031L,{'required': {}}
+CISC181032L,{'required': {}}
+CISC181040L,{'required': {}}
+CISC181041L,{'required': {}}
+CISC181042L,{'required': {}}
+CISC181070,{'required': {}}
+CISC181071,{'required': {}}
+CISC181080,{'required': {}}
+CISC181080L,{'required': {}}
+CISC187010,{'required': {}}
+CISC187011,{'required': {}}
+CISC187012,{'required': {}}
+CISC187013,{'required': {}}
+CISC187014,{'required': {}}
+CISC187015,{'required': {}}
+CISC187016,{'required': {}}
+CISC187017,{'required': {}}
+CISC187019,{'required': {}}
+CISC187019,{'required': {}}
+CISC187020,{'required': {}}
+CISC187021,{'required': {}}
+CISC187022,{'required': {}}
+CISC210010,{'required': {}}
+CISC210011,{'required': {}}
+CISC210012,{'required': {}}
+CISC210013,{'required': {}}
+CISC210020L,{'required': {}}
+CISC210021L,{'required': {}}
+CISC210022L,{'required': {}}
+CISC210030L,{'required': {}}
+CISC210031L,{'required': {}}
+CISC210032L,{'required': {}}
+CISC210040L,{'required': {}}
+CISC210041L,{'required': {}}
+CISC210042L,{'required': {}}
+CISC210050L,{'required': {}}
+CISC210051L,{'required': {}}
+CISC210052L,{'required': {}}
+CISC210080,{'required': {}}
+CISC210080L,{'required': {}}
+CISC220010,{'required': {'CISC210': 'false'}}
+CISC220011,{'required': {'CISC210': 'false'}}
+CISC220020L,{'required': {'CISC210': 'false'}}
+CISC220021L,{'required': {'CISC210': 'false'}}
+CISC220022L,{'required': {'CISC210': 'false'}}
+CISC220030L,{'required': {'CISC210': 'false'}}
+CISC220031L,{'required': {'CISC210': 'false'}}
+CISC220032L,{'required': {'CISC210': 'false'}}
+CISC220070,{'required': {'CISC210': 'false'}}
+CISC250011,{'required': {}}
+CISC260010,{'required': {'CISC210': 'false'}}
+CISC267010,{'required': {}}
+CISC275010,{'required': {}}
+CISC275020L,{'required': {}}
+CISC275021L,{'required': {}}
+CISC275022L,{'required': {}}
+CISC275023L,{'required': {}}
+CISC275030L,{'required': {}}
+CISC275031L,{'required': {}}
+CISC287010,{'required': {}}
+CISC287011,{'required': {}}
+CISC287012,{'required': {}}
+CISC287013,{'required': {}}
+CISC287014,{'required': {}}
+CISC287015,{'required': {}}
+CISC287016,{'required': {}}
+CISC287017,{'required': {}}
+CISC287017,{'required': {}}
+CISC287019,{'required': {}}
+CISC287020,{'required': {}}
+CISC287021,{'required': {}}
+CISC303010,{'required': {}}
+CISC304010,{'required': {}}
+CISC320010,{'required': {}}
+CISC320011,{'required': {}}
+CISC320070,{'required': {}}
+CISC320071,{'required': {}}
+CISC355010,{'required': {}}
+CISC357010,{'required': {}}
+CISC360010,{'required': {}}
+CISC361010,{'required': {}}
+CISC361011,{'required': {}}
+CISC361070,{'required': {}}
+CISC361071,{'required': {}}
+CISC366000,{'required': {}}
+CISC367011,{'required': {}}
+CISC372010,{'required': {}}
+CISC374010,{'required': {'CISC220': 'false'}}
+CISC387010,{'required': {}}
+CISC387011,{'required': {}}
+CISC387012,{'required': {}}
+CISC387013,{'required': {}}
+CISC387014,{'required': {}}
+CISC387015,{'required': {}}
+CISC387016,{'required': {}}
+CISC387017,{'required': {}}
+CISC387019,{'required': {}}
+CISC387020,{'required': {}}
+CISC387021,{'required': {}}
+CISC401010,{'required': {'CISC303': 'false'}}
+CISC410010,{'required': {}}
+CISC411010,{'required': {}}
+CISC436010,{'required': {'CISC220': 'false'}}
+CISC437010,{'required': {'CISC220': 'false'}}
+CISC437011,{'required': {'CISC220': 'false'}}
+CISC437070,{'required': {'CISC220': 'false'}}
+CISC437071,{'required': {'CISC220': 'false'}}
+CISC440010,{'required': {}}
+CISC449010,{'required': {}}
+CISC449070,{'required': {}}
+CISC449071,{'required': {}}
+CISC449072,{'required': {}}
+CISC449073,{'required': {}}
+CISC449074,{'required': {}}
+CISC450010,{'required': {}}
+CISC450011,{'required': {}}
+CISC450011,{'required': {}}
+CISC459070,{'required': {'CISC450': 'false'}}
+CISC459071,{'required': {'CISC450': 'false'}}
+CISC459072,{'required': {'CISC450': 'false'}}
+CISC459073,{'required': {'CISC450': 'false'}}
+CISC464010,{'required': {'CISC450': 'false'}}
+CISC465010,{'required': {}}
+CISC466000,{'required': {}}
+CISC467010,{'required': {}}
+CISC467011,{'required': {}}
+CISC471010,{'required': {}}
+CISC474070,{'required': {'CISC275': 'false'}}
+CISC474071,{'required': {'CISC275': 'false'}}
+CISC475010,{'required': {'CISC275': 'false'}}
+CISC475011,{'required': {'CISC275': 'false'}}
+CISC475020L,{'required': {'CISC275': 'false'}}
+CISC475021L,{'required': {'CISC275': 'false'}}
+CISC475030L,{'required': {'CISC275': 'false'}}
+CISC475031L,{'required': {'CISC275': 'false'}}
+CISC475080L,{'required': {'CISC275': 'false'}}
+CISC475080,{'required': {'CISC275': 'false'}}
+CISC475081,{'required': {'CISC275': 'false'}}
+CISC475081L,{'required': {'CISC275': 'false'}}
+CISC479070,{'required': {'CISC361': 'false'}}
+CISC479071,{'required': {'CISC361': 'false'}}
+CISC481010,{'required': {}}
+CISC483010,{'required': {}}
+CISC483070,{'required': {}}
+CISC483071,{'required': {}}
+CISC484010,{'required': {}}
+CISC487010,{'required': {}}
+CISC487011,{'required': {}}
+CISC487012,{'required': {}}
+CISC487013,{'required': {}}
+CISC487014,{'required': {}}
+CISC487015,{'required': {}}
+CISC487016,{'required': {}}
+CISC487017,{'required': {}}
+CISC487019,{'required': {}}
+CISC487020,{'required': {}}
+CISC487021,{'required': {}}
+CISC489010,{'required': {}}
+CISC489011,{'required': {}}
+CISC489070,{'required': {}}
+CISC489071,{'required': {}}
+CISC489072,{'required': {}}
+CISC499010,{'required': {'CISC498': 'false'}}
+CISC499011,{'required': {'CISC498': 'false'}}
+CISC499020L,{'required': {'CISC498': 'false'}}
+CISC499020L,{'required': {'CISC498': 'false'}}
+CISC499030L,{'required': {'CISC498': 'false'}}
+CISC499080L,{'required': {'CISC498': 'false'}}
+CISC499080,{'required': {'CISC498': 'false'}}
+CISC601010,{'required': {}}
+CISC636010,{'required': {'CISC220': 'false'}}
+CISC637010,{'required': {'CISC220': 'false'}}
+CISC640010,{'required': {'CISC220': 'false'}}
+CISC649010,{'required': {'CISC220': 'false'}}
+CISC655010,{'required': {}}
+CISC663010,{'required': {'CISC260': 'false'}}
+CISC664010,{'required': {}}
+CISC665010,{'required': {}}
+CISC667010,{'required': {}}
+CISC667011,{'required': {}}
+CISC672010,{'required': {'CISC320': 'false'}}
+CISC675010,{'required': {}}
+CISC675011,{'required': {}}
+CISC675020L,{'required': {}}
+CISC675030L,{'required': {}}
+CISC681010,{'required': {'CISC220': 'false'}}
+CISC683010,{'required': {'CISC220': 'false'}}
+CISC684010,{'required': {}}
+CISC689010,{'required': {'CISC681': 'false'}}
+CISC689011,{'required': {'CISC681': 'false'}}
+CISC699000,{'required': {}}
+CISC849010,{'required': {}}
+CISC849011,{'required': {}}
+CISC849012,{'required': {}}
+CISC867015,{'required': {}}
+CISC868000,{'required': {}}
+CISC868010,{'required': {}}
+CISC868011,{'required': {}}
+CISC869000,{'required': {}}
+CISC889010,{'required': {'CISC681': 'false'}}
+CISC890010,{'required': {}}
+CISC890011,{'required': {}}
+CISC890012,{'required': {}}
+CISC890017,{'required': {}}
+CISC890018,{'required': {}}
+CISC890020,{'required': {}}
+CISC969000,{'required': {}}
+CMLT316070,{'required': {}}
+CMLT330010,{'required': {}}
+COMM167070,{'required': {}}
+COMM167071,{'required': {}}
+COMM167072,{'required': {}}
+COMM206010,{'required': {}}
+COMM212010,{'required': {}}
+COMM212010,{'required': {}}
+COMM212011,{'required': {}}
+COMM212012,{'required': {}}
+COMM212013,{'required': {}}
+COMM212014,{'required': {}}
+COMM212015,{'required': {}}
+COMM212016,{'required': {}}
+COMM212017,{'required': {}}
+COMM212018,{'required': {}}
+COMM212019,{'required': {}}
+COMM212020,{'required': {}}
+COMM212021,{'required': {}}
+COMM212022,{'required': {}}
+COMM212023,{'required': {}}
+COMM212024,{'required': {}}
+COMM212025,{'required': {}}
+COMM212026,{'required': {}}
+COMM212027,{'required': {}}
+COMM212028,{'required': {}}
+COMM212029,{'required': {}}
+COMM212031,{'required': {}}
+COMM212032,{'required': {}}
+COMM212070,{'required': {}}
+COMM212071,{'required': {}}
+COMM212072,{'required': {}}
+COMM212073,{'required': {}}
+COMM212074,{'required': {}}
+COMM212075,{'required': {}}
+COMM212080,{'required': {}}
+COMM212310,{'required': {}}
+COMM212510,{'required': {}}
+COMM212710,{'required': {}}
+COMM230010,{'required': {}}
+COMM230070,{'required': {}}
+COMM230071,{'required': {}}
+COMM230072,{'required': {}}
+COMM230073,{'required': {}}
+COMM230310,{'required': {}}
+COMM245010,{'required': {}}
+COMM245070,{'required': {}}
+COMM245071,{'required': {}}
+COMM245072,{'required': {}}
+COMM245073,{'required': {}}
+COMM245710,{'required': {}}
+COMM263070,{'required': {}}
+COMM263072,{'required': {}}
+COMM263073,{'required': {}}
+COMM263074,{'required': {}}
+COMM263075,{'required': {}}
+COMM263075,{'required': {}}
+COMM263076,{'required': {}}
+COMM263077,{'required': {}}
+COMM263078,{'required': {}}
+COMM267070,{'required': {}}
+COMM267071,{'required': {}}
+COMM301010,{'required': {}}
+COMM301070,{'required': {}}
+COMM301071,{'required': {}}
+COMM301080,{'required': {}}
+COMM311010,{'required': {'COMM309': 'false'}}
+COMM311011,{'required': {'COMM309': 'false'}}
+COMM313010,{'required': {}}
+COMM318070,{'required': {}}
+COMM318071,{'required': {}}
+COMM318072,{'required': {}}
+COMM324070L,{'required': {}}
+COMM325010L,{'required': {}}
+COMM325070L,{'required': {}}
+COMM326010L,{'required': {}}
+COMM329010,{'required': {}}
+COMM340010,{'required': {}}
+COMM341010,{'required': {}}
+COMM345010,{'required': {}}
+COMM350070,{'required': {}}
+COMM350071,{'required': {}}
+COMM350072,{'required': {}}
+COMM350073,{'required': {}}
+COMM350710,{'required': {}}
+COMM351010,{'required': {'COMM350': 'false'}}
+COMM364010,{'required': {}}
+COMM366000,{'required': {}}
+COMM367010,{'required': {}}
+COMM388010L,{'required': {}}
+COMM409010,{'required': {'COMM309': 'false'}}
+COMM414010,{'required': {}}
+COMM417010,{'required': {}}
+COMM418010,{'required': {}}
+COMM418012,{'required': {}}
+COMM418013,{'required': {}}
+COMM421010,{'required': {}}
+COMM423010,{'required': {}}
+COMM423011,{'required': {}}
+COMM426010D,{'required': {'COMM324': 'false'}}
+COMM443010,{'required': {}}
+COMM446010,{'required': {'COMM309': 'false'}}
+COMM452010,{'required': {}}
+COMM452080,{'required': {}}
+COMM453010,{'required': {}}
+COMM453010,{'required': {}}
+COMM456010,{'required': {}}
+COMM456080,{'required': {}}
+COMM466000,{'required': {}}
+COMM468000,{'required': {}}
+COMM476070,{'required': {}}
+COMM486010,{'required': {}}
+COMM486011,{'required': {}}
+COMM490080D,{'required': {}}
+COMM604010,{'required': {}}
+COMM617010,{'required': {}}
+COMM664010,{'required': {}}
+COMM667010,{'required': {}}
+COMM702610,{'required': {}}
+COMM703650,{'required': {}}
+COMM706610,{'required': {}}
+COMM707650,{'required': {}}
+COMM719610,{'required': {}}
+COMM722650,{'required': {}}
+COMM723610,{'required': {}}
+COMM732650,{'required': {}}
+COMM734610,{'required': {}}
+COMM756650,{'required': {}}
+COMM769610D,{'required': {}}
+COMM815010,{'required': {}}
+COMM836010,{'required': {}}
+COMM869000,{'required': {}}
+COMM890010,{'required': {}}
+CPEG202010,{'required': {}}
+CPEG202070,{'required': {}}
+CPEG202080,{'required': {}}
+CPEG298010,{'required': {}}
+CPEG298020L,{'required': {}}
+CPEG298021L,{'required': {}}
+CPEG298022L,{'required': {}}
+CPEG298023L,{'required': {}}
+CPEG301010,{'required': {}}
+CPEG301011,{'required': {}}
+CPEG324010,{'required': {'CPEG323': 'false'}}
+CPEG324020L,{'required': {'CPEG323': 'false'}}
+CPEG324021L,{'required': {'CPEG323': 'false'}}
+CPEG324022L,{'required': {'CPEG323': 'false'}}
+CPEG324023L,{'required': {'CPEG323': 'false'}}
+CPEG398010,{'required': {'ELEG298': 'false'}}
+CPEG419010,{'required': {}}
+CPEG419011,{'required': {}}
+CPEG421010,{'required': {}}
+CPEG422010,{'required': {}}
+CPEG457010,{'required': {}}
+CPEG457010,{'required': {}}
+CPEG465010,{'required': {}}
+CPEG466000,{'required': {}}
+CPEG472010,{'required': {}}
+CPEG476010,{'required': {}}
+CPEG495010,{'required': {}}
+CPEG499010,{'required': {}}
+CPEG499080,{'required': {}}
+CPEG621010,{'required': {}}
+CPEG622010,{'required': {}}
+CPEG652010,{'required': {}}
+CPEG657010,{'required': {}}
+CPEG665010,{'required': {}}
+CPEG672010,{'required': {}}
+CPEG672610,{'required': {}}
+CPEG676010,{'required': {}}
+CPEG676650,{'required': {}}
+CPEG694650,{'required': {}}
+CPEG695010,{'required': {}}
+CPEG695610,{'required': {}}
+CPEG869000,{'required': {}}
+CRJU110010,{'required': {}}
+CRJU110011,{'required': {}}
+CRJU110012,{'required': {}}
+CRJU110013,{'required': {}}
+CRJU110071,{'required': {}}
+CRJU110072,{'required': {}}
+CRJU110073,{'required': {}}
+CRJU166000,{'required': {}}
+CRJU201010,{'required': {}}
+CRJU202010,{'required': {}}
+CRJU203010,{'required': {}}
+CRJU203710,{'required': {}}
+CRJU266000,{'required': {}}
+CRJU302010,{'required': {}}
+CRJU304010,{'required': {}}
+CRJU304440,{'required': {}}
+CRJU311010,{'required': {}}
+CRJU320010,{'required': {'CRJU110': 'false'}}
+CRJU324010,{'required': {}}
+CRJU324080,{'required': {}}
+CRJU324510,{'required': {}}
+CRJU345010,{'required': {}}
+CRJU350010,{'required': {}}
+CRJU350080,{'required': {}}
+CRJU355010,{'required': {}}
+CRJU357010,{'required': {}}
+CRJU366000,{'required': {}}
+CRJU367010,{'required': {}}
+CRJU367010,{'required': {}}
+CRJU456010,{'required': {}}
+CRJU457010,{'required': {}}
+CRJU466000,{'required': {}}
+CRJU489010,{'required': {}}
+CRJU495010L,{'required': {}}
+CRJU666000,{'required': {}}
+CRJU866000,{'required': {}}
+CSCD490010,{'required': {}}
+CSCD490011,{'required': {}}
+CSCD490013,{'required': {}}
+CSCD490014,{'required': {}}
+CSCD621010,{'required': {}}
+CSCD622010,{'required': {}}
+CSCD623010,{'required': {}}
+CSCD625010,{'required': {}}
+CSCD628010,{'required': {}}
+CSCD650001,{'required': {}}
+CSCD651010,{'required': {}}
+CSCD711010,{'required': {}}
+CSCD713012,{'required': {}}
+CSCD751010,{'required': {}}
+CSCD780010,{'required': {}}
+CSCD780011,{'required': {}}
+CSCD780012,{'required': {}}
+CSCD780013,{'required': {}}
+CSCD780014,{'required': {}}
+CSCD780015,{'required': {}}
+CSCD780016,{'required': {}}
+CSCD780017,{'required': {}}
+CSCD780018,{'required': {}}
+CSCD780019,{'required': {}}
+CSCD780020,{'required': {}}
+CSCD800001,{'required': {}}
+CSCD810001,{'required': {}}
+CSCD816001,{'required': {}}
+CSCD820001,{'required': {}}
+CSCD860001,{'required': {}}
+CSCD866001,{'required': {}}
+CSCD964001,{'required': {}}
+CSCD969001,{'required': {}}
+DANC201010,{'required': {}}
+DANC202010,{'required': {}}
+DANC202011,{'required': {}}
+DANC202012,{'required': {}}
+DANC203010,{'required': {}}
+DANC203011,{'required': {}}
+DANC204010,{'required': {}}
+DANC204011,{'required': {}}
+DANC204011,{'required': {}}
+DANC206010,{'required': {}}
+DANC207010,{'required': {}}
+DANC209010,{'required': {}}
+DANC302010,{'required': {}}
+DANC304010,{'required': {}}
+DANC305010,{'required': {}}
+DANC307070,{'required': {}}
+DANC307071,{'required': {}}
+DANC310010,{'required': {}}
+DANC401010,{'required': {}}
+DISA666000,{'required': {}}
+DISA858010,{'required': {}}
+DISA866000,{'required': {}}
+DISA868000,{'required': {}}
+DISA869000,{'required': {}}
+DISA880010,{'required': {}}
+DIST150001D,{'required': {}}
+DIST200000,{'required': {'DIST100': 'false'}}
+DIST250010,{'required': {}}
+DIST266010,{'required': {}}
+DIST345010L,{'required': {}}
+DIST400001,{'required': {}}
+DIST450001,{'required': {}}
+DIST465010,{'required': {'DIST250': 'false'}}
+DIST465020D,{'required': {'DIST250': 'false'}}
+DIST465021D,{'required': {'DIST250': 'false'}}
+DIST465022D,{'required': {'DIST250': 'false'}}
+DIST465023D,{'required': {'DIST250': 'false'}}
+EAMC607010,{'required': {}}
+EAMC609010,{'required': {}}
+EAMC610010,{'required': {}}
+EAMC666000,{'required': {}}
+EAMC672010,{'required': {}}
+EAMC673010,{'required': {}}
+EAMC869000,{'required': {}}
+ECON100010,{'required': {}}
+ECON100011,{'required': {}}
+ECON100012,{'required': {}}
+ECON100013,{'required': {}}
+ECON100070,{'required': {}}
+ECON100071,{'required': {}}
+ECON101010,{'required': {}}
+ECON101011,{'required': {}}
+ECON101020D,{'required': {}}
+ECON101021D,{'required': {}}
+ECON101022D,{'required': {}}
+ECON101023D,{'required': {}}
+ECON101024D,{'required': {}}
+ECON101024D,{'required': {}}
+ECON101025D,{'required': {}}
+ECON101026D,{'required': {}}
+ECON101030D,{'required': {}}
+ECON101031D,{'required': {}}
+ECON101032D,{'required': {}}
+ECON101033D,{'required': {}}
+ECON101034D,{'required': {}}
+ECON101035D,{'required': {}}
+ECON101036D,{'required': {}}
+ECON101071,{'required': {}}
+ECON101072,{'required': {}}
+ECON101073,{'required': {}}
+ECON101074,{'required': {}}
+ECON101075,{'required': {}}
+ECON101080,{'required': {}}
+ECON101710,{'required': {}}
+ECON101711,{'required': {}}
+ECON102010,{'required': {}}
+ECON102011,{'required': {}}
+ECON103010,{'required': {'ECON101': 'false'}}
+ECON103011,{'required': {'ECON101': 'false'}}
+ECON103012,{'required': {'ECON101': 'false'}}
+ECON103020D,{'required': {'ECON101': 'false'}}
+ECON103021D,{'required': {'ECON101': 'false'}}
+ECON103022D,{'required': {'ECON101': 'false'}}
+ECON103023D,{'required': {'ECON101': 'false'}}
+ECON103024D,{'required': {'ECON101': 'false'}}
+ECON103025D,{'required': {'ECON101': 'false'}}
+ECON103026D,{'required': {'ECON101': 'false'}}
+ECON103027D,{'required': {'ECON101': 'false'}}
+ECON103028D,{'required': {'ECON101': 'false'}}
+ECON103029D,{'required': {'ECON101': 'false'}}
+ECON103030D,{'required': {'ECON101': 'false'}}
+ECON103031D,{'required': {'ECON101': 'false'}}
+ECON103032D,{'required': {'ECON101': 'false'}}
+ECON103033D,{'required': {'ECON101': 'false'}}
+ECON103034D,{'required': {'ECON101': 'false'}}
+ECON103035D,{'required': {'ECON101': 'false'}}
+ECON103036D,{'required': {'ECON101': 'false'}}
+ECON103037D,{'required': {'ECON101': 'false'}}
+ECON103038D,{'required': {'ECON101': 'false'}}
+ECON103039D,{'required': {'ECON101': 'false'}}
+ECON103040D,{'required': {'ECON101': 'false'}}
+ECON103041D,{'required': {'ECON101': 'false'}}
+ECON103042D,{'required': {'ECON101': 'false'}}
+ECON103043D,{'required': {'ECON101': 'false'}}
+ECON103044D,{'required': {'ECON101': 'false'}}
+ECON103045D,{'required': {'ECON101': 'false'}}
+ECON103045D,{'required': {'ECON101': 'false'}}
+ECON103046D,{'required': {'ECON101': 'false'}}
+ECON103047D,{'required': {'ECON101': 'false'}}
+ECON103048D,{'required': {'ECON101': 'false'}}
+ECON103049D,{'required': {'ECON101': 'false'}}
+ECON103070,{'required': {'ECON101': 'false'}}
+ECON103071,{'required': {'ECON101': 'false'}}
+ECON103072,{'required': {'ECON101': 'false'}}
+ECON103073,{'required': {'ECON101': 'false'}}
+ECON103074,{'required': {'ECON101': 'false'}}
+ECON103075,{'required': {'ECON101': 'false'}}
+ECON103080,{'required': {'ECON101': 'false'}}
+ECON103081,{'required': {'ECON101': 'false'}}
+ECON103310,{'required': {'ECON101': 'false'}}
+ECON103510,{'required': {'ECON101': 'false'}}
+ECON103710,{'required': {'ECON101': 'false'}}
+ECON167070,{'required': {}}
+ECON167071,{'required': {}}
+ECON167072,{'required': {}}
+ECON300010,{'required': {'ECON101': 'false'}}
+ECON300011,{'required': {'ECON101': 'false'}}
+ECON300012,{'required': {'ECON101': 'false'}}
+ECON301010,{'required': {}}
+ECON301011,{'required': {}}
+ECON301012,{'required': {}}
+ECON301070,{'required': {}}
+ECON303011,{'required': {}}
+ECON304010,{'required': {}}
+ECON304070,{'required': {}}
+ECON304080,{'required': {}}
+ECON306010,{'required': {}}
+ECON306011,{'required': {}}
+ECON308010,{'required': {'ECON103': 'false'}}
+ECON308011,{'required': {'ECON103': 'false'}}
+ECON308012,{'required': {'ECON103': 'false'}}
+ECON308013,{'required': {'ECON103': 'false'}}
+ECON308071,{'required': {'ECON103': 'false'}}
+ECON308072,{'required': {'ECON103': 'false'}}
+ECON311010,{'required': {}}
+ECON311011,{'required': {}}
+ECON311012,{'required': {}}
+ECON316010,{'required': {}}
+ECON317070,{'required': {}}
+ECON340010,{'required': {}}
+ECON340011,{'required': {}}
+ECON340070,{'required': {}}
+ECON340071,{'required': {}}
+ECON340072,{'required': {}}
+ECON340073,{'required': {}}
+ECON340073,{'required': {}}
+ECON340080,{'required': {}}
+ECON342071,{'required': {}}
+ECON342072,{'required': {}}
+ECON342073,{'required': {}}
+ECON342074,{'required': {}}
+ECON343010,{'required': {}}
+ECON367070,{'required': {}}
+ECON393010,{'required': {'ECON101': 'false'}}
+ECON410010,{'required': {}}
+ECON419010,{'required': {}}
+ECON422010,{'required': {}}
+ECON422070,{'required': {}}
+ECON423010,{'required': {'ECON422': 'false'}}
+ECON423080,{'required': {'ECON422': 'false'}}
+ECON426010,{'required': {}}
+ECON436010,{'required': {}}
+ECON436080,{'required': {}}
+ECON460010,{'required': {}}
+ECON463010,{'required': {}}
+ECON603050,{'required': {}}
+ECON603196,{'required': {}}
+ECON603197,{'required': {}}
+ECON676010,{'required': {}}
+ECON813010,{'required': {'ECON811': 'false'}}
+ECON814010,{'required': {'ECON812': 'false'}}
+ECON823010,{'required': {'ECON822': 'false'}}
+ECON826010,{'required': {}}
+ECON845010,{'required': {}}
+ECON850010D,{'required': {}}
+ECON868000,{'required': {}}
+ECON871010,{'required': {}}
+ECON880010,{'required': {}}
+ECON890010,{'required': {}}
+ECON964000,{'required': {}}
+ECON969000,{'required': {}}
+EDUC205010,{'required': {}}
+EDUC205011,{'required': {}}
+EDUC210010,{'required': {}}
+EDUC210011,{'required': {}}
+EDUC210012,{'required': {}}
+EDUC210080,{'required': {}}
+EDUC210081,{'required': {}}
+EDUC210510,{'required': {}}
+EDUC210710,{'required': {}}
+EDUC230010,{'required': {}}
+EDUC230011,{'required': {}}
+EDUC240010,{'required': {}}
+EDUC240510,{'required': {}}
+EDUC240510,{'required': {}}
+EDUC240710,{'required': {}}
+EDUC247010,{'required': {}}
+EDUC247011,{'required': {}}
+EDUC258010,{'required': {}}
+EDUC258011,{'required': {}}
+EDUC258012,{'required': {}}
+EDUC258510,{'required': {}}
+EDUC258710,{'required': {}}
+EDUC310010,{'required': {'EDUC210': 'false'}}
+EDUC310011,{'required': {'EDUC210': 'false'}}
+EDUC310012,{'required': {'EDUC210': 'false'}}
+EDUC310080,{'required': {'EDUC210': 'false'}}
+EDUC320070,{'required': {'EDUC310': 'false'}}
+EDUC335010,{'required': {'MATH253': 'false'}}
+EDUC335011,{'required': {'MATH253': 'false'}}
+EDUC335012,{'required': {'MATH253': 'false'}}
+EDUC341010,{'required': {}}
+EDUC341011,{'required': {}}
+EDUC341012,{'required': {}}
+EDUC346010,{'required': {}}
+EDUC346011,{'required': {}}
+EDUC346012,{'required': {}}
+EDUC348070D,{'required': {'EDUC346': 'false'}}
+EDUC366000,{'required': {}}
+EDUC387013,{'required': {}}
+EDUC387014,{'required': {}}
+EDUC387084,{'required': {}}
+EDUC387510,{'required': {}}
+EDUC387710,{'required': {}}
+EDUC390010,{'required': {}}
+EDUC390011,{'required': {}}
+EDUC390012,{'required': {}}
+EDUC390080,{'required': {}}
+EDUC400010,{'required': {}}
+EDUC400012,{'required': {}}
+EDUC400013,{'required': {}}
+EDUC400014,{'required': {}}
+EDUC400015,{'required': {}}
+EDUC400016,{'required': {}}
+EDUC400017,{'required': {}}
+EDUC400018,{'required': {}}
+EDUC400019,{'required': {}}
+EDUC400020,{'required': {}}
+EDUC400023,{'required': {}}
+EDUC400024,{'required': {}}
+EDUC400025,{'required': {}}
+EDUC400028,{'required': {}}
+EDUC400031,{'required': {}}
+EDUC400031,{'required': {}}
+EDUC400032,{'required': {}}
+EDUC400033,{'required': {}}
+EDUC400038,{'required': {}}
+EDUC400039,{'required': {}}
+EDUC400040,{'required': {}}
+EDUC400041,{'required': {}}
+EDUC400042,{'required': {}}
+EDUC400043,{'required': {}}
+EDUC400044,{'required': {}}
+EDUC400045,{'required': {}}
+EDUC400046,{'required': {}}
+EDUC400047,{'required': {}}
+EDUC400050,{'required': {}}
+EDUC400051,{'required': {}}
+EDUC400071,{'required': {}}
+EDUC400072,{'required': {}}
+EDUC401010,{'required': {}}
+EDUC403010,{'required': {}}
+EDUC403080,{'required': {}}
+EDUC404070,{'required': {'EDUC341': 'false'}}
+EDUC406070,{'required': {'EDUC335': 'false'}}
+EDUC410010,{'required': {'EDUC230': 'false'}}
+EDUC410011,{'required': {'EDUC230': 'false'}}
+EDUC413010,{'required': {}}
+EDUC414010,{'required': {}}
+EDUC414012,{'required': {}}
+EDUC415000,{'required': {}}
+EDUC419010,{'required': {}}
+EDUC421010,{'required': {}}
+EDUC421011,{'required': {}}
+EDUC428013,{'required': {}}
+EDUC428014,{'required': {}}
+EDUC429010,{'required': {}}
+EDUC431013,{'required': {'EDUC230': 'false'}}
+EDUC431014,{'required': {'EDUC230': 'false'}}
+EDUC432013,{'required': {}}
+EDUC432014,{'required': {}}
+EDUC433010,{'required': {}}
+EDUC433070,{'required': {}}
+EDUC435011,{'required': {}}
+EDUC435013,{'required': {}}
+EDUC435014,{'required': {}}
+EDUC436010,{'required': {'EDUC310': 'false'}}
+EDUC436011,{'required': {'EDUC310': 'false'}}
+EDUC436070,{'required': {'EDUC310': 'false'}}
+EDUC437011,{'required': {'EDUC310': 'false'}}
+EDUC437013,{'required': {'EDUC310': 'false'}}
+EDUC437014,{'required': {'EDUC310': 'false'}}
+EDUC437014,{'required': {'EDUC310': 'false'}}
+EDUC440010,{'required': {}}
+EDUC447010,{'required': {'EDUC472': 'false'}}
+EDUC450010,{'required': {}}
+EDUC450011,{'required': {}}
+EDUC451010,{'required': {}}
+EDUC451080,{'required': {}}
+EDUC459010,{'required': {}}
+EDUC466000,{'required': {}}
+EDUC467010,{'required': {}}
+EDUC470010,{'required': {}}
+EDUC470080,{'required': {}}
+EDUC485010,{'required': {}}
+EDUC485011,{'required': {}}
+EDUC492010,{'required': {}}
+EDUC492011,{'required': {}}
+EDUC601010,{'required': {}}
+EDUC602010,{'required': {}}
+EDUC604660,{'required': {}}
+EDUC608620,{'required': {}}
+EDUC609620,{'required': {}}
+EDUC610010,{'required': {}}
+EDUC613010,{'required': {}}
+EDUC614010,{'required': {}}
+EDUC614012,{'required': {}}
+EDUC619010,{'required': {}}
+EDUC621010,{'required': {}}
+EDUC621011,{'required': {}}
+EDUC622620,{'required': {}}
+EDUC626010,{'required': {'EDUC625': 'false'}}
+EDUC650010,{'required': {}}
+EDUC650011,{'required': {}}
+EDUC651010,{'required': {}}
+EDUC655010,{'required': {}}
+EDUC659010,{'required': {}}
+EDUC666000,{'required': {}}
+EDUC667015,{'required': {}}
+EDUC671010,{'required': {}}
+EDUC674660,{'required': {}}
+EDUC676010,{'required': {}}
+EDUC676011,{'required': {}}
+EDUC679010,{'required': {}}
+EDUC681620,{'required': {}}
+EDUC682010,{'required': {}}
+EDUC682620,{'required': {}}
+EDUC685010,{'required': {}}
+EDUC686010,{'required': {}}
+EDUC688010,{'required': {}}
+EDUC692010,{'required': {}}
+EDUC692010,{'required': {}}
+EDUC692011,{'required': {}}
+EDUC725010,{'required': {}}
+EDUC725011,{'required': {}}
+EDUC729660,{'required': {}}
+EDUC732000,{'required': {}}
+EDUC740010,{'required': {}}
+EDUC740011,{'required': {}}
+EDUC741010,{'required': {}}
+EDUC742000,{'required': {}}
+EDUC745010,{'required': {}}
+EDUC746010,{'required': {}}
+EDUC750012,{'required': {}}
+EDUC750016,{'required': {}}
+EDUC754660,{'required': {}}
+EDUC757010,{'required': {}}
+EDUC774620,{'required': {}}
+EDUC776660,{'required': {}}
+EDUC806010,{'required': {'EDUC805': 'false'}}
+EDUC812010,{'required': {}}
+EDUC819010,{'required': {}}
+EDUC827010,{'required': {}}
+EDUC830010,{'required': {}}
+EDUC836010D,{'required': {'EDUC835': 'false'}}
+EDUC838010D,{'required': {}}
+EDUC840010,{'required': {}}
+EDUC841010,{'required': {'EDUC830': 'false'}}
+EDUC855010,{'required': {}}
+EDUC856010,{'required': {'EDUC665': 'false'}}
+EDUC857010D,{'required': {}}
+EDUC858010,{'required': {}}
+EDUC863010,{'required': {}}
+EDUC863011,{'required': {}}
+EDUC865010,{'required': {'EDUC665': 'false'}}
+EDUC866000,{'required': {}}
+EDUC868000,{'required': {}}
+EDUC870010,{'required': {}}
+EDUC879010,{'required': {}}
+EDUC880000,{'required': {}}
+EDUC880002,{'required': {}}
+EDUC881000,{'required': {'EDUC864': 'false'}}
+EDUC881002,{'required': {'EDUC864': 'false'}}
+EDUC882000,{'required': {}}
+EDUC882002,{'required': {}}
+EDUC884010,{'required': {}}
+EDUC888010,{'required': {}}
+EDUC897010,{'required': {}}
+EDUC964000,{'required': {}}
+EDUC969000,{'required': {}}
+EDUC969000,{'required': {}}
+EGGG209010,{'required': {}}
+EGGG267010,{'required': {}}
+ELEG187010,{'required': {}}
+ELEG187011,{'required': {}}
+ELEG187012,{'required': {}}
+ELEG187013,{'required': {}}
+ELEG187014,{'required': {}}
+ELEG187015,{'required': {}}
+ELEG187016,{'required': {}}
+ELEG187017,{'required': {}}
+ELEG187019,{'required': {}}
+ELEG187020,{'required': {}}
+ELEG187021,{'required': {}}
+ELEG187022,{'required': {}}
+ELEG205010,{'required': {}}
+ELEG205020D,{'required': {}}
+ELEG205020L,{'required': {}}
+ELEG205021L,{'required': {}}
+ELEG287010,{'required': {}}
+ELEG287011,{'required': {}}
+ELEG287012,{'required': {}}
+ELEG287013,{'required': {}}
+ELEG287014,{'required': {}}
+ELEG287015,{'required': {}}
+ELEG287016,{'required': {}}
+ELEG287017,{'required': {}}
+ELEG287019,{'required': {}}
+ELEG287020,{'required': {}}
+ELEG287021,{'required': {}}
+ELEG287022,{'required': {}}
+ELEG298010,{'required': {}}
+ELEG298020L,{'required': {}}
+ELEG298021L,{'required': {}}
+ELEG298022L,{'required': {}}
+ELEG298023L,{'required': {}}
+ELEG305010,{'required': {}}
+ELEG305020D,{'required': {}}
+ELEG305080,{'required': {}}
+ELEG305080D,{'required': {}}
+ELEG309010,{'required': {'ELEG205': 'false'}}
+ELEG309020L,{'required': {'ELEG205': 'false'}}
+ELEG309021L,{'required': {'ELEG205': 'false'}}
+ELEG309022L,{'required': {'ELEG205': 'false'}}
+ELEG309023L,{'required': {'ELEG205': 'false'}}
+ELEG309024L,{'required': {'ELEG205': 'false'}}
+ELEG309025L,{'required': {'ELEG205': 'false'}}
+ELEG309080L,{'required': {'ELEG205': 'false'}}
+ELEG309080,{'required': {'ELEG205': 'false'}}
+ELEG309080L,{'required': {'ELEG205': 'false'}}
+ELEG309080,{'required': {'ELEG205': 'false'}}
+ELEG310010,{'required': {}}
+ELEG366000,{'required': {}}
+ELEG387010,{'required': {}}
+ELEG387011,{'required': {}}
+ELEG387012,{'required': {}}
+ELEG387013,{'required': {}}
+ELEG387014,{'required': {}}
+ELEG387015,{'required': {}}
+ELEG387016,{'required': {}}
+ELEG387017,{'required': {}}
+ELEG387019,{'required': {}}
+ELEG387020,{'required': {}}
+ELEG387021,{'required': {}}
+ELEG387022,{'required': {}}
+ELEG398010,{'required': {'ELEG298': 'false'}}
+ELEG404010,{'required': {'ELEG305': 'false'}}
+ELEG413010,{'required': {}}
+ELEG418010,{'required': {'ELEG305': 'false'}}
+ELEG418080,{'required': {'ELEG305': 'false'}}
+ELEG428010,{'required': {}}
+ELEG446010,{'required': {}}
+ELEG450010,{'required': {}}
+ELEG465010,{'required': {}}
+ELEG466000,{'required': {}}
+ELEG466002,{'required': {}}
+ELEG467013,{'required': {}}
+ELEG471010,{'required': {}}
+ELEG482010,{'required': {}}
+ELEG487010,{'required': {}}
+ELEG487011,{'required': {}}
+ELEG487012,{'required': {}}
+ELEG487013,{'required': {}}
+ELEG487014,{'required': {}}
+ELEG487015,{'required': {}}
+ELEG487016,{'required': {}}
+ELEG487017,{'required': {}}
+ELEG487019,{'required': {}}
+ELEG487020,{'required': {}}
+ELEG487021,{'required': {}}
+ELEG487022,{'required': {}}
+ELEG491010,{'required': {}}
+ELEG495010,{'required': {}}
+ELEG499010,{'required': {}}
+ELEG499080,{'required': {}}
+ELEG604010,{'required': {'ELEG305': 'false'}}
+ELEG606010,{'required': {}}
+ELEG628010,{'required': {}}
+ELEG628010,{'required': {}}
+ELEG630010,{'required': {}}
+ELEG632610,{'required': {}}
+ELEG634650,{'required': {}}
+ELEG635010,{'required': {}}
+ELEG646010,{'required': {}}
+ELEG650010,{'required': {'ELEG340': 'false'}}
+ELEG652010,{'required': {}}
+ELEG661010,{'required': {}}
+ELEG662010,{'required': {}}
+ELEG663010,{'required': {}}
+ELEG665010,{'required': {}}
+ELEG666000,{'required': {}}
+ELEG666001,{'required': {}}
+ELEG667010,{'required': {}}
+ELEG667651,{'required': {}}
+ELEG671010,{'required': {}}
+ELEG682010,{'required': {}}
+ELEG695010,{'required': {}}
+ELEG843010,{'required': {}}
+ELEG845650,{'required': {}}
+ELEG853010,{'required': {}}
+ELEG853194,{'required': {}}
+ELEG866000,{'required': {}}
+ELEG868000,{'required': {}}
+ELEG869000,{'required': {}}
+ELEG869001,{'required': {}}
+ELEG869002,{'required': {}}
+ELEG869003,{'required': {}}
+ELEG964000,{'required': {}}
+ELEG964001,{'required': {}}
+ELEG969000,{'required': {}}
+ENEP250010,{'required': {}}
+ENEP250080,{'required': {}}
+ENEP364000,{'required': {}}
+ENEP413010,{'required': {'ENWC201': 'false'}}
+ENEP426010,{'required': {}}
+ENEP468000,{'required': {}}
+ENEP470000,{'required': {}}
+ENEP472000,{'required': {}}
+ENEP472080,{'required': {}}
+ENEP485010D,{'required': {}}
+ENEP613010,{'required': {}}
+ENEP626010,{'required': {}}
+ENEP666000,{'required': {}}
+ENEP820010,{'required': {}}
+ENEP863000,{'required': {}}
+ENEP868000,{'required': {}}
+ENEP869000,{'required': {}}
+ENEP869000,{'required': {}}
+ENEP870000,{'required': {}}
+ENEP872000,{'required': {}}
+ENGL102070,{'required': {}}
+ENGL110010,{'required': {}}
+ENGL110011,{'required': {}}
+ENGL110012,{'required': {}}
+ENGL110013,{'required': {}}
+ENGL110014,{'required': {}}
+ENGL110015,{'required': {}}
+ENGL110016,{'required': {}}
+ENGL110017,{'required': {}}
+ENGL110018,{'required': {}}
+ENGL110019,{'required': {}}
+ENGL110020,{'required': {}}
+ENGL110021,{'required': {}}
+ENGL110022,{'required': {}}
+ENGL110023,{'required': {}}
+ENGL110024,{'required': {}}
+ENGL110025,{'required': {}}
+ENGL110026,{'required': {}}
+ENGL110027,{'required': {}}
+ENGL110028,{'required': {}}
+ENGL110029,{'required': {}}
+ENGL110030,{'required': {}}
+ENGL110031,{'required': {}}
+ENGL110032,{'required': {}}
+ENGL110033,{'required': {}}
+ENGL110034,{'required': {}}
+ENGL110035,{'required': {}}
+ENGL110036,{'required': {}}
+ENGL110037,{'required': {}}
+ENGL110038,{'required': {}}
+ENGL110039,{'required': {}}
+ENGL110040,{'required': {}}
+ENGL110041,{'required': {}}
+ENGL110042,{'required': {}}
+ENGL110043,{'required': {}}
+ENGL110044,{'required': {}}
+ENGL110045,{'required': {}}
+ENGL110046,{'required': {}}
+ENGL110047,{'required': {}}
+ENGL110048,{'required': {}}
+ENGL110049,{'required': {}}
+ENGL110050,{'required': {}}
+ENGL110051,{'required': {}}
+ENGL110052,{'required': {}}
+ENGL110053,{'required': {}}
+ENGL110054,{'required': {}}
+ENGL110054,{'required': {}}
+ENGL110055,{'required': {}}
+ENGL110056,{'required': {}}
+ENGL110057,{'required': {}}
+ENGL110058,{'required': {}}
+ENGL110059,{'required': {}}
+ENGL110060,{'required': {}}
+ENGL110061,{'required': {}}
+ENGL110062,{'required': {}}
+ENGL110063,{'required': {}}
+ENGL110065,{'required': {}}
+ENGL110066,{'required': {}}
+ENGL110067,{'required': {}}
+ENGL110068,{'required': {}}
+ENGL110069,{'required': {}}
+ENGL110070,{'required': {}}
+ENGL110071,{'required': {}}
+ENGL110072,{'required': {}}
+ENGL110073,{'required': {}}
+ENGL110074,{'required': {}}
+ENGL110076,{'required': {}}
+ENGL110077,{'required': {}}
+ENGL110078,{'required': {}}
+ENGL110079,{'required': {}}
+ENGL110080,{'required': {}}
+ENGL110081,{'required': {}}
+ENGL110082,{'required': {}}
+ENGL110083,{'required': {}}
+ENGL110084,{'required': {}}
+ENGL110085,{'required': {}}
+ENGL110086,{'required': {}}
+ENGL110087,{'required': {}}
+ENGL110088,{'required': {}}
+ENGL110089,{'required': {}}
+ENGL110090,{'required': {}}
+ENGL110100,{'required': {}}
+ENGL110102,{'required': {}}
+ENGL110103,{'required': {}}
+ENGL110104,{'required': {}}
+ENGL110106,{'required': {}}
+ENGL110111,{'required': {}}
+ENGL110112,{'required': {}}
+ENGL110113,{'required': {}}
+ENGL110114,{'required': {}}
+ENGL110115,{'required': {}}
+ENGL110116,{'required': {}}
+ENGL110117,{'required': {}}
+ENGL110120,{'required': {}}
+ENGL110310,{'required': {}}
+ENGL110310,{'required': {}}
+ENGL110510,{'required': {}}
+ENGL110710,{'required': {}}
+ENGL150010,{'required': {}}
+ENGL151310,{'required': {}}
+ENGL202010,{'required': {'ENGL110': 'false'}}
+ENGL202510,{'required': {'ENGL110': 'false'}}
+ENGL204010,{'required': {'ENGL110': 'false'}}
+ENGL204011,{'required': {'ENGL110': 'false'}}
+ENGL204070,{'required': {'ENGL110': 'false'}}
+ENGL204071,{'required': {'ENGL110': 'false'}}
+ENGL204310,{'required': {'ENGL110': 'false'}}
+ENGL204510,{'required': {'ENGL110': 'false'}}
+ENGL205010,{'required': {'ENGL110': 'false'}}
+ENGL205070,{'required': {'ENGL110': 'false'}}
+ENGL205071,{'required': {'ENGL110': 'false'}}
+ENGL206010,{'required': {'ENGL110': 'false'}}
+ENGL207070,{'required': {'ENGL110': 'false'}}
+ENGL207071,{'required': {'ENGL110': 'false'}}
+ENGL207072,{'required': {'ENGL110': 'false'}}
+ENGL207073,{'required': {'ENGL110': 'false'}}
+ENGL207510,{'required': {'ENGL110': 'false'}}
+ENGL209070,{'required': {'ENGL110': 'false'}}
+ENGL209071,{'required': {'ENGL110': 'false'}}
+ENGL210070,{'required': {'ENGL110': 'false'}}
+ENGL210710,{'required': {'ENGL110': 'false'}}
+ENGL214070,{'required': {'ENGL110': 'false'}}
+ENGL214071,{'required': {'ENGL110': 'false'}}
+ENGL215010,{'required': {}}
+ENGL217010,{'required': {'ENGL110': 'false'}}
+ENGL217070,{'required': {'ENGL110': 'false'}}
+ENGL217071,{'required': {'ENGL110': 'false'}}
+ENGL217072,{'required': {'ENGL110': 'false'}}
+ENGL217080,{'required': {'ENGL110': 'false'}}
+ENGL217710,{'required': {'ENGL110': 'false'}}
+ENGL222070,{'required': {'ENGL110': 'false'}}
+ENGL222071,{'required': {'ENGL110': 'false'}}
+ENGL227010,{'required': {'ENGL110': 'false'}}
+ENGL227710,{'required': {'ENGL110': 'false'}}
+ENGL230010,{'required': {}}
+ENGL230710,{'required': {}}
+ENGL267070,{'required': {}}
+ENGL278010,{'required': {'ENGL110': 'false'}}
+ENGL280010,{'required': {'ENGL110': 'false'}}
+ENGL280011,{'required': {'ENGL110': 'false'}}
+ENGL280012,{'required': {'ENGL110': 'false'}}
+ENGL280013,{'required': {'ENGL110': 'false'}}
+ENGL280510,{'required': {'ENGL110': 'false'}}
+ENGL284070,{'required': {'ENGL110': 'false'}}
+ENGL284070,{'required': {'ENGL110': 'false'}}
+ENGL290070,{'required': {'ENGL110': 'false'}}
+ENGL290071,{'required': {'ENGL110': 'false'}}
+ENGL290072,{'required': {'ENGL110': 'false'}}
+ENGL290073,{'required': {'ENGL110': 'false'}}
+ENGL290074,{'required': {'ENGL110': 'false'}}
+ENGL290310,{'required': {'ENGL110': 'false'}}
+ENGL290510,{'required': {'ENGL110': 'false'}}
+ENGL294010,{'required': {'ENGL110': 'false'}}
+ENGL295010,{'required': {}}
+ENGL295020L,{'required': {}}
+ENGL295021L,{'required': {}}
+ENGL300010,{'required': {'ENGL110': 'false'}}
+ENGL300070,{'required': {'ENGL110': 'false'}}
+ENGL300071,{'required': {'ENGL110': 'false'}}
+ENGL300072,{'required': {'ENGL110': 'false'}}
+ENGL300073,{'required': {'ENGL110': 'false'}}
+ENGL304010,{'required': {'ENGL110': 'false'}}
+ENGL305010,{'required': {'ENGL110': 'false'}}
+ENGL305070,{'required': {'ENGL110': 'false'}}
+ENGL305071,{'required': {'ENGL110': 'false'}}
+ENGL306010,{'required': {'ENGL110': 'false'}}
+ENGL306011,{'required': {'ENGL110': 'false'}}
+ENGL306073,{'required': {'ENGL110': 'false'}}
+ENGL306074,{'required': {'ENGL110': 'false'}}
+ENGL307010,{'required': {'ENGL110': 'false'}}
+ENGL307011,{'required': {'ENGL110': 'false'}}
+ENGL307070,{'required': {'ENGL110': 'false'}}
+ENGL308010L,{'required': {'ENGL307': 'false'}}
+ENGL309010,{'required': {}}
+ENGL312010,{'required': {'ENGL110': 'false'}}
+ENGL312011,{'required': {'ENGL110': 'false'}}
+ENGL312012,{'required': {'ENGL110': 'false'}}
+ENGL312013,{'required': {'ENGL110': 'false'}}
+ENGL312014,{'required': {'ENGL110': 'false'}}
+ENGL312015,{'required': {'ENGL110': 'false'}}
+ENGL312016,{'required': {'ENGL110': 'false'}}
+ENGL312017,{'required': {'ENGL110': 'false'}}
+ENGL312120,{'required': {'ENGL110': 'false'}}
+ENGL316080,{'required': {}}
+ENGL317071,{'required': {'ENGL110': 'false'}}
+ENGL317510,{'required': {'ENGL110': 'false'}}
+ENGL318010,{'required': {'ENGL110': 'false'}}
+ENGL318071,{'required': {'ENGL110': 'false'}}
+ENGL318072,{'required': {'ENGL110': 'false'}}
+ENGL318073,{'required': {'ENGL110': 'false'}}
+ENGL324010,{'required': {'ENGL110': 'false'}}
+ENGL324070,{'required': {'ENGL110': 'false'}}
+ENGL324071,{'required': {'ENGL110': 'false'}}
+ENGL324071,{'required': {'ENGL110': 'false'}}
+ENGL324072,{'required': {'ENGL110': 'false'}}
+ENGL334010,{'required': {}}
+ENGL338010,{'required': {'ENGL110': 'false'}}
+ENGL338070,{'required': {'ENGL110': 'false'}}
+ENGL338071,{'required': {'ENGL110': 'false'}}
+ENGL340070,{'required': {'ENGL110': 'false'}}
+ENGL340071,{'required': {'ENGL110': 'false'}}
+ENGL341070,{'required': {'ENGL110': 'false'}}
+ENGL341071,{'required': {'ENGL110': 'false'}}
+ENGL347070,{'required': {}}
+ENGL347071,{'required': {}}
+ENGL347072,{'required': {}}
+ENGL351070,{'required': {'ENGL110': 'false'}}
+ENGL352070,{'required': {'ENGL110': 'false'}}
+ENGL352071,{'required': {'ENGL110': 'false'}}
+ENGL356070,{'required': {'ENGL110': 'false'}}
+ENGL356071,{'required': {'ENGL110': 'false'}}
+ENGL356072,{'required': {'ENGL110': 'false'}}
+ENGL361010,{'required': {'ENGL110': 'false'}}
+ENGL365010,{'required': {'ENGL110': 'false'}}
+ENGL365070,{'required': {'ENGL110': 'false'}}
+ENGL365071,{'required': {'ENGL110': 'false'}}
+ENGL365072,{'required': {'ENGL110': 'false'}}
+ENGL365080,{'required': {'ENGL110': 'false'}}
+ENGL366710,{'required': {}}
+ENGL367070,{'required': {}}
+ENGL371010,{'required': {'ENGL110': 'false'}}
+ENGL371011,{'required': {'ENGL110': 'false'}}
+ENGL371070,{'required': {'ENGL110': 'false'}}
+ENGL371071,{'required': {'ENGL110': 'false'}}
+ENGL371080,{'required': {'ENGL110': 'false'}}
+ENGL372070,{'required': {'ENGL110': 'false'}}
+ENGL372071,{'required': {'ENGL110': 'false'}}
+ENGL372072,{'required': {'ENGL110': 'false'}}
+ENGL372073,{'required': {'ENGL110': 'false'}}
+ENGL372074,{'required': {'ENGL110': 'false'}}
+ENGL373010,{'required': {'ENGL110': 'false'}}
+ENGL373011,{'required': {'ENGL110': 'false'}}
+ENGL373070,{'required': {'ENGL110': 'false'}}
+ENGL373071,{'required': {'ENGL110': 'false'}}
+ENGL373072,{'required': {'ENGL110': 'false'}}
+ENGL374010,{'required': {'ENGL110': 'false'}}
+ENGL376010,{'required': {'ENGL110': 'false'}}
+ENGL380010,{'required': {'ENGL110': 'false'}}
+ENGL382010,{'required': {'ENGL110': 'false'}}
+ENGL392010,{'required': {'ENGL110': 'false'}}
+ENGL394010,{'required': {}}
+ENGL394080,{'required': {}}
+ENGL394080,{'required': {}}
+ENGL396010,{'required': {'ENGL110': 'false'}}
+ENGL403010,{'required': {}}
+ENGL409010,{'required': {'ENGL110': 'false'}}
+ENGL409070,{'required': {'ENGL110': 'false'}}
+ENGL410010,{'required': {'ENGL110': 'false'}}
+ENGL410011,{'required': {'ENGL110': 'false'}}
+ENGL410012,{'required': {'ENGL110': 'false'}}
+ENGL410013,{'required': {'ENGL110': 'false'}}
+ENGL410014,{'required': {'ENGL110': 'false'}}
+ENGL413010,{'required': {'ENGL110': 'false'}}
+ENGL416010,{'required': {}}
+ENGL462010,{'required': {}}
+ENGL480010,{'required': {}}
+ENGL480080,{'required': {}}
+ENGL492050,{'required': {'ENGL110': 'false'}}
+ENGL610010,{'required': {}}
+ENGL639010,{'required': {}}
+ENGL667010,{'required': {}}
+ENGL675010,{'required': {}}
+ENGL688010,{'required': {}}
+ENGL870010,{'required': {}}
+ENGL964000,{'required': {}}
+ENGL969000,{'required': {}}
+ENSC101070,{'required': {}}
+ENSC102070,{'required': {}}
+ENSC450010,{'required': {}}
+ENSC450011,{'required': {}}
+ENSC450081,{'required': {}}
+ENSC464010,{'required': {}}
+ENSC466000,{'required': {}}
+ENSC468080,{'required': {}}
+ENTR150194,{'required': {}}
+ENTR150195,{'required': {}}
+ENTR155194,{'required': {}}
+ENTR155195,{'required': {}}
+ENTR158194,{'required': {}}
+ENTR161010D,{'required': {}}
+ENTR209010,{'required': {}}
+ENTR253010D,{'required': {}}
+ENTR253011D,{'required': {}}
+ENTR253050D,{'required': {}}
+ENTR256010D,{'required': {}}
+ENTR260010D,{'required': {}}
+ENTR267070,{'required': {}}
+ENTR350010,{'required': {}}
+ENTR350011,{'required': {}}
+ENTR350012,{'required': {}}
+ENTR350013,{'required': {}}
+ENTR350013,{'required': {}}
+ENTR350014,{'required': {}}
+ENTR350015,{'required': {}}
+ENTR350016,{'required': {}}
+ENTR350017,{'required': {}}
+ENTR350050,{'required': {}}
+ENTR350051,{'required': {}}
+ENTR350070,{'required': {}}
+ENTR351010,{'required': {}}
+ENTR351011,{'required': {}}
+ENTR351012,{'required': {}}
+ENTR353010D,{'required': {}}
+ENTR355010,{'required': {}}
+ENTR355011,{'required': {}}
+ENTR356010,{'required': {}}
+ENTR356011,{'required': {}}
+ENTR356012,{'required': {}}
+ENTR360010,{'required': {}}
+ENTR364010,{'required': {}}
+ENTR367012,{'required': {}}
+ENTR367070,{'required': {}}
+ENTR420010D,{'required': {}}
+ENTR420011D,{'required': {}}
+ENTR420012D,{'required': {}}
+ENTR450015,{'required': {}}
+ENTR452010D,{'required': {}}
+ENTR455050D,{'required': {}}
+ENTR456050D,{'required': {}}
+ENTR457050,{'required': {}}
+ENTR458010,{'required': {}}
+ENTR459050,{'required': {}}
+ENTR461010D,{'required': {}}
+ENTR464010,{'required': {}}
+ENTR467010,{'required': {}}
+ENTR467015,{'required': {}}
+ENTR489010,{'required': {}}
+ENTR617050D,{'required': {}}
+ENTR620010D,{'required': {}}
+ENTR620011D,{'required': {}}
+ENTR650015,{'required': {}}
+ENTR651010,{'required': {}}
+ENTR655050D,{'required': {}}
+ENTR656010D,{'required': {'ENTR655': 'false'}}
+ENTR657050,{'required': {}}
+ENTR658010,{'required': {}}
+ENTR659050,{'required': {}}
+ENTR661010D,{'required': {}}
+ENTR664010,{'required': {}}
+ENTR667010,{'required': {}}
+ENTR667010,{'required': {}}
+ENVR450081,{'required': {}}
+ENVR464010,{'required': {}}
+ENWC103010,{'required': {}}
+ENWC201010,{'required': {}}
+ENWC201080,{'required': {}}
+ENWC205010,{'required': {}}
+ENWC205080,{'required': {}}
+ENWC205710,{'required': {}}
+ENWC214010,{'required': {}}
+ENWC224020L,{'required': {}}
+ENWC224022L,{'required': {}}
+ENWC325010,{'required': {'ENWC201': 'false'}}
+ENWC346010,{'required': {}}
+ENWC406010,{'required': {'ENWC205': 'false'}}
+ENWC406020L,{'required': {'ENWC205': 'false'}}
+ENWC413010,{'required': {'ENWC201': 'false'}}
+ENWC415010,{'required': {}}
+ENWC415020L,{'required': {}}
+ENWC415021L,{'required': {}}
+ENWC418010,{'required': {}}
+ENWC418020L,{'required': {}}
+ENWC418021L,{'required': {}}
+ENWC424010,{'required': {}}
+ENWC424020L,{'required': {}}
+ENWC435010,{'required': {'BISC302': 'false'}}
+ENWC456010,{'required': {}}
+ENWC464000,{'required': {}}
+ENWC466000,{'required': {}}
+ENWC606010,{'required': {}}
+ENWC606020L,{'required': {}}
+ENWC613010,{'required': {}}
+ENWC615010,{'required': {}}
+ENWC615020L,{'required': {}}
+ENWC615021L,{'required': {}}
+ENWC618010,{'required': {'BISC208': 'false'}}
+ENWC618020L,{'required': {'BISC208': 'false'}}
+ENWC618021L,{'required': {'BISC208': 'false'}}
+ENWC624010,{'required': {}}
+ENWC624020L,{'required': {}}
+ENWC635010,{'required': {}}
+ENWC656010,{'required': {}}
+ENWC666000,{'required': {}}
+ENWC667015,{'required': {}}
+ENWC842010,{'required': {}}
+ENWC868000,{'required': {}}
+ENWC869000,{'required': {}}
+ENWC870010,{'required': {}}
+ENWC888010,{'required': {}}
+ENWC888010,{'required': {}}
+ENWC964000,{'required': {}}
+ENWC969000,{'required': {}}
+EPID610010,{'required': {}}
+EPID621010,{'required': {}}
+EPID631010,{'required': {}}
+EPID667011,{'required': {}}
+EPID667013,{'required': {}}
+EPID667014,{'required': {}}
+EPID689010,{'required': {}}
+EPID690010,{'required': {}}
+EPID699010,{'required': {}}
+EPID860010,{'required': {}}
+EPID969010,{'required': {}}
+FASH122010,{'required': {}}
+FASH122020,{'required': {}}
+FASH133010,{'required': {}}
+FASH133011,{'required': {}}
+FASH133012,{'required': {}}
+FASH133013,{'required': {}}
+FASH133020,{'required': {}}
+FASH133030,{'required': {}}
+FASH133040,{'required': {}}
+FASH133050,{'required': {}}
+FASH180010,{'required': {}}
+FASH180020L,{'required': {}}
+FASH180080,{'required': {}}
+FASH180080L,{'required': {}}
+FASH210010D,{'required': {}}
+FASH210011D,{'required': {}}
+FASH213010,{'required': {}}
+FASH213710,{'required': {}}
+FASH214010,{'required': {}}
+FASH215010,{'required': {}}
+FASH215020L,{'required': {}}
+FASH215021L,{'required': {}}
+FASH218010,{'required': {}}
+FASH218080,{'required': {}}
+FASH220010,{'required': {'FASH215': 'false'}}
+FASH220080,{'required': {'FASH215': 'false'}}
+FASH221010,{'required': {'FASH122': 'false'}}
+FASH221020,{'required': {'FASH122': 'false'}}
+FASH224070,{'required': {}}
+FASH233010,{'required': {'FASH133': 'false'}}
+FASH233020,{'required': {'FASH133': 'false'}}
+FASH314010,{'required': {'FASH221': 'false'}}
+FASH314020,{'required': {'FASH221': 'false'}}
+FASH319010,{'required': {}}
+FASH324010,{'required': {}}
+FASH324010,{'required': {}}
+FASH324020,{'required': {}}
+FASH330010,{'required': {}}
+FASH330020L,{'required': {}}
+FASH355010,{'required': {}}
+FASH355011,{'required': {}}
+FASH355070,{'required': {}}
+FASH355080,{'required': {}}
+FASH380010,{'required': {}}
+FASH380011,{'required': {}}
+FASH380080,{'required': {}}
+FASH417010,{'required': {}}
+FASH419010,{'required': {'PSYC100': 'false'}}
+FASH420010,{'required': {'FASH330': 'false'}}
+FASH421010,{'required': {'FASH333': 'false'}}
+FASH421020,{'required': {'FASH333': 'false'}}
+FASH425010,{'required': {}}
+FASH425020,{'required': {}}
+FASH430010,{'required': {}}
+FASH433010,{'required': {}}
+FASH433020L,{'required': {}}
+FASH455010,{'required': {}}
+FASH490010,{'required': {}}
+FASH490011,{'required': {}}
+FASH490080,{'required': {}}
+FASH617010,{'required': {}}
+FASH625010,{'required': {}}
+FASH625020,{'required': {}}
+FASH655010,{'required': {}}
+FASH665010,{'required': {}}
+FASH666000,{'required': {}}
+FASH669000,{'required': {}}
+FASH695194,{'required': {}}
+FASH696194,{'required': {}}
+FASH697194,{'required': {}}
+FASH869000,{'required': {}}
+FINC200010,{'required': {}}
+FINC200050,{'required': {}}
+FINC311010,{'required': {}}
+FINC311011,{'required': {}}
+FINC311012,{'required': {}}
+FINC311073,{'required': {}}
+FINC311074,{'required': {}}
+FINC311075,{'required': {}}
+FINC311076,{'required': {}}
+FINC311080,{'required': {}}
+FINC312010,{'required': {}}
+FINC312011,{'required': {}}
+FINC312012,{'required': {}}
+FINC312012,{'required': {}}
+FINC312070,{'required': {}}
+FINC314010,{'required': {}}
+FINC314011,{'required': {}}
+FINC314013,{'required': {}}
+FINC314014,{'required': {}}
+FINC314015,{'required': {}}
+FINC314016,{'required': {}}
+FINC314080,{'required': {}}
+FINC320010,{'required': {'FINC311': 'false'}}
+FINC322050,{'required': {'FINC311': 'false'}}
+FINC364050,{'required': {'FINC311': 'false'}}
+FINC412010,{'required': {}}
+FINC412050,{'required': {}}
+FINC413010,{'required': {}}
+FINC413080,{'required': {}}
+FINC415050,{'required': {'FINC311': 'false'}}
+FINC415075,{'required': {'FINC311': 'false'}}
+FINC415076,{'required': {'FINC311': 'false'}}
+FINC415077,{'required': {'FINC311': 'false'}}
+FINC416050,{'required': {}}
+FINC418010,{'required': {'FINC311': 'false'}}
+FINC418011,{'required': {'FINC311': 'false'}}
+FINC418012,{'required': {'FINC311': 'false'}}
+FINC418080,{'required': {'FINC311': 'false'}}
+FINC419050,{'required': {}}
+FINC425050,{'required': {}}
+FINC459050,{'required': {}}
+FINC462011,{'required': {}}
+FINC462050,{'required': {}}
+FINC612050,{'required': {'FINC650': 'false'}}
+FINC615050,{'required': {'FINC650': 'false'}}
+FINC616050,{'required': {'FINC650': 'false'}}
+FINC619050,{'required': {'FINC650': 'false'}}
+FINC650050,{'required': {'ACCT600': 'false'}}
+FINC650198,{'required': {'ACCT600': 'false'}}
+FINC650199,{'required': {'ACCT600': 'false'}}
+FINC652196,{'required': {'FINC650': 'false'}}
+FINC652197,{'required': {'FINC650': 'false'}}
+FINC659050,{'required': {}}
+FINC662050,{'required': {'FINC650': 'false'}}
+FINC671050,{'required': {}}
+FINC672010,{'required': {}}
+FREN105010,{'required': {}}
+FREN105011,{'required': {}}
+FREN105070,{'required': {}}
+FREN105071,{'required': {}}
+FREN105072,{'required': {}}
+FREN105073,{'required': {}}
+FREN105073,{'required': {}}
+FREN105074,{'required': {}}
+FREN105075,{'required': {}}
+FREN105076,{'required': {}}
+FREN106010,{'required': {'FREN105': 'false'}}
+FREN106011,{'required': {'FREN105': 'false'}}
+FREN106012,{'required': {'FREN105': 'false'}}
+FREN106070,{'required': {'FREN105': 'false'}}
+FREN106071,{'required': {'FREN105': 'false'}}
+FREN106072,{'required': {'FREN105': 'false'}}
+FREN106073,{'required': {'FREN105': 'false'}}
+FREN106074,{'required': {'FREN105': 'false'}}
+FREN106075,{'required': {'FREN105': 'false'}}
+FREN107010,{'required': {'FREN106': 'false'}}
+FREN107011,{'required': {'FREN106': 'false'}}
+FREN107012,{'required': {'FREN106': 'false'}}
+FREN107013,{'required': {'FREN106': 'false'}}
+FREN107070,{'required': {'FREN106': 'false'}}
+FREN107071,{'required': {'FREN106': 'false'}}
+FREN107072,{'required': {'FREN106': 'false'}}
+FREN107073,{'required': {'FREN106': 'false'}}
+FREN107074,{'required': {'FREN106': 'false'}}
+FREN167070,{'required': {}}
+FREN167071,{'required': {}}
+FREN200010,{'required': {}}
+FREN200080,{'required': {}}
+FREN205010,{'required': {}}
+FREN205070,{'required': {}}
+FREN205080,{'required': {}}
+FREN211010,{'required': {}}
+FREN211080,{'required': {}}
+FREN250070,{'required': {'Any200-levelcoursetaughtintheFrenchlanguage': 'false'}}
+FREN250071,{'required': {'Any200-levelcoursetaughtintheFrenchlanguage': 'false'}}
+FREN302010,{'required': {}}
+FREN302080,{'required': {}}
+FREN305070,{'required': {'FREN211': 'false'}}
+FREN314010,{'required': {}}
+FREN314080,{'required': {}}
+FREN355070,{'required': {}}
+FREN376070,{'required': {}}
+FREN376071,{'required': {}}
+FREN403070,{'required': {'FREN314': 'false'}}
+FREN405070,{'required': {}}
+FREN455010,{'required': {}}
+FREN455070,{'required': {}}
+FREN456010,{'required': {}}
+FREN476070,{'required': {}}
+FREN655010,{'required': {}}
+FREN875010,{'required': {}}
+FREN875010,{'required': {}}
+FSAN850010,{'required': {}}
+FSAN860000,{'required': {}}
+FSAN964000,{'required': {}}
+FSAN969000,{'required': {}}
+GAME351010,{'required': {}}
+GAME351080,{'required': {}}
+GEOG101070,{'required': {}}
+GEOG103010,{'required': {}}
+GEOG120310,{'required': {}}
+GEOG120510,{'required': {}}
+GEOG120710,{'required': {}}
+GEOG152010,{'required': {}}
+GEOG152020L,{'required': {}}
+GEOG152021L,{'required': {}}
+GEOG152022L,{'required': {}}
+GEOG152023L,{'required': {}}
+GEOG220010,{'required': {}}
+GEOG220080,{'required': {}}
+GEOG221010L,{'required': {}}
+GEOG221011L,{'required': {}}
+GEOG230070,{'required': {}}
+GEOG230071,{'required': {}}
+GEOG235070,{'required': {}}
+GEOG235071,{'required': {}}
+GEOG266000,{'required': {}}
+GEOG341010,{'required': {}}
+GEOG341080,{'required': {}}
+GEOG345010,{'required': {}}
+GEOG366000,{'required': {}}
+GEOG372010,{'required': {}}
+GEOG372020L,{'required': {}}
+GEOG372021L,{'required': {}}
+GEOG372070,{'required': {}}
+GEOG372071,{'required': {}}
+GEOG372072,{'required': {}}
+GEOG409010,{'required': {}}
+GEOG414010D,{'required': {}}
+GEOG415010,{'required': {}}
+GEOG421010,{'required': {'MATH242': 'false'}}
+GEOG423010,{'required': {}}
+GEOG430010,{'required': {}}
+GEOG449010,{'required': {}}
+GEOG459010,{'required': {}}
+GEOG464010,{'required': {}}
+GEOG466000,{'required': {}}
+GEOG467016,{'required': {}}
+GEOG471010,{'required': {'GEOG372': 'false'}}
+GEOG472010,{'required': {}}
+GEOG472010,{'required': {}}
+GEOG478010,{'required': {}}
+GEOG489010,{'required': {}}
+GEOG606010,{'required': {}}
+GEOG609010,{'required': {}}
+GEOG615010,{'required': {}}
+GEOG621010,{'required': {}}
+GEOG623010,{'required': {}}
+GEOG630010,{'required': {}}
+GEOG649010,{'required': {}}
+GEOG659010,{'required': {}}
+GEOG666000,{'required': {}}
+GEOG666002,{'required': {}}
+GEOG667016,{'required': {}}
+GEOG670010,{'required': {}}
+GEOG671010,{'required': {'GEOG670': 'false'}}
+GEOG686010,{'required': {}}
+GEOG866000,{'required': {}}
+GEOG868000,{'required': {}}
+GEOG869000,{'required': {}}
+GEOG964000,{'required': {}}
+GEOG969000,{'required': {}}
+GEOL105010,{'required': {}}
+GEOL105011,{'required': {}}
+GEOL105080,{'required': {}}
+GEOL108010,{'required': {}}
+GEOL110011,{'required': {}}
+GEOL110020L,{'required': {}}
+GEOL110021L,{'required': {}}
+GEOL110022L,{'required': {}}
+GEOL110030L,{'required': {}}
+GEOL110031L,{'required': {}}
+GEOL110032L,{'required': {}}
+GEOL110081L,{'required': {}}
+GEOL110081,{'required': {}}
+GEOL113010,{'required': {}}
+GEOL113020L,{'required': {}}
+GEOL113021L,{'required': {}}
+GEOL113022L,{'required': {}}
+GEOL113023L,{'required': {}}
+GEOL113024L,{'required': {}}
+GEOL113025L,{'required': {}}
+GEOL113510,{'required': {}}
+GEOL113510L,{'required': {}}
+GEOL113710,{'required': {}}
+GEOL113710L,{'required': {}}
+GEOL115010L,{'required': {}}
+GEOL115011L,{'required': {}}
+GEOL115012L,{'required': {}}
+GEOL115012L,{'required': {}}
+GEOL115013L,{'required': {}}
+GEOL115014L,{'required': {}}
+GEOL115015L,{'required': {}}
+GEOL115016L,{'required': {}}
+GEOL115017L,{'required': {}}
+GEOL115018L,{'required': {}}
+GEOL115019L,{'required': {}}
+GEOL115020L,{'required': {}}
+GEOL115021L,{'required': {}}
+GEOL115022L,{'required': {}}
+GEOL115023L,{'required': {}}
+GEOL115024L,{'required': {}}
+GEOL166000,{'required': {}}
+GEOL203010,{'required': {'GEOL107': 'false'}}
+GEOL203020L,{'required': {'GEOL107': 'false'}}
+GEOL302010,{'required': {}}
+GEOL302020L,{'required': {}}
+GEOL302021L,{'required': {}}
+GEOL305010,{'required': {}}
+GEOL305020L,{'required': {}}
+GEOL306010,{'required': {}}
+GEOL341010,{'required': {}}
+GEOL366000,{'required': {}}
+GEOL401010,{'required': {}}
+GEOL428010,{'required': {'MATH241': 'false'}}
+GEOL466000,{'required': {}}
+GEOL467010,{'required': {}}
+GEOL469010,{'required': {}}
+GEOL602010,{'required': {}}
+GEOL604010,{'required': {}}
+GEOL606010,{'required': {}}
+GEOL627010,{'required': {}}
+GEOL628010,{'required': {}}
+GEOL659000,{'required': {}}
+GEOL666000,{'required': {}}
+GEOL667010,{'required': {}}
+GEOL669010,{'required': {}}
+GEOL866000,{'required': {}}
+GEOL868000,{'required': {}}
+GEOL869000,{'required': {}}
+GEOL964000,{'required': {}}
+GEOL969000,{'required': {}}
+GRCO667010,{'required': {}}
+GREK101070,{'required': {}}
+GREK101071,{'required': {}}
+GREK101072,{'required': {}}
+GREK102010,{'required': {'GREK101': 'false'}}
+GREK102070,{'required': {'GREK101': 'false'}}
+GREK102070,{'required': {'GREK101': 'false'}}
+GREK102071,{'required': {'GREK101': 'false'}}
+GREK102072,{'required': {'GREK101': 'false'}}
+GREK102073,{'required': {'GREK101': 'false'}}
+GREK202010,{'required': {'GREK201': 'false'}}
+GREK202080,{'required': {'GREK201': 'false'}}
+GREK302010,{'required': {'GREK202': 'false'}}
+GREK302080,{'required': {'GREK202': 'false'}}
+GRMN103010,{'required': {}}
+GRMN105010,{'required': {}}
+GRMN105011,{'required': {}}
+GRMN105070,{'required': {}}
+GRMN105071,{'required': {}}
+GRMN106010,{'required': {'GRMN105': 'false'}}
+GRMN106011,{'required': {'GRMN105': 'false'}}
+GRMN106070,{'required': {'GRMN105': 'false'}}
+GRMN106071,{'required': {'GRMN105': 'false'}}
+GRMN107010,{'required': {'GRMN106': 'false'}}
+GRMN107011,{'required': {'GRMN106': 'false'}}
+GRMN107070,{'required': {'GRMN106': 'false'}}
+GRMN200010,{'required': {'GRMN107': 'false'}}
+GRMN200080,{'required': {'GRMN107': 'false'}}
+GRMN205070,{'required': {'GRMN107': 'false'}}
+GRMN255010,{'required': {'GRMN107': 'false'}}
+GRMN255080,{'required': {'GRMN107': 'false'}}
+GRMN306070,{'required': {}}
+GRMN307070,{'required': {}}
+GRMN325010,{'required': {}}
+GRMN325080,{'required': {}}
+GRMN326010,{'required': {}}
+GRMN326080,{'required': {}}
+GRMN355070,{'required': {}}
+GRMN355071,{'required': {}}
+GRMN355072,{'required': {}}
+GRMN355073,{'required': {}}
+GRMN406070,{'required': {}}
+GRMN455010,{'required': {}}
+GRMN455070,{'required': {}}
+GRMN455072,{'required': {}}
+GRMN455080,{'required': {}}
+HDFS201010,{'required': {}}
+HDFS201080,{'required': {}}
+HDFS201194,{'required': {}}
+HDFS201195,{'required': {}}
+HDFS202010,{'required': {}}
+HDFS202011,{'required': {}}
+HDFS202080,{'required': {}}
+HDFS202081,{'required': {}}
+HDFS202194,{'required': {}}
+HDFS202194,{'required': {}}
+HDFS202195,{'required': {}}
+HDFS202710,{'required': {}}
+HDFS220010,{'required': {}}
+HDFS221010,{'required': {}}
+HDFS222010,{'required': {'HDFS221': 'false'}}
+HDFS223010,{'required': {}}
+HDFS224010D,{'required': {'HDFS221': 'false'}}
+HDFS224020L,{'required': {'HDFS221': 'false'}}
+HDFS224021L,{'required': {'HDFS221': 'false'}}
+HDFS224022L,{'required': {'HDFS221': 'false'}}
+HDFS224023L,{'required': {'HDFS221': 'false'}}
+HDFS224024L,{'required': {'HDFS221': 'false'}}
+HDFS224025L,{'required': {'HDFS221': 'false'}}
+HDFS224026L,{'required': {'HDFS221': 'false'}}
+HDFS224027L,{'required': {'HDFS221': 'false'}}
+HDFS224028L,{'required': {'HDFS221': 'false'}}
+HDFS224029L,{'required': {'HDFS221': 'false'}}
+HDFS224030L,{'required': {'HDFS221': 'false'}}
+HDFS224031L,{'required': {'HDFS221': 'false'}}
+HDFS224032L,{'required': {'HDFS221': 'false'}}
+HDFS224033L,{'required': {'HDFS221': 'false'}}
+HDFS224034L,{'required': {'HDFS221': 'false'}}
+HDFS224035L,{'required': {'HDFS221': 'false'}}
+HDFS224036L,{'required': {'HDFS221': 'false'}}
+HDFS224037L,{'required': {'HDFS221': 'false'}}
+HDFS224038L,{'required': {'HDFS221': 'false'}}
+HDFS224039L,{'required': {'HDFS221': 'false'}}
+HDFS230010,{'required': {}}
+HDFS230012,{'required': {}}
+HDFS235010,{'required': {}}
+HDFS235080,{'required': {}}
+HDFS266000,{'required': {}}
+HDFS270010,{'required': {}}
+HDFS270011,{'required': {}}
+HDFS270194,{'required': {}}
+HDFS270195,{'required': {}}
+HDFS316010,{'required': {}}
+HDFS328011,{'required': {}}
+HDFS329010,{'required': {}}
+HDFS330010,{'required': {}}
+HDFS330080,{'required': {}}
+HDFS332010,{'required': {}}
+HDFS332011,{'required': {}}
+HDFS334010,{'required': {}}
+HDFS339010,{'required': {'HDFS201': 'false'}}
+HDFS346010,{'required': {'HDFS334': 'false'}}
+HDFS346080,{'required': {'HDFS334': 'false'}}
+HDFS347010,{'required': {}}
+HDFS347010,{'required': {}}
+HDFS355010,{'required': {}}
+HDFS366000,{'required': {}}
+HDFS402011,{'required': {}}
+HDFS408010,{'required': {'WOMS240': 'false'}}
+HDFS409010,{'required': {}}
+HDFS411010,{'required': {}}
+HDFS411080,{'required': {}}
+HDFS413010,{'required': {}}
+HDFS413011,{'required': {}}
+HDFS414010,{'required': {}}
+HDFS422010,{'required': {}}
+HDFS422012,{'required': {}}
+HDFS422080,{'required': {}}
+HDFS425010,{'required': {}}
+HDFS425071,{'required': {}}
+HDFS431020L,{'required': {}}
+HDFS431022L,{'required': {}}
+HDFS431023L,{'required': {}}
+HDFS431024L,{'required': {}}
+HDFS431025L,{'required': {}}
+HDFS433010D,{'required': {}}
+HDFS433020L,{'required': {}}
+HDFS433021L,{'required': {}}
+HDFS433022L,{'required': {}}
+HDFS433023L,{'required': {}}
+HDFS433024L,{'required': {}}
+HDFS436010,{'required': {}}
+HDFS437010,{'required': {'HDFS436': 'false'}}
+HDFS442010,{'required': {'HDFS441': 'false'}}
+HDFS442071,{'required': {'HDFS441': 'false'}}
+HDFS449010,{'required': {}}
+HDFS449011,{'required': {}}
+HDFS465010D,{'required': {}}
+HDFS465011D,{'required': {}}
+HDFS470010,{'required': {}}
+HDFS470080,{'required': {}}
+HDFS472010,{'required': {}}
+HDFS637010,{'required': {}}
+HDFS640010,{'required': {}}
+HDFS642010,{'required': {}}
+HDFS656011,{'required': {}}
+HDFS669010,{'required': {}}
+HDFS691010,{'required': {}}
+HDFS815010,{'required': {'HDFS615': 'false'}}
+HDFS855010,{'required': {'HDFS621': 'false'}}
+HDFS866002,{'required': {}}
+HDFS868010,{'required': {}}
+HDFS869000,{'required': {}}
+HDFS869000,{'required': {}}
+HDFS964002,{'required': {}}
+HDFS969000,{'required': {}}
+HEBR106010,{'required': {'HEBR105': 'false'}}
+HEBR205010,{'required': {'HEBR107': 'false'}}
+HEBR205080,{'required': {'HEBR107': 'false'}}
+HIST101010,{'required': {}}
+HIST101070,{'required': {}}
+HIST101071,{'required': {}}
+HIST101072,{'required': {}}
+HIST101073,{'required': {}}
+HIST102010,{'required': {}}
+HIST102070,{'required': {}}
+HIST102071,{'required': {}}
+HIST102072,{'required': {}}
+HIST102073,{'required': {}}
+HIST102074,{'required': {}}
+HIST103010,{'required': {}}
+HIST103011,{'required': {}}
+HIST103016,{'required': {}}
+HIST103070,{'required': {}}
+HIST103071,{'required': {}}
+HIST103072,{'required': {}}
+HIST104013,{'required': {}}
+HIST104015,{'required': {}}
+HIST104016,{'required': {}}
+HIST104051D,{'required': {}}
+HIST104052D,{'required': {}}
+HIST104053D,{'required': {}}
+HIST104054D,{'required': {}}
+HIST104070,{'required': {}}
+HIST104071,{'required': {}}
+HIST104072,{'required': {}}
+HIST104510,{'required': {}}
+HIST104710,{'required': {}}
+HIST105011,{'required': {}}
+HIST105012,{'required': {}}
+HIST106010,{'required': {}}
+HIST106012,{'required': {}}
+HIST106014,{'required': {}}
+HIST106016,{'required': {}}
+HIST106041D,{'required': {}}
+HIST106042D,{'required': {}}
+HIST106043D,{'required': {}}
+HIST106044D,{'required': {}}
+HIST106045D,{'required': {}}
+HIST106082,{'required': {}}
+HIST106082D,{'required': {}}
+HIST106310,{'required': {}}
+HIST106310,{'required': {}}
+HIST106510,{'required': {}}
+HIST131010,{'required': {}}
+HIST131080,{'required': {}}
+HIST135011,{'required': {}}
+HIST135070,{'required': {}}
+HIST138010,{'required': {}}
+HIST140010,{'required': {}}
+HIST146010,{'required': {}}
+HIST146080,{'required': {}}
+HIST152010,{'required': {}}
+HIST170010,{'required': {}}
+HIST170012,{'required': {}}
+HIST170080,{'required': {}}
+HIST170082,{'required': {}}
+HIST200010,{'required': {}}
+HIST200080,{'required': {}}
+HIST210710,{'required': {}}
+HIST211001,{'required': {}}
+HIST220010,{'required': {}}
+HIST220710,{'required': {}}
+HIST221010,{'required': {}}
+HIST221310,{'required': {}}
+HIST227010,{'required': {}}
+HIST227080,{'required': {}}
+HIST241710,{'required': {}}
+HIST254010,{'required': {}}
+HIST254070,{'required': {}}
+HIST254080,{'required': {}}
+HIST267071,{'required': {}}
+HIST267072,{'required': {}}
+HIST268012,{'required': {}}
+HIST268013,{'required': {}}
+HIST268014,{'required': {}}
+HIST268084,{'required': {}}
+HIST291010,{'required': {}}
+HIST300010,{'required': {}}
+HIST300310,{'required': {}}
+HIST308010,{'required': {}}
+HIST308011,{'required': {}}
+HIST308080,{'required': {}}
+HIST309010,{'required': {}}
+HIST314010,{'required': {}}
+HIST314011,{'required': {}}
+HIST314510,{'required': {}}
+HIST319010,{'required': {}}
+HIST319080,{'required': {}}
+HIST324010,{'required': {}}
+HIST324080,{'required': {}}
+HIST324080,{'required': {}}
+HIST326010,{'required': {}}
+HIST326011,{'required': {}}
+HIST327070,{'required': {}}
+HIST334010,{'required': {}}
+HIST334011,{'required': {}}
+HIST335010,{'required': {}}
+HIST335011,{'required': {}}
+HIST336010,{'required': {}}
+HIST337010,{'required': {}}
+HIST337080,{'required': {}}
+HIST339071,{'required': {}}
+HIST339072,{'required': {}}
+HIST339073,{'required': {}}
+HIST339074,{'required': {}}
+HIST339075,{'required': {}}
+HIST339076,{'required': {}}
+HIST339077,{'required': {}}
+HIST339078,{'required': {}}
+HIST339079,{'required': {}}
+HIST339100,{'required': {}}
+HIST339101,{'required': {}}
+HIST339102,{'required': {}}
+HIST339103,{'required': {}}
+HIST339104,{'required': {}}
+HIST339105,{'required': {}}
+HIST339106,{'required': {}}
+HIST339107,{'required': {}}
+HIST339108,{'required': {}}
+HIST339109,{'required': {}}
+HIST339110,{'required': {}}
+HIST339111,{'required': {}}
+HIST339112,{'required': {}}
+HIST340070,{'required': {}}
+HIST340071,{'required': {}}
+HIST340072,{'required': {}}
+HIST341010,{'required': {}}
+HIST341070,{'required': {}}
+HIST341071,{'required': {}}
+HIST341080,{'required': {}}
+HIST343070,{'required': {}}
+HIST345010,{'required': {}}
+HIST345080,{'required': {}}
+HIST348070,{'required': {}}
+HIST348071,{'required': {}}
+HIST348072,{'required': {}}
+HIST348073,{'required': {}}
+HIST348074,{'required': {}}
+HIST349010,{'required': {}}
+HIST349010,{'required': {}}
+HIST349080,{'required': {}}
+HIST352010,{'required': {}}
+HIST352070,{'required': {}}
+HIST352080,{'required': {}}
+HIST354010,{'required': {}}
+HIST354011,{'required': {}}
+HIST354080,{'required': {}}
+HIST357070,{'required': {}}
+HIST363010,{'required': {}}
+HIST363011,{'required': {}}
+HIST363080,{'required': {}}
+HIST366000,{'required': {}}
+HIST368010,{'required': {}}
+HIST368011,{'required': {}}
+HIST374010,{'required': {}}
+HIST374011,{'required': {}}
+HIST377010,{'required': {}}
+HIST377080,{'required': {}}
+HIST379010,{'required': {}}
+HIST382010,{'required': {}}
+HIST382080,{'required': {}}
+HIST388010,{'required': {}}
+HIST388011,{'required': {}}
+HIST388080,{'required': {}}
+HIST396010,{'required': {}}
+HIST396070,{'required': {}}
+HIST396071,{'required': {}}
+HIST396072,{'required': {}}
+HIST400010,{'required': {'HIST268': 'false'}}
+HIST400011,{'required': {'HIST268': 'false'}}
+HIST400012,{'required': {'HIST268': 'false'}}
+HIST400080,{'required': {'HIST268': 'false'}}
+HIST400082,{'required': {'HIST268': 'false'}}
+HIST464001,{'required': {}}
+HIST466000,{'required': {}}
+HIST468000,{'required': {'HIST268': 'false'}}
+HIST493011,{'required': {}}
+HIST603010D,{'required': {}}
+HIST610010,{'required': {}}
+HIST643010,{'required': {}}
+HIST650010D,{'required': {}}
+HIST666000,{'required': {}}
+HIST804000,{'required': {}}
+HIST866000,{'required': {}}
+HIST867010,{'required': {}}
+HIST867011,{'required': {}}
+HLPR211010,{'required': {}}
+HLPR211070,{'required': {}}
+HLPR211070,{'required': {}}
+HLPR222010,{'required': {}}
+HLPR222020D,{'required': {}}
+HLPR222021D,{'required': {}}
+HLPR222022D,{'required': {}}
+HLPR222023D,{'required': {}}
+HLPR233010,{'required': {}}
+HLPR233070,{'required': {}}
+HLPR233071,{'required': {}}
+HLPR410010,{'required': {}}
+HLPR430010,{'required': {'BHAN332': 'false'}}
+HLPR430011,{'required': {'BHAN332': 'false'}}
+HLPR610010,{'required': {}}
+HLPR631050,{'required': {'HLPR630': 'false'}}
+HLPR650050,{'required': {}}
+HLPR664010L,{'required': {}}
+HLPR804010,{'required': {'HLPR803': 'false'}}
+HLPR813050,{'required': {}}
+HLPR864010,{'required': {}}
+HLPR866000,{'required': {}}
+HLPR868000,{'required': {}}
+HLTH166000,{'required': {}}
+HLTH215010,{'required': {}}
+HLTH241011,{'required': {}}
+HLTH314010,{'required': {'HLTH215': 'false'}}
+HLTH320010,{'required': {'ENGL110': 'false'}}
+HLTH360010,{'required': {}}
+HLTH395070,{'required': {}}
+HLTH843196,{'required': {}}
+HLTH843197,{'required': {}}
+HLTH844198,{'required': {}}
+HLTH844199,{'required': {}}
+HONR290083,{'required': {}}
+HONR290085,{'required': {}}
+HONR290086,{'required': {}}
+HONR290088,{'required': {}}
+HONR291080,{'required': {}}
+HONR292080,{'required': {}}
+HONR292081,{'required': {}}
+HONR292082,{'required': {}}
+HONR292083,{'required': {}}
+HONR292084,{'required': {}}
+HONR292085,{'required': {}}
+HONR292086,{'required': {}}
+HONR330080,{'required': {}}
+HOSP180010,{'required': {}}
+HOSP180020L,{'required': {}}
+HOSP180080,{'required': {}}
+HOSP180080L,{'required': {}}
+HOSP180080,{'required': {}}
+HOSP180080L,{'required': {}}
+HOSP187010,{'required': {}}
+HOSP201010,{'required': {}}
+HOSP201080,{'required': {}}
+HOSP211010L,{'required': {}}
+HOSP211011L,{'required': {}}
+HOSP211012L,{'required': {}}
+HOSP211013L,{'required': {}}
+HOSP211014L,{'required': {}}
+HOSP212010,{'required': {}}
+HOSP214010,{'required': {}}
+HOSP214070,{'required': {}}
+HOSP214071,{'required': {}}
+HOSP215010,{'required': {}}
+HOSP230010,{'required': {}}
+HOSP230011,{'required': {}}
+HOSP230012,{'required': {}}
+HOSP230013,{'required': {}}
+HOSP230014,{'required': {}}
+HOSP267070,{'required': {}}
+HOSP267071,{'required': {}}
+HOSP300010,{'required': {}}
+HOSP300020L,{'required': {}}
+HOSP300021L,{'required': {}}
+HOSP300022L,{'required': {}}
+HOSP300023L,{'required': {}}
+HOSP314010,{'required': {}}
+HOSP315010,{'required': {'HOSP215': 'false'}}
+HOSP316010,{'required': {}}
+HOSP316011,{'required': {}}
+HOSP321010,{'required': {}}
+HOSP321080,{'required': {}}
+HOSP325010L,{'required': {}}
+HOSP325011L,{'required': {}}
+HOSP325012L,{'required': {}}
+HOSP325013L,{'required': {}}
+HOSP325014L,{'required': {}}
+HOSP327010,{'required': {}}
+HOSP364010,{'required': {'HOSP215': 'false'}}
+HOSP366000,{'required': {}}
+HOSP367010,{'required': {}}
+HOSP367070,{'required': {}}
+HOSP367071,{'required': {}}
+HOSP380010,{'required': {}}
+HOSP381010,{'required': {'HOSP321': 'false'}}
+HOSP381070,{'required': {'HOSP321': 'false'}}
+HOSP381071,{'required': {'HOSP321': 'false'}}
+HOSP381080,{'required': {'HOSP321': 'false'}}
+HOSP381080,{'required': {'HOSP321': 'false'}}
+HOSP382010,{'required': {'ACCT207': 'false'}}
+HOSP418010,{'required': {}}
+HOSP418012,{'required': {}}
+HOSP420010L,{'required': {'SPTM418': 'false'}}
+HOSP450010,{'required': {}}
+HOSP464072,{'required': {}}
+HOSP464073,{'required': {}}
+HOSP467010,{'required': {}}
+HOSP467070,{'required': {}}
+HOSP480010,{'required': {}}
+HOSP481010,{'required': {}}
+HOSP482010,{'required': {}}
+HOSP488010L,{'required': {}}
+HOSP489010L,{'required': {}}
+HOSP489080L,{'required': {}}
+HOSP602198,{'required': {}}
+HOSP602199,{'required': {}}
+HOSP604010,{'required': {}}
+HOSP645010,{'required': {}}
+HOSP667010,{'required': {}}
+HOSP848010,{'required': {'HOSP801': 'false'}}
+HOSP890010,{'required': {'HOSP848': 'false'}}
+HOSP969001,{'required': {}}
+ITAL105010,{'required': {}}
+ITAL105011,{'required': {}}
+ITAL105012,{'required': {}}
+ITAL105070,{'required': {}}
+ITAL105071,{'required': {}}
+ITAL105072,{'required': {}}
+ITAL105073,{'required': {}}
+ITAL106010,{'required': {'ITAL105': 'false'}}
+ITAL106011,{'required': {'ITAL105': 'false'}}
+ITAL106012,{'required': {'ITAL105': 'false'}}
+ITAL106071,{'required': {'ITAL105': 'false'}}
+ITAL106072,{'required': {'ITAL105': 'false'}}
+ITAL106073,{'required': {'ITAL105': 'false'}}
+ITAL107010,{'required': {'ITAL106': 'false'}}
+ITAL107011,{'required': {'ITAL106': 'false'}}
+ITAL107012,{'required': {'ITAL106': 'false'}}
+ITAL107070,{'required': {'ITAL106': 'false'}}
+ITAL107071,{'required': {'ITAL106': 'false'}}
+ITAL107072,{'required': {'ITAL106': 'false'}}
+ITAL107073,{'required': {'ITAL106': 'false'}}
+ITAL200070,{'required': {'ITAL107': 'false'}}
+ITAL200071,{'required': {'ITAL107': 'false'}}
+ITAL205010,{'required': {'ITAL107': 'false'}}
+ITAL205080,{'required': {'ITAL107': 'false'}}
+ITAL206070,{'required': {'ITAL107': 'false'}}
+ITAL206070,{'required': {'ITAL107': 'false'}}
+ITAL211010,{'required': {}}
+ITAL211070,{'required': {}}
+ITAL211080,{'required': {}}
+ITAL212070,{'required': {}}
+ITAL267070,{'required': {}}
+ITAL305010,{'required': {}}
+ITAL305070,{'required': {}}
+ITAL305080,{'required': {}}
+ITAL355010,{'required': {}}
+ITAL355070,{'required': {}}
+ITAL355071,{'required': {}}
+ITAL355072,{'required': {}}
+ITAL355073,{'required': {}}
+ITAL355074,{'required': {}}
+ITAL355080,{'required': {}}
+ITAL367070,{'required': {}}
+ITAL367071,{'required': {}}
+ITAL455010,{'required': {}}
+ITAL455070,{'required': {}}
+ITAL455071,{'required': {}}
+ITAL455080,{'required': {}}
+ITAL655010,{'required': {}}
+ITAL869010,{'required': {}}
+JAPN105010,{'required': {}}
+JAPN105011,{'required': {}}
+JAPN105012,{'required': {}}
+JAPN106010,{'required': {'JAPN105': 'false'}}
+JAPN106011,{'required': {'JAPN105': 'false'}}
+JAPN107010,{'required': {'JAPN106': 'false'}}
+JAPN107011,{'required': {'JAPN106': 'false'}}
+JAPN201010,{'required': {'JAPN107': 'false'}}
+JAPN201080,{'required': {'JAPN107': 'false'}}
+JAPN202010,{'required': {}}
+JAPN202080,{'required': {}}
+JAPN204010,{'required': {'JAPNcourse': 'false'}}
+JAPN204080,{'required': {'JAPNcourse': 'false'}}
+JAPN301010,{'required': {}}
+JAPN301080,{'required': {}}
+JAPN455010,{'required': {}}
+JAPN455080,{'required': {}}
+JOUR301010,{'required': {'ENGL110': 'false'}}
+JOUR301070,{'required': {'ENGL110': 'false'}}
+JOUR311070,{'required': {}}
+JWST106010,{'required': {'HEBR105': 'false'}}
+JWST146010,{'required': {}}
+JWST146080,{'required': {}}
+JWST202010,{'required': {'ENGL110': 'false'}}
+JWST205010,{'required': {'HEBR107': 'false'}}
+JWST205010,{'required': {'HEBR107': 'false'}}
+JWST205080,{'required': {'HEBR107': 'false'}}
+JWST212010,{'required': {}}
+JWST254010,{'required': {}}
+JWST254070,{'required': {}}
+JWST254080,{'required': {}}
+JWST302010,{'required': {}}
+JWST345010,{'required': {}}
+JWST345080,{'required': {}}
+JWST363010,{'required': {}}
+JWST363011,{'required': {}}
+JWST363080,{'required': {}}
+JWST482010,{'required': {}}
+KAAP107020L,{'required': {}}
+KAAP180010,{'required': {}}
+KAAP207020L,{'required': {}}
+KAAP210010,{'required': {}}
+KAAP220010,{'required': {}}
+KAAP220011,{'required': {}}
+KAAP220070,{'required': {}}
+KAAP220071,{'required': {}}
+KAAP220080,{'required': {}}
+KAAP221010,{'required': {}}
+KAAP221011,{'required': {}}
+KAAP221012,{'required': {}}
+KAAP221070,{'required': {}}
+KAAP230024L,{'required': {'KAAP220': 'false'}}
+KAAP231033L,{'required': {'KAAP221': 'false'}}
+KAAP231040L,{'required': {'KAAP221': 'false'}}
+KAAP266000,{'required': {}}
+KAAP267070,{'required': {}}
+KAAP267071,{'required': {}}
+KAAP305010,{'required': {}}
+KAAP305011,{'required': {}}
+KAAP305013,{'required': {}}
+KAAP307020L,{'required': {}}
+KAAP309010,{'required': {}}
+KAAP309020L,{'required': {}}
+KAAP309021L,{'required': {}}
+KAAP309022L,{'required': {}}
+KAAP309023L,{'required': {}}
+KAAP309024L,{'required': {}}
+KAAP310010,{'required': {'KAAP309': 'false'}}
+KAAP310011,{'required': {'KAAP309': 'false'}}
+KAAP310012,{'required': {'KAAP309': 'false'}}
+KAAP310020L,{'required': {'KAAP309': 'false'}}
+KAAP310021L,{'required': {'KAAP309': 'false'}}
+KAAP310022L,{'required': {'KAAP309': 'false'}}
+KAAP310030L,{'required': {'KAAP309': 'false'}}
+KAAP310030L,{'required': {'KAAP309': 'false'}}
+KAAP310031L,{'required': {'KAAP309': 'false'}}
+KAAP310032L,{'required': {'KAAP309': 'false'}}
+KAAP310033L,{'required': {'KAAP309': 'false'}}
+KAAP310034L,{'required': {'KAAP309': 'false'}}
+KAAP310035L,{'required': {'KAAP309': 'false'}}
+KAAP310036L,{'required': {'KAAP309': 'false'}}
+KAAP310040L,{'required': {'KAAP309': 'false'}}
+KAAP310041L,{'required': {'KAAP309': 'false'}}
+KAAP310042L,{'required': {'KAAP309': 'false'}}
+KAAP310043L,{'required': {'KAAP309': 'false'}}
+KAAP310080L,{'required': {'KAAP309': 'false'}}
+KAAP310080,{'required': {'KAAP309': 'false'}}
+KAAP310081L,{'required': {'KAAP309': 'false'}}
+KAAP310082L,{'required': {'KAAP309': 'false'}}
+KAAP320010,{'required': {}}
+KAAP350010,{'required': {}}
+KAAP350080,{'required': {}}
+KAAP353010,{'required': {}}
+KAAP366000,{'required': {}}
+KAAP368000,{'required': {}}
+KAAP400010,{'required': {}}
+KAAP400011,{'required': {}}
+KAAP400012,{'required': {}}
+KAAP400080,{'required': {}}
+KAAP400081,{'required': {}}
+KAAP400082,{'required': {}}
+KAAP420010,{'required': {}}
+KAAP420020L,{'required': {}}
+KAAP420080,{'required': {}}
+KAAP420080L,{'required': {}}
+KAAP426010,{'required': {}}
+KAAP426020L,{'required': {}}
+KAAP426021L,{'required': {}}
+KAAP426022L,{'required': {}}
+KAAP426023L,{'required': {}}
+KAAP426024L,{'required': {}}
+KAAP426080L,{'required': {}}
+KAAP426080,{'required': {}}
+KAAP428010,{'required': {}}
+KAAP428020L,{'required': {}}
+KAAP428021L,{'required': {}}
+KAAP428022L,{'required': {}}
+KAAP428023L,{'required': {}}
+KAAP428024L,{'required': {}}
+KAAP430010,{'required': {}}
+KAAP430011,{'required': {}}
+KAAP430020L,{'required': {}}
+KAAP430021L,{'required': {}}
+KAAP430021L,{'required': {}}
+KAAP430022L,{'required': {}}
+KAAP430023L,{'required': {}}
+KAAP430030L,{'required': {}}
+KAAP430031L,{'required': {}}
+KAAP430032L,{'required': {}}
+KAAP430080L,{'required': {}}
+KAAP430080,{'required': {}}
+KAAP430081L,{'required': {}}
+KAAP434010,{'required': {'KAAP430': 'false'}}
+KAAP434080,{'required': {'KAAP430': 'false'}}
+KAAP440010,{'required': {}}
+KAAP440012,{'required': {}}
+KAAP441010,{'required': {}}
+KAAP442010,{'required': {}}
+KAAP444020L,{'required': {}}
+KAAP462020L,{'required': {'KAAP447': 'false'}}
+KAAP463000,{'required': {}}
+KAAP466000,{'required': {}}
+KAAP468000,{'required': {}}
+KAAP475010,{'required': {'KAAP430': 'false'}}
+KAAP485000,{'required': {}}
+KAAP487000,{'required': {}}
+KAAP605050,{'required': {'HESC220': 'false'}}
+KAAP607010,{'required': {}}
+KAAP612010,{'required': {}}
+KAAP613050,{'required': {'KAAP690': 'false'}}
+KAAP624010,{'required': {'KAAP623': 'false'}}
+KAAP627010,{'required': {}}
+KAAP628010,{'required': {'KAAP627': 'false'}}
+KAAP631010,{'required': {}}
+KAAP640010,{'required': {}}
+KAAP652010,{'required': {}}
+KAAP666000,{'required': {}}
+KAAP667012,{'required': {}}
+KAAP667013,{'required': {}}
+KAAP671010,{'required': {'KAAP675': 'false'}}
+KAAP678010,{'required': {}}
+KAAP680010,{'required': {'KAAP676': 'false'}}
+KAAP691010,{'required': {'KAAP690': 'false'}}
+KAAP694010,{'required': {'KAAP693': 'false'}}
+KAAP801010,{'required': {}}
+KAAP868000,{'required': {}}
+KAAP869000,{'required': {}}
+KAAP964000,{'required': {}}
+KAAP969000,{'required': {}}
+LAMS491010,{'required': {}}
+LARC103010,{'required': {}}
+LARC150010,{'required': {}}
+LARC150010,{'required': {}}
+LARC166000,{'required': {}}
+LARC250010,{'required': {}}
+LARC266000,{'required': {}}
+LARC303010,{'required': {}}
+LARC343010,{'required': {}}
+LARC343080,{'required': {}}
+LARC351010,{'required': {'LARC350': 'false'}}
+LARC364010,{'required': {}}
+LARC366000,{'required': {}}
+LARC367010,{'required': {}}
+LARC399010,{'required': {}}
+LARC431010,{'required': {}}
+LARC466000,{'required': {}}
+LARC467010,{'required': {}}
+LARC467011,{'required': {}}
+LARC467012,{'required': {}}
+LATN101070,{'required': {}}
+LATN101071,{'required': {}}
+LATN101072,{'required': {}}
+LATN102010,{'required': {'LATN101': 'false'}}
+LATN102070,{'required': {'LATN101': 'false'}}
+LATN102071,{'required': {'LATN101': 'false'}}
+LATN102072,{'required': {'LATN101': 'false'}}
+LATN102073,{'required': {'LATN101': 'false'}}
+LATN202010,{'required': {'LATN201': 'false'}}
+LATN202080,{'required': {'LATN201': 'false'}}
+LATN302010,{'required': {'LATN202': 'false'}}
+LATN302080,{'required': {'LATN202': 'false'}}
+LATN402010,{'required': {}}
+LATN402080,{'required': {}}
+LEAD100010,{'required': {}}
+LEAD100011,{'required': {}}
+LEAD100012,{'required': {}}
+LEAD100013,{'required': {}}
+LEAD100082,{'required': {}}
+LEAD100710,{'required': {}}
+LEAD101010,{'required': {}}
+LEAD101310,{'required': {}}
+LEAD101311,{'required': {}}
+LEAD110010,{'required': {}}
+LEAD125011,{'required': {}}
+LEAD166000,{'required': {}}
+LEAD200010,{'required': {}}
+LEAD200011,{'required': {}}
+LEAD200070,{'required': {}}
+LEAD200080,{'required': {}}
+LEAD209010,{'required': {}}
+LEAD253010D,{'required': {}}
+LEAD253010D,{'required': {}}
+LEAD253011D,{'required': {}}
+LEAD253050D,{'required': {}}
+LEAD266000,{'required': {}}
+LEAD268000,{'required': {}}
+LEAD300010,{'required': {}}
+LEAD300011,{'required': {}}
+LEAD300080,{'required': {}}
+LEAD341010,{'required': {'LEAD100': 'false'}}
+LEAD341080,{'required': {'LEAD100': 'false'}}
+LEAD366000,{'required': {}}
+LEAD390000,{'required': {}}
+LEAD390002,{'required': {}}
+LEAD391010D,{'required': {}}
+LEAD404010,{'required': {'LEAD100': 'false'}}
+LEAD404080,{'required': {'LEAD100': 'false'}}
+LEAD466000,{'required': {}}
+LEAD490010,{'required': {}}
+LEAD490080,{'required': {}}
+LEST210010,{'required': {}}
+LEST345010,{'required': {}}
+LEST380010,{'required': {}}
+LEST649010,{'required': {}}
+LING101010,{'required': {}}
+LING101011,{'required': {}}
+LING101510,{'required': {}}
+LING202010,{'required': {'LING101': 'false'}}
+LING222010,{'required': {}}
+LING353010,{'required': {'LING101': 'false'}}
+LING366000,{'required': {}}
+LING404010,{'required': {'Ling101': 'false'}}
+LING404080,{'required': {'Ling101': 'false'}}
+LING421010,{'required': {}}
+LING444010,{'required': {'LING101': 'false'}}
+LING444080,{'required': {'LING101': 'false'}}
+LING466000,{'required': {}}
+LING476011,{'required': {'LING101': 'false'}}
+LING476080,{'required': {'LING101': 'false'}}
+LING480010,{'required': {}}
+LING480070,{'required': {}}
+LING480080,{'required': {}}
+LING496010,{'required': {}}
+LING604010,{'required': {}}
+LING608010,{'required': {'LING607': 'false'}}
+LING610010,{'required': {'LING609': 'false'}}
+LING621010,{'required': {}}
+LING622010,{'required': {}}
+LING622011,{'required': {}}
+LING634010,{'required': {}}
+LING634010,{'required': {}}
+LING644010,{'required': {}}
+LING666000,{'required': {}}
+LING676010,{'required': {}}
+LING676011,{'required': {}}
+LING680010,{'required': {}}
+LING691010,{'required': {}}
+LING696010,{'required': {}}
+LING831010,{'required': {}}
+LING866000,{'required': {}}
+LING890010,{'required': {}}
+LING890011,{'required': {}}
+LING964000,{'required': {}}
+LING969000,{'required': {}}
+LLCU105010,{'required': {}}
+LLCU107010,{'required': {'LLCU106': 'false'}}
+LLCU167070,{'required': {}}
+LLCU167071,{'required': {}}
+LLCU167072,{'required': {}}
+LLCU167073,{'required': {}}
+LLCU167074,{'required': {}}
+LLCU167075,{'required': {}}
+LLCU167076,{'required': {}}
+LLCU167077,{'required': {}}
+LLCU208070,{'required': {}}
+LLCU267071,{'required': {}}
+LLCU316070,{'required': {}}
+LLCU316071,{'required': {}}
+LLCU316072,{'required': {}}
+LLCU320010,{'required': {}}
+LLCU320080,{'required': {}}
+LLCU322070,{'required': {}}
+LLCU322071,{'required': {}}
+LLCU322072,{'required': {}}
+LLCU330010,{'required': {}}
+LLCU330012,{'required': {}}
+LLCU330070,{'required': {}}
+LLCU330071,{'required': {}}
+LLCU330073,{'required': {}}
+LLCU330074,{'required': {}}
+LLCU330075,{'required': {}}
+LLCU330080,{'required': {}}
+LLCU330082,{'required': {}}
+LLCU330710,{'required': {}}
+LLCU331010,{'required': {}}
+LLCU331080,{'required': {}}
+LLCU332010,{'required': {}}
+LLCU332080,{'required': {}}
+LLCU340010,{'required': {}}
+LLCU340010,{'required': {}}
+LLCU340080,{'required': {}}
+LLCU345010,{'required': {}}
+LLCU345080,{'required': {}}
+LLCU351010,{'required': {}}
+LLCU351080,{'required': {}}
+LLCU383010,{'required': {}}
+LLCU383080,{'required': {}}
+LLCU421010,{'required': {}}
+LLCU429010,{'required': {}}
+LLCU491010,{'required': {}}
+LLCU499010,{'required': {}}
+LLCU621010,{'required': {}}
+LLCU622010,{'required': {}}
+LLCU622011,{'required': {}}
+LLCU629010,{'required': {}}
+MALS610010,{'required': {}}
+MALS624010,{'required': {}}
+MALS626010,{'required': {}}
+MALS645010,{'required': {}}
+MALS869000,{'required': {}}
+MALS879000,{'required': {}}
+MAST101010,{'required': {}}
+MAST101011,{'required': {}}
+MAST200010,{'required': {}}
+MAST200070,{'required': {}}
+MAST200510,{'required': {}}
+MAST202010,{'required': {}}
+MAST301010,{'required': {}}
+MAST341010,{'required': {}}
+MAST366000,{'required': {}}
+MAST375010,{'required': {}}
+MAST382010,{'required': {}}
+MAST382080,{'required': {}}
+MAST406010,{'required': {'ENGL110': 'false'}}
+MAST409010,{'required': {}}
+MAST415010,{'required': {}}
+MAST418010,{'required': {}}
+MAST455010,{'required': {}}
+MAST466000,{'required': {}}
+MAST467016,{'required': {}}
+MAST467026,{'required': {}}
+MAST468000,{'required': {}}
+MAST492010,{'required': {'MAST382': 'false'}}
+MAST495010,{'required': {}}
+MAST606010,{'required': {}}
+MAST607010,{'required': {}}
+MAST609010,{'required': {}}
+MAST615010,{'required': {}}
+MAST615010,{'required': {}}
+MAST618010,{'required': {}}
+MAST623010,{'required': {}}
+MAST625010,{'required': {}}
+MAST635010,{'required': {}}
+MAST637010,{'required': {}}
+MAST646010,{'required': {}}
+MAST655010,{'required': {}}
+MAST663010,{'required': {}}
+MAST666000,{'required': {}}
+MAST667010,{'required': {}}
+MAST667016,{'required': {}}
+MAST667026,{'required': {}}
+MAST669010,{'required': {}}
+MAST669011,{'required': {}}
+MAST669012,{'required': {}}
+MAST676010,{'required': {}}
+MAST693010,{'required': {'MEEG690': 'false'}}
+MAST695010,{'required': {'MAST427': 'false'}}
+MAST821010,{'required': {}}
+MAST865000,{'required': {}}
+MAST868000,{'required': {}}
+MAST869000,{'required': {}}
+MAST873010,{'required': {}}
+MAST882010,{'required': {}}
+MAST964000,{'required': {}}
+MAST969000,{'required': {}}
+MATH010010,{'required': {}}
+MATH010070,{'required': {}}
+MATH010071,{'required': {}}
+MATH010710,{'required': {}}
+MATH113010,{'required': {}}
+MATH113011,{'required': {}}
+MATH113012,{'required': {}}
+MATH114010,{'required': {'MATH010': 'false'}}
+MATH114011,{'required': {'MATH010': 'false'}}
+MATH114012,{'required': {'MATH010': 'false'}}
+MATH114013,{'required': {'MATH010': 'false'}}
+MATH114014,{'required': {'MATH010': 'false'}}
+MATH114015,{'required': {'MATH010': 'false'}}
+MATH114016,{'required': {'MATH010': 'false'}}
+MATH114017,{'required': {'MATH010': 'false'}}
+MATH114018,{'required': {'MATH010': 'false'}}
+MATH114310,{'required': {'MATH010': 'false'}}
+MATH114510,{'required': {'MATH010': 'false'}}
+MATH114710,{'required': {'MATH010': 'false'}}
+MATH114711,{'required': {'MATH010': 'false'}}
+MATH114712,{'required': {'MATH010': 'false'}}
+MATH115010,{'required': {'MATH010': 'false'}}
+MATH115010,{'required': {'MATH010': 'false'}}
+MATH115011,{'required': {'MATH010': 'false'}}
+MATH115012,{'required': {'MATH010': 'false'}}
+MATH115013,{'required': {'MATH010': 'false'}}
+MATH115014,{'required': {'MATH010': 'false'}}
+MATH115070,{'required': {'MATH010': 'false'}}
+MATH115071,{'required': {'MATH010': 'false'}}
+MATH115072,{'required': {'MATH010': 'false'}}
+MATH115073,{'required': {'MATH010': 'false'}}
+MATH115510,{'required': {'MATH010': 'false'}}
+MATH115710,{'required': {'MATH010': 'false'}}
+MATH117010,{'required': {'MATH010': 'false'}}
+MATH117070,{'required': {'MATH010': 'false'}}
+MATH117071,{'required': {'MATH010': 'false'}}
+MATH117710,{'required': {'MATH010': 'false'}}
+MATH167070D,{'required': {}}
+MATH167071D,{'required': {}}
+MATH201070,{'required': {}}
+MATH205010,{'required': {}}
+MATH205020L,{'required': {}}
+MATH205021L,{'required': {}}
+MATH205022L,{'required': {}}
+MATH210010,{'required': {}}
+MATH210011,{'required': {}}
+MATH210012,{'required': {}}
+MATH210020D,{'required': {}}
+MATH210030D,{'required': {}}
+MATH210040D,{'required': {}}
+MATH210070,{'required': {}}
+MATH210071,{'required': {}}
+MATH210072,{'required': {}}
+MATH210073,{'required': {}}
+MATH221010,{'required': {}}
+MATH221011,{'required': {}}
+MATH221012,{'required': {}}
+MATH221013,{'required': {}}
+MATH221014,{'required': {}}
+MATH221015,{'required': {}}
+MATH221070,{'required': {}}
+MATH221071,{'required': {}}
+MATH221072,{'required': {}}
+MATH221073,{'required': {}}
+MATH221074,{'required': {}}
+MATH221075,{'required': {}}
+MATH221710,{'required': {}}
+MATH230010,{'required': {'MATH221': 'false'}}
+MATH230011,{'required': {'MATH221': 'false'}}
+MATH230012,{'required': {'MATH221': 'false'}}
+MATH230020D,{'required': {'MATH221': 'false'}}
+MATH230020D,{'required': {'MATH221': 'false'}}
+MATH230021D,{'required': {'MATH221': 'false'}}
+MATH230022D,{'required': {'MATH221': 'false'}}
+MATH230030D,{'required': {'MATH221': 'false'}}
+MATH230031D,{'required': {'MATH221': 'false'}}
+MATH230032D,{'required': {'MATH221': 'false'}}
+MATH230040D,{'required': {'MATH221': 'false'}}
+MATH230041D,{'required': {'MATH221': 'false'}}
+MATH230042D,{'required': {'MATH221': 'false'}}
+MATH230070,{'required': {'MATH221': 'false'}}
+MATH230071,{'required': {'MATH221': 'false'}}
+MATH230072,{'required': {'MATH221': 'false'}}
+MATH230073,{'required': {'MATH221': 'false'}}
+MATH232010,{'required': {'MATH231': 'false'}}
+MATH232011,{'required': {'MATH231': 'false'}}
+MATH240010,{'required': {'MATH253': 'false'}}
+MATH241010,{'required': {'MATH117': 'false'}}
+MATH241011,{'required': {'MATH117': 'false'}}
+MATH241021D,{'required': {'MATH117': 'false'}}
+MATH241022D,{'required': {'MATH117': 'false'}}
+MATH241030D,{'required': {'MATH117': 'false'}}
+MATH241031D,{'required': {'MATH117': 'false'}}
+MATH241032D,{'required': {'MATH117': 'false'}}
+MATH241070,{'required': {'MATH117': 'false'}}
+MATH241071,{'required': {'MATH117': 'false'}}
+MATH241710,{'required': {'MATH117': 'false'}}
+MATH242010,{'required': {}}
+MATH242011,{'required': {}}
+MATH242012,{'required': {}}
+MATH242014,{'required': {}}
+MATH242015,{'required': {}}
+MATH242016,{'required': {}}
+MATH242017,{'required': {}}
+MATH242018,{'required': {}}
+MATH242020L,{'required': {}}
+MATH242020D,{'required': {}}
+MATH242021L,{'required': {}}
+MATH242021D,{'required': {}}
+MATH242022L,{'required': {}}
+MATH242022D,{'required': {}}
+MATH242030L,{'required': {}}
+MATH242030D,{'required': {}}
+MATH242031L,{'required': {}}
+MATH242031D,{'required': {}}
+MATH242032L,{'required': {}}
+MATH242032D,{'required': {}}
+MATH242040L,{'required': {}}
+MATH242040D,{'required': {}}
+MATH242041D,{'required': {}}
+MATH242041D,{'required': {}}
+MATH242041L,{'required': {}}
+MATH242042L,{'required': {}}
+MATH242042D,{'required': {}}
+MATH242060L,{'required': {}}
+MATH242060D,{'required': {}}
+MATH242061L,{'required': {}}
+MATH242061D,{'required': {}}
+MATH242062L,{'required': {}}
+MATH242062D,{'required': {}}
+MATH242070,{'required': {}}
+MATH242070D,{'required': {}}
+MATH242070L,{'required': {}}
+MATH242071D,{'required': {}}
+MATH242071L,{'required': {}}
+MATH242072D,{'required': {}}
+MATH242072L,{'required': {}}
+MATH242090D,{'required': {}}
+MATH242090L,{'required': {}}
+MATH242091D,{'required': {}}
+MATH242091L,{'required': {}}
+MATH242092D,{'required': {}}
+MATH242092L,{'required': {}}
+MATH242100L,{'required': {}}
+MATH242100D,{'required': {}}
+MATH242101D,{'required': {}}
+MATH242101L,{'required': {}}
+MATH242102D,{'required': {}}
+MATH242102L,{'required': {}}
+MATH242110D,{'required': {}}
+MATH242110L,{'required': {}}
+MATH242111D,{'required': {}}
+MATH242111L,{'required': {}}
+MATH242112D,{'required': {}}
+MATH242112L,{'required': {}}
+MATH243010,{'required': {'MATH242': 'false'}}
+MATH243011,{'required': {'MATH242': 'false'}}
+MATH243013,{'required': {'MATH242': 'false'}}
+MATH243014,{'required': {'MATH242': 'false'}}
+MATH243020L,{'required': {'MATH242': 'false'}}
+MATH243020D,{'required': {'MATH242': 'false'}}
+MATH243021L,{'required': {'MATH242': 'false'}}
+MATH243021D,{'required': {'MATH242': 'false'}}
+MATH243030D,{'required': {'MATH242': 'false'}}
+MATH243030L,{'required': {'MATH242': 'false'}}
+MATH243031L,{'required': {'MATH242': 'false'}}
+MATH243031D,{'required': {'MATH242': 'false'}}
+MATH243060L,{'required': {'MATH242': 'false'}}
+MATH243060D,{'required': {'MATH242': 'false'}}
+MATH243060L,{'required': {'MATH242': 'false'}}
+MATH243060D,{'required': {'MATH242': 'false'}}
+MATH243061L,{'required': {'MATH242': 'false'}}
+MATH243061D,{'required': {'MATH242': 'false'}}
+MATH243070,{'required': {'MATH242': 'false'}}
+MATH243070L,{'required': {'MATH242': 'false'}}
+MATH243070D,{'required': {'MATH242': 'false'}}
+MATH243071,{'required': {'MATH242': 'false'}}
+MATH243071L,{'required': {'MATH242': 'false'}}
+MATH243071D,{'required': {'MATH242': 'false'}}
+MATH243072,{'required': {'MATH242': 'false'}}
+MATH245010,{'required': {}}
+MATH251010,{'required': {}}
+MATH251011,{'required': {}}
+MATH251012,{'required': {}}
+MATH252010,{'required': {'MATH251': 'false'}}
+MATH252011,{'required': {'MATH251': 'false'}}
+MATH252012,{'required': {'MATH251': 'false'}}
+MATH252013,{'required': {'MATH251': 'false'}}
+MATH252510,{'required': {'MATH251': 'false'}}
+MATH252710,{'required': {'MATH251': 'false'}}
+MATH253010,{'required': {'MATH252': 'false'}}
+MATH253011,{'required': {'MATH252': 'false'}}
+MATH260010,{'required': {}}
+MATH267010,{'required': {}}
+MATH267070,{'required': {}}
+MATH267071,{'required': {}}
+MATH267072,{'required': {}}
+MATH267073,{'required': {}}
+MATH267074,{'required': {}}
+MATH302010,{'required': {}}
+MATH302050,{'required': {}}
+MATH302070,{'required': {}}
+MATH302071,{'required': {}}
+MATH305010,{'required': {}}
+MATH305011,{'required': {}}
+MATH305012,{'required': {}}
+MATH308010,{'required': {'MATH241': 'false'}}
+MATH315010,{'required': {'MATH210': 'false'}}
+MATH342010,{'required': {'MATH351': 'false'}}
+MATH349010,{'required': {}}
+MATH349012,{'required': {}}
+MATH349013,{'required': {}}
+MATH349014,{'required': {}}
+MATH350010,{'required': {}}
+MATH350011,{'required': {}}
+MATH351010,{'required': {}}
+MATH351011,{'required': {}}
+MATH351012,{'required': {}}
+MATH351012,{'required': {}}
+MATH351013,{'required': {}}
+MATH352010,{'required': {'MATH351': 'false'}}
+MATH352011,{'required': {'MATH351': 'false'}}
+MATH352012,{'required': {'MATH351': 'false'}}
+MATH353010,{'required': {}}
+MATH353011,{'required': {}}
+MATH353012,{'required': {}}
+MATH353013,{'required': {}}
+MATH353014,{'required': {}}
+MATH367010,{'required': {}}
+MATH379010,{'required': {'MATH243': 'false'}}
+MATH382050,{'required': {'MATH380': 'false'}}
+MATH401010,{'required': {'MATH245': 'false'}}
+MATH401011,{'required': {'MATH245': 'false'}}
+MATH420010,{'required': {}}
+MATH420080,{'required': {}}
+MATH426010,{'required': {}}
+MATH428010,{'required': {}}
+MATH450010,{'required': {'MATH350MATH350': 'false'}}
+MATH466000,{'required': {}}
+MATH467011,{'required': {}}
+MATH529010,{'required': {'MATH349': 'false'}}
+MATH529011,{'required': {'MATH349': 'false'}}
+MATH535010,{'required': {}}
+MATH549010,{'required': {}}
+MATH602010,{'required': {'MATH600': 'false'}}
+MATH611010,{'required': {}}
+MATH617010,{'required': {}}
+MATH620010,{'required': {}}
+MATH631010,{'required': {'MATH630': 'false'}}
+MATH637010,{'required': {}}
+MATH637011,{'required': {}}
+MATH650010,{'required': {'MATH672': 'false'}}
+MATH667010,{'required': {}}
+MATH667011,{'required': {}}
+MATH810010,{'required': {'MATH617': 'false'}}
+MATH836010,{'required': {'MATH806': 'false'}}
+MATH838010,{'required': {'MATH806': 'false'}}
+MATH867010,{'required': {}}
+MATH868000,{'required': {}}
+MATH869000,{'required': {}}
+MATH888010,{'required': {}}
+MATH964000,{'required': {}}
+MATH969000,{'required': {}}
+MCST610010,{'required': {}}
+MEEG102010,{'required': {}}
+MEEG102020L,{'required': {}}
+MEEG102021L,{'required': {}}
+MEEG102021L,{'required': {}}
+MEEG102022L,{'required': {}}
+MEEG102023L,{'required': {}}
+MEEG102024L,{'required': {}}
+MEEG102080L,{'required': {}}
+MEEG102080,{'required': {}}
+MEEG102081L,{'required': {}}
+MEEG102082L,{'required': {}}
+MEEG102083L,{'required': {}}
+MEEG102084L,{'required': {}}
+MEEG104010,{'required': {}}
+MEEG104011,{'required': {}}
+MEEG211010,{'required': {}}
+MEEG211011,{'required': {}}
+MEEG211020D,{'required': {}}
+MEEG211021D,{'required': {}}
+MEEG211022D,{'required': {}}
+MEEG211030D,{'required': {}}
+MEEG211031D,{'required': {}}
+MEEG211032D,{'required': {}}
+MEEG215010,{'required': {}}
+MEEG215011,{'required': {}}
+MEEG215020D,{'required': {}}
+MEEG215030D,{'required': {}}
+MEEG215080,{'required': {}}
+MEEG215080D,{'required': {}}
+MEEG215081,{'required': {}}
+MEEG215081D,{'required': {}}
+MEEG216020L,{'required': {}}
+MEEG216021L,{'required': {}}
+MEEG216022L,{'required': {}}
+MEEG216023L,{'required': {}}
+MEEG304010,{'required': {}}
+MEEG304020D,{'required': {}}
+MEEG304021D,{'required': {}}
+MEEG304022D,{'required': {}}
+MEEG304023D,{'required': {}}
+MEEG304080,{'required': {}}
+MEEG304080D,{'required': {}}
+MEEG304081D,{'required': {}}
+MEEG304082D,{'required': {}}
+MEEG304083D,{'required': {}}
+MEEG332010,{'required': {}}
+MEEG332020D,{'required': {}}
+MEEG332021D,{'required': {}}
+MEEG332022D,{'required': {}}
+MEEG332023D,{'required': {}}
+MEEG342010,{'required': {}}
+MEEG342011,{'required': {}}
+MEEG342011,{'required': {}}
+MEEG342020D,{'required': {}}
+MEEG342021D,{'required': {}}
+MEEG342022D,{'required': {}}
+MEEG342030D,{'required': {}}
+MEEG342031D,{'required': {}}
+MEEG342032D,{'required': {}}
+MEEG342080D,{'required': {}}
+MEEG342080,{'required': {}}
+MEEG342081,{'required': {}}
+MEEG342081D,{'required': {}}
+MEEG346020L,{'required': {'MEEG241': 'false'}}
+MEEG346020D,{'required': {'MEEG241': 'false'}}
+MEEG346021L,{'required': {'MEEG241': 'false'}}
+MEEG346022L,{'required': {'MEEG241': 'false'}}
+MEEG346023L,{'required': {'MEEG241': 'false'}}
+MEEG346024L,{'required': {'MEEG241': 'false'}}
+MEEG346025L,{'required': {'MEEG241': 'false'}}
+MEEG413010,{'required': {}}
+MEEG417010,{'required': {}}
+MEEG424010,{'required': {}}
+MEEG435010,{'required': {'MEEG332': 'false'}}
+MEEG442010,{'required': {}}
+MEEG442194,{'required': {}}
+MEEG442195,{'required': {}}
+MEEG466000,{'required': {}}
+MEEG467010,{'required': {}}
+MEEG467011,{'required': {}}
+MEEG467012,{'required': {}}
+MEEG467013,{'required': {}}
+MEEG467016,{'required': {}}
+MEEG467050L,{'required': {}}
+MEEG467194,{'required': {}}
+MEEG467195,{'required': {}}
+MEEG482010,{'required': {}}
+MEEG600000,{'required': {}}
+MEEG613010,{'required': {}}
+MEEG617010,{'required': {}}
+MEEG617194,{'required': {}}
+MEEG635010,{'required': {}}
+MEEG640010,{'required': {}}
+MEEG642010,{'required': {}}
+MEEG642194,{'required': {}}
+MEEG667010,{'required': {}}
+MEEG667011,{'required': {}}
+MEEG667012,{'required': {}}
+MEEG667013,{'required': {}}
+MEEG667016,{'required': {}}
+MEEG667050L,{'required': {}}
+MEEG667050L,{'required': {}}
+MEEG667194,{'required': {}}
+MEEG671010,{'required': {}}
+MEEG671194,{'required': {}}
+MEEG682010,{'required': {}}
+MEEG690194,{'required': {}}
+MEEG698010,{'required': {}}
+MEEG813010,{'required': {'MEEG610': 'false'}}
+MEEG829010,{'required': {}}
+MEEG867010,{'required': {}}
+MEEG867011,{'required': {}}
+MEEG868000,{'required': {}}
+MEEG869000,{'required': {}}
+MEEG964000,{'required': {}}
+MEEG969000,{'required': {}}
+MISY160012,{'required': {}}
+MISY160013,{'required': {}}
+MISY160014,{'required': {}}
+MISY160016,{'required': {}}
+MISY160050,{'required': {}}
+MISY160051,{'required': {}}
+MISY225010,{'required': {}}
+MISY250010,{'required': {'MISY160': 'false'}}
+MISY250011,{'required': {'MISY160': 'false'}}
+MISY261010,{'required': {'MISY160': 'false'}}
+MISY261011,{'required': {'MISY160': 'false'}}
+MISY261012,{'required': {'MISY160': 'false'}}
+MISY261013,{'required': {'MISY160': 'false'}}
+MISY261014,{'required': {'MISY160': 'false'}}
+MISY261015,{'required': {'MISY160': 'false'}}
+MISY261017,{'required': {'MISY160': 'false'}}
+MISY261019,{'required': {'MISY160': 'false'}}
+MISY261050,{'required': {'MISY160': 'false'}}
+MISY261051,{'required': {'MISY160': 'false'}}
+MISY262010,{'required': {}}
+MISY262011,{'required': {}}
+MISY262012,{'required': {}}
+MISY262013,{'required': {}}
+MISY262014,{'required': {}}
+MISY262050,{'required': {}}
+MISY262051,{'required': {}}
+MISY305010,{'required': {}}
+MISY305080,{'required': {}}
+MISY330010,{'required': {}}
+MISY330011,{'required': {}}
+MISY330013,{'required': {}}
+MISY331010,{'required': {'MISY225': 'false'}}
+MISY350010,{'required': {}}
+MISY350011,{'required': {}}
+MISY350011,{'required': {}}
+MISY427050,{'required': {}}
+MISY431012,{'required': {'MISY430': 'false'}}
+MISY432010,{'required': {'MISY430': 'false'}}
+MISY432011,{'required': {'MISY430': 'false'}}
+MISY432012,{'required': {'MISY430': 'false'}}
+MISY432013,{'required': {'MISY430': 'false'}}
+MISY432014,{'required': {'MISY430': 'false'}}
+MISY432015,{'required': {'MISY430': 'false'}}
+MISY432016,{'required': {'MISY430': 'false'}}
+MISY432017,{'required': {'MISY430': 'false'}}
+MISY436010,{'required': {'MISY225': 'false'}}
+MISY445010,{'required': {}}
+MISY455050,{'required': {}}
+MISY465010,{'required': {}}
+MISY604196,{'required': {}}
+MISY604197,{'required': {}}
+MISY606050,{'required': {'ACCT604': 'false'}}
+MISY631196,{'required': {'BUAD820': 'false'}}
+MISY631197,{'required': {'BUAD820': 'false'}}
+MISY655050,{'required': {}}
+MISY665010,{'required': {}}
+MISY667010,{'required': {}}
+MISY667012,{'required': {}}
+MISY667050,{'required': {}}
+MLSC106010,{'required': {}}
+MLSC106011,{'required': {}}
+MLSC166000,{'required': {}}
+MLSC206010,{'required': {}}
+MLSC266002,{'required': {}}
+MLSC306011,{'required': {'MLSC305': 'false'}}
+MLSC365010,{'required': {}}
+MLSC366000,{'required': {}}
+MLSC406010,{'required': {'MLSC306': 'false'}}
+MLSC466000,{'required': {}}
+MMSC100010,{'required': {}}
+MMSC100011,{'required': {}}
+MMSC166000,{'required': {}}
+MMSC200010,{'required': {}}
+MMSC200011,{'required': {}}
+MMSC200050,{'required': {}}
+MMSC200510,{'required': {}}
+MMSC200710,{'required': {}}
+MMSC210010,{'required': {'BISC208': 'false'}}
+MMSC220010,{'required': {}}
+MMSC230010,{'required': {}}
+MMSC240010,{'required': {}}
+MMSC270010,{'required': {}}
+MMSC270020L,{'required': {}}
+MMSC270020L,{'required': {}}
+MMSC270021L,{'required': {}}
+MMSC270022L,{'required': {}}
+MMSC270023L,{'required': {}}
+MMSC270024L,{'required': {}}
+MMSC270025L,{'required': {}}
+MMSC270026L,{'required': {}}
+MMSC270027L,{'required': {}}
+MMSC270510,{'required': {}}
+MMSC270510L,{'required': {}}
+MMSC366000,{'required': {}}
+MMSC366002,{'required': {}}
+MMSC407010,{'required': {}}
+MMSC407080,{'required': {}}
+MMSC409010,{'required': {'MMSC360': 'false'}}
+MMSC409080,{'required': {'MMSC360': 'false'}}
+MMSC410010,{'required': {}}
+MMSC417010L,{'required': {}}
+MMSC417011L,{'required': {}}
+MMSC419020L,{'required': {}}
+MMSC419021L,{'required': {}}
+MMSC423050,{'required': {}}
+MMSC423080,{'required': {}}
+MMSC424010L,{'required': {}}
+MMSC424011L,{'required': {}}
+MMSC426010,{'required': {}}
+MMSC427010,{'required': {}}
+MMSC427020L,{'required': {}}
+MMSC427021L,{'required': {}}
+MMSC428010,{'required': {}}
+MMSC429010L,{'required': {}}
+MMSC429011L,{'required': {}}
+MMSC441000,{'required': {}}
+MMSC442000,{'required': {}}
+MMSC443000,{'required': {}}
+MMSC443080,{'required': {}}
+MMSC444000,{'required': {}}
+MMSC444080,{'required': {}}
+MMSC450010,{'required': {}}
+MMSC450080,{'required': {}}
+MMSC451010,{'required': {}}
+MMSC462010D,{'required': {}}
+MMSC462080D,{'required': {}}
+MMSC466000,{'required': {}}
+MMSC471010,{'required': {'MMSC461': 'false'}}
+MMSC472010,{'required': {}}
+MMSC473010,{'required': {}}
+MMSC474080,{'required': {}}
+MMSC475010,{'required': {}}
+MMSC475010,{'required': {}}
+MMSC476080,{'required': {}}
+MMSC477010,{'required': {}}
+MMSC478080,{'required': {}}
+MMSC479010,{'required': {}}
+MMSC480010,{'required': {}}
+MMSC481080,{'required': {}}
+MMSC491192,{'required': {}}
+MMSC491194,{'required': {}}
+MMSC491195,{'required': {}}
+MMSC492010L,{'required': {'MMSC425': 'false'}}
+MMSC493010L,{'required': {}}
+MMSC605010,{'required': {}}
+MMSC607010,{'required': {}}
+MMSC609010,{'required': {}}
+MMSC610000,{'required': {}}
+MMSC611000,{'required': {}}
+MMSC613000,{'required': {}}
+MMSC614000,{'required': {}}
+MMSC617010L,{'required': {}}
+MMSC619020L,{'required': {}}
+MMSC623050,{'required': {}}
+MMSC624010L,{'required': {}}
+MMSC626010,{'required': {}}
+MMSC627010,{'required': {}}
+MMSC627020L,{'required': {}}
+MMSC627021L,{'required': {}}
+MMSC628010,{'required': {}}
+MMSC629010L,{'required': {}}
+MMSC631010,{'required': {}}
+MMSC632010,{'required': {}}
+MMSC643010,{'required': {}}
+MMSC644010,{'required': {}}
+MMSC650010,{'required': {'CHEM213': 'false'}}
+MMSC651010,{'required': {}}
+MMSC691194,{'required': {'MEDT690': 'false'}}
+MMSC692010L,{'required': {'MMSC625': 'false'}}
+MMSC693010L,{'required': {}}
+MMSC800010,{'required': {}}
+MMSC803010,{'required': {}}
+MMSC804000,{'required': {}}
+MMSC815000,{'required': {}}
+MMSC866000,{'required': {}}
+MMSC866002,{'required': {}}
+MMSC868000,{'required': {}}
+MMSC868002,{'required': {}}
+MMSC964000,{'required': {}}
+MMSC969000,{'required': {}}
+MSEG111010,{'required': {}}
+MSEG111010,{'required': {}}
+MSEG201010,{'required': {}}
+MSEG211010,{'required': {}}
+MSEG211080,{'required': {}}
+MSEG212010,{'required': {}}
+MSEG311010,{'required': {}}
+MSEG312010,{'required': {}}
+MSEG315010,{'required': {'MSEG305': 'false'}}
+MSEG315020L,{'required': {'MSEG305': 'false'}}
+MSEG315080L,{'required': {'MSEG305': 'false'}}
+MSEG315080,{'required': {'MSEG305': 'false'}}
+MSEG366010,{'required': {}}
+MSEG460010,{'required': {}}
+MSEG624010,{'required': {}}
+MSEG660010,{'required': {}}
+MSEG666000,{'required': {}}
+MSEG804010,{'required': {}}
+MSEG825010,{'required': {'MSEG640': 'false'}}
+MSEG835010,{'required': {}}
+MSEG841010,{'required': {'MSEG640': 'false'}}
+MSEG866000,{'required': {}}
+MSEG868000,{'required': {}}
+MSEG869000,{'required': {}}
+MSEG964000,{'required': {}}
+MSEG969000,{'required': {}}
+MSST203070,{'required': {}}
+MSST203071,{'required': {}}
+MSST402010,{'required': {}}
+MSST411010D,{'required': {}}
+MSST411011D,{'required': {}}
+MSST411012D,{'required': {}}
+MSST464000,{'required': {}}
+MSST466000,{'required': {}}
+MSST467010,{'required': {}}
+MSST602010D,{'required': {}}
+MSST605010D,{'required': {}}
+MSST611010D,{'required': {}}
+MSST611011D,{'required': {}}
+MSST611012D,{'required': {}}
+MSST666000,{'required': {}}
+MSST804000,{'required': {}}
+MUED277010,{'required': {'MUED179': 'false'}}
+MUED336010,{'required': {'MUSC335': 'false'}}
+MUED337010,{'required': {'MUSC335': 'false'}}
+MUED378010,{'required': {}}
+MUED379010,{'required': {}}
+MUED392010L,{'required': {}}
+MUED467010,{'required': {}}
+MUSC101010,{'required': {}}
+MUSC101010,{'required': {}}
+MUSC101071,{'required': {}}
+MUSC101072,{'required': {}}
+MUSC101073,{'required': {}}
+MUSC101074,{'required': {}}
+MUSC102510,{'required': {'MUSC101': 'false'}}
+MUSC105010,{'required': {}}
+MUSC105070,{'required': {}}
+MUSC107010,{'required': {}}
+MUSC107011,{'required': {}}
+MUSC107310,{'required': {}}
+MUSC112050L,{'required': {}}
+MUSC119010L,{'required': {}}
+MUSC120010L,{'required': {}}
+MUSC123050L,{'required': {}}
+MUSC124050L,{'required': {'MUSC123': 'false'}}
+MUSC130010,{'required': {}}
+MUSC150080,{'required': {}}
+MUSC151000,{'required': {}}
+MUSC152000,{'required': {'MUSC151': 'false'}}
+MUSC153000,{'required': {}}
+MUSC154000,{'required': {'MUSC153': 'false'}}
+MUSC155000,{'required': {}}
+MUSC174010,{'required': {}}
+MUSC176010L,{'required': {}}
+MUSC176011L,{'required': {}}
+MUSC176013L,{'required': {}}
+MUSC178001,{'required': {'MUSC175': 'false'}}
+MUSC181000,{'required': {}}
+MUSC182000,{'required': {'MUSC181': 'false'}}
+MUSC186010,{'required': {}}
+MUSC186011,{'required': {}}
+MUSC186012,{'required': {}}
+MUSC186013,{'required': {}}
+MUSC193010,{'required': {}}
+MUSC195010,{'required': {}}
+MUSC195011,{'required': {}}
+MUSC195012,{'required': {}}
+MUSC195080,{'required': {}}
+MUSC195081,{'required': {}}
+MUSC195082,{'required': {}}
+MUSC205010,{'required': {}}
+MUSC205070,{'required': {}}
+MUSC205071,{'required': {}}
+MUSC205310,{'required': {}}
+MUSC206010,{'required': {}}
+MUSC210010,{'required': {'MUSC209': 'false'}}
+MUSC216010,{'required': {'MUSC215': 'false'}}
+MUSC218010,{'required': {'MUSC217': 'false'}}
+MUSC218010,{'required': {'MUSC217': 'false'}}
+MUSC218011,{'required': {'MUSC217': 'false'}}
+MUSC219010,{'required': {}}
+MUSC220010,{'required': {'MUSC113': 'false'}}
+MUSC221010L,{'required': {}}
+MUSC221011L,{'required': {}}
+MUSC222010,{'required': {'MUSC214': 'false'}}
+MUSC227010,{'required': {}}
+MUSC241010,{'required': {}}
+MUSC251000,{'required': {'MUSC152': 'false'}}
+MUSC252000,{'required': {'MUSC251': 'false'}}
+MUSC253000,{'required': {'MUSC154': 'false'}}
+MUSC254000,{'required': {'MUSC253': 'false'}}
+MUSC271011,{'required': {'MUSC171': 'false'}}
+MUSC276010L,{'required': {'MUSC275': 'false'}}
+MUSC276011L,{'required': {'MUSC275': 'false'}}
+MUSC276012L,{'required': {'MUSC275': 'false'}}
+MUSC281000,{'required': {'MUSC181': 'false'}}
+MUSC282000,{'required': {'MUSC281': 'false'}}
+MUSC286010,{'required': {}}
+MUSC286011,{'required': {}}
+MUSC286012,{'required': {}}
+MUSC293010,{'required': {'MUSC178': 'false'}}
+MUSC295010,{'required': {}}
+MUSC295011,{'required': {}}
+MUSC295012,{'required': {}}
+MUSC298010D,{'required': {}}
+MUSC301000,{'required': {}}
+MUSC302010,{'required': {}}
+MUSC311010,{'required': {}}
+MUSC311080,{'required': {}}
+MUSC313010,{'required': {}}
+MUSC313011,{'required': {}}
+MUSC313080,{'required': {}}
+MUSC313081,{'required': {}}
+MUSC328010,{'required': {'MUSC211': 'false'}}
+MUSC334010,{'required': {}}
+MUSC345010,{'required': {}}
+MUSC351000,{'required': {'MUSC252withagradeofC-': 'false'}}
+MUSC352000,{'required': {'MUSC351withagradeofC-': 'false'}}
+MUSC357000,{'required': {'MUSC252withagradeofC-': 'false'}}
+MUSC358000,{'required': {'MUSC357withagradeofC-': 'false'}}
+MUSC401000,{'required': {}}
+MUSC401002,{'required': {}}
+MUSC403010,{'required': {}}
+MUSC420020D,{'required': {'MUSC298': 'false'}}
+MUSC423000,{'required': {'MUSC420': 'false'}}
+MUSC426010,{'required': {}}
+MUSC430010L,{'required': {}}
+MUSC430010L,{'required': {}}
+MUSC430011L,{'required': {}}
+MUSC430013L,{'required': {}}
+MUSC430014L,{'required': {}}
+MUSC430020L,{'required': {}}
+MUSC432015L,{'required': {}}
+MUSC432016L,{'required': {}}
+MUSC432017L,{'required': {}}
+MUSC432021L,{'required': {}}
+MUSC432022L,{'required': {}}
+MUSC432051L,{'required': {}}
+MUSC432052L,{'required': {}}
+MUSC433010L,{'required': {}}
+MUSC438010,{'required': {}}
+MUSC441010,{'required': {'MUSC241': 'false'}}
+MUSC451000,{'required': {'MUSC352withagradeofC-': 'false'}}
+MUSC457000,{'required': {'MUSC358withagradeofC-': 'false'}}
+MUSC458000,{'required': {'MUSC457withagradeofC-': 'false'}}
+MUSC460010L,{'required': {}}
+MUSC461050L,{'required': {}}
+MUSC462010L,{'required': {}}
+MUSC463010L,{'required': {}}
+MUSC464000,{'required': {}}
+MUSC467011,{'required': {}}
+MUSC471010L,{'required': {}}
+MUSC472010L,{'required': {}}
+MUSC473010L,{'required': {}}
+MUSC474010L,{'required': {}}
+MUSC475010L,{'required': {}}
+MUSC476010L,{'required': {}}
+MUSC477010L,{'required': {}}
+MUSC477011L,{'required': {}}
+MUSC478010L,{'required': {}}
+MUSC484010,{'required': {}}
+MUSC485050,{'required': {}}
+MUSC487050,{'required': {}}
+MUSC490010L,{'required': {}}
+MUSC495010,{'required': {'MUSC295': 'false'}}
+MUSC499000,{'required': {}}
+MUSC561000,{'required': {}}
+MUSC600000,{'required': {'MUSC662': 'false'}}
+MUSC601000,{'required': {}}
+MUSC602010,{'required': {}}
+MUSC603010,{'required': {}}
+MUSC603011,{'required': {}}
+MUSC603012,{'required': {}}
+MUSC603013,{'required': {}}
+MUSC610010,{'required': {}}
+MUSC611010,{'required': {'MUSC511': 'false'}}
+MUSC611010,{'required': {'MUSC511': 'false'}}
+MUSC611011,{'required': {'MUSC511': 'false'}}
+MUSC613010,{'required': {}}
+MUSC620010L,{'required': {}}
+MUSC620012L,{'required': {}}
+MUSC620013L,{'required': {}}
+MUSC620015L,{'required': {}}
+MUSC620018L,{'required': {}}
+MUSC620019L,{'required': {}}
+MUSC620020L,{'required': {}}
+MUSC625010,{'required': {}}
+MUSC625011,{'required': {}}
+MUSC630010L,{'required': {}}
+MUSC630011L,{'required': {}}
+MUSC630013L,{'required': {}}
+MUSC630014L,{'required': {}}
+MUSC630018L,{'required': {}}
+MUSC630020L,{'required': {}}
+MUSC630023L,{'required': {}}
+MUSC630025L,{'required': {}}
+MUSC630027L,{'required': {}}
+MUSC630028L,{'required': {}}
+MUSC632015L,{'required': {}}
+MUSC632016L,{'required': {}}
+MUSC632017L,{'required': {}}
+MUSC632021L,{'required': {}}
+MUSC632022L,{'required': {}}
+MUSC632051L,{'required': {}}
+MUSC632052L,{'required': {}}
+MUSC639010,{'required': {}}
+MUSC640010,{'required': {}}
+MUSC641000,{'required': {}}
+MUSC652000,{'required': {'MUSC651': 'false'}}
+MUSC654000,{'required': {'MUSC653': 'false'}}
+MUSC662000,{'required': {'MUSC661': 'false'}}
+MUSC664000,{'required': {'MUSC663': 'false'}}
+MUSC666002,{'required': {}}
+MUSC667011,{'required': {}}
+MUSC667012,{'required': {}}
+MUSC672000,{'required': {'MUSC671': 'false'}}
+MUSC674000,{'required': {'MUSC673': 'false'}}
+MUSC677010D,{'required': {}}
+MUSC681000,{'required': {}}
+MUSC682010,{'required': {}}
+MUSC684010,{'required': {'MUSC105': 'false'}}
+MUSC685050,{'required': {}}
+MUSC695010,{'required': {'MUSC595': 'false'}}
+MUSC865010D,{'required': {}}
+MUSC869000,{'required': {}}
+MUSC869000,{'required': {}}
+NSCI100010,{'required': {}}
+NSCI100710,{'required': {}}
+NSCI320010,{'required': {}}
+NSCI320012,{'required': {}}
+NSCI320080,{'required': {}}
+NSCI368000,{'required': {}}
+NSCI402010,{'required': {}}
+NSCI407010L,{'required': {'NSCI320': 'false'}}
+NSCI427010,{'required': {'NSCI320': 'false'}}
+NSCI428010,{'required': {'NSCI320': 'false'}}
+NSCI430010,{'required': {'NSCI320': 'false'}}
+NSCI430080,{'required': {'NSCI320': 'false'}}
+NSCI438010,{'required': {'NSCi320': 'false'}}
+NSCI442010,{'required': {'NSCI320': 'false'}}
+NSCI467010,{'required': {}}
+NSCI467080,{'required': {}}
+NSCI468000,{'required': {'NSCI368': 'false'}}
+NSCI468002,{'required': {'NSCI368': 'false'}}
+NSCI627010,{'required': {}}
+NSCI628011,{'required': {}}
+NSCI632010,{'required': {}}
+NSCI866010,{'required': {}}
+NSCI868000,{'required': {}}
+NSCI869000,{'required': {}}
+NTDT200011,{'required': {}}
+NTDT200013,{'required': {}}
+NTDT200014,{'required': {}}
+NTDT200015,{'required': {}}
+NTDT200017,{'required': {}}
+NTDT200020,{'required': {}}
+NTDT200070,{'required': {}}
+NTDT200071,{'required': {}}
+NTDT200194,{'required': {}}
+NTDT200195,{'required': {}}
+NTDT201010,{'required': {'NTDT200': 'false'}}
+NTDT201020L,{'required': {'NTDT200': 'false'}}
+NTDT201021L,{'required': {'NTDT200': 'false'}}
+NTDT250011,{'required': {'NTDT200': 'false'}}
+NTDT266000,{'required': {}}
+NTDT301010,{'required': {}}
+NTDT305011,{'required': {'NTDT200': 'false'}}
+NTDT310010,{'required': {}}
+NTDT310011,{'required': {}}
+NTDT310012,{'required': {}}
+NTDT312010,{'required': {'NTDT200': 'false'}}
+NTDT321010,{'required': {}}
+NTDT322010,{'required': {}}
+NTDT326010,{'required': {}}
+NTDT326010,{'required': {}}
+NTDT326020L,{'required': {}}
+NTDT326021L,{'required': {}}
+NTDT330010,{'required': {}}
+NTDT350010,{'required': {}}
+NTDT366000,{'required': {}}
+NTDT368000,{'required': {}}
+NTDT390010,{'required': {}}
+NTDT400010,{'required': {}}
+NTDT400080,{'required': {}}
+NTDT401011,{'required': {'NTDT400': 'false'}}
+NTDT401012,{'required': {'NTDT400': 'false'}}
+NTDT401081,{'required': {'NTDT400': 'false'}}
+NTDT421010,{'required': {'NTDT400': 'false'}}
+NTDT421020L,{'required': {'NTDT400': 'false'}}
+NTDT421021L,{'required': {'NTDT400': 'false'}}
+NTDT421022L,{'required': {'NTDT400': 'false'}}
+NTDT421023L,{'required': {'NTDT400': 'false'}}
+NTDT445010,{'required': {'NTDT200': 'false'}}
+NTDT451011,{'required': {}}
+NTDT451081,{'required': {}}
+NTDT460010,{'required': {'NTDT400': 'false'}}
+NTDT466000,{'required': {}}
+NTDT468000,{'required': {}}
+NTDT551194L,{'required': {'NTDT550': 'false'}}
+NTDT608010,{'required': {}}
+NTDT611050,{'required': {}}
+NTDT651194,{'required': {}}
+NTDT655010,{'required': {}}
+NTDT665010,{'required': {}}
+NTDT666000,{'required': {}}
+NTDT668000,{'required': {}}
+NTDT669000,{'required': {}}
+NTDT822010,{'required': {}}
+NTDT866000,{'required': {}}
+NTDT868000,{'required': {}}
+NTDT869000,{'required': {}}
+NTDT969001,{'required': {}}
+NURS101510,{'required': {}}
+NURS120010,{'required': {}}
+NURS120011,{'required': {}}
+NURS120012,{'required': {}}
+NURS120013,{'required': {}}
+NURS120080,{'required': {}}
+NURS243010,{'required': {}}
+NURS246010,{'required': {}}
+NURS246011,{'required': {}}
+NURS247011,{'required': {}}
+NURS247012,{'required': {}}
+NURS247012,{'required': {}}
+NURS247013,{'required': {}}
+NURS247014,{'required': {}}
+NURS247015,{'required': {}}
+NURS247016,{'required': {}}
+NURS247017,{'required': {}}
+NURS247018,{'required': {}}
+NURS247019,{'required': {}}
+NURS247020,{'required': {}}
+NURS247021,{'required': {}}
+NURS247022,{'required': {}}
+NURS247023,{'required': {}}
+NURS247024,{'required': {}}
+NURS247025,{'required': {}}
+NURS247026,{'required': {}}
+NURS247027,{'required': {}}
+NURS247028,{'required': {}}
+NURS247029,{'required': {}}
+NURS247030,{'required': {}}
+NURS247031,{'required': {}}
+NURS247032,{'required': {}}
+NURS262010,{'required': {}}
+NURS262011,{'required': {}}
+NURS262081,{'required': {}}
+NURS262194,{'required': {}}
+NURS262195,{'required': {}}
+NURS263010,{'required': {}}
+NURS264020L,{'required': {}}
+NURS264021L,{'required': {}}
+NURS322010,{'required': {}}
+NURS325194,{'required': {}}
+NURS325195,{'required': {}}
+NURS330020L,{'required': {}}
+NURS330021L,{'required': {}}
+NURS335010,{'required': {}}
+NURS337010,{'required': {}}
+NURS353010,{'required': {}}
+NURS353011,{'required': {}}
+NURS353012,{'required': {}}
+NURS353013,{'required': {}}
+NURS353014,{'required': {}}
+NURS353015,{'required': {}}
+NURS353016,{'required': {}}
+NURS353017,{'required': {}}
+NURS353018,{'required': {}}
+NURS353019,{'required': {}}
+NURS353020,{'required': {}}
+NURS353021,{'required': {}}
+NURS353022,{'required': {}}
+NURS353022,{'required': {}}
+NURS353023,{'required': {}}
+NURS353024,{'required': {}}
+NURS353025,{'required': {}}
+NURS353026,{'required': {}}
+NURS353027,{'required': {}}
+NURS353028,{'required': {}}
+NURS353029,{'required': {}}
+NURS353030,{'required': {}}
+NURS355010,{'required': {}}
+NURS355011,{'required': {}}
+NURS355012,{'required': {}}
+NURS355013,{'required': {}}
+NURS355014,{'required': {}}
+NURS355015,{'required': {}}
+NURS355016,{'required': {}}
+NURS355017,{'required': {}}
+NURS355018,{'required': {}}
+NURS355019,{'required': {}}
+NURS355020,{'required': {}}
+NURS355021,{'required': {}}
+NURS357010,{'required': {}}
+NURS357011,{'required': {}}
+NURS357012,{'required': {}}
+NURS357013,{'required': {}}
+NURS357014,{'required': {}}
+NURS357015,{'required': {}}
+NURS357016,{'required': {}}
+NURS357017,{'required': {}}
+NURS357018,{'required': {}}
+NURS357019,{'required': {}}
+NURS357020,{'required': {}}
+NURS357021,{'required': {}}
+NURS365010,{'required': {}}
+NURS375010,{'required': {}}
+NURS375080,{'required': {}}
+NURS411010,{'required': {}}
+NURS411011,{'required': {}}
+NURS411192,{'required': {}}
+NURS411193,{'required': {}}
+NURS418010,{'required': {}}
+NURS438010,{'required': {}}
+NURS438194,{'required': {}}
+NURS438195,{'required': {}}
+NURS443194L,{'required': {}}
+NURS443195L,{'required': {}}
+NURS448010D,{'required': {}}
+NURS448011D,{'required': {}}
+NURS464010L,{'required': {}}
+NURS464010L,{'required': {}}
+NURS466005,{'required': {}}
+NURS475010,{'required': {}}
+NURS475011,{'required': {}}
+NURS475012,{'required': {}}
+NURS475013,{'required': {}}
+NURS485010,{'required': {}}
+NURS485011,{'required': {}}
+NURS485012,{'required': {}}
+NURS485013,{'required': {}}
+NURS485014,{'required': {}}
+NURS485015,{'required': {}}
+NURS485016,{'required': {}}
+NURS485017,{'required': {}}
+NURS485018,{'required': {}}
+NURS485019,{'required': {}}
+NURS485020,{'required': {}}
+NURS485021,{'required': {}}
+NURS485080,{'required': {}}
+NURS485081,{'required': {}}
+NURS652010,{'required': {}}
+NURS655010,{'required': {'NURS654': 'false'}}
+NURS672010,{'required': {}}
+NURS675010,{'required': {'NURS674': 'false'}}
+NURS677010,{'required': {}}
+NURS680010,{'required': {}}
+NURS693010,{'required': {}}
+NURS694010,{'required': {}}
+NURS843194,{'required': {}}
+NURS843195,{'required': {}}
+NURS844194,{'required': {}}
+NURS844195,{'required': {}}
+NURS853010,{'required': {'NURS852': 'false'}}
+NURS882010,{'required': {'NURS881': 'false'}}
+NURS886010,{'required': {'NURS883': 'false'}}
+NURS910194D,{'required': {'NURS900': 'false'}}
+NURS910195D,{'required': {'NURS900': 'false'}}
+NURS921010,{'required': {}}
+NURS921011,{'required': {}}
+PHIL100010,{'required': {}}
+PHIL101010,{'required': {}}
+PHIL101194,{'required': {}}
+PHIL101195,{'required': {}}
+PHIL102010,{'required': {}}
+PHIL102011,{'required': {}}
+PHIL102070,{'required': {}}
+PHIL102071,{'required': {}}
+PHIL102072,{'required': {}}
+PHIL102073,{'required': {}}
+PHIL102073,{'required': {}}
+PHIL102074,{'required': {}}
+PHIL102075,{'required': {}}
+PHIL102076,{'required': {}}
+PHIL102077,{'required': {}}
+PHIL102310,{'required': {}}
+PHIL105010,{'required': {}}
+PHIL105070,{'required': {}}
+PHIL105071,{'required': {}}
+PHIL167070,{'required': {}}
+PHIL167071,{'required': {}}
+PHIL200070,{'required': {}}
+PHIL200071,{'required': {}}
+PHIL201070,{'required': {}}
+PHIL201071,{'required': {}}
+PHIL201710,{'required': {}}
+PHIL202010,{'required': {}}
+PHIL202011,{'required': {}}
+PHIL202070,{'required': {}}
+PHIL202071,{'required': {}}
+PHIL202510,{'required': {}}
+PHIL203010,{'required': {}}
+PHIL203011,{'required': {}}
+PHIL203070,{'required': {}}
+PHIL203071,{'required': {}}
+PHIL203072,{'required': {}}
+PHIL203073,{'required': {}}
+PHIL204010,{'required': {}}
+PHIL204070,{'required': {}}
+PHIL204071,{'required': {}}
+PHIL205010,{'required': {}}
+PHIL205011,{'required': {}}
+PHIL209010,{'required': {}}
+PHIL212080,{'required': {}}
+PHIL216010,{'required': {}}
+PHIL216011,{'required': {}}
+PHIL241010,{'required': {}}
+PHIL244070,{'required': {}}
+PHIL244071,{'required': {}}
+PHIL300010,{'required': {}}
+PHIL301010,{'required': {}}
+PHIL301070,{'required': {}}
+PHIL301071,{'required': {}}
+PHIL301072,{'required': {}}
+PHIL301073,{'required': {}}
+PHIL302010,{'required': {}}
+PHIL305010,{'required': {}}
+PHIL306010,{'required': {}}
+PHIL307010,{'required': {}}
+PHIL307010,{'required': {}}
+PHIL309010,{'required': {}}
+PHIL309080,{'required': {}}
+PHIL316080,{'required': {}}
+PHIL330010,{'required': {}}
+PHIL330080,{'required': {}}
+PHIL346010,{'required': {}}
+PHIL410010,{'required': {}}
+PHIL444010,{'required': {}}
+PHIL444011,{'required': {}}
+PHIL448010,{'required': {}}
+PHIL648010,{'required': {}}
+PHYS133010,{'required': {}}
+PHYS133020L,{'required': {}}
+PHYS133021L,{'required': {}}
+PHYS133022L,{'required': {}}
+PHYS133023L,{'required': {}}
+PHYS133024L,{'required': {}}
+PHYS139010,{'required': {}}
+PHYS144010,{'required': {}}
+PHYS144070,{'required': {}}
+PHYS144071,{'required': {}}
+PHYS144072,{'required': {}}
+PHYS144073,{'required': {}}
+PHYS144172,{'required': {}}
+PHYS201010,{'required': {}}
+PHYS201011,{'required': {}}
+PHYS201020D,{'required': {}}
+PHYS201021D,{'required': {}}
+PHYS201022D,{'required': {}}
+PHYS201023D,{'required': {}}
+PHYS201030D,{'required': {}}
+PHYS201031D,{'required': {}}
+PHYS201032D,{'required': {}}
+PHYS201033D,{'required': {}}
+PHYS201070,{'required': {}}
+PHYS202010,{'required': {}}
+PHYS202011,{'required': {}}
+PHYS202012,{'required': {}}
+PHYS202020D,{'required': {}}
+PHYS202021D,{'required': {}}
+PHYS202022D,{'required': {}}
+PHYS202023D,{'required': {}}
+PHYS202024D,{'required': {}}
+PHYS202030D,{'required': {}}
+PHYS202031D,{'required': {}}
+PHYS202032D,{'required': {}}
+PHYS202033D,{'required': {}}
+PHYS202034D,{'required': {}}
+PHYS202034D,{'required': {}}
+PHYS202040D,{'required': {}}
+PHYS202041D,{'required': {}}
+PHYS202042D,{'required': {}}
+PHYS202043D,{'required': {}}
+PHYS202044D,{'required': {}}
+PHYS202070,{'required': {}}
+PHYS202071,{'required': {}}
+PHYS204010,{'required': {}}
+PHYS204020D,{'required': {}}
+PHYS204020L,{'required': {}}
+PHYS204021D,{'required': {}}
+PHYS204021L,{'required': {}}
+PHYS204022D,{'required': {}}
+PHYS204022L,{'required': {}}
+PHYS204023D,{'required': {}}
+PHYS204023L,{'required': {}}
+PHYS204024L,{'required': {}}
+PHYS207010,{'required': {}}
+PHYS207011,{'required': {}}
+PHYS207013,{'required': {}}
+PHYS207020D,{'required': {}}
+PHYS207021D,{'required': {}}
+PHYS207022D,{'required': {}}
+PHYS207023D,{'required': {}}
+PHYS207030D,{'required': {}}
+PHYS207031D,{'required': {}}
+PHYS207032D,{'required': {}}
+PHYS207033D,{'required': {}}
+PHYS207050D,{'required': {}}
+PHYS207051D,{'required': {}}
+PHYS207052D,{'required': {}}
+PHYS207053D,{'required': {}}
+PHYS207070,{'required': {}}
+PHYS207071,{'required': {}}
+PHYS208011,{'required': {}}
+PHYS208030D,{'required': {}}
+PHYS208031D,{'required': {}}
+PHYS208032D,{'required': {}}
+PHYS208033D,{'required': {}}
+PHYS208070,{'required': {}}
+PHYS209010,{'required': {'PHYS207': 'false'}}
+PHYS209080,{'required': {'PHYS207': 'false'}}
+PHYS221020L,{'required': {}}
+PHYS221021L,{'required': {}}
+PHYS221022L,{'required': {}}
+PHYS221023L,{'required': {}}
+PHYS221031L,{'required': {}}
+PHYS221032L,{'required': {}}
+PHYS221032L,{'required': {}}
+PHYS221042L,{'required': {}}
+PHYS221044L,{'required': {}}
+PHYS222020L,{'required': {}}
+PHYS222021L,{'required': {}}
+PHYS222023L,{'required': {}}
+PHYS222024L,{'required': {}}
+PHYS222030L,{'required': {}}
+PHYS222031L,{'required': {}}
+PHYS222032L,{'required': {}}
+PHYS222034L,{'required': {}}
+PHYS222040L,{'required': {}}
+PHYS222041L,{'required': {}}
+PHYS222044L,{'required': {}}
+PHYS222051L,{'required': {}}
+PHYS222052L,{'required': {}}
+PHYS222053L,{'required': {}}
+PHYS227020L,{'required': {}}
+PHYS227021L,{'required': {}}
+PHYS227022L,{'required': {}}
+PHYS227023L,{'required': {}}
+PHYS227024L,{'required': {}}
+PHYS227025L,{'required': {}}
+PHYS227031L,{'required': {}}
+PHYS227033L,{'required': {}}
+PHYS227034L,{'required': {}}
+PHYS227040L,{'required': {}}
+PHYS227041L,{'required': {}}
+PHYS227042L,{'required': {}}
+PHYS227044L,{'required': {}}
+PHYS227051L,{'required': {}}
+PHYS227053L,{'required': {}}
+PHYS227054L,{'required': {}}
+PHYS227055L,{'required': {}}
+PHYS228040L,{'required': {}}
+PHYS228042L,{'required': {}}
+PHYS228045L,{'required': {}}
+PHYS228051L,{'required': {}}
+PHYS228052L,{'required': {}}
+PHYS228055L,{'required': {}}
+PHYS309010,{'required': {}}
+PHYS313010,{'required': {}}
+PHYS313020L,{'required': {}}
+PHYS313021L,{'required': {}}
+PHYS313022L,{'required': {}}
+PHYS313080,{'required': {}}
+PHYS313080D,{'required': {}}
+PHYS313080L,{'required': {}}
+PHYS333010,{'required': {}}
+PHYS333010,{'required': {}}
+PHYS419010,{'required': {}}
+PHYS425010,{'required': {'PHYS424': 'false'}}
+PHYS460010,{'required': {}}
+PHYS468010,{'required': {}}
+PHYS600010,{'required': {}}
+PHYS603010,{'required': {}}
+PHYS624010,{'required': {}}
+PHYS633010,{'required': {}}
+PHYS646010,{'required': {'PHYS645': 'false'}}
+PHYS646020L,{'required': {'PHYS645': 'false'}}
+PHYS660010,{'required': {}}
+PHYS667010,{'required': {}}
+PHYS699010,{'required': {}}
+PHYS811010,{'required': {}}
+PHYS813010,{'required': {'PHYS616': 'false'}}
+PHYS815010,{'required': {'PHYS809': 'false'}}
+PHYS834010,{'required': {}}
+PHYS838010,{'required': {}}
+PHYS861001,{'required': {}}
+PHYS862001,{'required': {'PHYS861': 'false'}}
+PHYS868000,{'required': {}}
+PHYS869000,{'required': {}}
+PHYS964000,{'required': {}}
+PHYS969000,{'required': {}}
+PHYT400010L,{'required': {}}
+PHYT466000,{'required': {}}
+PHYT467010,{'required': {}}
+PHYT468000,{'required': {}}
+PHYT606010,{'required': {}}
+PHYT606020D,{'required': {}}
+PHYT606021D,{'required': {}}
+PHYT623010,{'required': {}}
+PHYT623020L,{'required': {}}
+PHYT623021L,{'required': {}}
+PHYT626010,{'required': {'PHYT622': 'false'}}
+PHYT633010,{'required': {'PHYT632': 'false'}}
+PHYT633020D,{'required': {'PHYT632': 'false'}}
+PHYT633021D,{'required': {'PHYT632': 'false'}}
+PHYT634010,{'required': {}}
+PHYT634020L,{'required': {}}
+PHYT634021L,{'required': {}}
+PHYT634022L,{'required': {}}
+PHYT634023L,{'required': {}}
+PHYT634024L,{'required': {}}
+PHYT666000,{'required': {}}
+PHYT803010,{'required': {}}
+PHYT803020D,{'required': {}}
+PHYT803021D,{'required': {}}
+PHYT803021D,{'required': {}}
+PHYT804010,{'required': {}}
+PHYT804020L,{'required': {}}
+PHYT804021L,{'required': {}}
+PHYT804022L,{'required': {}}
+PHYT804023L,{'required': {}}
+PHYT804024L,{'required': {}}
+PHYT805010,{'required': {}}
+PHYT805020L,{'required': {}}
+PHYT805021L,{'required': {}}
+PHYT805022L,{'required': {}}
+PHYT805023L,{'required': {}}
+PHYT805024L,{'required': {}}
+PHYT811010,{'required': {}}
+PHYT811020L,{'required': {}}
+PHYT811021L,{'required': {}}
+PHYT811022L,{'required': {}}
+PHYT811023L,{'required': {}}
+PHYT811024L,{'required': {}}
+PHYT821010,{'required': {}}
+PHYT822010,{'required': {}}
+PHYT831010,{'required': {}}
+PHYT833010,{'required': {}}
+PHYT834010,{'required': {}}
+PHYT866010,{'required': {}}
+PHYT867010,{'required': {}}
+PLSC100010,{'required': {}}
+PLSC100080,{'required': {}}
+PLSC140070,{'required': {}}
+PLSC151010,{'required': {}}
+PLSC170010,{'required': {}}
+PLSC201010,{'required': {}}
+PLSC201020L,{'required': {}}
+PLSC201021L,{'required': {}}
+PLSC201022L,{'required': {}}
+PLSC214010,{'required': {}}
+PLSC214020L,{'required': {}}
+PLSC214021L,{'required': {}}
+PLSC214022L,{'required': {}}
+PLSC218010,{'required': {}}
+PLSC266000,{'required': {}}
+PLSC270010,{'required': {}}
+PLSC300010,{'required': {}}
+PLSC303010,{'required': {}}
+PLSC303020L,{'required': {}}
+PLSC303021L,{'required': {}}
+PLSC354010,{'required': {}}
+PLSC364010,{'required': {}}
+PLSC366000,{'required': {}}
+PLSC366000,{'required': {}}
+PLSC399000,{'required': {}}
+PLSC401010,{'required': {'PLSC151': 'false'}}
+PLSC411010,{'required': {}}
+PLSC421010,{'required': {}}
+PLSC466000,{'required': {}}
+PLSC467010,{'required': {}}
+PLSC467011,{'required': {}}
+PLSC601010,{'required': {'PLSC151': 'false'}}
+PLSC611010,{'required': {}}
+PLSC621010,{'required': {}}
+PLSC666000,{'required': {}}
+PLSC667010,{'required': {}}
+PLSC667011,{'required': {}}
+PLSC671010,{'required': {}}
+PLSC802010,{'required': {}}
+PLSC811010,{'required': {}}
+PLSC865010,{'required': {}}
+PLSC866000,{'required': {}}
+PLSC868000,{'required': {}}
+PLSC869000,{'required': {}}
+PLSC964000,{'required': {}}
+PLSC969000,{'required': {}}
+PORT216070,{'required': {}}
+PORT316010,{'required': {'PORT216': 'false'}}
+PORT316070,{'required': {'PORT216': 'false'}}
+POSC150010,{'required': {}}
+POSC150011,{'required': {}}
+POSC150020D,{'required': {}}
+POSC150021D,{'required': {}}
+POSC150022D,{'required': {}}
+POSC150023D,{'required': {}}
+POSC150024D,{'required': {}}
+POSC150025D,{'required': {}}
+POSC150030D,{'required': {}}
+POSC150031D,{'required': {}}
+POSC150032D,{'required': {}}
+POSC150033D,{'required': {}}
+POSC150034D,{'required': {}}
+POSC150035D,{'required': {}}
+POSC150070,{'required': {}}
+POSC150310,{'required': {}}
+POSC150510,{'required': {}}
+POSC150710,{'required': {}}
+POSC167070,{'required': {}}
+POSC220310,{'required': {}}
+POSC230010,{'required': {}}
+POSC240010,{'required': {}}
+POSC240020D,{'required': {}}
+POSC240020D,{'required': {}}
+POSC240021D,{'required': {}}
+POSC240022D,{'required': {}}
+POSC240023D,{'required': {}}
+POSC240024D,{'required': {}}
+POSC240025D,{'required': {}}
+POSC240070,{'required': {}}
+POSC240071,{'required': {}}
+POSC240072,{'required': {}}
+POSC240073,{'required': {}}
+POSC240074,{'required': {}}
+POSC240075,{'required': {}}
+POSC240083,{'required': {}}
+POSC240084,{'required': {}}
+POSC240085,{'required': {}}
+POSC267070,{'required': {}}
+POSC270010,{'required': {}}
+POSC270011,{'required': {}}
+POSC270070,{'required': {}}
+POSC270071,{'required': {}}
+POSC270072,{'required': {}}
+POSC270073,{'required': {}}
+POSC270074,{'required': {}}
+POSC285070,{'required': {}}
+POSC285071,{'required': {}}
+POSC285072,{'required': {}}
+POSC285710,{'required': {}}
+POSC300010,{'required': {}}
+POSC300011,{'required': {}}
+POSC300020D,{'required': {}}
+POSC300021D,{'required': {}}
+POSC300030D,{'required': {}}
+POSC300031D,{'required': {}}
+POSC300070,{'required': {}}
+POSC300072,{'required': {}}
+POSC300073,{'required': {}}
+POSC300074,{'required': {}}
+POSC301010,{'required': {}}
+POSC309070,{'required': {}}
+POSC309071,{'required': {}}
+POSC309072,{'required': {}}
+POSC309075,{'required': {}}
+POSC309076,{'required': {}}
+POSC309077,{'required': {}}
+POSC309078,{'required': {}}
+POSC309079,{'required': {}}
+POSC309100,{'required': {}}
+POSC310070,{'required': {}}
+POSC310071,{'required': {}}
+POSC310071,{'required': {}}
+POSC310072,{'required': {}}
+POSC313010,{'required': {}}
+POSC316010,{'required': {}}
+POSC316070,{'required': {}}
+POSC316071,{'required': {}}
+POSC317010,{'required': {}}
+POSC318080,{'required': {}}
+POSC320010,{'required': {}}
+POSC330071,{'required': {}}
+POSC330072,{'required': {}}
+POSC333010,{'required': {}}
+POSC339070,{'required': {}}
+POSC339071,{'required': {}}
+POSC339072,{'required': {}}
+POSC339073,{'required': {}}
+POSC339074,{'required': {}}
+POSC339075,{'required': {}}
+POSC339076,{'required': {}}
+POSC339077,{'required': {}}
+POSC340010,{'required': {}}
+POSC342010,{'required': {}}
+POSC350010,{'required': {}}
+POSC350071,{'required': {}}
+POSC361010,{'required': {}}
+POSC362070,{'required': {}}
+POSC362071,{'required': {}}
+POSC362072,{'required': {}}
+POSC363010,{'required': {}}
+POSC363070,{'required': {}}
+POSC363071,{'required': {}}
+POSC377070,{'required': {}}
+POSC380010,{'required': {}}
+POSC401010,{'required': {}}
+POSC401011,{'required': {}}
+POSC401070,{'required': {}}
+POSC401071,{'required': {}}
+POSC404010,{'required': {}}
+POSC408070,{'required': {}}
+POSC408071,{'required': {}}
+POSC408072,{'required': {}}
+POSC409010,{'required': {}}
+POSC409070,{'required': {}}
+POSC409071,{'required': {}}
+POSC409072,{'required': {}}
+POSC409073,{'required': {}}
+POSC409074,{'required': {}}
+POSC409076,{'required': {}}
+POSC409077,{'required': {}}

@@ -121,9 +121,31 @@ Also of note, if you look in the CSV files in the V2 and V3 folders, you will se
 
 ### V4: 
 in V4, I kept the base design of a few functions and structures. The entire prereqs section is rewritten and redesigned to be integrated
-with the rest of the course scraping. 
+with the rest of the course scraping. There are several CSV documents in the testing folder that show progress as I made more progress writing the script
+
+NOTE: This section is written a little different since I was aftively working on the readme while coding this
+# CHANGES
+ -  cleaned up code
+ -  seperate string getter function from prereq checking logic
+ -  fixed prereq string collecting error cases
+ -  added various documentation to code
+ -  remove redundancies left from previous versions
+ -  made sure every class with prereqs gets into system
+ -  removed unneccessary times getting newLink for each course when only the section of the same course changes and not the course itself
+ -  script now returns dictionary
+ -  data always returns required classes in a dictionary nested in the main dictionary
+ -  if theres a decision between two or more prereqs to select, it will go in an optional dictionary, nested in the main dictionary
+ -  completely redfined courses string from scraped data.
+ -  added an insane amount of fixes for specific courses from scraped data 
+ -  vastly improved effiency of scraper 
 
 
+ Unfortionatly, I ran out of time right at the end before I could finish the end of the logic for the most complicated prereq requirements
+ and put it into our system. The final coursedata file has about 90% of the prereq requirements accurate, but not 100%.
+ There also was not enough time to convert the file to JSON. Its a little disapointing, I got within an hours work of having it work
+ perfectly. There were too many inconsistancies in the UD system and it took too much time to find and fix all of them. It ended
+ up being extremely time consuming without the raw data to begin with. Everything expect the prereqs did not give me too much 
+ trouble to scrape though. 
 
 
 
