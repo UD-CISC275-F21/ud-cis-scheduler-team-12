@@ -570,57 +570,6 @@ def makeDictionaries(prereqPost):
 
 
 
-
-
-
-
-'''
-    caseCheck = list(prereqsFinal)
-    if 'ART' not in caseCheck:
-        caseCheck = caseCheck[:7]
-        for letter in caseCheck:
-            count = 0
-            if letter.isalpha():
-                if letter.isupper():
-                    caseCheck[count] = 'X'
-                    count += 1
-        #print(caseCheck)
-
-
-    if caseCheck not in caseList:
-        caseList.append(caseCheck)
-        
-        
-possible cases:
-LING101
-LING101andLING20
-LING101orLING20
-ACCT208,MISY160orCISC101
-ACCT207,ACCT208
-ACCT313orACCT413,ACCT352orACCT350andACCT450
-PLSC101orBISC205orBISC207orBISC208
-ANFS101orANFS220,andANFS251orANFS241,
-ANFS332andBISC207andBISC205
-CHEM213orCHEM321andBISC205orBISC207
-ART280orART284orART285orART289orART385
-ART402andART409orART400
-ART307orART310orART326orART384orART385orART386
-'''
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def main(fileNameToSave, firstPageLink):
     caseCheck = []
     # creates a CSV file with these values as header
