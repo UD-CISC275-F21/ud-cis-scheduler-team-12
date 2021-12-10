@@ -126,6 +126,9 @@ with the rest of the course scraping. There are several CSV documents in the tes
 NOTE: This section is written a little different since I was aftively working on the readme while coding this
 # CHANGES
  -  cleaned up code
+ -  restructered entire script
+ -  fixed page html parsing happening twice
+ -  removed many useless variables
  -  seperate string getter function from prereq checking logic
  -  fixed prereq string collecting error cases
  -  added various documentation to code
@@ -137,7 +140,11 @@ NOTE: This section is written a little different since I was aftively working on
  -  if theres a decision between two or more prereqs to select, it will go in an optional dictionary, nested in the main dictionary
  -  completely redfined courses string from scraped data.
  -  added an insane amount of fixes for specific courses from scraped data 
- -  vastly improved effiency of scraper 
+ -  vastly improved efficency of scraper loops
+ -  improved efficiency of identifying and fixing incorrect course prereq list strings
+ -  removed redundant prereqs
+ -  removed old commented out code
+ -  fixed some code not being properly block commented, causing VSCode to complain
 
 
  Unfortionatly, I ran out of time right at the end before I could finish the end of the logic for the most complicated prereq requirements
