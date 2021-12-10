@@ -1,0 +1,49 @@
+.course {
+    border-radius:25px;
+    border: 3px solid;
+    border-color: #fff;
+    background: #fff;
+    color: black;
+    margin: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    transition: 0.3s;
+}
+
+.add-button {
+    margin: 5%;
+    transition: 0.3s;
+    background: transparent;
+    border: 0px;
+}
+
+.course:hover {
+    transform: scale(.95);
+    cursor: -webkit-grab; cursor: grab;
+}
+.course:active{
+    cursor: -webkit-grabbing; cursor: grabbing;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.add-button:hover {
+    color: crimson;
+}
+.menu-button {
+    display: inline-flex;
+}
+.menu-button button {
+    transition: 0.3s;
+    background: transparent;
+    border: 0px;
+    color: rgb(0, 102, 255);
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.list-group{
+    max-height: 750px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    list-style: none;
+}

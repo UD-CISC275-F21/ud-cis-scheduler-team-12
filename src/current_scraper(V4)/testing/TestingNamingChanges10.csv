@@ -1,0 +1,99 @@
+Class ID,Class Type,Class Title,Campus,Credits,Days,Time,Date,Instructor,PreReqs
+ACCT200010,LEC,Survey of Accounting,NEWRK,4 Hrs,TR,3:30PM - 5:15PM,Feb 7 - May 17,"Kane,Gregory D",{}
+ACCT207010,LEC,Accounting I,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Levine,Carolyn",{}
+ACCT207011,LEC,Accounting I,NEWRK,3 Hrs,TR,8:00AM - 9:15AM,Feb 7 - May 17,"Velury,Uma",{}
+ACCT207012,LEC,Accounting I,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Vermeer,Thomas Edward",{}
+ACCT207013,LEC,Accounting I,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Jenkins,David Shawn",{}
+ACCT207014,LEC,Accounting I,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Levine,Carolyn",{}
+ACCT207015,LEC,Accounting I,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"McMartin,Andrew",{}
+ACCT207016,LEC,Accounting I,NEWRK,3 Hrs,,Canceled,,,{}
+ACCT207017,LEC,Accounting I,NEWRK,3 Hrs,,Canceled,,,{}
+ACCT207018,LEC,Accounting I,NEWRK,3 Hrs,,Canceled,,,{}
+ACCT207019,LEC,Accounting I,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Wright,Diane Marie Lambert",{}
+ACCT207020,LEC,Accounting I,NEWRK,3 Hrs,,Canceled,,,{}
+ACCT207050,LEC,Accounting I,NEWRK,3 Hrs,MW,5:00PM - 6:15PM,Feb 7 - May 17,"McMartin,Andrew",{}
+ACCT207051,LEC,Accounting I,NEWRK,3 Hrs,MW,6:30PM - 7:45PM,Feb 7 - May 17,"McMartin,Andrew",{}
+ACCT207070,LEC,Accounting I,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",{}
+ACCT207075,LEC,Accounting I,NEWRK,3 Hrs,,Canceled,,,{}
+ACCT207080,LEC,Accounting I,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"McMartin,Andrew",{}
+ACCT208010,LEC,Accounting II,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Etheridge,Paige Penelope",{'required': {'ACCT207': 'false'}}
+ACCT208011,LEC,Accounting II,NEWRK,3 Hrs,MWF,9:05AM - 9:55AM,Feb 7 - May 17,"Etheridge,Paige Penelope",{'required': {'ACCT207': 'false'}}
+ACCT208012,LEC,Accounting II,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"Levine,Carolyn",{'required': {'ACCT207': 'false'}}
+ACCT208013,LEC,Accounting II,NEWRK,3 Hrs,MWF,1:25PM - 2:15PM,Feb 7 - May 17,"McDougal,Karen",{'required': {'ACCT207': 'false'}}
+ACCT208014,LEC,Accounting II,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Jones,Scott K",{'required': {'ACCT207': 'false'}}
+ACCT208015,LEC,Accounting II,NEWRK,3 Hrs,,Canceled,,,{'required': {'ACCT207': 'false'}}
+ACCT208016,LEC,Accounting II,NEWRK,3 Hrs,,Canceled,,,{'required': {'ACCT207': 'false'}}
+ACCT208017,LEC,Accounting II,NEWRK,3 Hrs,MWF,12:20PM - 1:10PM,Feb 7 - May 17,"McDougal,Karen",{'required': {'ACCT207': 'false'}}
+ACCT208018,LEC,Accounting II,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"McDougal,Karen",{'required': {'ACCT207': 'false'}}
+ACCT208019,LEC,Accounting II,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"McDougal,Karen",{'required': {'ACCT207': 'false'}}
+ACCT208020,LEC,Accounting II,NEWRK,3 Hrs,,Canceled,,,{'required': {'ACCT207': 'false'}}
+ACCT208021,LEC,Accounting II,NEWRK,3 Hrs,TR,8:00AM - 9:15AM,Feb 7 - May 17,"Jones,Scott K",{'required': {'ACCT207': 'false'}}
+ACCT208022,LEC,Accounting II,NEWRK,3 Hrs,,Canceled,,,{'required': {'ACCT207': 'false'}}
+ACCT208023,LEC,Accounting II,NEWRK,3 Hrs,,Canceled,,,{'required': {'ACCT207': 'false'}}
+ACCT208050,LEC,Accounting II,NEWRK,3 Hrs,MW,5:00PM - 6:15PM,Feb 7 - May 17,"Levine,Carolyn",{'required': {'ACCT207': 'false'}}
+ACCT208051,LEC,Accounting II,NEWRK,3 Hrs,MW,6:30PM - 7:45PM,Feb 7 - May 17,"Levine,Carolyn",{'required': {'ACCT207': 'false'}}
+ACCT302010,LEC,Accounting Information Systems,NEWRK,3 Hrs,TR,8:00AM - 9:15AM,Feb 7 - May 17,"Geerts,Guido L","{'required': {'ACCT208': 'false'}, 'optional1': {'MISY160': 'false', 'CISC101': 'false'}}"
+ACCT302080,LEC,Accounting Information Systems,NEWRK,3 Hrs,TR,8:00AM - 9:15AM,Feb 7 - May 17,"Geerts,Guido L","{'required': {'ACCT208': 'false'}, 'optional1': {'MISY160': 'false', 'CISC101': 'false'}}"
+ACCT315010,LEC,Intermediate Accounting I,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Yehuda,Nir","{'required': {'ACCT207': 'false', 'ACCT208': 'false'}}"
+ACCT315011,LEC,Intermediate Accounting I,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Yehuda,Nir","{'required': {'ACCT207': 'false', 'ACCT208': 'false'}}"
+ACCT316010,LEC,Intermediate Accounting II,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Jenkins,David Shawn",{'required': {'ACCT315': 'false'}}
+ACCT327010,LEC,Cost Accounting,NEWRK,3 Hrs,MWF ,1:25PM - 2:15PM ,Feb 7 - May 17 ,"Dragone,Debra Sue Gassner",{'required': {'ACCT208': 'false'}}
+ACCT327011,LEC,Cost Accounting,NEWRK,3 Hrs,MWF ,10:10AM - 11:00AM ,Feb 7 - May 17 ,"Dragone,Debra Sue Gassner",{'required': {'ACCT208': 'false'}}
+ACCT350010,LEC,Business Law I,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Coffin,Roger G",{}
+ACCT350080,LEC,Business Law I,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Coffin,Roger G",{}
+ACCT351010,LEC,Business Law II,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Coffin,Roger G",{'required': {'ACCT350': 'false'}}
+ACCT351080,LEC,Business Law II,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Coffin,Roger G",{'required': {'ACCT350': 'false'}}
+ACCT352010,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"McCloskey Esq,Jennifer Zelvin",{}
+ACCT352011,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"McCloskey Esq,Jennifer Zelvin",{}
+ACCT352012,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Alexander JD,Virgil E",{}
+ACCT352013,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Moffa Jr,Louis Robert",{}
+ACCT352014,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Moffa Jr,Louis Robert",{}
+ACCT352014,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Moffa Jr,Louis Robert",{}
+ACCT352015,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,MWF,12:20PM - 1:10PM,Feb 7 - May 17,"Alexander JD,Virgil E",{}
+ACCT352016,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Moffa Jr,Louis Robert",{}
+ACCT352017,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Alexander JD,Virgil E",{}
+ACCT363000,IND,Service Learning and Earned Income Tax Credit,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,{}
+ACCT366000,IND,Independent Study,NEWRK,1-6 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,{}
+ACCT402010,LEC,Big Data Technologies,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Geerts,Guido L","{'optional1': {'ACCT302': 'false', 'MISY330': 'false'}}"
+ACCT413010,LEC,Income Tax Accounting,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Etheridge,Paige Penelope",{'required': {'ACCT315': 'false'}}
+ACCT413011,LEC,Income Tax Accounting,NEWRK,3 Hrs,MWF,12:20PM - 1:10PM,Feb 7 - May 17,"Etheridge,Paige Penelope",{'required': {'ACCT315': 'false'}}
+ACCT414010,LEC,Advanced Federal Taxation,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Greenstein,Brian Richard",{'required': {'ACCT413': 'false'}}
+ACCT414011,LEC,Advanced Federal Taxation,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Greenstein,Brian Richard",{'required': {'ACCT413': 'false'}}
+ACCT415010,LEC,Advanced Accounting,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Velury,Uma",{'required': {'ACCT316': 'false'}}
+ACCT416010,LEC,Fiduciary Income Tax,NEWRK,3 Hrs,MWF,12:20PM - 1:10PM,Feb 7 - May 17,"McCloskey Esq,Jennifer Zelvin",{}
+ACCT417010,LEC,Auditing,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Vermeer,Thomas Edward",{'required': {'ACCT316': 'false'}}
+ACCT418050,LEC,Estate Planning,NEWRK,3 Hrs,M,6:00PM - 9:00PM,Feb 7 - May 17,"Diamond,David Arthur","{'optional1': {'ACCT350': 'false', 'ACCT352': 'false'}}"
+ACCT418051,LEC,Estate Planning,NEWRK,3 Hrs,W,6:00PM - 9:00PM,Feb 7 - May 17,"Diamond,David Arthur","{'optional1': {'ACCT350': 'false', 'ACCT352': 'false'}}"
+ACCT420010,LEC,Theory of External Reporting and Applications,NEWRK,3 Hrs,MW,3:35PM - 6:35PM,Apr 4 - May 20,"Levine,Carolyn",{'required': {'ACCT315': 'false'}}
+ACCT425010,LEC,Strategic Information Systems and Accounting,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Fico,Joan","{'required': {'ACCT302': 'false', 'ACCT316': 'false'}}"
+ACCT425050,LEC,Strategic Information Systems and Accounting,NEWRK,3 Hrs,TR,5:00PM - 6:15PM,Feb 7 - May 17,"Fico,Joan","{'required': {'ACCT302': 'false', 'ACCT316': 'false'}}"
+ACCT425080,LEC,Strategic Information Systems and Accounting,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Fico,Joan","{'required': {'ACCT302': 'false', 'ACCT316': 'false'}}"
+ACCT425082,LEC,Strategic Information Systems and Accounting,NEWRK,3 Hrs,TR,5:00PM - 6:15PM,Feb 7 - May 17,"Fico,Joan","{'required': {'ACCT302': 'false', 'ACCT316': 'false'}}"
+ACCT457050,LEC,Legal Issues for Entrepreneurs,NEWRK,3 Hrs,W,5:00PM - 8:00PM,Feb 7 - May 17,"Jumper Esq,James Bradley",{}
+ACCT600196,LEC,Financial Reporting and Analysis,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - Mar 25,"Levine,Carolyn",{}
+ACCT600197,LEC,Financial Reporting and Analysis,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - Mar 25,"Levine,Carolyn",{}
+ACCT600198,LEC,Financial Reporting and Analysis,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Apr 4 - May 20,"Levine,Carolyn",{}
+ACCT600199,LEC,Financial Reporting and Analysis,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Apr 4 - May 20,"Levine,Carolyn",{}
+ACCT602010,LEC,Big Data Technologies,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Geerts,Guido L",{}
+ACCT604196,LEC,Database Design and Implementation,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - Mar 25,"Monk,Ellen Jean Fischer",{}
+ACCT604197,LEC,Database Design and Implementation,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - Mar 25,"Monk,Ellen Jean Fischer",{}
+ACCT606050,LEC,"Object-oriented Systems Analysis, Design and Implementation",NEWRK,3 Hrs,T,6:00PM - 9:00PM,Feb 7 - May 17,"Laskowski,Jason Daniel",{'required': {'ACCT604': 'false'}}
+ACCT610196,LEC,Financial Reporting I,NEWRK,2 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - Mar 25,"Yehuda,Nir",{'required': {'ACCT207': 'false'}}
+ACCT611198,LEC,Financial Reporting II,NEWRK,2 Hrs,ASYN,12:00AM - 12:00AM,Apr 4 - May 20,"Yehuda,Nir",{'required': {'ACCT610': 'false'}}
+ACCT613010,LEC,Federal Taxation of Income and Property Transactions,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Etheridge,Paige Penelope",{}
+ACCT613011,LEC,Federal Taxation of Income and Property Transactions,NEWRK,3 Hrs,MWF,12:20PM - 1:10PM,Feb 7 - May 17,"Etheridge,Paige Penelope",{}
+ACCT614010,LEC,Advanced Federal Taxation,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Greenstein,Brian Richard",{'required': {'ACCT413': 'false'}}
+ACCT614011,LEC,Advanced Federal Taxation,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Greenstein,Brian Richard",{'required': {'ACCT413': 'false'}}
+ACCT615010,LEC,Advanced Financial Reporting,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Velury,Uma",{'required': {'ACCT612': 'false'}}
+ACCT615196,LEC,Advanced Financial Reporting,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Tsakumis,George Theodore",{'required': {'ACCT612': 'false'}}
+ACCT617010,LEC,"Auditing, Ethics, and Professional Responsibility",NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Vermeer,Thomas Edward",{'required': {'ACCT612': 'false'}}
+ACCT617011,LEC,"Auditing, Ethics, and Professional Responsibility",NEWRK,3 Hrs,,Canceled,,,{'required': {'ACCT612': 'false'}}
+ACCT618050,LEC,Estate Planning,NEWRK,3 Hrs,M,6:00PM - 9:00PM,Feb 7 - May 17,"Diamond,David Arthur","{'optional1': {'ACCT350': 'false', 'ACCT352': 'false'}}"
+ACCT618051,LEC,Estate Planning,NEWRK,3 Hrs,W,6:00PM - 9:00PM,Feb 7 - May 17,"Diamond,David Arthur","{'optional1': {'ACCT350': 'false', 'ACCT352': 'false'}}"
+ACCT620010,LEC,Theory of External Reporting and Applications,NEWRK,3 Hrs,MW,3:35PM - 6:35PM,Apr 4 - May 20,"Levine,Carolyn",{'required': {'ACCT316': 'false'}}
+ACCT653198,LEC,Business Law for Accountants,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Apr 4 - May 20,"Alexander JD,Virgil E",{'required': {'ACCT207': 'false'}}
+ACCT657050,LEC,Legal Issues for Entrepreneurs,NEWRK,3 Hrs,W,5:00PM - 8:00PM,Feb 7 - May 17,"Jumper Esq,James Bradley",{}
+ACCT683050,LEC,International Accounting,NEWRK,3 Hrs,T,6:00PM - 9:00PM,Feb 7 - May 17,"Kane,Gregory D","{'optional1': {'ACCT620': 'false', 'ACCT316': 'false'}}"
+ADMN102010,ADM,Career and Life Studies Certificate I,NEWRK,0 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Freedman,Brian Howard",{}
+ADMN119010,ADM,Dual Enrollement,NEWRK,0 Hrs,TBD,,-,Staff,{}
+ADMN562011,ADM,GRADUATE CONTRACT,NEWRK,0 Hrs,TBD,,-,Staff,{}

@@ -1,0 +1,687 @@
+Class ID,Class Type,Class Title,Campus,Credits,Days,Time,Date,Instructor,PreReqs
+ACCT200010,LEC,Survey of Accounting,NEWRK,4 Hrs,TR,3:30PM - 5:15PM,Feb 7 - May 17,"Kane,Gregory D",[]
+ACCT207010,LEC,Accounting I,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Levine,Carolyn",[]
+ACCT207011,LEC,Accounting I,NEWRK,3 Hrs,TR,8:00AM - 9:15AM,Feb 7 - May 17,"Velury,Uma",[]
+ACCT207012,LEC,Accounting I,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Vermeer,Thomas Edward",[]
+ACCT207013,LEC,Accounting I,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Jenkins,David Shawn",[]
+ACCT207014,LEC,Accounting I,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Levine,Carolyn",[]
+ACCT207015,LEC,Accounting I,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"McMartin,Andrew",[]
+ACCT207016,LEC,Accounting I,NEWRK,3 Hrs,,Canceled,,,[]
+ACCT207017,LEC,Accounting I,NEWRK,3 Hrs,,Canceled,,,[]
+ACCT207018,LEC,Accounting I,NEWRK,3 Hrs,,Canceled,,,[]
+ACCT207019,LEC,Accounting I,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Wright,Diane Marie Lambert",[]
+ACCT207020,LEC,Accounting I,NEWRK,3 Hrs,,Canceled,,,[]
+ACCT207050,LEC,Accounting I,NEWRK,3 Hrs,MW,5:00PM - 6:15PM,Feb 7 - May 17,"McMartin,Andrew",[]
+ACCT207051,LEC,Accounting I,NEWRK,3 Hrs,MW,6:30PM - 7:45PM,Feb 7 - May 17,"McMartin,Andrew",[]
+ACCT207070,LEC,Accounting I,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ACCT207075,LEC,Accounting I,NEWRK,3 Hrs,,Canceled,,,[]
+ACCT207080,LEC,Accounting I,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"McMartin,Andrew",[]
+ACCT208010,LEC,Accounting II,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Etheridge,Paige Penelope","[['ACCT207'], []]"
+ACCT208011,LEC,Accounting II,NEWRK,3 Hrs,MWF,9:05AM - 9:55AM,Feb 7 - May 17,"Etheridge,Paige Penelope","[['ACCT207'], []]"
+ACCT208012,LEC,Accounting II,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"Levine,Carolyn","[['ACCT207'], []]"
+ACCT208013,LEC,Accounting II,NEWRK,3 Hrs,MWF,1:25PM - 2:15PM,Feb 7 - May 17,"McDougal,Karen","[['ACCT207'], []]"
+ACCT208014,LEC,Accounting II,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Jones,Scott K","[['ACCT207'], []]"
+ACCT208015,LEC,Accounting II,NEWRK,3 Hrs,,Canceled,,,"[['ACCT207'], []]"
+ACCT208016,LEC,Accounting II,NEWRK,3 Hrs,,Canceled,,,"[['ACCT207'], []]"
+ACCT208017,LEC,Accounting II,NEWRK,3 Hrs,MWF,12:20PM - 1:10PM,Feb 7 - May 17,"McDougal,Karen","[['ACCT207'], []]"
+ACCT208018,LEC,Accounting II,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"McDougal,Karen","[['ACCT207'], []]"
+ACCT208019,LEC,Accounting II,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"McDougal,Karen","[['ACCT207'], []]"
+ACCT208020,LEC,Accounting II,NEWRK,3 Hrs,,Canceled,,,"[['ACCT207'], []]"
+ACCT208021,LEC,Accounting II,NEWRK,3 Hrs,TR,8:00AM - 9:15AM,Feb 7 - May 17,"Jones,Scott K","[['ACCT207'], []]"
+ACCT208022,LEC,Accounting II,NEWRK,3 Hrs,,Canceled,,,"[['ACCT207'], []]"
+ACCT208023,LEC,Accounting II,NEWRK,3 Hrs,,Canceled,,,"[['ACCT207'], []]"
+ACCT208050,LEC,Accounting II,NEWRK,3 Hrs,MW,5:00PM - 6:15PM,Feb 7 - May 17,"Levine,Carolyn","[['ACCT207'], []]"
+ACCT208051,LEC,Accounting II,NEWRK,3 Hrs,MW,6:30PM - 7:45PM,Feb 7 - May 17,"Levine,Carolyn","[['ACCT207'], []]"
+ACCT302010,LEC,Accounting Information Systems,NEWRK,3 Hrs,TR,8:00AM - 9:15AM,Feb 7 - May 17,"Geerts,Guido L","[['ACCT208'], [['MISY160', 'CISC101']]]"
+ACCT302080,LEC,Accounting Information Systems,NEWRK,3 Hrs,TR,8:00AM - 9:15AM,Feb 7 - May 17,"Geerts,Guido L","[['ACCT208'], [['MISY160', 'CISC101']]]"
+ACCT315010,LEC,Intermediate Accounting I,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Yehuda,Nir","[['ACCT207', 'ACCT208'], []]"
+ACCT315011,LEC,Intermediate Accounting I,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Yehuda,Nir","[['ACCT207', 'ACCT208'], []]"
+ACCT316010,LEC,Intermediate Accounting II,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Jenkins,David Shawn","[['ACCT315'], []]"
+ACCT327010,LEC,Cost Accounting,NEWRK,3 Hrs,MWF ,1:25PM - 2:15PM ,Feb 7 - May 17 ,"Dragone,Debra Sue Gassner","[['ACCT208'], []]"
+ACCT327011,LEC,Cost Accounting,NEWRK,3 Hrs,MWF ,10:10AM - 11:00AM ,Feb 7 - May 17 ,"Dragone,Debra Sue Gassner","[['ACCT208'], []]"
+ACCT350010,LEC,Business Law I,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Coffin,Roger G",[]
+ACCT350080,LEC,Business Law I,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Coffin,Roger G",[]
+ACCT351010,LEC,Business Law II,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Coffin,Roger G","[['ACCT350'], []]"
+ACCT351080,LEC,Business Law II,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Coffin,Roger G","[['ACCT350'], []]"
+ACCT352010,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"McCloskey Esq,Jennifer Zelvin",[]
+ACCT352011,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"McCloskey Esq,Jennifer Zelvin",[]
+ACCT352012,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Alexander JD,Virgil E",[]
+ACCT352013,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Moffa Jr,Louis Robert",[]
+ACCT352014,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Moffa Jr,Louis Robert",[]
+ACCT352014,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Moffa Jr,Louis Robert",[]
+ACCT352015,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,MWF,12:20PM - 1:10PM,Feb 7 - May 17,"Alexander JD,Virgil E",[]
+ACCT352016,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Moffa Jr,Louis Robert",[]
+ACCT352017,LEC,Law and Social Issues in Business,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Alexander JD,Virgil E",[]
+ACCT363000,IND,Service Learning and Earned Income Tax Credit,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ACCT366000,IND,Independent Study,NEWRK,1-6 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ACCT402010,LEC,Big Data Technologies,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Geerts,Guido L","[[], [['ACCT302', 'MISY330']]]"
+ACCT413010,LEC,Income Tax Accounting,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Etheridge,Paige Penelope","[['ACCT315'], []]"
+ACCT413011,LEC,Income Tax Accounting,NEWRK,3 Hrs,MWF,12:20PM - 1:10PM,Feb 7 - May 17,"Etheridge,Paige Penelope","[['ACCT315'], []]"
+ACCT414010,LEC,Advanced Federal Taxation,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Greenstein,Brian Richard","[['ACCT413'], []]"
+ACCT414011,LEC,Advanced Federal Taxation,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Greenstein,Brian Richard","[['ACCT413'], []]"
+ACCT415010,LEC,Advanced Accounting,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Velury,Uma","[['ACCT316'], []]"
+ACCT416010,LEC,Fiduciary Income Tax,NEWRK,3 Hrs,MWF,12:20PM - 1:10PM,Feb 7 - May 17,"McCloskey Esq,Jennifer Zelvin","[['ACCT450'], [['ACCT313', 'ACCT413'], ['ACCT352', 'ACCT350']]]"
+ACCT417010,LEC,Auditing,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Vermeer,Thomas Edward","[['ACCT316'], []]"
+ACCT418050,LEC,Estate Planning,NEWRK,3 Hrs,M,6:00PM - 9:00PM,Feb 7 - May 17,"Diamond,David Arthur","[[], [['ACCT350', 'ACCT352']]]"
+ACCT418051,LEC,Estate Planning,NEWRK,3 Hrs,W,6:00PM - 9:00PM,Feb 7 - May 17,"Diamond,David Arthur","[[], [['ACCT350', 'ACCT352']]]"
+ACCT420010,LEC,Theory of External Reporting and Applications,NEWRK,3 Hrs,MW,3:35PM - 6:35PM,Apr 4 - May 20,"Levine,Carolyn","[['ACCT315'], []]"
+ACCT425010,LEC,Strategic Information Systems and Accounting,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Fico,Joan","[['ACCT302', 'ACCT316'], []]"
+ACCT425050,LEC,Strategic Information Systems and Accounting,NEWRK,3 Hrs,TR,5:00PM - 6:15PM,Feb 7 - May 17,"Fico,Joan","[['ACCT302', 'ACCT316'], []]"
+ACCT425080,LEC,Strategic Information Systems and Accounting,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Fico,Joan","[['ACCT302', 'ACCT316'], []]"
+ACCT425082,LEC,Strategic Information Systems and Accounting,NEWRK,3 Hrs,TR,5:00PM - 6:15PM,Feb 7 - May 17,"Fico,Joan","[['ACCT302', 'ACCT316'], []]"
+ACCT457050,LEC,Legal Issues for Entrepreneurs,NEWRK,3 Hrs,W,5:00PM - 8:00PM,Feb 7 - May 17,"Jumper Esq,James Bradley",[]
+ACCT600196,LEC,Financial Reporting and Analysis,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - Mar 25,"Levine,Carolyn",[]
+ACCT600197,LEC,Financial Reporting and Analysis,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - Mar 25,"Levine,Carolyn",[]
+ACCT600198,LEC,Financial Reporting and Analysis,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Apr 4 - May 20,"Levine,Carolyn",[]
+ACCT600199,LEC,Financial Reporting and Analysis,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Apr 4 - May 20,"Levine,Carolyn",[]
+ACCT602010,LEC,Big Data Technologies,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Geerts,Guido L",[]
+ACCT604196,LEC,Database Design and Implementation,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - Mar 25,"Monk,Ellen Jean Fischer",[]
+ACCT604197,LEC,Database Design and Implementation,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - Mar 25,"Monk,Ellen Jean Fischer",[]
+ACCT606050,LEC,"Object-oriented Systems Analysis, Design and Implementation",NEWRK,3 Hrs,T,6:00PM - 9:00PM,Feb 7 - May 17,"Laskowski,Jason Daniel","[['ACCT604'], []]"
+ACCT610196,LEC,Financial Reporting I,NEWRK,2 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - Mar 25,"Yehuda,Nir","[[], [['ACCT207', 'equival']]]"
+ACCT611198,LEC,Financial Reporting II,NEWRK,2 Hrs,ASYN,12:00AM - 12:00AM,Apr 4 - May 20,"Yehuda,Nir","[[], [['ACCT610', 'equival']]]"
+ACCT613010,LEC,Federal Taxation of Income and Property Transactions,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Etheridge,Paige Penelope",[]
+ACCT613011,LEC,Federal Taxation of Income and Property Transactions,NEWRK,3 Hrs,MWF,12:20PM - 1:10PM,Feb 7 - May 17,"Etheridge,Paige Penelope",[]
+ACCT614010,LEC,Advanced Federal Taxation,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Greenstein,Brian Richard","[[], [['ACCT413', 'compara']]]"
+ACCT614011,LEC,Advanced Federal Taxation,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Greenstein,Brian Richard","[[], [['ACCT413', 'compara']]]"
+ACCT615010,LEC,Advanced Financial Reporting,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Velury,Uma","[[], [['ACCT612', 'equival']]]"
+ACCT615196,LEC,Advanced Financial Reporting,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Tsakumis,George Theodore","[[], [['ACCT612', 'equival']]]"
+ACCT617010,LEC,"Auditing, Ethics, and Professional Responsibility",NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Vermeer,Thomas Edward","[[], [['ACCT612', 'equival']]]"
+ACCT617011,LEC,"Auditing, Ethics, and Professional Responsibility",NEWRK,3 Hrs,,Canceled,,,"[[], [['ACCT612', 'equival']]]"
+ACCT618050,LEC,Estate Planning,NEWRK,3 Hrs,M,6:00PM - 9:00PM,Feb 7 - May 17,"Diamond,David Arthur","[[], [['ACCT350', 'ACCT352']]]"
+ACCT618051,LEC,Estate Planning,NEWRK,3 Hrs,W,6:00PM - 9:00PM,Feb 7 - May 17,"Diamond,David Arthur","[[], [['ACCT350', 'ACCT352']]]"
+ACCT620010,LEC,Theory of External Reporting and Applications,NEWRK,3 Hrs,MW,3:35PM - 6:35PM,Apr 4 - May 20,"Levine,Carolyn","[['ACCT316'], []]"
+ACCT653198,LEC,Business Law for Accountants,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Apr 4 - May 20,"Alexander JD,Virgil E","[[], [['ACCT207', 'equival']]]"
+ACCT657050,LEC,Legal Issues for Entrepreneurs,NEWRK,3 Hrs,W,5:00PM - 8:00PM,Feb 7 - May 17,"Jumper Esq,James Bradley",[]
+ACCT683050,LEC,International Accounting,NEWRK,3 Hrs,T,6:00PM - 9:00PM,Feb 7 - May 17,"Kane,Gregory D","[[], [['ACCT620', 'ACCT316']]]"
+ADMN102010,ADM,Career and Life Studies Certificate I,NEWRK,0 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Freedman,Brian Howard",[]
+ADMN119010,ADM,Dual Enrollement,NEWRK,0 Hrs,TBD,,-,Staff,[]
+ADMN562011,ADM,GRADUATE CONTRACT,NEWRK,0 Hrs,TBD,,-,Staff,[]
+ADMN562011,ADM,GRADUATE CONTRACT,NEWRK,0 Hrs,TBD,,-,Staff,[]
+ADMN562015,ADM,GRADUATE CONTRACT,NEWRK,0 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+AFRA107010,LEC,History of Rock,NEWRK,3 Hrs,ASYN,,Feb 7 - May 17,"England Baab,Sarah Jean",[]
+AFRA107011,LEC,History of Rock,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Gentry,Philip Max",[]
+AFRA110010,LEC,Introduction to African American Studies,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Serrano,Jorge Luis",[]
+AFRA110012,LEC,Introduction to African American Studies,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Davis Jr,Theodore J",[]
+AFRA110710,LEC,Introduction to African American Studies,WILM,3 Hrs,MW,1:30PM - 2:45PM,Feb 7 - May 17,"Livingston,Lawrence Michael",[]
+AFRA205010,LEC,Contemporary African American Issues: ENVIRONMENTAL JUSTICE,NEWRK,3 Hrs,MW,8:40AM - 9:55AM,Feb 7 - May 17,"Richardson,Jefffrey L",[]
+AFRA206010,LEC,Survey of African American Culture: WAGES OF WHITENESS,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"Stanford,Brandon",[]
+AFRA206710,LEC,Survey of African American Culture,WILM,3 Hrs,MW,3:00PM - 4:15PM,Feb 7 - May 17,"Livingston,Lawrence Michael",[]
+AFRA215010,LEC,Race in Society,NEWRK,3 Hrs,MW,6:30PM - 7:45PM,Feb 7 - May 17,"Stanford,Brandon",[]
+AFRA220010,LEC,The Civil Rights Movement,NEWRK,3 Hrs,MW,5:00PM - 6:15PM,Feb 7 - May 17,"Stanford,Brandon",[]
+AFRA220710,LEC,The Civil Rights Movement,WILM,3 Hrs,TR,3:00PM - 4:15PM,Feb 7 - May 17,"Livingston,Lawrence Michael",[]
+AFRA227010,LEC,Popular Music of the Global South,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Miller,Colin David",[]
+AFRA230010,LEC,Introduction to Politics and Social Justice,NEWRK,3 Hrs,MWF,1:25PM - 2:15PM,Feb 7 - May 17,"Oskooii,Kassra",[]
+AFRA240010,LEC,Create Performances about Black American History using all Art Forms,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"El-Amin,Hassan",[]
+AFRA306010,LEC,African America History Since the Civil War,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Hicks,Cheryl",[]
+AFRA306011,LEC,African America History Since the Civil War,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Hicks,Cheryl",[]
+AFRA307010,LEC,Black Thought and Philosophy,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"Richardson,Jefffrey L",[]
+AFRA321010,LEC,Black Women and Popular Culture,NEWRK,3 Hrs,TR,5:00PM - 6:15PM,Feb 7 - May 17,"Gaiter,Colette Christine",[]
+AFRA324010,LEC,The Art of Social Change,NEWRK,3 Hrs,TR,6:30PM - 7:45PM,Feb 7 - May 17,"Gaiter,Colette Christine",[]
+AFRA334010,LEC,Black Women's History Since 1865,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Hicks,Cheryl",[]
+AFRA334011,LEC,Black Women's History Since 1865,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Hicks,Cheryl",[]
+AFRA336010,LEC,American Slavery,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Benjamin Golden,Kathryn",[]
+AFRA336011,LEC,American Slavery,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Benjamin Golden,Kathryn",[]
+AFRA355010,LEC,"Inequality, Crime and Justice",NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"Gray,Andrew Charles",[]
+AFRA373010,LEC,Sociology of Gangster Rap Music and Culture,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Payne,Yasser Arafat",[]
+AFRA418010,LEC,"Race, Gender, and Poverty",NEWRK,3 Hrs,M,5:00PM - 8:00PM,Feb 7 - May 17,"Bouek,Jennifer","[['SOCI201'], []]"
+AFRA445010,LEC,Black Bodies on Display: Race in Museums,NEWRK,3 Hrs,T,2:00PM - 5:00PM,Feb 7 - May 17,"McGee,Julie L",[]
+AFRA490010,LEC,Senior Colloquium,NEWRK,3 Hrs,MW,8:40AM - 9:55AM,Feb 7 - May 17,"Serrano,Jorge Luis","[['AFRA391'], []]"
+AFRA601001D,DIS,Africana Research Methods,NEWRK,3 Hrs,R,12:30PM - 3:30PM,Feb 7 - May 17,"Serrano,Jorge Luis","[['AFRA600'], []]"
+AFRA643010,LEC,Africa Under Colonial Rule,NEWRK,3 Hrs,M,3:35PM - 6:35PM,Feb 7 - May 17,"Maloba,Wunyabari",[]
+AFRA645010,LEC,Black Bodies on Display: Race in Museums,NEWRK,3 Hrs,T,2:00PM - 5:00PM,Feb 7 - May 17,"McGee,Julie L",[]
+AFRA649010,LEC,Civil Rights Law and Policy,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Ware,Leland Brett",[]
+AFRA650010,LEC,Black Community Studies: STREET ETHNOGRAPHY,NEWRK,3 Hrs,W,5:00PM - 8:00PM,Feb 7 - May 17,"Payne,Yasser Arafat",[]
+AFRA666010,IND,SPECIAL PROBLEM,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Benjamin Golden,Kathryn",[]
+AFSC111010,LEC,Foundations of the United States Air Force II,NEWRK,1 Hrs,T,9:30AM - 10:45AM,Feb 7 - May 17,"Busch,Jonathan",[]
+AFSC151010L,LAB,Initial Military Training II,NEWRK,0 Hrs,T,7:00AM - 9:00AM,Feb 7 - May 17,"Busch,Jonathan",[]
+AFSC211010,LEC,Evolution of United States Air and Space Power II,NEWRK,1 Hrs,T,11:00AM - 12:00PM,Feb 7 - May 17,"Busch,Jonathan",[]
+AFSC251010L,LAB,Field Training Preparation II,NEWRK,0 Hrs,T,7:00AM - 9:00AM,Feb 7 - May 17,"Busch,Jonathan",[]
+AFSC311010,LEC,Leadership Studies II,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Busch,Jonathan",[]
+AFSC351010L,LAB,Intermediate Cadet Leader Training II,NEWRK,0 Hrs,T,7:00AM - 9:00AM,Feb 7 - May 17,"Busch,Jonathan",[]
+AFSC411010,LEC,National Security Affairs II,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Busch,Jonathan",[]
+AFSC451010L,LAB,Senior Cadet Leader Training II,NEWRK,0 Hrs,T,7:00AM - 9:00AM,Feb 7 - May 17,"Busch,Jonathan",[]
+AGRI217010,LEC,Leadership and Communication in Agriculture,NEWRK,3 Hrs,T,11:00AM - 12:15PM,Feb 7 - May 17,"Rodgers,Michelle Skiles",[]
+AGRI400010,LEC,Senior Capstone in Agriculture and Natural Resources,NEWRK,1 Hrs,M,8:00AM - 8:50AM,Feb 7 - May 17,"Isaacs,Mark A",[]
+ANFS102010,LEC,Food for Thought,NEWRK,3 Hrs,ASYN,,Feb 7 - May 17,"Kniel,Kalmia E",[]
+ANFS102080,LEC,Food for Thought,NEWRK,3 Hrs,ASYN ,4:40PM - 5:20PM,Feb 7 - May 17 ,"Kniel,Kalmia E",[]
+ANFS166000,IND,Special Problem,NEWRK,1-3 Hrs,ASYN,,Feb 7 - May 17,Staff,[]
+ANFS166000,IND,Special Problem,NEWRK,1-3 Hrs,ASYN,,Feb 7 - May 17,Staff,[]
+ANFS218010,LEC,Fermentation Sciences,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Donofrio,Nicole M",[]
+ANFS240010,LEC,Functional Anatomy of Domestic Animals,NEWRK,4 Hrs,MWF,8:00AM - 8:50AM,Feb 7 - May 17,"Renzetti,Annie",[]
+ANFS240020L,LAB,Functional Anatomy of Domestic Animals,NEWRK,4 Hrs,T,3:30PM - 6:30PM,Feb 7 - May 17,"Renzetti,Annie",[]
+ANFS240021L,LAB,Functional Anatomy of Domestic Animals,NEWRK,4 Hrs,T,12:30PM - 3:15PM,Feb 7 - May 17,"Renzetti,Annie",[]
+ANFS240022L,LAB,Functional Anatomy of Domestic Animals,NEWRK,4 Hrs,M,1:25PM - 4:25PM,Feb 7 - May 17,"Renzetti,Annie",[]
+ANFS240023L,LAB,Functional Anatomy of Domestic Animals,NEWRK,4 Hrs,M,10:10AM - 1:10PM,Feb 7 - May 17,"Renzetti,Annie",[]
+ANFS240024L,LAB,Functional Anatomy of Domestic Animals,NEWRK,4 Hrs,W,10:10AM - 1:10PM,Feb 7 - May 17,"Renzetti,Annie",[]
+ANFS240080,LEC,Functional Anatomy of Domestic Animals,NEWRK,4 Hrs,MWF,8:00AM - 8:50AM,Feb 7 - May 17,"Renzetti,Annie",[]
+ANFS240081L,LAB,Functional Anatomy of Domestic Animals,NEWRK,4 Hrs,T,12:30PM - 3:15PM,Feb 7 - May 17,"Renzetti,Annie",[]
+ANFS240082L,LAB,Functional Anatomy of Domestic Animals,NEWRK,4 Hrs,M,1:25PM - 4:25PM,Feb 7 - May 17,"Renzetti,Annie",[]
+ANFS240083L,LAB,Functional Anatomy of Domestic Animals,NEWRK,4 Hrs,M,10:10AM - 1:10PM,Feb 7 - May 17,"Renzetti,Annie",[]
+ANFS240084L,LAB,Functional Anatomy of Domestic Animals,NEWRK,4 Hrs,T,3:30PM - 6:30PM,Feb 7 - May 17,"Renzetti,Annie",[]
+ANFS240085L,LAB,Functional Anatomy of Domestic Animals,NEWRK,4 Hrs,W,10:10AM - 1:10PM,Feb 7 - May 17,"Renzetti,Annie",[]
+ANFS251010,LEC,Animal Nutrition,NEWRK,3 Hrs,T ,8:00AM - 9:15AM,Feb 7 - May 17 ,"Griffiths,Lesa G","[['ANFS101'], []]"
+ANFS251011,LEC,Animal Nutrition,NEWRK,3 Hrs,R,8:00AM - 9:15AM,Feb 7 - May 17,"Griffiths,Lesa G","[['ANFS101'], []]"
+ANFS252020D,DIS,Animal Nutrition Applications,NEWRK,1 Hrs,W,1:25PM - 2:15PM,Feb 7 - May 17,"Li,Yihang",[]
+ANFS252021D,DIS,Animal Nutrition Applications,NEWRK,1 Hrs,W,2:30PM - 3:20PM,Feb 7 - May 17,"Li,Yihang",[]
+ANFS252022D,DIS,Animal Nutrition Applications,NEWRK,1 Hrs,W,3:35PM - 4:25PM,Feb 7 - May 17,"Li,Yihang",[]
+ANFS252023D,DIS,Animal Nutrition Applications,NEWRK,1 Hrs,W,4:40PM - 5:30PM,Feb 7 - May 17,"Li,Yihang",[]
+ANFS265010,LEC,Perspectives in Career and Professional Development,NEWRK,1 Hrs,M,2:30PM - 3:20PM,Feb 7 - May 17,"Parcells,Mark Steven",[]
+ANFS267011,LEC,SEMINAR: CLINICAL PRE-VET EXPERIENCE 2,NEWRK,2 Hrs,TBD,,Feb 7 - May 17,"DeMarco,Stephanie",[]
+ANFS267020D,DIS,SEMINAR: CLINICAL PRE-VET EXPERIENCE 2,NEWRK,2 Hrs,F,10:10AM - 12:10PM,Feb 7 - May 17,"DeMarco,Stephanie",[]
+ANFS267021D,DIS,SEMINAR: CLINICAL PRE-VET EXPERIENCE 2,NEWRK,2 Hrs,F,2:00PM - 4:00PM,Feb 7 - May 17,"DeMarco,Stephanie",[]
+ANFS300010,LEC,Principles of Animal and Plant Genetics,NEWRK,3 Hrs,MWF,9:05AM - 9:55AM,Feb 7 - May 17,"Abasht,Behnam","[[], [['PLSC101', 'BISC205']]]"
+ANFS305010,LEC,Food Science,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Shearer,Adrienne E",[]
+ANFS305080,LEC,Food Science,NEWRK,3 Hrs,W,4:40PM - 5:30PM,Feb 7 - May 17,"Shearer,Adrienne E",[]
+ANFS310010L,LAB,Animal and Plant Genetics Laboratory,NEWRK,2 Hrs,W,10:10AM - 1:10PM,Feb 7 - May 17,"Hougentogler,Laura Nemec",[]
+ANFS310011L,LAB,Animal and Plant Genetics Laboratory,NEWRK,2 Hrs,W,2:30PM - 5:30PM,Feb 7 - May 17,"Hougentogler,Laura Nemec",[]
+ANFS310012L,LAB,Animal and Plant Genetics Laboratory,NEWRK,2 Hrs,R,11:00AM - 1:45PM,Feb 7 - May 17,"Hougentogler,Laura Nemec",[]
+ANFS310014L,LAB,Animal and Plant Genetics Laboratory,NEWRK,2 Hrs,T,11:00AM - 1:45PM,Feb 7 - May 17,"Hougentogler,Laura Nemec",[]
+ANFS324010,LEC,Equine Disease and Lameness,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Renzetti,Annie",[]
+ANFS324080,LEC,Equine Disease and Lameness,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Renzetti,Annie",[]
+ANFS340010,LEC,Introduction to Animal Environmental Management,NEWRK,3 Hrs,MW,11:15AM - 12:05PM,Feb 7 - May 17,"Li,Hong","[[], [['MATH114', 'higher.']]]"
+ANFS340020L,LAB,Introduction to Animal Environmental Management,NEWRK,3 Hrs,F,12:30PM - 2:30PM,Feb 7 - May 17,"Li,Hong","[[], [['MATH114', 'higher.']]]"
+ANFS366000,IND,Independent Study,NEWRK,1-6 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ANFS399010,LEC,Teaching Assistant,NEWRK,1 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Kniel,Kalmia E",[]
+ANFS404010,LEC,Dairy Production,NEWRK,4 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Gressley,Tanya Faust","[['ANFS101'], []]"
+ANFS404020L,LAB,Dairy Production,NEWRK,4 Hrs,F,12:20PM - 3:20PM,Feb 7 - May 17,"Gressley,Tanya Faust","[['ANFS101'], []]"
+ANFS404080L,LAB,Dairy Production,NEWRK,4 Hrs,F,12:20PM - 3:20PM,Feb 7 - May 17,"Gressley,Tanya Faust","[['ANFS101'], []]"
+ANFS404080,LEC,Dairy Production,NEWRK,4 Hrs,TR ,9:30AM - 10:45AM ,Feb 7 - May 17 ,"Gressley,Tanya Faust","[['ANFS101'], []]"
+ANFS411010,LEC,Food Science Capstone,NEWRK,4 Hrs,MWF,9:05AM - 9:55AM,Feb 7 - May 17,"Joerger,Rolf D",[]
+ANFS411020L,LAB,Food Science Capstone,NEWRK,4 Hrs,M,11:15AM - 2:15PM,Feb 7 - May 17,"Joerger,Rolf D",[]
+ANFS411080L,LAB,Food Science Capstone,NEWRK,4 Hrs,M,11:15AM - 2:15PM,Feb 7 - May 17,"Joerger,Rolf D",[]
+ANFS411080,LEC,Food Science Capstone,NEWRK,4 Hrs,MWF,9:05AM - 9:55AM,Feb 7 - May 17,"Joerger,Rolf D",[]
+ANFS415010,LEC,Developmental Biology,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Song,Jia Ling","[['BISC207', 'BISC208'], []]"
+ANFS417010,LEC,Beef Cattle and Sheep Production,NEWRK,4 Hrs,MW,8:40AM - 9:55AM,Feb 7 - May 17,"Griffiths,Lesa G","[['ANFS101', 'ANFS251'], []]"
+ANFS417020L,LAB,Beef Cattle and Sheep Production,NEWRK,4 Hrs,M,12:25PM - 3:25PM,Feb 7 - May 17,"Griffiths,Lesa G","[['ANFS101', 'ANFS251'], []]"
+ANFS417080L,LAB,Beef Cattle and Sheep Production,NEWRK,4 Hrs,M,12:25PM - 3:25PM,Feb 7 - May 17,"Griffiths,Lesa G","[['ANFS101', 'ANFS251'], []]"
+ANFS417080L,LAB,Beef Cattle and Sheep Production,NEWRK,4 Hrs,M,12:25PM - 3:25PM,Feb 7 - May 17,"Griffiths,Lesa G","[['ANFS101', 'ANFS251'], []]"
+ANFS417080,LEC,Beef Cattle and Sheep Production,NEWRK,4 Hrs,MW,8:40AM - 9:55AM,Feb 7 - May 17,"Griffiths,Lesa G","[['ANFS101', 'ANFS251'], []]"
+ANFS426010,LEC,Equine Management,NEWRK,4 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Biddle,Amy Sanders","[[], [['ANFS101', 'ANFS220']]]"
+ANFS426020L,LAB,Equine Management,NEWRK,4 Hrs,R,2:00PM - 3:30PM,Feb 7 - May 17,"Biddle,Amy Sanders","[[], [['ANFS101', 'ANFS220']]]"
+ANFS426080,LEC,Equine Management,NEWRK,4 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Biddle,Amy Sanders","[[], [['ANFS101', 'ANFS220']]]"
+ANFS426080L,LAB,Equine Management,NEWRK,4 Hrs,R,2:00PM - 3:30PM,Feb 7 - May 17,"Biddle,Amy Sanders","[[], [['ANFS101', 'ANFS220']]]"
+ANFS429010,LEC,Food Analysis,NEWRK,4 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Wu,Changqing",[]
+ANFS429020L,LAB,Food Analysis,NEWRK,4 Hrs,W,12:20PM - 3:15PM,Feb 7 - May 17,"Wu,Changqing",[]
+ANFS436010,LEC,Immunology of Domestic Animals,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Parcells,Mark Steven","[['ANFS332', 'BISC207', 'BISC205'], []]"
+ANFS440010,LEC,Comparative Histopathology,NEWRK,4 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Brannick,Erin Marie","[['|permi'], [['BISC208', 'BISC205']]]"
+ANFS440020L,LAB,Comparative Histopathology,NEWRK,4 Hrs,M,12:30PM - 2:00PM,Feb 7 - May 17,"Brannick,Erin Marie","[['|permi'], [['BISC208', 'BISC205']]]"
+ANFS440021L,LAB,Comparative Histopathology,NEWRK,4 Hrs,M,2:00PM - 3:30PM,Feb 7 - May 17,"Brannick,Erin Marie","[['|permi'], [['BISC208', 'BISC205']]]"
+ANFS440022L,LAB,Comparative Histopathology,NEWRK,4 Hrs,M,3:30PM - 5:00PM,Feb 7 - May 17,"Brannick,Erin Marie","[['|permi'], [['BISC208', 'BISC205']]]"
+ANFS443010,LEC,Food Engineering Technology,NEWRK,4 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Chen,Haiqiang","[['PHYS201'], []]"
+ANFS443020L,LAB,Food Engineering Technology,NEWRK,4 Hrs,T,12:45PM - 3:15PM,Feb 7 - May 17,"Chen,Haiqiang","[['PHYS201'], []]"
+ANFS449010,LEC,Food Biotechnology,NEWRK,4 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Joerger,Rolf D",[]
+ANFS449020L,LAB,Food Biotechnology,NEWRK,4 Hrs,R,12:30PM - 3:00PM,Feb 7 - May 17,"Joerger,Rolf D",[]
+ANFS449021L,LAB,Food Biotechnology,NEWRK,4 Hrs,R,3:00PM - 5:30PM,Feb 7 - May 17,"Joerger,Rolf D",[]
+ANFS449080L,LAB,Food Biotechnology,NEWRK,4 Hrs,R,12:30PM - 3:00PM,Feb 7 - May 17,"Joerger,Rolf D",[]
+ANFS449080,LEC,Food Biotechnology,NEWRK,4 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Joerger,Rolf D",[]
+ANFS455010,LEC,The Gut Microbiome: Microbial and Host Perspectives,NEWRK,4 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Arsenault,Ryan Joseph","[[], [['BISC300', 'permiss']]]"
+ANFS455020D,DIS,The Gut Microbiome: Microbial and Host Perspectives,NEWRK,4 Hrs,R,12:30PM - 1:20PM,Feb 7 - May 17,"Arsenault,Ryan Joseph","[[], [['BISC300', 'permiss']]]"
+ANFS464000,IND,Animal and Food Science Experience,NEWRK,1-3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ANFS466000,IND,Independent Study,NEWRK,1-6 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ANFS467011,LEC,SEMINAR: CURRENT TOPICS IN ONE'S HEALTH,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Arsenault,Ryan Joseph",[]
+ANFS468000,RSC,Research,NEWRK,1-3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ANFS475010,LEC,Veterinary Biochemistry,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Schmidt,Carl Joseph","[[], [['CHEM101', 'CHEM103']]]"
+ANFS611010,LEC,Food Science Capstone,NEWRK,4 Hrs,MWF,9:05AM - 9:55AM,Feb 7 - May 17,"Joerger,Rolf D",[]
+ANFS629010,LEC,Food Analysis,NEWRK,4 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Wu,Changqing",[]
+ANFS629020L,LAB,Food Analysis,NEWRK,4 Hrs,W,12:20PM - 3:15PM,Feb 7 - May 17,"Wu,Changqing",[]
+ANFS636010,LEC,Immunology of Domestic Animals,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Parcells,Mark Steven","[['ANFS332', 'BISC207'], []]"
+ANFS640010,LEC,Comparative Histopathology,NEWRK,4 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Brannick,Erin Marie","[[], [['BISC208', 'bypermi']]]"
+ANFS640020L,LAB,Comparative Histopathology,NEWRK,4 Hrs,M,12:30PM - 2:00PM,Feb 7 - May 17,"Brannick,Erin Marie","[[], [['BISC208', 'bypermi']]]"
+ANFS640021L,LAB,Comparative Histopathology,NEWRK,4 Hrs,M,2:00PM - 3:30PM,Feb 7 - May 17,"Brannick,Erin Marie","[[], [['BISC208', 'bypermi']]]"
+ANFS640022L,LAB,Comparative Histopathology,NEWRK,4 Hrs,M,3:30PM - 5:00PM,Feb 7 - May 17,"Brannick,Erin Marie","[[], [['BISC208', 'bypermi']]]"
+ANFS643010,LEC,Food Engineering Technology,NEWRK,4 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Chen,Haiqiang","[['MATH222', 'PHYS201'], []]"
+ANFS643020L,LAB,Food Engineering Technology,NEWRK,4 Hrs,T,12:45PM - 3:15PM,Feb 7 - May 17,"Chen,Haiqiang","[['MATH222', 'PHYS201'], []]"
+ANFS649010,LEC,Food Biotechnology,NEWRK,4 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Joerger,Rolf D",[]
+ANFS649020L,LAB,Food Biotechnology,NEWRK,4 Hrs,R,12:30PM - 3:00PM,Feb 7 - May 17,"Joerger,Rolf D",[]
+ANFS655010,LEC,The Gut Microbiome: Microbial and Host Perspectives,NEWRK,4 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Arsenault,Ryan Joseph","[[], [['BISC300', 'permiss']]]"
+ANFS655020D,DIS,The Gut Microbiome: Microbial and Host Perspectives,NEWRK,4 Hrs,R,12:30PM - 1:20PM,Feb 7 - May 17,"Arsenault,Ryan Joseph","[[], [['BISC300', 'permiss']]]"
+ANFS667011,LEC,SEMINAR: CURRENT TOPICS IN ONE'S HEALTH,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Arsenault,Ryan Joseph",[]
+ANFS668000,RSC,Research,NEWRK,1-6 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ANFS675010,LEC,Veterinary Biochemistry,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Schmidt,Carl Joseph","[[], [['CHEM213', 'CHEM321'], ['BISC205', 'BISC207']]]"
+ANFS865010,LEC,Seminar,NEWRK,1 Hrs,M,3:00PM - 4:30PM,Feb 7 - May 17,"Connor,Erin",[]
+ANFS868000,RSC,Research,NEWRK,1-9 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ANFS868002,RSC,Research,NEWRK,1-9 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ANFS869000,IND,Master's Thesis,NEWRK,1-6 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ANFS964000,IND,Pre-Candidacy Study,NEWRK,3-12 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ANFS964000,IND,Pre-Candidacy Study,NEWRK,3-12 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ANFS969000,IND,Doctoral Dissertation,NEWRK,1-12 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ANTH101012,LEC,Introduction to Social and Cultural Anthropology,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Neitzel,Jill E",[]
+ANTH101013,LEC,Introduction to Social and Cultural Anthropology,NEWRK,3 Hrs,ASYN,,Feb 7 - May 17,"Thomas,Kedron",[]
+ANTH101014,LEC,Introduction to Social and Cultural Anthropology,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Trivedi,Jennifer Marie",[]
+ANTH101015,LEC,Introduction to Social and Cultural Anthropology,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Ramsay,Georgina Kathleen",[]
+ANTH101070,LEC,Introduction to Social and Cultural Anthropology,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ANTH101072,LEC,Introduction to Social and Cultural Anthropology,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ANTH102070,LEC,"Human Biology, Behavior and Evolution",NEWRK,3 Hrs,,Canceled,,,[]
+ANTH102071,LEC,"Human Biology, Behavior and Evolution",NEWRK,3 Hrs,,Canceled,,,[]
+ANTH103070,LEC,Introduction to Prehistoric Archaeology,NEWRK,3 Hrs,,Canceled,,,[]
+ANTH104010,LEC,Introduction to Archaeology and Biological Anthropology,NEWRK,3 Hrs,MWF,1:25PM - 2:15PM,Feb 7 - May 17,"Rocek,Thomas",[]
+ANTH104080,LEC,Introduction to Archaeology and Biological Anthropology,NEWRK,3 Hrs,MWF,1:25PM - 2:15PM,Feb 7 - May 17,"Rocek,Thomas",[]
+ANTH104310,LEC,Introduction to Archaeology and Biological Anthropology,DOVER,3 Hrs,MW,11:00AM - 12:15PM,Feb 7 - May 17,"Peasnall,Brian Lee",[]
+ANTH105010,LEC,Archaeology of Modern World,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"DeCunzo,Lu Ann",[]
+ANTH106010,LEC,Introduction to Anthropology of Health,NEWRK,3 Hrs,ASYN,,Feb 7 - May 17,"Ansari,David",[]
+ANTH167070,LEC,SEMINAR,NEWRK,3 Hrs,,Canceled,,,[]
+ANTH200010,LEC,Introduction to the History of Anthropological Theory,NEWRK,3 Hrs,MW,8:40AM - 9:55AM,Feb 7 - May 17,"Guerron-Montero,Carla M",[]
+ANTH201710,LEC,Visualizing Humanity: Ethnographic Film,WILM,3 Hrs,MW,11:00AM - 12:15PM,Feb 7 - May 17,"de Kramer-Lynch,Kuinera Jennifer",[]
+ANTH202010,LEC,"Genes, Bones and Human Evolution",NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Rosenberg,Karen",[]
+ANTH205510,LEC,Anthropology and Human Nature,GTOWN,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Peasnall,Brian Lee",[]
+ANTH209010,LEC,Contemporary South Asia: An Anthropological Introduction through Everyday Struggles,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Thakur,Vikramaditya",[]
+ANTH223710,LEC,"Food, Gender and Culture",WILM,3 Hrs,MW,1:30PM - 2:45PM,Feb 7 - May 17,"de Kramer-Lynch,Kuinera Jennifer",[]
+ANTH228010,LEC,Peoples and Cultures of the Southwest,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Rocek,Thomas",[]
+ANTH229010,LEC,Indians of North America,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Custer,Jay F",[]
+ANTH232010,LEC,The Anthropology of Global Youth,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Neitzel,Jill E",[]
+ANTH234010,LEC,"Environmental Anthropology: Plants, People and Pigs",NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Thakur,Vikramaditya",[]
+ANTH235071,LEC,Anthropology of Food,NEWRK,3 Hrs,,Canceled,,,[]
+ANTH235072,LEC,Anthropology of Food,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ANTH236010,LEC,Anthropology of Sport,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"Neitzel,Jill E",[]
+ANTH302010,LEC,Medical Anthropology,NEWRK,3 Hrs,MWF,2:30PM - 3:20PM,Feb 7 - May 17,"Ansari,David",[]
+ANTH304010,LEC,"Culture, Health & Environment",NEWRK,3 Hrs,W,5:00PM - 8:00PM,Feb 7 - May 17,"Trivedi,Jennifer Marie",[]
+ANTH325070,LEC,Anthropology of Europe,NEWRK,3 Hrs,,Canceled,,,[]
+ANTH344010,LEC,Anthropology of Clothing and Fashion,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Thomas,Kedron",[]
+ANTH350070,LEC,Contemporary Topics in Anthropology,NEWRK,3 Hrs,,Canceled,,,[]
+ANTH350071,LEC,Contemporary Topics in Anthropology,NEWRK,3 Hrs,,Canceled,,,[]
+ANTH356010,LEC,Anthropology of Childhood,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Rosenberg,Karen",[]
+ANTH356080,LEC,Anthropology of Childhood,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Rosenberg,Karen",[]
+ANTH367070,LEC,"SEMINAR: CZECH FOOD, CULT AND BREWING",NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ANTH379010,LEC,Archaeology and Colonialism in North America,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"DeCunzo,Lu Ann",[]
+ANTH381010,LEC,Visions of Native Americans,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Custer,Jay F",[]
+ANTH382010,LEC,The Anthropology of Capitalism,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"Benson,Peter",[]
+ANTH466000,IND,Independent Study,NEWRK,1-6 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ANTH486010,LEC,Tutorial in Social and Cultural Anthropology,NEWRK,3 Hrs,MW,8:40AM - 9:55AM,Feb 7 - May 17,"Thomas,Kedron",[]
+ANTH486080,LEC,Tutorial in Social and Cultural Anthropology,NEWRK,3 Hrs,MW,8:40AM - 9:55AM,Feb 7 - May 17,"Thomas,Kedron",[]
+ANTH488010,LEC,Tutorial in Physical Anthropology,NEWRK,3 Hrs,T,3:30PM - 6:30PM,Feb 7 - May 17,"Melby,Melissa Kathleen",[]
+APEC100010,LEC,Sustainable Development,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Messer,Kent Donald",[]
+APEC135010,LEC,Introduction to Data Analysis,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Wolinski,Laurie Greene",[]
+APEC150010,LEC,Economics of Agriculture and Natural Resources,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"McGranaghan,Christina Maria Ursula",[]
+APEC150010,LEC,Economics of Agriculture and Natural Resources,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"McGranaghan,Christina Maria Ursula",[]
+APEC212010,LEC,Food Retailing and Consumer Behavior,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"McFadden,Brandon",[]
+APEC266000,IND,SPECIAL PROBLEM,NEWRK,1-3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+APEC270010,LEC,Biotechnology: Science and Socioeconomic Issues,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"Sparks,Erin Elizabeth",[]
+APEC316010,LEC,Economics of Biotechnology and New Technologies,NEWRK,3 Hrs,MWF,2:30PM - 3:20PM,Feb 7 - May 17,"Bernard,John C",[]
+APEC324010,LEC,Introduction to Resource Economics,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Palm-Forster,Leah Harris","[[], [['APEC150', 'ECON101']]]"
+APEC343010,LEC,Environmental Economics,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Kecinski,Maik","[[], [['ECON101', 'APEC150']]]"
+APEC343070,LEC,Environmental Economics,NEWRK,3 Hrs,,Canceled,,,"[[], [['ECON101', 'APEC150']]]"
+APEC343071,LEC,Environmental Economics,NEWRK,3 Hrs,,Canceled,,,"[[], [['ECON101', 'APEC150']]]"
+APEC406010,LEC,Agricultural and Natural Resource Policy,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Egan,Jennifer M","[[], [['APEC150', 'ECON101']]]"
+APEC409010,LEC,Surveys and Economic Experiments,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Bernard,John C","[[], [['STAT200', 'equival']]]"
+APEC412010,LEC,Strategic Marketing Competition,NEWRK,1-3 Hrs,T,5:00PM - 8:00PM,Feb 7 - May 17,"Davidson,Kelly",[]
+APEC480050,LEC,Geographic Information Systems in Natural Resource Management,NEWRK,4 Hrs,T,5:00PM - 8:00PM,Feb 7 - May 17,"Smith,Olena",[]
+APEC609010,LEC,Surveys and Economic Experiments,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Bernard,John C",[]
+APEC805010,LEC,Behavioral Economics,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"McGranaghan,Christina Maria Ursula","[['APEC801'], []]"
+APEC812010,LEC,Preferences & Choices,NEWRK,3 Hrs,W,9:00AM - 12:00PM,Feb 7 - May 17,"McFadden,Brandon","[['APEC801', 'ECON622'], []]"
+APEC820010,LEC,Experimental Economics,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Messer,Kent Donald",[]
+APEC868000,RSC,Research,NEWRK,1-9 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARAB105010,LEC,Arabic I - Elementary,NEWRK,4 Hrs,MWF ,12:20PM - 1:10PM ,Feb 7 - May 17 ,"Masmoudi,Khalil",[]
+ARAB105070,LEC,Arabic I - Elementary,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARAB105071,LEC,Arabic I - Elementary,NEWRK,4 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARAB106010,LEC,Arabic II - Elementary/Intermediate,NEWRK,4 Hrs,MWF ,2:30PM - 3:20PM ,Feb 7 - May 17 ,"Masmoudi,Khalil","[['ARAB105'], []]"
+ARAB107010,LEC,Arabic III - Intermediate,NEWRK,4 Hrs,MWF ,10:10AM - 11:00AM ,Feb 7 - May 17 ,"Masmoudi,Khalil","[['ARAB106'], []]"
+ARAB200010,LEC,Advanced Intermediate Arabic,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Masmoudi,Ikram","[['ARAB107'], []]"
+ARAB200080,LEC,Advanced Intermediate Arabic,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Masmoudi,Ikram","[['ARAB107'], []]"
+ARAB301010,LEC,Advanced Reading in Arabic,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Masmoudi,Ikram","[['ARAB205'], []]"
+ARSC104310,LEC,Sophomore Seminar,DOVER,1 Hrs,W,11:20AM - 12:10PM,Feb 7 - May 17,"Mendoza,Melvin Ignacio",[]
+ARSC104311,LEC,Sophomore Seminar,DOVER,1 Hrs,T,9:55AM - 10:45AM,Feb 7 - May 17,"Mendoza,Melvin Ignacio",[]
+ARSC104510,LEC,Sophomore Seminar,GTOWN,1 Hrs,T,12:25PM - 1:15PM,Feb 7 - May 17,"Scott,Stephanie Elyse",[]
+ARSC104710,LEC,Sophomore Seminar,WILM,1 Hrs,W,12:25PM - 1:15PM,Feb 7 - May 17,"Helgeson,Stephanie",[]
+ARSC104711,LEC,Sophomore Seminar,WILM,1 Hrs,T,12:25PM - 1:15PM,Feb 7 - May 17,"Fisher-Klein,Tommy Samuel",[]
+ARSC120010,LEC,Transfer Student Transition Seminar,NEWRK,1 Hrs,W,2:30PM - 3:20PM,Feb 7 - May 17,"Gondos,Alison Christine",[]
+ARSC167013,LEC,SEMINAR: AMER CULT FOR INTL SCHOLARS,NEWRK,1 Hrs,W,1:25PM - 2:15PM,Feb 7 - May 17,"Rice,Philip Thomas",[]
+ARSC293080,LEC,Honors Forum,NEWRK,1 Hrs,W,3:35PM - 4:25PM,Feb 7 - May 17,"Peters III,Raymond Ingling",[]
+ARSC297010,LEC,Passport to the Arts,NEWRK,3 Hrs,M,2:30PM - 3:45PM,Feb 7 - May 17,"Miller,Colin David",[]
+ARSC300010,LEC,Issues in Global Studies: GLOBAL VIRUSES/VIRALITY,NEWRK,1 Hrs,T,12:30PM - 1:20PM,Feb 7 - May 17,"Guerron-Montero,Carla M",[]
+ARSC301010,LEC,Aesthetics and Education,NEWRK,3 Hrs,MW,3:30PM - 4:50PM,Feb 7 - May 17,"Haislip,Yael Anastasia",[]
+ARSC301080,LEC,Aesthetics and Education,NEWRK,3 Hrs,MW,3:30PM - 4:50PM,Feb 7 - May 17,"Haislip,Yael Anastasia",[]
+ARSC316080,LEC,Peer Tutoring/Advanced Composition,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Peters III,Raymond Ingling",[]
+ART129070,STD,Design for Non-Majors,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ART129071,STD,Design for Non-Majors,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ART129072,STD,Design for Non-Majors,NEWRK,3 Hrs,,Canceled,,,[]
+ART129073,STD,Design for Non-Majors,NEWRK,3 Hrs,,Canceled,,,[]
+ART129074,STD,Design for Non-Majors,NEWRK,3 Hrs,,Canceled,,,[]
+ART129710,STD,Design for Non-Majors,WILM,3 Hrs,TR,3:00PM - 5:00PM,Feb 7 - May 17,"DeReus,Rayna Victoria",[]
+ART133010,STD,Drawing for Non-Majors,NEWRK,3 Hrs,MW,3:35PM - 6:05PM,Feb 7 - May 17,Staff,[]
+ART133070,STD,Drawing for Non-Majors,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ART133071,STD,Drawing for Non-Majors,NEWRK,3 Hrs,,Canceled,,,[]
+ART133072,STD,Drawing for Non-Majors,NEWRK,3 Hrs,,Canceled,,,[]
+ART133072,STD,Drawing for Non-Majors,NEWRK,3 Hrs,,Canceled,,,[]
+ART133073,STD,Drawing for Non-Majors,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART133074,STD,Drawing for Non-Majors,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART167070,LEC,SEMINAR: CROSS-MEDIA ART STUDIO,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART167071,LEC,SEMINAR: SKETCH COURSE IN ROME,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART180070,LEC,Digital Photography for Non-Majors,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ART180071,LEC,Digital Photography for Non-Majors,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART180072,LEC,Digital Photography for Non-Majors,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART180073,LEC,Digital Photography for Non-Majors,NEWRK,3 Hrs,,Canceled,,,[]
+ART180074,LEC,Digital Photography for Non-Majors: PHOTOGRAPHIC APPROACHES,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART180075,LEC,Digital Photography for Non-Majors,NEWRK,3 Hrs,,Canceled,,,[]
+ART180076,LEC,Digital Photography for Non-Majors,NEWRK,3 Hrs,,Canceled,,,[]
+ART180077,LEC,Digital Photography for Non-Majors,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART180078,LEC,Digital Photography for Non-Majors: PHOTOJOURNALISM,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART180079,LEC,Digital Photography for Non-Majors: PHOTOJOURNALISM,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART180192,LEC,Digital Photography for Non-Majors,NEWRK,3 Hrs,,Canceled,,,[]
+ART180193,LEC,Digital Photography for Non-Majors,NEWRK,3 Hrs,,Canceled,,,[]
+ART180194,LEC,Digital Photography for Non-Majors,NEWRK,3 Hrs,,Canceled,,,[]
+ART180195,LEC,Digital Photography for Non-Majors,NEWRK,3 Hrs,,Canceled,,,[]
+ART200010,LEC,Introduction to Art and Design for Games,NEWRK,3 Hrs,MW,9:05AM - 11:35AM,Feb 7 - May 17,"Chang,Jia Rey",[]
+ART204010,LEC,Media/Design/Culture,NEWRK,3 Hrs,ASYN,,Feb 7 - May 17,Staff,[]
+ART204070,LEC,Media/Design/Culture,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART204071,LEC,Media/Design/Culture,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART204072,LEC,Media/Design/Culture,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART204073,LEC,Media/Design/Culture,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART205010,STD,Core Interactive Media,NEWRK,3 Hrs,TR,3:30PM - 5:25PM,Feb 7 - May 17,Staff,[]
+ART205011,STD,Core Interactive Media,NEWRK,3 Hrs,MW,6:30PM - 8:25PM,Feb 7 - May 17,Staff,[]
+ART208010,STD,Core Typography,NEWRK,3 Hrs,,Canceled,,,"[['ART209'], []]"
+ART208011,STD,Core Typography,NEWRK,3 Hrs,TR,12:30PM - 3:00PM,Feb 7 - May 17,"Pigford,Ashley J","[['ART209'], []]"
+ART209010,STD,Core Design,NEWRK,3 Hrs,TR,12:30PM - 3:00PM,Feb 7 - May 17,Staff,[]
+ART209011,STD,Core Design,NEWRK,3 Hrs,,Canceled,,,[]
+ART209070,STD,Core Design,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART218010,LEC,Core Colloquium,NEWRK,1 Hrs,T,6:00PM - 7:00PM,Feb 7 - May 17,"Shelnutt,Gregory William",[]
+ART230070,STD,Figure Drawing,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ART230071,STD,Figure Drawing,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART230072,STD,Figure Drawing,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART231070,STD,Introduction to Painting,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ART231071,STD,Introduction to Painting,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ART231072,STD,Introduction to Painting,NEWRK,3 Hrs,,Canceled,,,[]
+ART231073,STD,Introduction to Painting,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART231074,STD,Introduction to Painting,NEWRK,3 Hrs,,Canceled,,,[]
+ART231075,STD,Introduction to Painting,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART231076,STD,Introduction to Painting,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART233070,STD,Drawing as Study,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ART233071,STD,Drawing as Study,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART235010,STD,Core Drawing,NEWRK,3 Hrs,,Canceled,,,[]
+ART236010,STD,Core Painting,NEWRK,3 Hrs,TR,9:30AM - 12:00PM,Feb 7 - May 17,"Marquez,Rene J","[['ART235'], []]"
+ART236011,STD,Core Painting,NEWRK,3 Hrs,MW,6:00PM - 8:30PM,Feb 7 - May 17,Staff,"[['ART235'], []]"
+ART245010,STD,Core Printmaking,NEWRK,3 Hrs,MW,9:05AM - 11:35AM,Feb 7 - May 17,Staff,"[['ART235'], []]"
+ART245010,STD,Core Printmaking,NEWRK,3 Hrs,MW,9:05AM - 11:35AM,Feb 7 - May 17,Staff,"[['ART235'], []]"
+ART245011,STD,Core Printmaking,NEWRK,3 Hrs,MW,12:20PM - 2:50PM,Feb 7 - May 17,Staff,"[['ART235'], []]"
+ART250070,STD,Introduction to Sculpture,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART250071,STD,Introduction to Sculpture,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART250710,STD,Introduction to Sculpture,WILM,3 Hrs,F,9:30AM - 1:30PM,Feb 7 - May 17,"DeNigris,Brittany Allyn Cameron",[]
+ART255010,STD,Core Sculpture,NEWRK,3 Hrs,MW,3:35PM - 6:05PM,Feb 7 - May 17,Staff,"[['ART295'], []]"
+ART255011,STD,Core Sculpture,NEWRK,3 Hrs,,Canceled,,,"[['ART295'], []]"
+ART265010,STD,Core 3-D Modeling,NEWRK,3 Hrs,TR,9:30AM - 12:00PM,Feb 7 - May 17,"Winn,Edward Lawrence",[]
+ART265011,STD,Core 3-D Modeling,NEWRK,3 Hrs,MW,3:35PM - 6:05PM,Feb 7 - May 17,"Chang,Jia Rey",[]
+ART267072,LEC,SEMINAR: FRESCO PAINTING,NEWRK,3 Hrs,,Canceled,,,[]
+ART267073,LEC,SEMINAR: CREATIVE PHOTOGRAPHY,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART280010,STD,Introduction to Photo and Video,NEWRK,3 Hrs,,Canceled,,,[]
+ART280710,STD,Introduction to Photo and Video,WILM,3 Hrs,MW,11:00AM - 12:15PM,Feb 7 - May 17,"Dorsey,Sherry",[]
+ART281070,STD,Darkroom Photography,NEWRK,3 Hrs,,Canceled,,,[]
+ART281071,STD,Darkroom Photography,NEWRK,3 Hrs,,Canceled,,,[]
+ART284010,STD,Core Photography,NEWRK,3 Hrs,,Canceled,,,[]
+ART284011,STD,Core Photography,NEWRK,3 Hrs,TR,12:30PM - 3:00PM,Feb 7 - May 17,"Cox,Jonathan Andrew",[]
+ART285010,STD,Core Moving Images,NEWRK,3 Hrs,MW,12:20PM - 2:50PM,Feb 7 - May 17,"Hicks,Amy L","[['ART284'], []]"
+ART285011,STD,Core Moving Images,NEWRK,3 Hrs,MW,6:30PM - 9:00PM,Feb 7 - May 17,Staff,"[['ART284'], []]"
+ART285070,STD,Core Moving Images,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A","[['ART284'], []]"
+ART289010,STD,Documentary Photography,NEWRK,3 Hrs,TR,9:30AM - 12:00PM,Feb 7 - May 17,"Deering,William",[]
+ART289070,STD,Documentary Photography,NEWRK,3 Hrs,,Canceled,,,[]
+ART289071,STD,Documentary Photography,NEWRK,3 Hrs,,Canceled,,,[]
+ART289072,STD,Documentary Photography,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART289073,STD,Documentary Photography,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ART295010,STD,Core Ceramics,NEWRK,3 Hrs,TR,9:30AM - 12:00PM,Feb 7 - May 17,Staff,[]
+ART295011,STD,Core Ceramics,NEWRK,3 Hrs,MW,12:20PM - 2:50PM,Feb 7 - May 17,Staff,[]
+ART301010,STD,Design Studio,NEWRK,3 Hrs,TR,3:30PM - 5:25PM,Feb 7 - May 17,"Pigford,Ashley J","[['ART302'], [['ART303', 'ART308']]]"
+ART307010,STD,Interaction Design,NEWRK,3 Hrs,MW,12:20PM - 2:50PM,Feb 7 - May 17,"Chang,Jia Rey","[['ART205'], []]"
+ART310010,STD,Photographic Design,NEWRK,3 Hrs,,Canceled,,,[]
+ART317010,STD,Printmaking Strategies,NEWRK,3 Hrs,TR,6:00PM - 8:30PM,Feb 7 - May 17,"Terry,Aaron","[[], [['ART243', 'ART245']]]"
+ART322010,STD,Advertising Design Methods,NEWRK,3 Hrs,TR,12:30PM - 3:00PM,Feb 7 - May 17,"Deering,William",[]
+ART324010,LEC,The Art of Social Change,NEWRK,3 Hrs,TR,6:30PM - 7:45PM,Feb 7 - May 17,"Gaiter,Colette Christine",[]
+ART326010,STD,Experimental Animation,NEWRK,3 Hrs,MW,3:35PM - 6:05PM,Feb 7 - May 17,"Hicks,Amy L","[[], [['ART280', 'ART284']]]"
+ART331070,STD,Intermediate Painting,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A","[[], [['ART231', 'ART236']]]"
+ART331071,STD,Intermediate Painting,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A","[[], [['ART231', 'ART236']]]"
+ART334010,STD,Figure Painting,NEWRK,3 Hrs,MW,9:05AM - 11:35AM,Feb 7 - May 17,"Brinley,David M","[['ART230'], [['ART231', 'ART236']]]"
+ART350010,STD,Sculpture Processes,NEWRK,3 Hrs,MW,12:20PM - 2:50PM,Feb 7 - May 17,Staff,"[['ART250', 'ART255'], []]"
+ART350070,STD,Sculpture Processes,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A","[['ART250', 'ART255'], []]"
+ART353010,STD,Illustration Studio,NEWRK,3 Hrs,MW,12:20PM - 2:50PM,Feb 7 - May 17,"Brinley,David M",[]
+ART384010,STD,Photographic Strategies,NEWRK,3 Hrs,TR,9:30AM - 12:00PM,Feb 7 - May 17,"Cox,Jonathan Andrew","[[], [['ART280', 'ART284']]]"
+ART384070,STD,Photographic Strategies,NEWRK,3 Hrs,,Canceled,,,"[[], [['ART280', 'ART284']]]"
+ART384071,STD,Photographic Strategies,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A","[[], [['ART280', 'ART284']]]"
+ART393010,STD,Expanded Ceramic Processes,NEWRK,3 Hrs,TR,12:30PM - 3:00PM,Feb 7 - May 17,"Donovan,Abigail S.","[[], [['ART290', 'ART295']]]"
+ART401010,STD,Portfolio Preparation,NEWRK,3 Hrs,TR,3:30PM - 5:25PM,Feb 7 - May 17,"Deering,William","[['ART402'], [['ART409', 'ART400']]]"
+ART403010,STD,Degree Project,NEWRK,3 Hrs,M,6:30PM - 9:30PM,Feb 7 - May 17,Staff,"[['ART402', 'ART409'], []]"
+ART408002,IND,Internship,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Deering,William",[]
+ART408003,IND,Internship,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Cox,Jonathan Andrew",[]
+ART416010,LEC,Junior Seminar,NEWRK,3 Hrs,TR,3:30PM - 5:25PM,Feb 7 - May 17,"Cox,Jonathan Andrew",[]
+ART416010,LEC,Junior Seminar,NEWRK,3 Hrs,TR,3:30PM - 5:25PM,Feb 7 - May 17,"Cox,Jonathan Andrew",[]
+ART417002,IND,BFA Exhibition,NEWRK,0 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Marquez,Rene J",[]
+ART417003,IND,BFA Exhibition,NEWRK,0 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Deering,William",[]
+ART419010,STD,Senior Studio,NEWRK,3 Hrs,TR,3:30PM - 5:25PM,Feb 7 - May 17,"Marquez,Rene J","[['ART416'], []]"
+ART432070,STD,Painting Studio,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A","[[], [['ART331', 'ART334']]]"
+ART450010,STD,Sculpture Studio,NEWRK,3 Hrs,MW,12:20PM - 2:50PM,Feb 7 - May 17,Staff,"[['ART350'], []]"
+ART481010L,LAB,Photo and Video Studio,NEWRK,3 Hrs,MW,3:35PM - 6:05PM,Feb 7 - May 17,"Hicks,Amy L","[[], [['ART307', 'ART310']]]"
+ART481011L,LAB,Photo and Video Studio,NEWRK,3 Hrs,TR,9:30AM - 12:00PM,Feb 7 - May 17,"Cox,Jonathan Andrew","[[], [['ART307', 'ART310']]]"
+ART600010,LEC,Graduate Critique,NEWRK,3 Hrs,R,6:00PM - 9:00PM,Feb 7 - May 17,"Shelnutt,Gregory William",[]
+ART679000,IND,Graduate Studio,NEWRK,3-9 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ART698010,LEC,MFA Exhibition,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Donovan,Abigail S.",[]
+ART699010,LEC,MFA Supporting Paper,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Donovan,Abigail S.",[]
+ARTC302010,LEC,Care and Preservation of Cultural Property II,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Hagerman,Madeline",[]
+ARTC302080,LEC,Care and Preservation of Cultural Property II,NEWRK,3 Hrs,TR ,12:30PM - 1:45PM ,Feb 7 - May 17 ,"Hagerman,Madeline",[]
+ARTC464002,IND,Preservation Internship: TREATMENT OF ORGANIC OBJECTS,NEWRK,3 Hrs,T,2:00PM - 6:00PM,Feb 7 - May 17,"Owczarek,Nina",[]
+ARTC464006,IND,Preservation Internship: PAINTINGS CONSERVATION II,NEWRK,3 Hrs,F,10:00AM - 2:00PM,Feb 7 - May 17,"Baade,Brian Holden",[]
+ARTC464013,IND,Preservation Internship: PAINTINGS CONSERVATION II,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Stoner,Joyce Hill",[]
+ARTC467011,LEC,SEMINAR: ETHICS&VALUE IN COLLECT CARE T,NEWRK,3 Hrs,R,2:00PM - 5:00PM,Feb 7 - May 17,"Owczarek,Nina",[]
+ARTC467012,LEC,SEMINAR: ISSUES IN PHOTOGRAPHIC CONSERV,NEWRK,1 Hrs,R,6:30PM - 8:30PM,Feb 7 - May 17,"Norris,Debra Prina Hess",[]
+ARTC488010,LEC,Studio Materials and Techniques of Painting I,NEWRK,3 Hrs,MW,10:00AM - 1:00PM,Feb 7 - May 17,"Baade,Brian Holden",[]
+ARTC616010,LEC,Conservation Research Methods,NEWRK,3 Hrs,T,9:00AM - 12:00PM,Feb 7 - May 17,"Grayburn,Rosie Ann","[['ARTC61'], []]"
+ARTC650050,LEC,Seminar in Art Conservation,NEWRK,1 Hrs,W,4:00PM - 5:00PM,Feb 7 - May 17,"Stoner,Joyce Hill",[]
+ARTC666000,IND,Independent Study,NEWRK,1-12 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTC667013,LEC,SEMINAR: CONSERVATION OF CULT PROP II,NEWRK,6 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Norris,Debra Prina Hess",[]
+ARTC667016,LEC,SEMINAR: PREVS CONS:  RESEARCH & APPS,NEWRK,3 Hrs,W,9:00AM - 12:00PM,Feb 7 - May 17,"Wickens,Joelle Del'Orme-Juers",[]
+ARTC667017,LEC,SEMINAR: ART & FORENSICS:  PAINTINGS,NEWRK,3 Hrs,,Canceled,,,[]
+ARTC667018,LEC,SEMINAR: ETHICS&VALUE IN COLLECTION CAR,NEWRK,1-12 Hrs,R,2:00PM - 5:00PM,Feb 7 - May 17,"Owczarek,Nina",[]
+ARTC671010,LEC,Chemical and Physical Techniques Used in the Examination of Art Materials II,NEWRK,3 Hrs,R,9:00AM - 12:00PM,Feb 7 - May 17,"Porell,Mina Tosheva","[['ARTC67'], []]"
+ARTC673010,LEC,Chemical and Physical Techniques Used in the Examination of Art Materials IV,NEWRK,3 Hrs,R,9:00AM - 12:00PM,Feb 7 - May 17,"Alcantara-Garcia,Jocelyn","[['ARTC67'], []]"
+ARTC866000,IND,SPECIAL PROBLEM,NEWRK,1-12 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTC870000,IND,Internship in Conservation,NEWRK,1-9 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTC969000,IND,Doctoral Dissertation,NEWRK,1-12 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTH101010,LEC,Visual Culture,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Hill,Jason Edward",[]
+ARTH101070,LEC,Visual Culture,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH150070,LEC,Monuments and Methods in the History of Art,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH151310,LEC,"Myth, Religion and Art",DOVER,3 Hrs,MW,3:00PM - 4:15PM,Feb 7 - May 17,"Hintlian,Jennifer Beth",[]
+ARTH154010,LEC,Introduction to Art History: Renaissance to Modern,NEWRK,3 Hrs,ASYN,,Feb 7 - May 17,"Werth,Mary Margaret",[]
+ARTH154020D,DIS,Introduction to Art History: Renaissance to Modern,NEWRK,3 Hrs,W,2:30PM - 3:20PM,Feb 7 - May 17,Staff,[]
+ARTH154021D,DIS,Introduction to Art History: Renaissance to Modern,NEWRK,3 Hrs,W,3:35PM - 4:25PM,Feb 7 - May 17,Staff,[]
+ARTH154022D,DIS,Introduction to Art History: Renaissance to Modern,NEWRK,3 Hrs,R,11:00AM - 11:50AM,Feb 7 - May 17,Staff,[]
+ARTH154023D,DIS,Introduction to Art History: Renaissance to Modern,NEWRK,3 Hrs,R,12:30PM - 1:20PM,Feb 7 - May 17,Staff,[]
+ARTH154024D,DIS,Introduction to Art History: Renaissance to Modern,NEWRK,3 Hrs,F,12:30PM - 1:20PM,Feb 7 - May 17,Staff,[]
+ARTH154025D,DIS,Introduction to Art History: Renaissance to Modern,NEWRK,3 Hrs,F,1:25PM - 2:15PM,Feb 7 - May 17,Staff,[]
+ARTH154080D,DIS,Introduction to Art History: Renaissance to Modern,NEWRK,3 Hrs,W,1:25PM - 2:15PM,Feb 7 - May 17,Staff,[]
+ARTH154080,LEC,Introduction to Art History: Renaissance to Modern,NEWRK,3 Hrs,ASYN,,Feb 7 - May 17,"Werth,Mary Margaret",[]
+ARTH154310,LEC,Introduction to Art History: Renaissance to Modern,DOVER,3 Hrs,MW,4:30PM - 5:45PM,Feb 7 - May 17,"Hintlian,Jennifer Beth",[]
+ARTH166000,IND,Special Problem,NEWRK,1-3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTH198070,LEC,Studies in World Art and Architecture: ART OF ANCIENT GREECE,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH198071,LEC,Studies in World Art and Architecture: ART OF ANCIENT GREECE,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH198071,LEC,Studies in World Art and Architecture: ART OF ANCIENT GREECE,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH198072,LEC,Studies in World Art and Architecture: HISTORY OF ARCHITECTURE,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH198073,LEC,Studies in World Art and Architecture: HISTORY OF ART I,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH198074,LEC,Studies in World Art and Architecture: TOPOGRAPHY & MONUMENTS ATHENS,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH199070,LEC,"Topics in Art History: ROME, OSTIA, & POMPEII",NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH199071,LEC,Topics in Art History: HISTORY OF ART II,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH199072,LEC,Topics in Art History: HISTORY OF ART II,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH199073,LEC,Topics in Art History: SURVEY OF RENAISSANCE ART,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH199074,LEC,"Topics in Art History: ROME, OSTIA AND POMPEII",NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH199075,LEC,Topics in Art History: ART & ARCHITCTRE IMPERIAL ROME,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH199076,LEC,Topics in Art History: 20THC. ART: HISTORYOFMODERNISM,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH199077,LEC,Topics in Art History: ASPECTS OF GREEK ART IN ATHENS,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH199078,LEC,Topics in Art History: CONTEMPORARY ART SCENE,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH199079,LEC,Topics in Art History: HISTORY OF ART I,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH199100,LEC,Topics in Art History: MODERN GREEK ART,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH199101,LEC,Topics in Art History: FROM REALISM TO MODERN ART,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH199710,LEC,Topics in Art History,WILM,3 Hrs,MW,3:00PM - 4:15PM,Feb 7 - May 17,Staff,[]
+ARTH210010,LEC,Later Medieval Art: 1000-1400 AD,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Gallant,Denva",[]
+ARTH210080,LEC,Later Medieval Art: 1000-1400 AD,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Gallant,Denva",[]
+ARTH218010,LEC,Renaissance Art in a Global Perspective: The 1500s,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"Dominguez Torres,Monica",[]
+ARTH218080,LEC,Renaissance Art in a Global Perspective: The 1500s,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"Dominguez Torres,Monica",[]
+ARTH225011,LEC,Eighteenth Century Art,NEWRK,3 Hrs,ASYN,,Feb 7 - May 17,"Bellion,Wendy A",[]
+ARTH236070,LEC,Arts of the Islamic World,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH236710,LEC,Arts of the Islamic World,WILM,3 Hrs,MW,11:00AM - 12:15PM,Feb 7 - May 17,"Hintlian,Jennifer Beth",[]
+ARTH239072,LEC,Art and Architecture of Europe: SPANISH ART:RENAISSANCE&BAROQU,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH239073,LEC,Art and Architecture of Europe: HISTORY OF ART IN SPAIN,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH239074,LEC,Art and Architecture of Europe: CONTEMPORARY SPANISH ART,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH239075,LEC,Art and Architecture of Europe: ANCIENT ROME & ITS MONUMENTS,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH239076,LEC,Art and Architecture of Europe: BAROQUE ROME & ITS MONUMENTS,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH239077,LEC,Art and Architecture of Europe: MEDIEVAL ROME & ITS MONUMENTS,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH239078,LEC,Art and Architecture of Europe: RENAISSANCE ROME & ITS MONUMEN,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH239079,LEC,Art and Architecture of Europe: MODERN ART IN SPAIN & FRANCE,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH239100,LEC,Art and Architecture of Europe: GOLDEN AGE OF SPAIN,NEWRK,3-12 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH239101,LEC,Art and Architecture of Europe: THE BRONZE AGE ANCIENT GREECE,NEWRK,3-12 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH239102,LEC,Art and Architecture of Europe: THE BRONZE AGE ANCIENT GREECE,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH239103,LEC,Art and Architecture of Europe: MODERN ART IN SPAIN & FRANCE,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH239104,LEC,Art and Architecture of Europe: ANCIENT GREEK ART & ARCHITECT,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH239105,LEC,Art and Architecture of Europe: PARIS:ARCHITECTURL PERSPECTIVE,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH239106,LEC,Art and Architecture of Europe: LONDON: SUBLIME TO RIDICULOUS,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH239107,LEC,Art and Architecture of Europe: PRAGUE ART AND ARCHITECTURE,NEWRK,3 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH239108,LEC,Art and Architecture of Europe: ANCIENT ROME PORTRAITURE,NEWRK,3 Hrs,TBD,12:00AM - 12:00AM,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH239109,LEC,Art and Architecture of Europe: ITALIAN HIGH RENAISSANCE ART,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH239110,LEC,Art and Architecture of Europe: GOLDEN AGE OF SPAIN,NEWRK,3-12 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH239111,LEC,Art and Architecture of Europe: ART & HISTORY OF MADRID,NEWRK,3-12 Hrs,TBD,,Feb 7 - May 17,"Toole,Ruth A",[]
+ARTH242070,LEC,Woman As Image and Imagemaker,NEWRK,3 Hrs,,Canceled,,,[]
+ARTH264000,INT,Art History Sophomore Internship,NEWRK,1 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,"[[], [['']]]"
+ARTH266000,IND,SPECIAL PROBLEM,NEWRK,1-3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTH301010,LEC,Research and Methodology in Art History,NEWRK,3 Hrs,M,2:30PM - 5:30PM,Feb 7 - May 17,"Rujivacharakul,Vimalin",[]
+ARTH301080,LEC,Research and Methodology in Art History,NEWRK,3 Hrs,M,2:30PM - 5:30PM,Feb 7 - May 17,"Rujivacharakul,Vimalin",[]
+ARTH301080,LEC,Research and Methodology in Art History,NEWRK,3 Hrs,M,2:30PM - 5:30PM,Feb 7 - May 17,"Rujivacharakul,Vimalin",[]
+ARTH311011,LEC,"Women, Society and the Arts: WOMEN IN ANTIQUITY",NEWRK,3 Hrs,MW,8:40AM - 9:55AM,Feb 7 - May 17,"Petersen,Lauren",[]
+ARTH321010,LEC,Great Cities of the World,NEWRK,3 Hrs,ASYN,,Feb 7 - May 17,"Okoye,Ikem S",[]
+ARTH321080,LEC,Great Cities of the World,NEWRK,3 Hrs,ASYN,,Feb 7 - May 17,"Okoye,Ikem S",[]
+ARTH366000,IND,Independent Study,NEWRK,1-3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTH406012,LEC,Seminar in Medieval Art: THE MEDIEVAL BOOK,NEWRK,3 Hrs,W,2:30PM - 5:30PM,Feb 7 - May 17,"Gallant,Denva",[]
+ARTH429010,LEC,Seminar in Modern Architecture: ARCHITECTURE AND PROGRESS,NEWRK,3 Hrs,W,9:05AM - 12:05PM,Feb 7 - May 17,"Isenstadt,Samuel M",[]
+ARTH455010,LEC,Black Bodies on Display: Race in Museums,NEWRK,3 Hrs,T,2:00PM - 5:00PM,Feb 7 - May 17,"McGee,Julie L",[]
+ARTH464000,IND,Internship in Art History,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTH466000,IND,Independent Study,NEWRK,1-3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTH606012,LEC,Studies in Medieval Art: THE MEDIEVAL BOOK,NEWRK,3 Hrs,W,2:30PM - 5:30PM,Feb 7 - May 17,"Gallant,Denva",[]
+ARTH610010,LEC,Introduction to Theories of Material Culture Studies,NEWRK,3 Hrs,R,3:30PM - 6:30PM,Feb 7 - May 17,"Yates,Julian D",[]
+ARTH627011,LEC,Studies in the History of Photography: THE PHOTOGRAPH & THE MAGAZINE,NEWRK,3 Hrs,R,9:30AM - 12:30PM,Feb 7 - May 17,"Hill,Jason Edward",[]
+ARTH629010,LEC,Studies in Modern Architecture: ARCHITECTURE AND PROGRESS,NEWRK,3 Hrs,W,9:05AM - 12:05PM,Feb 7 - May 17,"Isenstadt,Samuel M",[]
+ARTH655010,LEC,Black Bodies on Display: Race in Museums,NEWRK,3 Hrs,T,2:00PM - 5:00PM,Feb 7 - May 17,"McGee,Julie L",[]
+ARTH663000,INT,Art Museum Internship,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTH664000,INT,Curatorial Internship,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTH666000,IND,SPECIAL PROBLEM,NEWRK,1-3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTH851010,LEC,Seminar in Art Historical Pedagogy,NEWRK,3 Hrs,M,1:25PM - 4:25PM,Feb 7 - May 17,"Werth,Mary Margaret",[]
+ARTH860000,RSC,Reading and Research,NEWRK,1-9 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTH866000,IND,SPECIAL PROBLEM,NEWRK,1-3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTH870000,IND,Master's Paper,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTH964000,IND,Pre-Candidacy Study,NEWRK,3-9 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ARTH969000,IND,Doctoral Dissertation,NEWRK,1-12 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+ASIA466010,IND,Independent Study,NEWRK,1-3 Hrs,,Canceled,,,[]
+BHAN106010,LEC,Introduction to Anthropology of Health,NEWRK,3 Hrs,ASYN,,Feb 7 - May 17,"Ansari,David",[]
+BHAN120010L,LAB,Physical Education: JUMP START FITNESS,NEWRK,1 Hrs,MW,10:10AM - 11:00AM,Feb 7 - May 17,"Taplin,Maria",[]
+BHAN120011L,LAB,Physical Education: TEAM SPORTS,NEWRK,1 Hrs,MW,1:25PM - 2:15PM,Feb 7 - May 17,"Carter,Jordan",[]
+BHAN120012L,LAB,Physical Education: YOGA,NEWRK,1 Hrs,TR,8:00AM - 8:50AM,Feb 7 - May 17,"Jones,Lisa Z",[]
+BHAN120013L,LAB,Physical Education: WALKING/JOGGING,NEWRK,1 Hrs,TR,2:00PM - 2:50PM,Feb 7 - May 17,"Hunt,Elizabeth",[]
+BHAN120014L,LAB,Physical Education: STRENGTH & CONDITIONING,NEWRK,1 Hrs,MW,10:10AM - 11:00AM,Feb 7 - May 17,"Balbirnie,Bridget M",[]
+BHAN120017L,LAB,Physical Education: PUMP & PLYO,NEWRK,1 Hrs,TR,9:30AM - 10:20AM,Feb 7 - May 17,"Crowley,Rita Marie",[]
+BHAN120018L,LAB,Physical Education: INDOOR CYCLE,NEWRK,1 Hrs,MW,10:10AM - 11:00AM,Feb 7 - May 17,"Crowley,Rita Marie",[]
+BHAN120019L,LAB,Physical Education: INDOOR CYCLE,NEWRK,1 Hrs,TR,8:25AM - 9:15AM,Feb 7 - May 17,"Rosa,Constance Beverly",[]
+BHAN120021L,LAB,Physical Education: FITNESS BOOT CAMP,NEWRK,1 Hrs,TR,11:00AM - 11:50AM,Feb 7 - May 17,"Crowley,Rita Marie",[]
+BHAN120023L,LAB,Physical Education: YOGA,NEWRK,1 Hrs,MW,9:05AM - 9:55AM,Feb 7 - May 17,"Jones,Lisa Z",[]
+BHAN120024L,LAB,Physical Education: STRENGTH & CONDITIONING,NEWRK,1 Hrs,TR,9:30AM - 10:20AM,Feb 7 - May 17,"Balbirnie,Bridget M",[]
+BHAN120025L,LAB,Physical Education: YOGA,NEWRK,1 Hrs,TR,9:30AM - 10:20AM,Feb 7 - May 17,"Jones,Lisa Z",[]
+BHAN120027L,LAB,Physical Education: ICE SKATING I,NEWRK,1 Hrs,MW,9:05AM - 9:55AM,Feb 7 - May 17,"Eppes,Jennifer Helfrich",[]
+BHAN120030L,LAB,Physical Education: YOGA,NEWRK,1 Hrs,MW,8:00AM - 8:50AM,Feb 7 - May 17,"Jones,Lisa Z",[]
+BHAN120032L,LAB,Physical Education: PILATES,NEWRK,1 Hrs,MW,9:05AM - 9:55AM,Feb 7 - May 17,"Crowley,Rita Marie",[]
+BHAN120033L,LAB,Physical Education: BARRE,NEWRK,1 Hrs,TR,9:30AM - 10:20AM,Feb 7 - May 17,"Hunt,Elizabeth",[]
+BHAN120034L,LAB,Physical Education: YOGA,NEWRK,1 Hrs,MW,10:10AM - 11:00AM,Feb 7 - May 17,"Boulden,Andrea Marie",[]
+BHAN120036L,LAB,Physical Education: EXERCISE AND CONDITIONING,NEWRK,1 Hrs,MW,10:10AM - 11:00AM,Feb 7 - May 17,"Carter,Jordan",[]
+BHAN120037L,LAB,Physical Education: ICE SKATING I,NEWRK,1 Hrs,MW,10:10AM - 11:00AM,Feb 7 - May 17,"Eppes,Jennifer Helfrich",[]
+BHAN120038L,LAB,Physical Education: INDOOR CYCLE,NEWRK,1 Hrs,TR,9:30AM - 10:20AM,Feb 7 - May 17,"Rosa,Constance Beverly",[]
+BHAN120039L,LAB,Physical Education: JUMP START FITNESS,NEWRK,1 Hrs,MW,11:15AM - 12:05PM,Feb 7 - May 17,"Taplin,Maria",[]
+BHAN120043L,LAB,Physical Education: PILATES,NEWRK,1 Hrs,MW,11:15AM - 12:05PM,Feb 7 - May 17,"Hunt,Elizabeth",[]
+BHAN120045L,LAB,Physical Education: YOGA,NEWRK,1 Hrs,MW,9:05AM - 9:55AM,Feb 7 - May 17,"Boulden,Andrea Marie",[]
+BHAN120045L,LAB,Physical Education: YOGA,NEWRK,1 Hrs,MW,9:05AM - 9:55AM,Feb 7 - May 17,"Boulden,Andrea Marie",[]
+BHAN120046L,LAB,Physical Education: FITNESS BOOT CAMP,NEWRK,1 Hrs,TR,11:00AM - 11:50AM,Feb 7 - May 17,"Hunt,Elizabeth",[]
+BHAN120047L,LAB,Physical Education: EXERCISE AND CONDITIONING,NEWRK,1 Hrs,MW,11:15AM - 12:05PM,Feb 7 - May 17,"Balbirnie,Bridget M",[]
+BHAN120052L,LAB,Physical Education: BADMINTON,NEWRK,1 Hrs,TR,2:00PM - 2:50PM,Feb 7 - May 17,"Hayman,John T",[]
+BHAN120054L,LAB,Physical Education: BADMINTON,NEWRK,1 Hrs,MW,10:10AM - 11:00AM,Feb 7 - May 17,"Hayman,John T",[]
+BHAN130016,LEC,Health Topics: SUSTAINABILITY & FOOD,NEWRK,1 Hrs,R,12:30PM - 2:00PM,Feb 7 - May 17,"Muzzi,Jennifer Lynn",[]
+BHAN130022,LEC,Health Topics: PERSONAL RELATIONSHIPS,NEWRK,1 Hrs,M,12:20PM - 1:10PM,Feb 7 - May 17,"Groth,John Warren",[]
+BHAN130025,LEC,Health Topics: DEATH AND DYING,NEWRK,1 Hrs,W,12:20PM - 1:10PM,Feb 7 - May 17,"Groth,John Warren",[]
+BHAN130028,LEC,Health Topics: PERSONAL RELATIONSHIPS,NEWRK,1 Hrs,M,10:10AM - 11:00AM,Feb 7 - May 17,"Groth,John Warren",[]
+BHAN130029,LEC,Health Topics: DEATH AND DYING,NEWRK,1 Hrs,W,10:10AM - 11:00AM,Feb 7 - May 17,"Groth,John Warren",[]
+BHAN130031,LEC,Health Topics: TAKEOUT MAKEOVER,NEWRK,1 Hrs,T,5:00PM - 6:30PM,Feb 7 - May 17,"Knick,Brittany L",[]
+BHAN130035,LEC,Health Topics: PERSONAL MANAGEMENT,NEWRK,1 Hrs,M,1:25PM - 2:15PM,Feb 7 - May 17,"Groth,John Warren",[]
+BHAN130036,LEC,Health Topics: PERSONAL MANAGEMENT,NEWRK,1 Hrs,W,1:25PM - 2:15PM,Feb 7 - May 17,"Groth,John Warren",[]
+BHAN130037,LEC,Health Topics: COOKING AROUND THE WORLD,NEWRK,1 Hrs,M,5:00PM - 6:30PM,Feb 7 - May 17,"Knick,Brittany L",[]
+BHAN130040,LEC,Health Topics: HEALTH & VIRTUES,NEWRK,1 Hrs,T,9:30AM - 10:45AM,Feb 7 - May 17,"Groth,John Warren",[]
+BHAN130196,LEC,Health Topics: MANAGING WORK STRESS,NEWRK,1 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"McCleary,Katherine Watson",[]
+BHAN130197,LEC,Health Topics: MANAGING WORK STRESS,NEWRK,1 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"McCleary,Katherine Watson",[]
+BHAN130198,LEC,Health Topics: MANAGING WORK STRESS,NEWRK,1 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"McCleary,Katherine Watson",[]
+BHAN130199,LEC,Health Topics: MANAGING WORK STRESS,NEWRK,1 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"McCleary,Katherine Watson",[]
+BHAN155010,LEC,Personal Health Management: An Approach for a Lifetime,NEWRK,3 Hrs,MWF,9:05AM - 9:55AM,Feb 7 - May 17,"Corbitt,Kathryn Lucille",[]
+BHAN155011,LEC,Personal Health Management: An Approach for a Lifetime,NEWRK,3 Hrs,TR,5:00PM - 6:15PM,Feb 7 - May 17,"Bowman,Stephen E",[]
+BHAN155012,LEC,Personal Health Management: An Approach for a Lifetime,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Hayman,John T",[]
+BHAN155014,LEC,Personal Health Management: An Approach for a Lifetime,NEWRK,3 Hrs,TR,8:00AM - 9:15AM,Feb 7 - May 17,"Corbitt,Kathryn Lucille",[]
+BHAN155015,LEC,Personal Health Management: An Approach for a Lifetime,NEWRK,3 Hrs,TR,12:30PM - 1:45PM,Feb 7 - May 17,"Stockar,Karyn Dunning",[]
+BHAN155016,LEC,Personal Health Management: An Approach for a Lifetime,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Holland,Cindy Lee Goodell",[]
+BHAN155017,LEC,Personal Health Management: An Approach for a Lifetime,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Crist,Gina Kathryn",[]
+BHAN155018,LEC,Personal Health Management: An Approach for a Lifetime,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Stockar,Karyn Dunning",[]
+BHAN160010,LEC,Health Behavior Science Seminar,NEWRK,1 Hrs,W,12:20PM - 1:10PM,Feb 7 - May 17,"Shendock,Jennifer","[['BHAN155'], []]"
+BHAN166000,IND,Special Problem,NEWRK,1-3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+BHAN168000,IND,Freshman Special Topics,NEWRK,1-4 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+BHAN256010D,DIS,"Mindfulness for Innovation, Creativity and Entrepreneurship",NEWRK,1 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Whittaker,Alyssa Nicole",[]
+BHAN263010L,LAB,Health Behavior Science Practicum,NEWRK,1-3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Bibik,Janice Marian",[]
+BHAN266000,IND,Special Problem,NEWRK,1-3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+BHAN268000,IND,Sophomore Special Topics,NEWRK,1-4 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+BHAN301050,LEC,The Art of Happiness,NEWRK,3 Hrs,MWF,2:30PM - 3:20PM,Feb 7 - May 17,"Goodwin,Stephen C.",[]
+BHAN302010,LEC,Medical Anthropology,NEWRK,3 Hrs,MWF,2:30PM - 3:20PM,Feb 7 - May 17,"Ansari,David",[]
+BHAN304010,LEC,"Culture, Health & Environment",NEWRK,3 Hrs,W,5:00PM - 8:00PM,Feb 7 - May 17,"Trivedi,Jennifer Marie",[]
+BHAN311010,LEC,Issues in Health Behavior Science,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"Hoopes,Elissa Koury","[['BHAN155'], []]"
+BHAN311011,LEC,Issues in Health Behavior Science,NEWRK,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"Abraham,Avron","[['BHAN155'], []]"
+BHAN326010,LEC,Research Methods and Statistics for Behavioral Science,NEWRK,3 Hrs,MW,1:25PM - 2:15PM,Feb 7 - May 17,"Skubisz,Christine M","[['STAT200'], []]"
+BHAN326020D,DIS,Research Methods and Statistics for Behavioral Science,NEWRK,3 Hrs,F,1:25PM - 2:15PM,Feb 7 - May 17,"Wolfle,Brianna","[['STAT200'], []]"
+BHAN326021D,DIS,Research Methods and Statistics for Behavioral Science,NEWRK,3 Hrs,F,12:20PM - 1:10PM,Feb 7 - May 17,"Wolfle,Brianna","[['STAT200'], []]"
+BHAN332010,LEC,Health Behavior Theory and Models,NEWRK,3 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Goodwin,Stephen C.","[['BHAN155'], []]"
+BHAN332011,LEC,Health Behavior Theory and Models,NEWRK,3 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Lodyga,Marc Gregory","[['BHAN155'], []]"
+BHAN334010,LEC,Health Behavior Assessment,NEWRK,3 Hrs,MW,8:40AM - 9:55AM,Feb 7 - May 17,"Skubisz,Christine M","[['BHAN326', 'BHAN332'], []]"
+BHAN334011,LEC,Health Behavior Assessment,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"Skubisz,Christine M","[['BHAN326', 'BHAN332'], []]"
+BHAN334081,LEC,Health Behavior Assessment,NEWRK,3 Hrs,MW,3:35PM - 4:50PM,Feb 7 - May 17,"Skubisz,Christine M","[['BHAN326', 'BHAN332'], []]"
+BHAN335010,LEC,Health and Aging: HEALTH AND AGING,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Orsega-Smith,Elizabeth M",[]
+BHAN335080,LEC,Health and Aging: HEALTH AND AGING,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Orsega-Smith,Elizabeth M",[]
+BHAN335080,LEC,Health and Aging: HEALTH AND AGING,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Orsega-Smith,Elizabeth M",[]
+BHAN342010,LEC,Introduction to Adapted Physical Activity,NEWRK,3 Hrs,MWF,9:05AM - 9:55AM,Feb 7 - May 17,"Obrusnikova,Iva",[]
+BHAN342011,LEC,Introduction to Adapted Physical Activity,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Goodwin,Stephen C.",[]
+BHAN342012,LEC,Introduction to Adapted Physical Activity,NEWRK,3 Hrs,MWF,11:15AM - 12:05PM,Feb 7 - May 17,"Firkin,Cora J",[]
+BHAN342081,LEC,Introduction to Adapted Physical Activity,NEWRK,3 Hrs,MWF,10:10AM - 11:00AM,Feb 7 - May 17,"Goodwin,Stephen C.",[]
+BHAN366000,IND,Independent Study,NEWRK,1-6 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+BHAN368000,IND,Junior Special Topics,NEWRK,1-4 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+BHAN403010L,LAB,Practicum in Adapted Physical Activity,NEWRK,1-3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Bibik,Janice Marian",[]
+BHAN435010,LEC,Physical Activity Behavior,NEWRK,3 Hrs,MWF,2:30PM - 3:20PM,Feb 7 - May 17,"Dominick PhD,Gregory Mitchell","[[], [['KAAP221', 'KAAP310']]]"
+BHAN435070,LEC,Physical Activity Behavior,NEWRK,3 Hrs,,Canceled,,,"[[], [['KAAP221', 'KAAP310']]]"
+BHAN440010,LEC,Strategies for Athletic Peak Performance,NEWRK,3 Hrs,MWF,9:05AM - 9:55AM,Feb 7 - May 17,"Hayman,John T",[]
+BHAN445050,LEC,"Health, Physical Activity, & Disability",NEWRK,3 Hrs,T,4:00PM - 7:00PM,Feb 7 - May 17,"Obrusnikova,Iva","[['BHAN342'], []]"
+BHAN445080,LEC,"Health, Physical Activity, & Disability",NEWRK,3 Hrs,T,4:00PM - 7:00PM,Feb 7 - May 17,"Obrusnikova,Iva","[['BHAN342'], []]"
+BHAN460010L,LAB,Coaching Performance Practicum,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Hayman,John T","[['KAAP210', 'KAAP220', 'KAAP320', 'BHAN390'], []]"
+BHAN464010,INT,Health Behavior Science Internship: HEALTH BEHAVIOR SCIENCE,NEWRK,6-9 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Peterson,P Michael","[[], [['KAAP220', 'KAAP309']]]"
+BHAN466000,IND,Independent Study,NEWRK,1-3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+BHAN468000,IND,Senior Special Topics,NEWRK,1-4 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+BHAN490010,LEC,Development of Health Promotion Programs,NEWRK,3 Hrs,TR,9:30AM - 10:45AM,Feb 7 - May 17,"Lodyga,Marc Gregory","[['BHAN334'], []]"
+BHAN645050,LEC,"Health, Physical Activity, & Disability",NEWRK,3 Hrs,T,4:00PM - 7:00PM,Feb 7 - May 17,"Obrusnikova,Iva",[]
+BHAN666000,IND,Special Problem,NEWRK,1-12 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+BHAN820010,LEC,Social and Environmental Determinants of Health Behavior,NEWRK,3 Hrs,M,3:35PM - 6:35PM,Feb 7 - May 17,"Patterson,Freda",[]
+BHAN820011,LEC,Social and Environmental Determinants of Health Behavior,NEWRK,3 Hrs,M,7:00PM - 10:00PM,Feb 7 - May 17,"Patterson,Freda",[]
+BHAN856050,LEC,Multivariable Biostatistics for Population Health,NEWRK,3 Hrs,R,4:00PM - 7:00PM,Feb 7 - May 17,"Davey,Adam","[[], [['STAT656', 'permiss']]]"
+BINF610010,LEC,Applied Machine Learning,NEWRK,3 Hrs,W,2:30PM - 3:20PM,Feb 7 - May 17,"Liao,Li",[]
+BINF640010,LEC,Databases for Bioinformatics,NEWRK,3 Hrs,W,5:45PM - 6:45PM,Feb 7 - May 17,"Kuyuk,Huseyin",[]
+BINF640194,LEC,Databases for Bioinformatics,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Kuyuk,Huseyin",[]
+BINF644010,LEC,Bioinformatics,NEWRK,3 Hrs,W,11:15AM - 12:05PM,Feb 7 - May 17,"Arighi,Cecilia Noemi",[]
+BINF644194,LEC,Bioinformatics,NEWRK,3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,"Arighi,Cecilia Noemi",[]
+BINF650010,LEC,Protein Modifications,NEWRK,3 Hrs,,Canceled,,,[]
+BINF666000,IND,Special Problem,NEWRK,1-3 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+BINF667016,LEC,Seminar: BIG DATA SOCIAL BEHAV HLTH SC,NEWRK,1-12 Hrs,W,1:00PM - 2:00PM,Feb 7 - May 17,"Chen,Fang Fang",[]
+BINF695010,LEC,Computational System Biology,NEWRK,3 Hrs,,Canceled,,,[]
+BINF864000,INT,Internship,NEWRK,1-6 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+BINF865010D,DIS,Seminar,NEWRK,0-1 Hrs,M,3:30PM - 4:30PM,Feb 7 - May 17,"Hoober,Karen Louise",[]
+BINF869000,IND,Master's Thesis,NEWRK,1-6 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+BINF964000,IND,Pre-Candidacy Study,NEWRK,3-12 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+BINF969000,IND,Doctoral Dissertation,NEWRK,1-12 Hrs,ASYN,12:00AM - 12:00AM,Feb 7 - May 17,Staff,[]
+BISC103710,LEC,Principles of Biology,WILM,3 Hrs,TR,11:00AM - 12:15PM,Feb 7 - May 17,"McDevit,Daniel Christopher",[]
+BISC104010,LEC,Principles of Biology with Laboratory,NEWRK,4 Hrs,TR,2:00PM - 3:15PM,Feb 7 - May 17,"Sikes,Robert Allen",[]
+BISC104011,LEC,Principles of Biology with Laboratory,NEWRK,4 Hrs,TR,3:30PM - 4:45PM,Feb 7 - May 17,"Sikes,Robert Allen",[]
+BISC104020L,LAB,Principles of Biology with Laboratory,NEWRK,0 Hrs,T,8:30AM - 10:45AM,Feb 7 - May 17,"Sekowski,Kimberly Anne",[]
+BISC104021L,LAB,Principles of Biology with Laboratory,NEWRK,0 Hrs,T,11:00AM - 1:15PM,Feb 7 - May 17,"Sekowski,Kimberly Anne",[]
+BISC104030L,LAB,Principles of Biology with Laboratory,NEWRK,0 Hrs,W,8:30AM - 10:45AM,Feb 7 - May 17,"Sekowski,Kimberly Anne",[]
+BISC104031L,LAB,Principles of Biology with Laboratory,NEWRK,0 Hrs,W,11:00AM - 1:15PM,Feb 7 - May 17,"Sekowski,Kimberly Anne",[]
+BISC104032L,LAB,Principles of Biology with Laboratory,NEWRK,0 Hrs,W,2:00PM - 4:15PM,Feb 7 - May 17,"Sekowski,Kimberly Anne",[]
+BISC104033L,LAB,Principles of Biology with Laboratory,NEWRK,0 Hrs,W,4:30PM - 6:45PM,Feb 7 - May 17,"Sekowski,Kimberly Anne",[]
+BISC104034L,LAB,Principles of Biology with Laboratory,NEWRK,0 Hrs,W,7:00PM - 9:15PM,Feb 7 - May 17,"Sekowski,Kimberly Anne",[]
+BISC104040L,LAB,Principles of Biology with Laboratory,NEWRK,0 Hrs,R,8:30AM - 10:45AM,Feb 7 - May 17,"Sekowski,Kimberly Anne",[]
+BISC104041L,LAB,Principles of Biology with Laboratory,NEWRK,0 Hrs,R,11:00AM - 1:15PM,Feb 7 - May 17,"Sekowski,Kimberly Anne",[]

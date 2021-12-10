@@ -1,0 +1,12 @@
+.save_button {
+    color: white;
+    background: transparent;
+    margin: 1%;
+    border-radius: 10px;
+    border: 1px solid rgb(19, 255, 255);
+    transition: 0.3s;
+}
+.save_button:hover {
+    border-color: white;
+    background-color: rgb(28, 99, 231);
+}

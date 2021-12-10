@@ -1,0 +1,17 @@
+.form__field {
+    font-family: inherit;
+    width: 70%;
+    border: 0;
+    border-bottom: 2px solid gray;
+    outline: 0;
+    font-size: 1rem;
+    color: white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.5s;
+    text-align: center;
+}
+.form__field:focus {
+    border-bottom: 2px solid #11998e;
+
+}

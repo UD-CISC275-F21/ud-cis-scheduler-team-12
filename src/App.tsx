@@ -1,17 +1,25 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useState } from "react";
+import "./css/App.css";
+
+import MainPage from "./components/MainPage";
+import LandingPage from "./components/LandingPage";
 
 function App(): JSX.Element {
+    const [visibleView, setVisibleView] = useState<string | null>("0"); // Changes the different board views
+
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                UD CIS Scheduler
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-            </header>
+        <div>
+
+            { visibleView === "0" ? 
+                <LandingPage
+                    setVisibleView={setVisibleView}
+                ></LandingPage> :
+
+                <MainPage
+                    setVisibleView={setVisibleView}
+                    visibleView={visibleView}
+                ></MainPage> }
+        
         </div>
     );
 }
